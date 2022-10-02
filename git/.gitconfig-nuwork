@@ -1,0 +1,6 @@
+[user]
+   name = Daniel_Pfefferkorn
+   email = daniel@nuwork.de
+
+[core]
+  sshCommand = ssh -i ~/.ssh/id_nuwork

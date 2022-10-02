@@ -1,0 +1,6 @@
+[user]
+   name = albohlabs
+   email = github@alboh.de
+
+[core]
+  sshCommand = ssh -i ~/.ssh/id_rsa

@@ -1,0 +1,124 @@
+[includeIf "gitdir:~/Development/nuwork"]
+  path = .gitconfig-nuwork
+
+[includeIf "gitdir:~/Development/alboh"]
+  path = .gitconfig-albohlabs
+
+[rebase]
+  autosquash = true
+
+[merge]
+  conflictstyle = diff3
+  summary = true
+  tool = vscode
+
+[mergetool]
+  keepbackup = true
+  prompt = false
+
+[mergetool "vscode"]
+  cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+
+# https://github.com/dandavison/delta
+[delta]
+  navigate = true    # use n and N to move between diff sections
+  light = false
+
+  syntax-theme = Nord
+  features = side-by-side line-numbers decorations
+
+  whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
+
+[interactive]
+  diffFilter = delta --color-only
+[add.interactive]
+  useBuiltin = false # required for git 2.37.0
+
+[branch]
+  autosetuprebase = always
+
+[push]
+	default = current
+  followTags = true
+	autoSetupRemote = true
+
+[stash]
+  showPatch = true
+
+[pretty]
+  cmedium="format:%C(auto,yellow)commit %H%C(auto,reset)%nCommit:     %cn <%ce>%nCommitDate: %cd (%cr)%n%n%w(0,4,4)%s%n%+b"
+
+[format]
+  pretty=cmedium
+
+[pull]
+  rebase = false
+
+[init]
+  defaultBranch = main
+
+[fetch]
+  prune = true
+
+[difftool]
+  prompt = false
+
+[diff]
+  colorMoved = default
+
+[filter "media"]
+  clean = git media clean %f
+  smudge = git media smudge %f
+  required = true
+
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+
+[core]
+  excludesfile = ~/.gitignore
+  editor = nvim
+
+  # Treat spaces before tabs and all kinds of trailing whitespace as an error
+  # [default] trailing-space: looks for spaces at the end of a line
+  # [default] space-before-tab: looks for spaces before tabs at the beginning of a line
+  whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+
+  pager = delta
+
+[url "git@github.com:"]
+  insteadof = "gh:"
+  insteadof = "git://github.com"
+  pushinsteadof = "github:"
+  pushinsteadof = "git://github.com/"
+  pushinsteadof = "https://github.com/"
+
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+
+[url "git@gist.github.com:"]
+  insteadof = "gst:"
+  pushinsteadof = "gist:"
+  pushinsteadof = "git://gist.github.com/"
+
+[color]
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
+
+[help]
+  autocorrect = 1
+
+[include]
+  # https://github.com/GitAlias/gitalias
+  path = ~/.gitalias
+

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+URL=$(grep -m 1 --null http "$1" |sed s/^.*http/http/ |tr -d '\r')
+mplayer -cache 1024 -prefer-ipv4 "$URL"
