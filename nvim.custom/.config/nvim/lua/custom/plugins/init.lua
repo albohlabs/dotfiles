@@ -22,16 +22,16 @@ return {
 			require("custom.plugins.autosession")
 		end,
 	},
-	["rmagatti/session-lens"] = {
-		cmd = "SearchSession",
-		requires = {
-			"rmagatti/auto-session",
-			"nvim-telescope/telescope.nvim",
-		},
-		config = function()
-			require("session-lens").setup()
-		end,
-	},
+	-- ["rmagatti/session-lens"] = {
+	-- 	cmd = "SearchSession",
+	-- 	requires = {
+	-- 		"rmagatti/auto-session",
+	-- 		"nvim-telescope/telescope.nvim",
+	-- 	},
+	-- 	config = function()
+	-- 		require("session-lens").setup()
+	-- 	end,
+	-- },
 
 	-- https://github.com/kevinhwang91/nvim-ufo
 	["kevinhwang91/nvim-ufo"] = {
@@ -183,6 +183,21 @@ return {
 	["christoomey/vim-tmux-navigator"] = {},
 
 	-- ["folke/tokyonight.nvim"] = {},
+
+	-- https://github.com/folke/noice.nvim
+	["folke/noice.nvim"] = {
+		event = "VimEnter",
+		after = "nvim-telescope/telescope.nvim",
+		config = function()
+			require("noice").setup()
+			require("telescope").load_extension("noice")
+		end,
+		requires = {
+			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+			"MunifTanjim/nui.nvim",
+			"rcarriga/nvim-notify",
+		},
+	},
 
 	["folke/which-key.nvim"] = {
 		disable = false,

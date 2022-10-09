@@ -64,68 +64,72 @@ local M = {}
 -- map('n', ',s', ':luafile $MYVIMRC<CR>')
 
 M.general = {
-  n = {
-    -- for navigation
-    ["<leader>ww"] = { "<cmd> HopWord <CR>", "word motion" },
+	n = {
+		-- for navigation
+		["<leader>ww"] = { "<cmd> HopWord <CR>", "word motion" },
 
-    -- jumplist
-    ["<A-j>"] = { "<C-O>zz", "move back" },
-    ["<A-k>"] = { "<C-I>zz", "move forward" },
+		-- jumplist
+		["<A-j>"] = { "<C-O>zz", "move back" },
+		["<A-k>"] = { "<C-I>zz", "move forward" },
 
-    ["<leader>gb"] = {
-      "<cmd> Gitsigns toggle_current_line_blame<CR>",
-      "toggle git blame",
-    },
-    ["<leader>gs"] = {
-      "<cmd> Gitsigns preview_hunk<CR>",
-      "show current hunk",
-    },
-    ["<leader>gp"] = {
-      "<cmd> Gitsigns prev_hunk<CR>",
-      "go to previous hunk",
-    },
-    ["<leader>gn"] = {
-      "<cmd> Gitsigns next_hunk<CR>",
-      "go to next hunk",
-    },
-    ["<leader>gu"] = {
-      "<cmd> Gitsigns reset_hunk<CR>",
-      "undo current hunk",
-    },
-    ["<leader>gd"] = {
-      "<cmd> DiffviewOpen<CR>",
-      "show git diff",
-    },
-    ["<leader>gf"] = {
-      "<cmd> DiffviewFileHistory %<CR>",
-      "show file history",
-    },
+		["<leader>gb"] = {
+			"<cmd> Gitsigns toggle_current_line_blame<CR>",
+			"toggle git blame",
+		},
+		["<leader>gs"] = {
+			"<cmd> Gitsigns preview_hunk<CR>",
+			"show current hunk",
+		},
+		["<leader>gp"] = {
+			"<cmd> Gitsigns prev_hunk<CR>",
+			"go to previous hunk",
+		},
+		["<leader>gn"] = {
+			"<cmd> Gitsigns next_hunk<CR>",
+			"go to next hunk",
+		},
+		["<leader>gu"] = {
+			"<cmd> Gitsigns reset_hunk<CR>",
+			"undo current hunk",
+		},
+		["<leader>gd"] = {
+			"<cmd> DiffviewOpen<CR>",
+			"show git diff",
+		},
+		["<leader>gf"] = {
+			"<cmd> DiffviewFileHistory %<CR>",
+			"show file history",
+		},
 
-    -- https://github.com/rmagatti/auto-session#-commands
-    ["<leader>sd"] = { "<cmd> :DeleteSession <CR>", "Delete Session" },
-    ["<leader>ss"] = { "<cmd> :SaveSession <CR>", "Save Session" },
-    ["<leader>sr"] = { "<cmd> :RestoreSession <CR>", "Restore Session" },
-  },
+		-- https://github.com/rmagatti/auto-session#-commands
+		["<leader>sd"] = { "<cmd> :DeleteSession <CR>", "Delete Session" },
+		["<leader>ss"] = { "<cmd> :SaveSession <CR>", "Save Session" },
+		["<leader>sr"] = { "<cmd> :RestoreSession <CR>", "Restore Session" },
+	},
 }
 
 M.telescope = {
-  n = {
-    -- map("n", "<leader>fc", ":Telescope neoclip<CR>")
-    ["<leader>fo"] = { "<cmd> Telescope lsp_document_symbols<CR>", "find symbols" },
-    ["<leader>fc"] = { "<cmd> Telescope git_status<CR>", "find git changes" },
-    ["<leader>fs"] = { "<cmd> SearchSession<CR>", "recent folders" },
-    ["<leader>fr"] = { "<cmd> Telescope registers<CR>", "find registers" },
-    ["<leader>fj"] = { "<cmd> Telescope jumplist<CR>", "find jumplist" },
-    ["<leader>fl"] = { "<cmd> Telescope resume<CR>", "resume" },
-    ["gr"] = { "<cmd> Telescope lsp_references<CR>", "find references" },
-    ["gd"] = { "<cmd> Telescope lsp_definitions<CR>", "find definitions" },
-  },
+	n = {
+		-- map("n", "<leader>fc", ":Telescope neoclip<CR>")
+
+		-- https://github.com/nvim-telescope/telescope.nvim#pickers
+		["<leader>fo"] = { "<cmd> Telescope lsp_document_symbols<CR>", "find symbols" },
+		["<leader>fc"] = { "<cmd> Telescope git_status<CR>", "find git changes" },
+		["<leader>fs"] = { "<cmd> SearchSession<CR>", "recent folders" },
+		["<leader>fr"] = { "<cmd> Telescope registers<CR>", "find registers" },
+		["<leader>fj"] = { "<cmd> Telescope jumplist<CR>", "find jumplist" },
+		["<leader>fl"] = { "<cmd> Telescope resume<CR>", "resume" },
+		["gr"] = { "<cmd> Telescope lsp_references<CR>", "find references" },
+		["gd"] = { "<cmd> Telescope lsp_definitions<CR>", "find definitions" },
+		["<leader>fd"] = { "<cmd> Telescope lsp_definitions<CR>", "find definitions" },
+		["<leader>fi"] = { "<cmd> Telescope lsp_implementations<CR>", "find implementation" },
+	},
 }
 
 M.lspconfig = {
-  n = {
-    ["<leader>ca"] = { "<cmd> CodeActionMenu <CR>", "Code Action Menu" },
-  },
+	n = {
+		["<leader>ca"] = { "<cmd> CodeActionMenu <CR>", "Code Action Menu" },
+	},
 }
 
 return M
