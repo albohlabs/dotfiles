@@ -49,12 +49,12 @@ M.telescope = {
 		},
 	},
 
-	-- defaults = {
-	--   layout_config = {
-	--     width = 0.999999,
-	--     height = 0.99999,
-	--   },
-	-- },
+	defaults = {
+		layout_config = {
+			width = 0.999999,
+			height = 0.99999,
+		},
+	},
 }
 
 -- https://github.com/williamboman/mason.nvim

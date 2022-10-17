@@ -33,18 +33,6 @@ return {
 	-- 	end,
 	-- },
 
-	-- https://github.com/kevinhwang91/nvim-ufo
-	["kevinhwang91/nvim-ufo"] = {
-		requires = "kevinhwang91/promise-async",
-		config = function()
-			require("ufo").setup({
-				provider_selector = function()
-					return { "treesitter", "indent" }
-				end,
-			})
-		end,
-	},
-
 	-- https://git.sr.ht/~whynothugo/lsp_lines.nvim
 	-- ["https://git.sr.ht/~whynothugo/lsp_lines.nvim"] = {
 	--   config = function()
@@ -96,6 +84,7 @@ return {
 	--     require("hop").setup()
 	--   end,
 	-- },
+
 	["unblevable/quick-scope"] = {},
 
 	-- breadcrumbs
@@ -106,7 +95,7 @@ return {
 	},
 
 	-- UI improvement
-	["luukvbaal/stabilize.nvim"] = {},
+	-- ["luukvbaal/stabilize.nvim"] = {},
 
 	-- ["nvim-treesitter/nvim-treesitter-textobjects"] = { after = { "nvim-treesitter" } },
 	-- ["RRethy/nvim-treesitter-textsubjects"] = { after = { "nvim-treesitter" } },
@@ -215,6 +204,18 @@ return {
 				-- your configuration comes here
 				-- or leave it empty to use the default settings
 				-- refer to the configuration section below
+			})
+		end,
+	},
+
+	-- https://github.com/kevinhwang91/nvim-ufo
+	["kevinhwang91/nvim-ufo"] = {
+		requires = "kevinhwang91/promise-async",
+		config = function()
+			require("ufo").setup({
+				provider_selector = function()
+					return { "treesitter", "indent" }
+				end,
 			})
 		end,
 	},

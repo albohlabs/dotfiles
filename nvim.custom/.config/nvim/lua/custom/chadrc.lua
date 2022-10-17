@@ -4,7 +4,7 @@
 local M = {}
 
 M.ui = {
-  theme = "everforest",
+  theme = "nord",
   theme_toggle = { "everforest", "one_light" },
 }
 
