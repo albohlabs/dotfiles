@@ -123,12 +123,17 @@ M.telescope = {
 		["gd"] = { "<cmd> Telescope lsp_definitions<CR>", "find definitions" },
 		["<leader>fd"] = { "<cmd> Telescope lsp_definitions<CR>", "find definitions" },
 		["<leader>fi"] = { "<cmd> Telescope lsp_implementations<CR>", "find implementation" },
+		["<leader>dd"] = { "<cmd> Telescope diagnostics<CR>", "find lsp diagnostics" },
 	},
 }
 
 M.lspconfig = {
 	n = {
 		["<leader>ca"] = { "<cmd> CodeActionMenu <CR>", "Code Action Menu" },
+
+		["<leader>do"] = { "<cmd> lua vim.diagnostic.open_float()<CR>", "open diagnostics" },
+		["<leader>dn"] = { "<cmd> lua vim.diagnostic.goto_next()<CR>", "goto next diagnostics" },
+		["<leader>dp"] = { "<cmd> lua vim.diagnostic.goto_prev()<CR>", "goto prev diagnostics" },
 	},
 }
 

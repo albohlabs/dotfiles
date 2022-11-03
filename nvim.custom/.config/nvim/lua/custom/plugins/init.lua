@@ -53,15 +53,15 @@ return {
 	},
 
 	-- https://github.com/p00f/nvim-ts-rainbow
-	["p00f/nvim-ts-rainbow"] = {
-		config = function()
-			require("nvim-treesitter.configs").setup({
-				rainbow = {
-					enable = true,
-				},
-			})
-		end,
-	},
+	-- ["p00f/nvim-ts-rainbow"] = {
+	-- 	config = function()
+	-- 		require("nvim-treesitter.configs").setup({
+	-- 			rainbow = {
+	-- 				enable = true,
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 
 	["nvim-treesitter/nvim-treesitter-context"] = {
 		after = "nvim-treesitter",
@@ -219,4 +219,30 @@ return {
 			})
 		end,
 	},
+
+	-- https://github.com/MrcJkb/haskell-tools.nvim
+	-- ["MrcJkb/haskell-tools.nvim"] = {
+	-- 	requires = {
+	-- 		"neovim/nvim-lspconfig",
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"nvim-telescope/telescope.nvim",
+	-- 	},
+	-- 	config = function()
+	-- 		local ht = require("haskell-tools")
+
+	-- 		local opts = { noremap = true, silent = true, buffer = bufnr }
+	-- 		ht.setup({
+	-- 			hls = {
+	-- 				-- See nvim-lspconfig's  suggested configuration for keymaps, etc.
+	-- 				on_attach = function()
+	-- 					-- haskell-language-server relies heavily on codeLenses,
+	-- 					-- so auto-refresh (see advanced configuration) is enabled by default
+	-- 					vim.keymap.set("n", "<space>ca", vim.lsp.codelens.run, opts)
+	-- 					vim.keymap.set("n", "<space>hs", ht.hoogle.hoogle_signature, opts)
+	-- 					-- default_on_attach(client, bufnr)  -- if defined, see nvim-lspconfig
+	-- 				end,
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 }
