@@ -8,10 +8,13 @@ vim.wo.wrap = false
 vim.wo.linebreak = false
 vim.wo.list = false
 
--- https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
-vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
-vim.o.foldlevelstart = 99
+-- fold options
 vim.o.foldenable = true
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldnestmax = 3
 
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup

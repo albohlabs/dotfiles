@@ -57,25 +57,25 @@ bind-key I rev-sort
 # -- color -------------------------------------------------------------------
 #
 
-highlight feedlist    "^  *[0-9]+  *N  "                    color156 default
-highlight articlelist "^  *[0-9]+  *N  "                    color156 default
-
-highlight article     "(^Feed:.*|^Title:.*|^Author:.*)"     color75  default
-highlight article     "(^Link:.*|^Date:.*)"                 color75  default
-highlight article     "^Podcast Download URL:.*"            color71  default
-highlight article     "^Links:"                             white    color240 underline
-highlight article     "\\[[0-9][0-9]*\\]"                   color72  default  bold
-highlight article     "\\[image [0-9][0-9]*\\]"             color72  default  bold
-highlight article     "\\[embedded flash: [0-9][0-9]*\\]"   color72  default  bold
-highlight article     ":.*\\(link\\)$"                      color74  default
-highlight article     ":.*\\(image\\)$"                     color74  default
-highlight article     ":.*\\(embedded flash\\)$"            color74  default
-
-color listnormal_unread										default  default
-color listfocus_unread										default  color11 bold
-color listnormal                                            color7   default
-color listfocus                                             default  color240 bold
-color info                                                  color15  color241
+# highlight feedlist    "^  *[0-9]+  *N  "                    color156 default
+# highlight articlelist "^  *[0-9]+  *N  "                    color156 default
+# 
+# highlight article     "(^Feed:.*|^Title:.*|^Author:.*)"     color75  default
+# highlight article     "(^Link:.*|^Date:.*)"                 color75  default
+# highlight article     "^Podcast Download URL:.*"            color71  default
+# highlight article     "^Links:"                             white    color240 underline
+# highlight article     "\\[[0-9][0-9]*\\]"                   color72  default  bold
+# highlight article     "\\[image [0-9][0-9]*\\]"             color72  default  bold
+# highlight article     "\\[embedded flash: [0-9][0-9]*\\]"   color72  default  bold
+# highlight article     ":.*\\(link\\)$"                      color74  default
+# highlight article     ":.*\\(image\\)$"                     color74  default
+# highlight article     ":.*\\(embedded flash\\)$"            color74  default
+# 
+# color listnormal_unread										default  default
+# color listfocus_unread										default  color11 bold
+# color listnormal                                            color7   default
+# color listfocus                                             default  color240 bold
+# color info                                                  color15  color241
 
 
 # https://github.com/catppuccin/newsboat

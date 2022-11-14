@@ -13,6 +13,7 @@
 "query:All MyPrio2:tags # \"MY_PRIO_2\"" "MY_PRIO_2"
 "query:All Tech:tags # \"tech\"" "tech" 
 "query:All Haskell:tags # \"haskell\"" "haskell" 
+"query:All Rust:tags # \"rust\"" "rust" 
 "query:All Github:tags # \"github\"" "github" 
 "query:All FrontendPrio1:tags # \"frontend_prio_1\"" "frontend_prio_1" 
 "query:All FrontendPrio2:tags # \"frontend_prio_2\"" "frontend_prio_2" 
@@ -57,6 +58,8 @@ http://www.newthinktank.com/feed/ "Linux" "~DerekBanas"
 https://itsfoss.com/feed/ "~It's FOSS" "Linux"
 
 # }}}
+
+https://readrust.net/all/feed.rss "~read rust" "rust"
 
 https://www.samhh.com/rss.xml "~samhh" "tech"
 https://increment.com/feed.xml "~Increment" "tech"

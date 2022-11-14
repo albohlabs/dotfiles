@@ -12,11 +12,22 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 plugins=(
     # https://github.com/djui/alias-tips
     alias-tips
+
+    # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins
+    colored-man-pages
+    docker
+    docker-compose
+    fd
+    fzf
     git
     npm
+    node
+    postgres
+    rust
+    rsync
     tmux
-    colored-man-pages
-    # direnv
+    ubuntu
+    
     # https://github.com/zsh-users/zsh-autosuggestions
     zsh-autosuggestions
     # https://github.com/zsh-users/zsh-history-substring-search
@@ -54,3 +65,4 @@ eval "$(zoxide init zsh)"
 # https://starship.rs/
 eval "$(starship init zsh)"
 
+source "$HOME/.cargo/env"

@@ -3,24 +3,16 @@
 
 local M = {}
 
+M.plugins = require("custom.plugins")
+
 M.ui = {
-	theme = "onenord",
-	theme_toggle = { "onenord", "one_light" },
-}
+	theme = "everforest",
+	transparency = false,
+	theme_toggle = { "everforest", "everforest_light" },
 
-local override = require("custom.override")
-
-M.plugins = {
-	override = {
-		["kyazdani42/nvim-tree.lua"] = override.nvimtree,
-		["nvim-treesitter/nvim-treesitter"] = override.treesitter,
-		["nvim-telescope/telescope.nvim"] = override.telescope,
-		["williamboman/mason.nvim"] = override.mason,
-		["hrsh7th/nvim-cmp"] = override.cmp,
-		["neovim/nvim-lspconfig"] = override.lspconfig,
+	hl_override = {
+		AlphaHeader = { fg = "blue" },
 	},
-
-	user = require("custom.plugins"),
 }
 
 M.mappings = require("custom.mappings")

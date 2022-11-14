@@ -29,6 +29,15 @@ alias ls='exa $(printf $exa_options)'
 alias ll="exa --long --header"
 alias tree="exa --long --tree --level=4 -a $(printf $exa_options)"
 
+# https://github.com/nivekuil/rip
+alias rm=rip
+
+# https://github.com/tarka/xcp
+alias cp=xcp
+
+# https://github.com/ajeetdsouza/zoxide
+alias cd=z
+
 # https://github.com/ranger/ranger
 alias cdc=ranger
 

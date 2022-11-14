@@ -15,12 +15,17 @@ local sources = {
 	b.diagnostics.eslint_d,
 	b.code_actions.eslint_d,
 	b.formatting.prismaFmt,
-	b.diagnostics.tsc,
+
+	-- b.diagnostics.tsc,
+	-- https://github.com/jose-elias-alvarez/typescript.nvim#null-ls
+	require("typescript.extensions.null-ls.code-actions"),
 
 	b.code_actions.gitsigns,
 
 	b.diagnostics.shellcheck,
 	b.code_actions.shellcheck,
+
+	b.formatting.rustfmt,
 
 	-- Lua
 	b.formatting.stylua,
@@ -32,7 +37,6 @@ local sources = {
 }
 
 null_ls.setup({
-	debug = true,
 	sources = sources,
 
 	-- format on save

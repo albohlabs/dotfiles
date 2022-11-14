@@ -28,3 +28,6 @@
 [submodule "zsh/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
 	path = zsh/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "alacritty/.config/alacritty/catppuccin"]
+	path = alacritty/.config/alacritty/catppuccin
+	url = https://github.com/catppuccin/alacritty
