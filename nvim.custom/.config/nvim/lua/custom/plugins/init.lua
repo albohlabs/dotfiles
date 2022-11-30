@@ -72,6 +72,14 @@ return {
 		end,
 	},
 
+	-- Useful status updates for LSP
+	-- https://github.com/j-hui/fidget.nvim
+	["j-hui/fidget.nvim"] = {
+		config = function()
+			require("fidget").setup()
+		end,
+	},
+
 	-- https://github.com/SmiteshP/nvim-navic
 	["SmiteshP/nvim-navic"] = {
 		requires = "neovim/nvim-lspconfig",

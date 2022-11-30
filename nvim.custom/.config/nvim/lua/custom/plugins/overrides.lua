@@ -93,6 +93,9 @@ M.mason = {
 		"rust-analyzer",
 		"codelldb",
 	},
+
+	-- https://github.com/williamboman/mason-lspconfig.nvim
+	requires = "williamboman/mason-lspconfig.nvim",
 }
 
 M.cmp = {
