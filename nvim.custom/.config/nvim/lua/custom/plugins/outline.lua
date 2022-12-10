@@ -12,7 +12,7 @@ function M.config()
 
 		highlight_hovered_item = false,
 		auto_unfold_hover = false,
-		-- autofold_depth = 99,
+		autofold_depth = 1,
 	})
 end
 
