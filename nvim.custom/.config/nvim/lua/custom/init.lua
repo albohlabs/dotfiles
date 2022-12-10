@@ -8,15 +8,21 @@ vim.wo.wrap = false
 vim.wo.linebreak = false
 vim.wo.list = false
 
--- fold options
-vim.o.foldenable = true
-vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
-vim.o.foldnestmax = 3
 
 local autocmd = vim.api.nvim_create_autocmd
+
+-- https://neovim.io/doc/user/autocmd.html#autocmd-events
+autocmd("VimEnter", {
+	pattern = "*",
+	callback = function()
+		-- https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
+		vim.cmd("highlight Folded guifg=#a8a8a8")
+	end,
+})
+
 local augroup = vim.api.nvim_create_augroup
 
 -- highlight yanked text
