@@ -16,6 +16,13 @@ return {
 		end,
 	},
 
+	-- https://github.com/ray-x/lsp_signature.nvim
+	["ray-x/lsp_signature.nvim"] = {
+		config = function()
+			require("lsp_signature").setup()
+		end,
+	},
+
 	-- override default configs
 	["kyazdani42/nvim-tree.lua"] = { override_options = overrides.nvimtree },
 	["nvim-treesitter/nvim-treesitter"] = { override_options = overrides.treesitter },
@@ -263,6 +270,13 @@ return {
 							{ buffer = bufnr }
 						)
 					end,
+					settings = {
+						["rust-analyzer"] = {
+							checkOnSave = {
+								command = "clippy",
+							},
+						},
+					},
 				},
 			})
 		end,
