@@ -124,6 +124,18 @@ M.telescope = {
 		["<leader>fd"] = { "<cmd> Telescope lsp_definitions<CR>", "find definitions" },
 		["<leader>fi"] = { "<cmd> Telescope lsp_implementations<CR>", "find implementation" },
 		["<leader>dd"] = { "<cmd> Telescope diagnostics<CR>", "find lsp diagnostics" },
+
+		-- https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua
+		["<leader>?"] = { "<cmd> Telescope oldfiles<CR>", "Find recently opened files" },
+		["<leader><space>"] = { "<cmd> Telescope buffers<CR>", "Find existing buffers" },
+		["<leader>/"] = {
+			function()
+				require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+					previewer = false,
+				}))
+			end,
+			"Fuzzily search in current buffer",
+		},
 	},
 }
 
