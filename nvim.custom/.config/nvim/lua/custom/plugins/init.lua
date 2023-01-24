@@ -284,4 +284,37 @@ return {
 
 	-- https://github.com/tpope/vim-surround
 	["tpope/vim-surround"] = {},
+
+	-- https://github.com/RRethy/vim-illuminate
+	["RRethy/vim-illuminate"] = {
+		config = function()
+			require("illuminate").configure({
+				providers = { "lsp", "treesitter", "regex" },
+				filetypes_denylist = { "dashboard", "NvimTree", "markdown", "rmd", "tex" },
+				under_cursor = true,
+				modes_denylist = {},
+				large_file_overrides = 1000,
+				large_file_config = {},
+			})
+
+			vim.api.nvim_set_hl(0, "IlluminatedWordText", { italic = false, bg = "#53565d" })
+			vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "IlluminatedWordText" })
+			vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "IlluminatedWordText" })
+		end,
+	},
+
+	-- https://github.com/b0o/schemastore.nvim
+	["b0o/schemastore.nvim"] = {
+		after = "nvim-lspconfig",
+		config = function()
+			require("lspconfig").jsonls.setup({
+				settings = {
+					json = {
+						schemas = require("schemastore").json.schemas(),
+						validate = { enable = true },
+					},
+				},
+			})
+		end,
+	},
 }

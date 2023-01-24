@@ -8,9 +8,12 @@ vim.wo.wrap = false
 vim.wo.linebreak = false
 vim.wo.list = false
 
+vim.o.foldenable = true
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldlevel = 99 -- was 1
 vim.o.foldlevelstart = 99
 vim.o.foldmethod = "expr"
-vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldnestmax = 10
 
 local autocmd = vim.api.nvim_create_autocmd
 
