@@ -18,16 +18,19 @@ prepopulate-query-feeds yes
 
 show-read-feeds no
 show-read-articles no
-# feed-sort-order unreadarticlecount-asc
 
 text-width 80
 
-feedlist-format " %n %4i %11u %t -- %T"
-articlelist-format  "%4i %f %D   %?T? -- %-17T --  ?%t"
+# https://newsboat.org/releases/2.14.1/docs/newsboat.html#_format_strings
+# feedlist-format " %n %4i %11u %t -- %T"
+# articlelist-format  "%4i %f %D   %?T? -- %-17T --  ?%t"
 
-notify-format       "%d new articles (%n unread articles, %f unread feeds)"
-notify-program      "/usr/bin/notify-send"
+feedlist-format     " %t"
+articlelist-format  " %-17T - %t"
 
+highlight all "(typescript|nestjs|gql|graphql|fp-ts)" red
+highlight article "^(Feed|Title|Author|Link|Date):" default default underline
+highlight feedlist "https?://[^ ]+" yellow red bold
 
 # -- navigation ----------------------------------------------------------------
 
@@ -55,29 +58,7 @@ bind-key i sort
 bind-key I rev-sort
 
 # -- color -------------------------------------------------------------------
-#
-
-# highlight feedlist    "^  *[0-9]+  *N  "                    color156 default
-# highlight articlelist "^  *[0-9]+  *N  "                    color156 default
-# 
-# highlight article     "(^Feed:.*|^Title:.*|^Author:.*)"     color75  default
-# highlight article     "(^Link:.*|^Date:.*)"                 color75  default
-# highlight article     "^Podcast Download URL:.*"            color71  default
-# highlight article     "^Links:"                             white    color240 underline
-# highlight article     "\\[[0-9][0-9]*\\]"                   color72  default  bold
-# highlight article     "\\[image [0-9][0-9]*\\]"             color72  default  bold
-# highlight article     "\\[embedded flash: [0-9][0-9]*\\]"   color72  default  bold
-# highlight article     ":.*\\(link\\)$"                      color74  default
-# highlight article     ":.*\\(image\\)$"                     color74  default
-# highlight article     ":.*\\(embedded flash\\)$"            color74  default
-# 
-# color listnormal_unread										default  default
-# color listfocus_unread										default  color11 bold
-# color listnormal                                            color7   default
-# color listfocus                                             default  color240 bold
-# color info                                                  color15  color241
-
 
 # https://github.com/catppuccin/newsboat
-include ~/.newsboat/latte
-# include ~/.newsboat/dark
+# include ~/.newsboat/latte
+include ~/.newsboat/dark
