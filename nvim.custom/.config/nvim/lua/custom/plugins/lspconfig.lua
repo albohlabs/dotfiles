@@ -16,7 +16,7 @@ local servers = {
 	"dockerls",
 	-- "emmet_ls",
 	-- "eslint",
-	-- "graphql",
+	"graphql",
 	"hls",
 	"html",
 	"jsonls",
