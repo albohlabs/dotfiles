@@ -28,3 +28,13 @@ cargo install --locked starship bat
 git submodule sync --recursive
 git submodule update --init --recursive
 ```
+
+### Misc
+
+### Switch between NVIDIA and Intel
+
+```
+$ prime-select query
+$ sudo prime-select intel
+$ sudo prime-select nvidia
+```

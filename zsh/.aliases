@@ -24,9 +24,11 @@ alias mux=tmux
 # https://github.com/ogham/exa
 exa_options='--links --group --changed --time-style long-iso --icons'
 # replace ls with exa
-alias ls='exa $(printf $exa_options)'
+# alias ls='exa $(printf $exa_options)'
+# alias ll="exa --long --header"
+alias ls="exa --icons --sort type -a"
+alias ll="exa --icons --long --sort type -a"
 
-alias ll="exa --long --header"
 alias tree="exa --long --tree --level=4 -a $(printf $exa_options)"
 
 # https://github.com/nivekuil/rip
@@ -78,8 +80,8 @@ alias .....="cd ../../../.."
 alias -- -="cd -"
 
 alias mv="mv -iv"
-alias cp="cp -iv"
-alias mkdir="mkdir -v"
+alias cp="cp -riv"
+alias mkdir="mkdir -vp"
 
 alias vim=nvim
 alias vi=nvim
@@ -88,6 +90,9 @@ alias v=nvim
 alias g="git"
 alias o="open -a"
 alias oo="open ."
+
+alias open="xdg-open"
+alias ports="sudo lsof -i -P -n | grep LISTEN"
 
 # IP addresses
 # alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
