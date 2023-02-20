@@ -9,10 +9,6 @@ M.ui = {
 	theme = "everforest",
 	transparency = false,
 	theme_toggle = { "everforest", "everforest_light" },
-
-	hl_override = {
-		AlphaHeader = { fg = "blue" },
-	},
 }
 
 M.mappings = require("custom.mappings")
