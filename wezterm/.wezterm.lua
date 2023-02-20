@@ -6,6 +6,7 @@ return {
 	-- family = "FiraCode Nerd Font Mono",
 	font_size = 11.3,
 	line_height = 1.23,
+	warn_about_missing_glyphs = false,
 
 	-- Cursor style
 	default_cursor_style = "BlinkingBlock",

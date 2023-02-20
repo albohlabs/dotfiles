@@ -1,15 +1,14 @@
 return {
 	----------------------------------------- default plugins ------------------------------------------
 
-	["folke/which-key.nvim"] = {
-		enabled = true,
-	},
+	{ "folke/which-key.nvim", enabled = true },
 
-	["neovim/nvim-lspconfig"] = {
+	{
+		"neovim/nvim-lspconfig",
 		-- override nvChad config https://github.com/NvChad/NvChad/blob/main/lua/plugins/init.lua#L112
 		config = function()
 			require("plugins.configs.lspconfig")
-			require("custom.plugins.lspconfig")
+			require("custom.configs.lspconfig")
 		end,
 		dependencies = {
 			-- https://github.com/jose-elias-alvarez/typescript.nvim
@@ -18,12 +17,11 @@ return {
 	},
 
 	-- https://github.com/ray-x/lsp_signature.nvim
-	["ray-x/lsp_signature.nvim"] = {
-		config = true,
-	},
+	{ "ray-x/lsp_signature.nvim", config = true },
 
-	["nvim-tree/nvim-tree.lua"] = {
-		override_options = {
+	{
+		"nvim-tree/nvim-tree.lua",
+		opts = {
 
 			git = {
 				enable = true,
@@ -46,8 +44,9 @@ return {
 		},
 	},
 
-	["nvim-treesitter/nvim-treesitter"] = {
-		override_options = {
+	{
+		"nvim-treesitter/nvim-treesitter",
+		opts = {
 			event = { "BufReadPost", "BufNewFile" },
 
 			auto_install = true,
@@ -78,8 +77,9 @@ return {
 		},
 	},
 
-	["nvim-telescope/telescope.nvim"] = {
-		override_options = {
+	{
+		"nvim-telescope/telescope.nvim",
+		opts = {
 			extensions = {
 				-- fd is needed
 				media_files = {
@@ -108,8 +108,9 @@ return {
 	},
 
 	-- https://github.com/williamboman/mason.nvim/blob/main/PACKAGES.md
-	["williamboman/mason.nvim"] = {
-		override_options = {
+	{
+		"williamboman/mason.nvim",
+		opts = {
 
 			ensure_installed = {
 				-- lua stuff
@@ -138,7 +139,7 @@ return {
 				"shellcheck",
 				"bash-language-server",
 
-				"haskell-language-server",
+				-- "haskell-language-server",
 
 				"rust-analyzer",
 				"codelldb",
@@ -160,8 +161,9 @@ return {
 		},
 	},
 
-	["hrsh7th/nvim-cmp"] = {
-		override_options = {
+	{
+		"hrsh7th/nvim-cmp",
+		opts = {
 			sources = {
 				{ name = "nvim_lsp" },
 				{ name = "buffer" },
@@ -175,17 +177,18 @@ return {
 	--------------------------------------------- custom plugins ----------------------------------------------
 
 	-- library used by other plugins
-	["nvim-lua/plenary.nvim"] = { lazy = true },
+	{ "nvim-lua/plenary.nvim", lazy = true },
 
 	-- makes some plugins dot-repeatable like leap
-	["tpope/vim-repeat"] = { event = "VeryLazy" },
+	{ "tpope/vim-repeat", event = "VeryLazy" },
 
 	-- https://github.com/editorconfig/editorconfig-vim
-	["editorconfig/editorconfig-vim"] = {},
+	"editorconfig/editorconfig-vim",
 
 	-- https://github.com/folke/persistence.nvim
 	-- session management
-	["folke/persistence.nvim"] = {
+	{
+		"folke/persistence.nvim",
 		event = "BufReadPre",
 		opts = { options = { "buffers", "curdir", "tabpages", "winsize", "help" } },
 	  -- stylua: ignore
@@ -197,13 +200,12 @@ return {
 	},
 
 	-- https://github.com/weilbith/nvim-code-action-menu
-	["weilbith/nvim-code-action-menu"] = {
-		cmd = "CodeActionMenu",
-	},
+	{ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" },
 
 	-- https://github.com/windwp/nvim-ts-autotag
 	-- autoclose tags in html, jsx only
-	["windwp/nvim-ts-autotag"] = {
+	{
+		"windwp/nvim-ts-autotag",
 		ft = { "html", "javascriptreact" },
 		config = function()
 			local present, autotag = pcall(require, "nvim-ts-autotag")
@@ -216,12 +218,11 @@ return {
 
 	-- https://github.com/unblevable/quick-scope
 	-- highlight unique character in every word on a line
-	["unblevable/quick-scope"] = {
-		event = { "BufReadPost", "BufNewFile" },
-	},
+	{ "unblevable/quick-scope", event = { "BufReadPost", "BufNewFile" } },
 
 	-- https://github.com/onsails/lspkind.nvim
-	["onsails/lspkind-nvim"] = {
+	{
+		"onsails/lspkind-nvim",
 		module = "lspkind",
 		config = function()
 			require("lspkind").init({
@@ -233,42 +234,37 @@ return {
 
 	-- Useful status updates for LSP
 	-- https://github.com/j-hui/fidget.nvim
-	["j-hui/fidget.nvim"] = {
-		lazy = false,
-		config = true,
-	},
+	{ "j-hui/fidget.nvim", lazy = false, config = true },
 
 	-- search/replace in multiple files
 	-- https://github.com/nvim-pack/nvim-spectre
-	["windwp/nvim-spectre"] = {
+	{
+		"windwp/nvim-spectre",
     -- stylua: ignore
     keys = {
       { "<leader>sr", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
     },
 	},
 
-	["nvim-tree/nvim-web-devicons"] = {
-		lazy = true,
-	},
+	{ "nvim-tree/nvim-web-devicons", lazy = true },
 
 	-- https://github.com/SmiteshP/nvim-navic
-	["SmiteshP/nvim-navic"] = {
+	{
+		"SmiteshP/nvim-navic",
 		enabled = false,
 		lazy = false,
 		-- event = "BufRead",
 		config = function()
-			require("custom.plugins.navic")
+			require("custom.configs.navic")
 		end,
 	},
 
 	-- https://github.com/sindrets/diffview.nvim
-	["sindrets/diffview.nvim"] = {
-		enabled = false,
-		config = true,
-	},
+	{ "sindrets/diffview.nvim", enabled = false, config = true },
 
 	-- https://github.com/TimUntersberger/neogit
-	["TimUntersberger/neogit"] = {
+	{
+		"TimUntersberger/neogit",
 		-- after = "diffview.nvim",
 		cmd = "Neogit",
 		keys = {
@@ -284,7 +280,8 @@ return {
 	},
 
 	-- https://github.com/simrat39/symbols-outline.nvim
-	["simrat39/symbols-outline.nvim"] = {
+	{
+		"simrat39/symbols-outline.nvim",
 		cmd = "SymbolsOutline",
 		keys = {
 			{ "<leader>o", "<cmd>SymbolsOutline<cr>", desc = "Toggle symbols outline" },
@@ -299,27 +296,24 @@ return {
 		},
 	},
 
-	["jose-elias-alvarez/null-ls.nvim"] = {
+	{
+		"jose-elias-alvarez/null-ls.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 		-- lazy = false,
 		config = function()
-			require("custom.plugins.null-ls")
+			require("custom.configs.null-ls")
 		end,
 		dependencies = { "mason.nvim" },
 	},
 
-	["christoomey/vim-tmux-navigator"] = {
-		lazy = false,
-	},
+	{ "christoomey/vim-tmux-navigator", lazy = false },
 
 	-- ui components
-	["MunifTanjim/nui.nvim"] = {
-		lazy = true,
-		enabled = false,
-	},
+	{ "MunifTanjim/nui.nvim", lazy = true, enabled = false },
 
 	-- Better `vim.notify()`
-	["rcarriga/nvim-notify"] = {
+	{
+		"rcarriga/nvim-notify",
 		enabled = false,
     -- stylua: ignore
 		keys = {
@@ -338,7 +332,8 @@ return {
 
 	-- https://github.com/folke/noice.nvim
 	-- noicer ui
-	["folke/noice.nvim"] = {
+	{
+		"folke/noice.nvim",
 		enabled = false,
 		event = "VeryLazy",
 		opts = {
@@ -366,7 +361,8 @@ return {
 	},
 
 	-- https://github.com/folke/trouble.nvim
-	["folke/trouble.nvim"] = {
+	{
+		"folke/trouble.nvim",
 		cmd = { "TroubleToggle", "Trouble" },
 		opts = { use_diagnostic_signs = true },
     -- stylua: ignore
@@ -379,7 +375,8 @@ return {
 	},
 
 	-- https://github.com/folke/todo-comments.nvim
-	["folke/todo-comments.nvim"] = {
+	{
+		"folke/todo-comments.nvim",
 		cmd = { "TodoTrouble", "TodoTelescope" },
 		event = { "BufReadPost", "BufNewFile" },
 		config = true,
@@ -406,9 +403,7 @@ return {
 	-- },
 
 	-- https://github.com/anuvyklack/pretty-fold.nvim
-	["anuvyklack/pretty-fold.nvim"] = {
-		config = true,
-	},
+	{ "anuvyklack/pretty-fold.nvim", config = true },
 
 	-- https://github.com/MrcJkb/haskell-tools.nvim
 	-- {"MrcJkb/haskell-tools.nvim",
@@ -432,7 +427,8 @@ return {
 	-- },
 
 	-- buffer remove
-	["echasnovski/mini.bufremove"] = {
+	{
+		"echasnovski/mini.bufremove",
     -- stylua: ignore
 		keys = {
 			{ "<leader>x", function() require("mini.bufremove").delete(0, false) end, desc = "Delete Buffer", },
@@ -441,7 +437,8 @@ return {
 	},
 
 	-- https://github.com/simrat39/rust-tools.nvim
-	["simrat39/rust-tools.nvim"] = {
+	{
+		"simrat39/rust-tools.nvim",
 		enabled = false,
 		config = function()
 			require("rust-tools").setup({
@@ -457,11 +454,9 @@ return {
 						)
 					end,
 					settings = {
-						["rust-analyzer"] = {
-							checkOnSave = {
-								command = "clippy",
-							},
-						},
+						{ "rust-analyzer", checkOnSave = {
+							command = "clippy",
+						} },
 					},
 				},
 			})
@@ -469,12 +464,11 @@ return {
 	},
 
 	-- https://github.com/tpope/vim-surround
-	["tpope/vim-surround"] = {
-		lazy = false,
-	},
+	{ "tpope/vim-surround", lazy = false },
 
 	-- https://github.com/RRethy/vim-illuminate
-	["RRethy/vim-illuminate"] = {
+	{
+		"RRethy/vim-illuminate",
 		event = { "BufReadPost", "BufNewFile" },
 		opts = {
 			delay = 200,
@@ -495,7 +489,8 @@ return {
 	},
 
 	-- https://github.com/b0o/schemastore.nvim
-	["b0o/schemastore.nvim"] = {
+	{
+		"b0o/schemastore.nvim",
 		ft = "json",
 		config = function()
 			require("lspconfig").jsonls.setup({
@@ -509,7 +504,8 @@ return {
 		end,
 	},
 
-	["github/copilot.vim"] = {
+	{
+		"github/copilot.vim",
 		-- lazy = false,
 		event = { "BufReadPost", "BufNewFile" },
 		config = function()
