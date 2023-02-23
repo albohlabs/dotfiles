@@ -40,6 +40,17 @@ return {
           require("typescript").setup({ server = opts })
           return true
         end,
+
+        eslint = function(_, _)
+          require("lazyvim.util").on_attach(function(client, _)
+            if client.name == "eslint" then
+              client.server_capabilities.documentFormattingProvider = true
+            end
+            if client.name == "tsserver" then
+              client.server_capabilities.documentFormattingProvider = false
+            end
+          end)
+        end,
       },
     },
     keys = {

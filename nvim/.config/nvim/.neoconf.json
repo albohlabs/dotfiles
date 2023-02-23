@@ -10,6 +10,11 @@
       "sumneko_lua": {
         "enabled": true
       }
+    },
+    "eslint": {
+      "format": {
+        "enable": true
+      }
     }
   }
 }

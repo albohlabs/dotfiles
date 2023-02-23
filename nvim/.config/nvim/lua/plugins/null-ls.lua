@@ -8,7 +8,7 @@ return {
         source = {
           -- b.formatting.elm_format,
 
-          nls.builtins.formatting.prettierd,
+          -- nls.builtins.formatting.prettierd,
           nls.builtins.diagnostics.eslint_d,
           nls.builtins.code_actions.eslint_d,
           -- nls.builtins.formatting.prismaFmt,
@@ -19,18 +19,18 @@ return {
 
           nls.builtins.code_actions.gitsigns,
 
-          -- nls.builtins.formatting.rustfmt,
+          nls.builtins.formatting.rustfmt,
 
           -- Lua
           nls.builtins.formatting.stylua,
           -- b.diagnostics.luacheck.with { extra_args = { "--global vim" } },
 
           -- Shell
-          -- nls.builtins.diagnostics.shellcheck,
-          -- nls.builtins.code_actions.shellcheck,
+          nls.builtins.diagnostics.shellcheck,
+          nls.builtins.code_actions.shellcheck,
 
-          -- nls.builtins.formatting.shfmt,
-          -- nls.builtins.diagnostics.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
+          nls.builtins.formatting.shfmt,
+          nls.builtins.diagnostics.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
         },
       }
     end,

@@ -9,7 +9,7 @@ return {
       { "zM", "<cmd>lua require('ufo').closeAllFolds()<cr>", desc = "Close folds" },
     },
     opts = {
-      provider_selector = function(_, _, _)
+      provider_selector = function()
         return { "treesitter", "indent" }
       end,
     },
