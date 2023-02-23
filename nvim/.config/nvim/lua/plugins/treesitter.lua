@@ -5,18 +5,27 @@ return {
       if type(opts.ensure_installed) == "table" then
         vim.list_extend(opts.ensure_installed, {
           "bash",
-          "css",
+          "comment",
+          "diff",
+          "dockerfile",
+          "dot",
+          "git_rebase",
+          "gitattributes",
+          "gitcommit",
+          "graphql",
           "haskell",
-          "html",
-          "javascript",
           "json",
           "lua",
+          "make",
           "markdown",
-          "rust",
+          "markdown_inline",
+          "mermaid",
           "toml",
-          "tsx",
-          "typescript",
           "vim",
+          "yaml"
+          -- "gitignore",
+          -- "regex",
+          -- "sql",
         })
       end
     end,
