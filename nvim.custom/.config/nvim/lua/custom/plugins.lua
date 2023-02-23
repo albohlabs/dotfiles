@@ -167,9 +167,9 @@ return {
 			sources = {
 				{ name = "nvim_lsp" },
 				{ name = "buffer" },
-				{ name = "path" },
+				-- { name = "path" },
 				-- { name = "nvim_lua" },
-				{ name = "luasnip" },
+				--{ name = "luasnip" },
 			},
 		},
 	},
@@ -284,7 +284,7 @@ return {
 		"simrat39/symbols-outline.nvim",
 		cmd = "SymbolsOutline",
 		keys = {
-			{ "<leader>o", "<cmd>SymbolsOutline<cr>", desc = "Toggle symbols outline" },
+			{ "<leader>co", "<cmd>SymbolsOutline<cr>", desc = "Toggle symbols outline" },
 		},
 		opts = {
 			auto_preview = false,
