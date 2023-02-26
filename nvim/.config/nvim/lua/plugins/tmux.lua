@@ -4,7 +4,7 @@ return {
     opts = {
       navigation = {
         enable_default_keybindings = false,
-        persist_zoom = true,
+        persist_zoom = false,
       },
       resize = {
         enable_default_keybindings = false,

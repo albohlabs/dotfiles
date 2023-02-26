@@ -11,8 +11,8 @@ vim.keymap.set(
   { noremap = true, silent = true, desc = "Resume" }
 )
 
--- vim.keymap.set("n", "<C-j>", "<C-O>zz", { noremap = true, silent = true, desc = "move back" })
--- vim.keymap.set("n", "<C-k>", "<C-I>zz", { noremap = true, silent = true, desc = "move forward" })
+vim.keymap.set("n", "<C-O>", "<C-O>zz", { noremap = true, silent = true, desc = "move back" })
+vim.keymap.set("n", "<C-I>", "<C-I>zz", { noremap = true, silent = true, desc = "move forward" })
 
 vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
 vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
