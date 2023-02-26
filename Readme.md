@@ -38,3 +38,10 @@ $ prime-select query
 $ sudo prime-select intel
 $ sudo prime-select nvidia
 ```
+### swap RAM when 90% is in use
+
+* `sudo vi /etc/sysctl.conf`
+* append `vm.swappiness=10` to the file
+* reboot
+* look at `cat /proc/sys/vm/swappiness`
+
