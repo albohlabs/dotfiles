@@ -46,10 +46,12 @@ for file in ~/.{exports,functions,aliases}; do
 done
 unset file
 
-# enable fzf keybindings
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-# enable fuzzy auto-completion
-source /usr/share/doc/fzf/examples/completion.zsh
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden -g '!{**/node_modules/*,**/.git/*}'"
+export FZF_CTRL_T_COMMAND="rg --files --no-ignore-vcs --hidden -g '!{**/node_modules/*,**/.git/*}'"
+source /usr/share/doc/fzf/examples/key-bindings.zsh # enable fzf keybindings
+source /usr/share/doc/fzf/examples/completion.zsh # enable fuzzy auto-completion
 
 # https://github.com/zsh-users/zsh-syntax-highlighting
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
