@@ -13,8 +13,8 @@ export PATH=${M2_HOME}/bin:${PATH}
 
 export MANPAGER="/bin/sh -c \"col -b | vi -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
-export DENO_INSTALL="/home/dpf/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
+# export DENO_INSTALL="/home/dpf/.deno"
+# export PATH="$DENO_INSTALL/bin:$PATH"
 
 # https://github.com/catppuccin/fzf/blob/main/frappe.md
 export FZF_DEFAULT_OPTS=" \
@@ -24,3 +24,6 @@ export FZF_DEFAULT_OPTS=" \
 
 export PNPM_HOME="/home/dpf/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+
+# export BUN_HOME="/home/dpf/.bun/bin"
+# export PATH="$BUN_HOME:$PATH"

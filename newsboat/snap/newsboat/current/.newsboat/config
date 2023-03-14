@@ -28,7 +28,7 @@ text-width 80
 feedlist-format     " %t"
 articlelist-format  " %-17T - %t"
 
-highlight all "(neovim|vim|typescript|nestjs|gql|graphql|fp-ts)" red
+highlight all "(neovim|vim|typescript|nestjs|gql|graphql|fp-ts|tmux)" red
 highlight article "^(Feed|Title|Author|Link|Date):" default default underline
 highlight feedlist "https?://[^ ]+" yellow red bold
 

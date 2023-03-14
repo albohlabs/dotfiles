@@ -122,3 +122,5 @@
   # https://github.com/GitAlias/gitalias
   path = ~/.gitalias
 
+[jump]
+	grepCmd = ag --column

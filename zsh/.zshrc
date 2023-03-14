@@ -68,3 +68,10 @@ eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 source "$HOME/.cargo/env"
+
+# bun completions
+[ -s "/home/dpf/.bun/_bun" ] && source "/home/dpf/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
