@@ -1,5 +1,6 @@
 return {
   {
+    -- vs https://github.com/mrjones2014/smart-splits.nvim
     "aserowy/tmux.nvim",
     opts = {
       navigation = {

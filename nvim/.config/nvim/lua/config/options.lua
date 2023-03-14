@@ -5,6 +5,15 @@
 vim.opt.breakindent = true
 vim.opt.showbreak = "↪ "
 
+vim.opt.fillchars = {
+  foldopen = "",
+  foldclose = "",
+  fold = " ",
+  foldsep = " ",
+  diff = "╱",
+  eob = " ",
+}
+
 -- Folding (from nvim-ufo)
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99

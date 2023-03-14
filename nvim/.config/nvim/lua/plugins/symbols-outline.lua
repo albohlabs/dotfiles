@@ -6,11 +6,7 @@ return {
       { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols outline" },
     },
     opts = {
-      auto_preview = false,
       position = "right",
-
-      highlight_hovered_item = false,
-      auto_unfold_hover = false,
       autofold_depth = 1,
     },
   },

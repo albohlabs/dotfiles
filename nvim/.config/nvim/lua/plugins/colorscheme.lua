@@ -1,10 +1,7 @@
 return {
 
-  -- disable tokyonight
-  { "folke/tokyonight.nvim", enabled = false },
-
   -- disable catppuccin
-  { "catppuccin/nvim",       name = "catppuccin", enabled = false },
+  { "catppuccin/nvim",      name = "catppuccin", enabled = false },
 
   { "rmehri01/onenord.nvim" },
 
