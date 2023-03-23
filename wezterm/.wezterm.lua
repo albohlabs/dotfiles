@@ -30,6 +30,6 @@ return {
   window_decorations = "RESIZE",
   window_close_confirmation = "NeverPrompt",
   bold_brightens_ansi_colors = true,
-  window_background_opacity = 0.97,
+  window_background_opacity = 0.9,
   cell_width = 0.9,
 }

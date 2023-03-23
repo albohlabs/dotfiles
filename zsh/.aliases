@@ -17,6 +17,7 @@ alias cat='bat -P'
 alias vo='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
 # alias cbr=git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" --pointer="" | xargs git checkout
 # alias cbr=git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" | xargs git checkout
+alias fzfp='fzf --height 100% --preview "bat --style=numbers --color=always {}"'
 
 alias rm='gio trash'
 

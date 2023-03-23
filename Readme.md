@@ -19,7 +19,6 @@ cargo install cargo-update
 
 ```sh
 cargo install topgrade xcp rm-improved zoxide
-cargo install --locked starship bat
 ```
 
 ## Update

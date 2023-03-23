@@ -1,0 +1,126 @@
+# vim: set ft=zsh:
+
+### Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
+
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+### End of Zinit's installer chunk
+
+zinit light mroth/evalcache
+zinit light romkatv/zsh-defer
+
+# https://starship.rs/
+# Load starship theme
+# line 1: `starship` binary as command, from github release
+# line 2: starship setup at clone(create init.zsh, completion)
+# line 3: pull behavior same as clone, source init.zsh
+zinit ice as"command" from"gh-r" \
+          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+          atpull"%atclone" src"init.zsh"
+zinit light starship/starship
+
+# FZF
+zinit ice from="gh-r" as="command" bpick="*linux_amd64*"
+zinit light junegunn/fzf
+
+# FZF BYNARY AND TMUX HELPER SCRIPT
+zinit ice lucid wait'0c' as="command" id-as="junegunn/fzf-tmux" pick="bin/fzf-tmux"
+zinit light junegunn/fzf
+
+# BIND MULTIPLE WIDGETS USING FZF
+zinit ice lucid wait'0c' multisrc"shell/{completion,key-bindings}.zsh" id-as="junegunn/fzf_completions" pick="/dev/null"
+zinit light junegunn/fzf
+
+# https://github.com/Aloxaf/fzf-tab
+zinit ice wait="1" lucid
+zinit light Aloxaf/fzf-tab
+
+# DELTA
+zinit ice lucid wait="0" as="program" from="gh-r" bpick="*amd64.deb" pick="usr/bin/delta"
+zinit light dandavison/delta
+
+# https://github.com/bigH/git-fuzzy
+zinit ice as"program" pick"bin/git-fuzzy"
+zinit light bigH/git-fuzzy
+
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light djui/alias-tips
+
+# https://github.com/jeffreytse/zsh-vi-mode
+zinit ice depth=1
+zinit light jeffreytse/zsh-vi-mode
+
+zinit light paulirish/git-open
+
+# RIPGREP
+zinit ice from="gh-r" as="program" bpick="*amd64.deb" pick="usr/bin/rg"
+zinit light BurntSushi/ripgrep
+
+# NEOVIM
+zinit ice from="gh-r" as="program" bpick="*linux64.deb" ver="nightly" pick="usr/bin/nvim"
+zinit light neovim/neovim
+
+# WEZTERM
+# zinit ice from="gh-r" as="program" bpick="*ebian11.deb" ver="nightly" pick="usr/bin/wezterm"
+zinit ice from="gh-r" as="program" bpick="*appimage*" mv="Wez* -> wezterm" pick="wezterm"
+zinit light wez/wezterm
+
+# FORGIT
+zinit ice wait lucid
+zinit load wfxr/forgit
+
+# LAZYGIT
+zinit ice lucid wait="0" as="program" from="gh-r" bpick="*Linux_x86_64*" pick="lazygit" atload="alias lg='lazygit'"
+zinit light jesseduffield/lazygit
+
+# LAZYDOCKER
+zinit ice lucid wait="0" as="program" from="gh-r" bpick="*Linux_x86_64*" pick="lazydocker"
+zinit light jesseduffield/lazydocker
+
+# FD
+zinit ice as="command" from="gh-r" bpick="*amd64.deb" pick="usr/bin/fd" 
+zinit light sharkdp/fd
+
+# GLOW
+zinit ice lucid wait"0" as"program" from"gh-r" bpick='*linux_amd64.deb' pick"usr/bin/glow"
+zinit light charmbracelet/glow
+
+# BAT
+zinit ice from="gh-r" as="program" pick="usr/bin/bat" bpick="*amd64.deb" atload="alias cat=bat"
+zinit light sharkdp/bat
+
+# BAT-EXTRAS
+zinit ice lucid wait="1" as="program" pick="src/batgrep.sh"
+zinit ice lucid wait="1" as="program" pick="src/batdiff.sh"
+zinit light eth-p/bat-extras
+alias rg=batgrep.sh
+alias bd=batdiff.sh
+alias man=batman.sh
+
+# EXA
+zinit ice wait="2" lucid from="gh-r" as="program" mv="bin/exa* -> exa"
+zinit light ogham/exa
+zinit ice wait blockf atpull'zinit creinstall -q .'
+
+zinit light b4b4r07/emoji-cli
+
+# https://github.com/ajeetdsouza/zoxide#installation
+zsh-defer eval "$(zoxide init zsh)"
