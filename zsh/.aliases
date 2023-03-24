@@ -1,3 +1,5 @@
+# vim: set ft=zsh:
+
 # clear out your system logfiles - speed up zsh
 alias clean="sudo rm /private/var/log/asl/*.asl"
 

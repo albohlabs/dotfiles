@@ -1,10 +1,12 @@
+# vim: set ft=zsh:
+
 export GIT_EDITOR='nvim'
 export VISUAL='nvim'
 export EDITOR='nvim'
 
 export PATH=~/.local/bin:~/.cargo/bin:$PATH
 
-export TERM=xterm-256color
+# export TERM=xterm-256color
 
 export JAVA_HOME=/usr/lib/jvm/default-java
 export M2_HOME=/opt/maven

@@ -1,11 +1,11 @@
 -- https://wezfurlong.org/wezterm/config/lua/config/
+local wezterm = require 'wezterm';
 
 return {
   -- Font config
-  family = "Hasklug Nerd Font",
-  -- family = "FiraCode Nerd Font Mono",
-  font_size = 11.3,
-  line_height = 1.23,
+  font = wezterm.font("Hasklug Nerd Font"),
+  font_size = 12,
+  line_height = 1.2,
   warn_about_missing_glyphs = false,
   -- Cursor style
   default_cursor_style = "BlinkingBlock",

@@ -1,3 +1,5 @@
+# vim: set ft=zsh:
+
 # when connect to usb-c hub audio in/out is set to hub - set back to headphones.
 # https://askubuntu.com/a/1207638
 # gedit /etc/pulse/default.pa

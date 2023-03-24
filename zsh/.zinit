@@ -99,6 +99,10 @@ zinit light jesseduffield/lazydocker
 zinit ice as="command" from="gh-r" bpick="*amd64.deb" pick="usr/bin/fd" 
 zinit light sharkdp/fd
 
+# TREE-SITTER
+zinit ice as="program" from="gh-r" mv="tree* -> tree-sitter" pick="tree-sitter"
+zinit light tree-sitter/tree-sitter
+
 # GLOW
 zinit ice lucid wait"0" as"program" from"gh-r" bpick='*linux_amd64.deb' pick"usr/bin/glow"
 zinit light charmbracelet/glow
@@ -119,8 +123,6 @@ alias man=batman.sh
 zinit ice wait="2" lucid from="gh-r" as="program" mv="bin/exa* -> exa"
 zinit light ogham/exa
 zinit ice wait blockf atpull'zinit creinstall -q .'
-
-zinit light b4b4r07/emoji-cli
 
 # https://github.com/ajeetdsouza/zoxide#installation
 zsh-defer eval "$(zoxide init zsh)"
