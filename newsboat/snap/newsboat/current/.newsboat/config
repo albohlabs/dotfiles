@@ -47,6 +47,7 @@ bind-key R reload-all
 bind-key A mark-feed-read
 
 bind-key o open-in-browser-noninteractively
+bind-key O open-all-unread-in-browser
 
 bind-key U show-urls
 bind-key ESC quit
