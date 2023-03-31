@@ -16,10 +16,10 @@ alias cat='bat -P'
 # https://github.com/denilsonsa/prettyping
 # alias ping='prettyping --nolegend'
 
-alias vo='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
+alias vo='fd --type f --hidden --exclude .git | fzf-tmux -p --sort | xargs nvim'
 # alias cbr=git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" --pointer="" | xargs git checkout
 # alias cbr=git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" | xargs git checkout
-alias fzfp='fzf --height 100% --preview "bat --style=numbers --color=always {}"'
+alias fzfp='fzf --height 100% --sort --preview "bat --style=numbers --color=always {}"'
 
 alias rm='gio trash'
 

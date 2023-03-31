@@ -56,9 +56,6 @@ unset file
 # https://github.com/zsh-users/zsh-syntax-highlighting
 # source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export PNPM_HOME="/home/dpf/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-
 # https://github.com/ajeetdsouza/zoxide#installation
 # eval "$(zoxide init zsh)"
 
@@ -85,10 +82,7 @@ export FZF_DEFAULT_OPTS="
 --info=inline
 --height=100%
 --multi
---preview-window=right:50%
---preview-window=sharp
---preview-window=cycle
---preview '([[ -f {} ]] && (bat --style=numbers --color=always --theme=\"Catppuccin-mocha\" --line-range :500 {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
+--no-sort
 --prompt='λ -> '
 --pointer='|>'
 --marker='✓'
@@ -96,3 +90,11 @@ export FZF_DEFAULT_OPTS="
 --bind 'ctrl-v:execute(code {+})'"
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# pnpm
+export PNPM_HOME="/home/dpf/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
