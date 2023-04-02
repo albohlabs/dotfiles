@@ -16,6 +16,13 @@ return {
 
   {
     "kevinhwang91/nvim-ufo",
+    init = function()
+      vim.opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+      vim.opt.foldcolumn = "0"
+      vim.opt.foldlevel = 99
+      vim.opt.foldlevelstart = 99
+      vim.opt.foldenable = true
+    end,
     dependencies = { "kevinhwang91/promise-async" },
     event = "BufReadPost",
     keys = {
