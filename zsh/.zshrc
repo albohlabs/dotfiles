@@ -88,13 +88,24 @@ export FZF_DEFAULT_OPTS="
 --marker='✓'
 --bind 'ctrl-e:execute(nvim {} < /dev/tty > /dev/tty 2>&1)' > selected
 --bind 'ctrl-v:execute(code {+})'"
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+FD_OPTIONS="--hidden --follow"
+export FZF_DEFAULT_COMMAND="fd --type f --type l $FD_OPTIONS || git ls-files --cached --others --exclude-standard"
+export FZF_CTRL_T_COMMAND="fd $FD_OPTIONS"
+export FZF_ALT_C_COMMAND="fd --type d $FD_OPTIONS"
+export FZF_COMPLETION_OPTS="-x"
 
-# pnpm
+_fzf_compgen_path() {
+    fd --hidden --follow . "$1"
+}
+_fzf_compgen_dir() {
+    fd --type d --hidden --follow . "$1"
+}
+
+#####################
+# PNPM SETTINGS      #
+#####################
 export PNPM_HOME="/home/dpf/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
