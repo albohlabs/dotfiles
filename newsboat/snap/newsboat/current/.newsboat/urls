@@ -90,8 +90,8 @@ http://www.newthinktank.com/feed/ "Linux" "~DerekBanas"
 https://itsfoss.com/feed/ "~It's FOSS" "Linux"
 
 
-https://readrust.net/all/feed.rss "~read rust" "rust"
-http://feeds.pinboard.in/rss/t:rust "Linux" "~Pinboard: rust"
+# https://readrust.net/all/feed.rss "~read rust" "rust"
+# http://feeds.pinboard.in/rss/t:rust "~Pinboard: rust" "rust"
 
 https://the-guild.dev/feed.xml "tech" 
 https://www.samhh.com/rss.xml "~samhh" "tech"
@@ -243,10 +243,11 @@ https://idlewords.com/index.xml "stuff01"
 https://saschalobo.com/category/blog/feed/ "stuff01"
 http://feeds.feedburner.com/alltagsforschung "stuff01"
 https://pieceoplastic.com/zk/feed/ "stuff01"
+https://gitta-peyn.de/rss/ "stuff01"
 
-https://nitter.net/BernardoKastrup/rss "stuff01"
+# https://nitter.net/BernardoKastrup/rss "stuff01"
 # https://nitter.net/anitaleirfall/rss "stuff01"
-https://nitter.net/Plinz/rss "stuff01"
+# https://nitter.net/Plinz/rss "stuff01"
 
 
 https://itsa2amgrunge.com/feed/ "stuff02"
@@ -483,6 +484,7 @@ https://www.trysmudford.com/blog/index.xml "frontend"
 https://thecodebarbarian.com/feed.xml "frontend"
 https://viljamis.com/atom.xml "frontend"
 https://zellwk.com/feed.xml "frontend"
+https://dev.to/feed/jkettmann "frontend"
 
 https://igloomag.com/feed "Music"
 https://acloserlisten.com/feed/ "Music"
