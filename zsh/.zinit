@@ -1,4 +1,4 @@
-# vim: set ft=zsh:
+# vim: set ft=zsh
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -60,7 +60,9 @@ zinit light dandavison/delta
 zinit ice as"program" pick"bin/git-fuzzy"
 zinit light bigH/git-fuzzy
 
-zinit light zsh-users/zsh-autosuggestions
+zinit wait lucid atload'_zsh_autosuggest_start' light-mode for \
+    zsh-users/zsh-autosuggestions
+
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light djui/alias-tips
 
@@ -75,7 +77,8 @@ zinit ice from="gh-r" as="program" bpick="*amd64.deb" pick="usr/bin/rg"
 zinit light BurntSushi/ripgrep
 
 # NEOVIM
-zinit ice from="gh-r" as="program" bpick="*linux64.deb" ver="nightly" pick="usr/bin/nvim"
+zinit ice from="gh-r" as="program" bpick="*appimage*" ver="nightly" mv="nvim* -> nvim" pick="nvim"
+# zinit ice from="gh-r" as="program" bpick="*linux64.deb" ver="nightly" pick="usr/bin/nvim"
 zinit light neovim/neovim
 
 # WEZTERM
@@ -96,7 +99,7 @@ zinit ice lucid wait="0" as="program" from="gh-r" bpick="*Linux_x86_64*" pick="l
 zinit light jesseduffield/lazydocker
 
 # FD
-zinit ice as="command" from="gh-r" bpick="*amd64.deb" pick="usr/bin/fd" 
+zinit ice as="command" from="gh-r" bpick="*amd64.deb" pick="usr/bin/fd"
 zinit light sharkdp/fd
 
 # TREE-SITTER
