@@ -110,6 +110,11 @@ zinit light tree-sitter/tree-sitter
 zinit ice lucid wait"0" as"program" from"gh-r" bpick='*linux_amd64.deb' pick"usr/bin/glow"
 zinit light charmbracelet/glow
 
+# yt-dlp
+zinit ice from="gh-r" as="program" pick="yt-dlp/yt-dlp" bpick="*tar.gz" 
+zinit light yt-dlp/yt-dlp
+alias yta="yt-dlp --extract-audio --audio-format mp3 --add-metadata"
+
 # BAT
 zinit ice from="gh-r" as="program" pick="usr/bin/bat" bpick="*amd64.deb" atload="alias cat=bat"
 zinit light sharkdp/bat
