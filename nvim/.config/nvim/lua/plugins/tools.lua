@@ -1,5 +1,13 @@
 return {
   {
+    "zbirenbaum/copilot.lua",
+    opts = {
+      suggestion = { enabled = true },
+      panel = { enabled = true },
+    },
+  },
+
+  {
     "NvChad/nvim-colorizer.lua",
     event = "BufReadPre",
     opts = {

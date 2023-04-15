@@ -1,5 +1,0 @@
-return {
-  {
-    'luukvbaal/statuscol.nvim',
-  }
-}
