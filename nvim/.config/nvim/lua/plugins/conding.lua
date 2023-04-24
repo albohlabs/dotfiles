@@ -195,4 +195,10 @@ return {
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji" } }))
     end,
   },
+
+  {
+    "windwp/nvim-ts-autotag",
+    event = "VeryLazy",
+    config = true,
+  },
 }
