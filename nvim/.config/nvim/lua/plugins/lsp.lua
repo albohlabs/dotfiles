@@ -38,9 +38,6 @@ return {
         },
         -- svelte = {},
         html = {},
-        -- gopls = {},
-        -- marksman = {},
-        -- pyright = {},
         -- rust_analyzer = {
         --   settings = {
         --     ["rust-analyzer"] = {
@@ -110,10 +107,16 @@ return {
             },
           },
         },
-        -- teal_ls = {},
         -- vimls = {},
       },
       setup = {},
+      diagnostics = {
+        virtual_text = {
+          -- this will set set the prefix to a function that returns the diagnostics icon based on the severity
+          -- this only works on a recent 0.10.0 build. Will be set to "●" when not supported
+          -- prefix = "icons",
+        },
+      },
     },
     keys = {
       {
@@ -139,7 +142,7 @@ return {
     opts = function(_, opts)
       local nls = require("null-ls")
       vim.list_extend(opts.sources, {
-        nls.builtins.diagnostics.markdownlint,
+        -- nls.builtins.diagnostics.markdownlint,
 
         -- nls.builtins.formatting.prettierd,
         -- nls.builtins.diagnostics.eslint_d,
@@ -150,12 +153,12 @@ return {
         -- https://github.com/jose-elias-alvarez/typescript.nvim#null-ls
         -- require("typescript.extensions.null-ls.code-actions"),
 
-        nls.builtins.code_actions.gitsigns,
+        -- nls.builtins.code_actions.gitsigns,
 
         -- nls.builtins.formatting.rustfmt,
 
         -- Lua
-        nls.builtins.formatting.stylua,
+        -- nls.builtins.formatting.stylua,
         nls.builtins.diagnostics.luacheck.with({
           condition = function(utils)
             return utils.root_has_file({ ".luacheckrc" })
@@ -163,11 +166,11 @@ return {
         }),
 
         -- Shell
-        nls.builtins.diagnostics.shellcheck,
-        nls.builtins.code_actions.shellcheck,
+        -- nls.builtins.diagnostics.shellcheck,
+        -- nls.builtins.code_actions.shellcheck,
 
-        nls.builtins.formatting.shfmt,
-        nls.builtins.diagnostics.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
+        -- nls.builtins.formatting.shfmt,
+        -- nls.builtins.diagnostics.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
       })
     end,
   },
@@ -195,31 +198,7 @@ return {
     "williamboman/mason.nvim",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
-        -- lua stuff
-        "lua-language-server",
-        "stylua",
-
-        "json-lsp",
-
-        "yaml-language-server",
-
-        -- shell
-        "shfmt",
-        "shellcheck",
-        "bash-language-server",
-
         -- "haskell-language-server",
-
-        "css-lsp",
-        "cssmodules-language-server",
-        "eslint-lsp",
-        "eslint_d",
-        "graphql-language-service-cli",
-        "html-lsp",
-        "prettierd",
-        "prisma-language-server",
-        "stylelint-lsp",
-        "typescript-language-server",
       })
     end,
   },
