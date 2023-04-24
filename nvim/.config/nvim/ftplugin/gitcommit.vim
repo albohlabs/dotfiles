@@ -12,8 +12,6 @@ setlocal textwidth=72
 setlocal colorcolumn=73,51
 
 " Autoformatting
-setlocal formatoptions+=ca  " Enable formatting everywhere, not just comments
-
 setlocal spell
 setlocal iskeyword+=-
 
