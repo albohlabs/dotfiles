@@ -42,7 +42,7 @@ https://www.trackawesomelist.com/rockerBOO/awesome-neovim/rss.xml "~ awesome-neo
 https://nitter.net/alexanderkondov/rss "~Twitter: Alex Kondov" "tech.social"
 https://nitter.net/GabrielVergnaud/rss "~Twitter: Gabriel Vergnaud" "tech.social"
 https://nitter.net/Folke/rss "~Twitter: Folke Lemaitre" "tech.social"
-https://nitter.net/mattpocockuk/rss "tech.social"
+# https://nitter.net/mattpocockuk/rss "tech.social"
 https://nitter.net/rtfeldman/rss "tech.social"
 https://nitter.net/trilon_io/rss "tech.social"
 https://nitter.net/TkDodo/rss "tech.social"
@@ -62,7 +62,6 @@ https://nitter.net/khalilstemmler/rss "tech.social"
 https://nitter.net/learnvim/rss "tech.social"
 https://nitter.net/mhevery/rss "tech.social"
 https://nitter.net/acemarke/rss "tech.social"
-https://fosstodon.org/@rauschma.rss "tech.social"
 
 
 http://feeds.feedburner.com/tocadotux "Linux" "~Toca do Tux"
