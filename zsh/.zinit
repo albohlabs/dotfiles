@@ -37,6 +37,33 @@ zinit ice as"command" from"gh-r" \
 zinit light starship/starship
 
 # FZF
+export FZF_DEFAULT_OPTS="
+--ansi
+--layout=default
+--info=inline
+--height=100%
+--multi
+--no-sort
+--prompt='λ -> '
+--pointer='|>'
+--marker='✓'
+--bind 'ctrl-e:execute(nvim {} < /dev/tty > /dev/tty 2>&1)' > selected
+--bind 'ctrl-v:execute(code {+})'"
+FD_OPTIONS="--hidden --follow"
+export FZF_DEFAULT_COMMAND="fd --type f --type l $FD_OPTIONS || git ls-files --cached --others --exclude-standard"
+export FZF_CTRL_T_COMMAND="fd $FD_OPTIONS"
+export FZF_ALT_C_COMMAND="fd --type d $FD_OPTIONS"
+export FZF_COMPLETION_OPTS="-x"
+# export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+# export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+_fzf_compgen_path() {
+    fd --hidden --follow . "$1"
+}
+_fzf_compgen_dir() {
+    fd --type d --hidden --follow . "$1"
+}
+
 zinit ice from="gh-r" as="command" bpick="*linux_amd64*"
 zinit light junegunn/fzf
 
@@ -45,7 +72,8 @@ zinit ice lucid wait'0c' as="command" id-as="junegunn/fzf-tmux" pick="bin/fzf-tm
 zinit light junegunn/fzf
 
 # BIND MULTIPLE WIDGETS USING FZF
-zinit ice lucid wait'0c' multisrc"shell/{completion,key-bindings}.zsh" id-as="junegunn/fzf_completions" pick="/dev/null"
+zinit ice lucid wait'0c' multisrc"shell/completion.zsh" id-as="junegunn/fzf_completions" pick="/dev/null"
+# zinit ice lucid wait'0c' multisrc"shell/{completion,key-bindings}.zsh" id-as="junegunn/fzf_completions" pick="/dev/null"
 zinit light junegunn/fzf
 
 # https://github.com/Aloxaf/fzf-tab
@@ -131,6 +159,22 @@ alias man=batman.sh
 zinit ice wait="2" lucid from="gh-r" as="program" mv="bin/exa* -> exa"
 zinit light ogham/exa
 zinit ice wait blockf atpull'zinit creinstall -q .'
+
+# atuin
+export ATUIN_NOBIND="true"
+zinit load ellie/atuin 
+zsh-defer eval "bindkey '^r' _atuin_search_widget"
+# zinit lucid \
+#   light-mode for @ellie/atuin \
+# bindkey '^r' _atuin_search_widget
+# zsh-defer eval "bindkey '^e' _atuin_search_widget"
+# bindkey '^e' _atuin_search_widget
+
+# zinit ice wait"5" lucid \
+#     from"gh" pick"atuin.plugin.zsh" \
+#     atinit"export ATUIN_NOBIND='true'" \
+#     atload"bindkey '^e' _atuin_search_widget"
+# zinit snippet https://github.com/ellie/atuin/blob/main/atuin.plugin.zsh
 
 # https://github.com/ajeetdsouza/zoxide#installation
 zsh-defer eval "$(zoxide init zsh)"

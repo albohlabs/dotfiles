@@ -8,24 +8,13 @@ export PATH=~/.local/bin:~/.cargo/bin:$PATH
 
 # export TERM=xterm-256color
 
-export JAVA_HOME=/usr/lib/jvm/default-java
+# export JAVA_HOME=/usr/lib/jvm/default-java
+export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
 export M2_HOME=/opt/maven
 export MAVEN_HOME=/opt/maven
 export PATH=${M2_HOME}/bin:${PATH}
 
 export MANPAGER="/bin/sh -c \"col -b | vi -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
-# export DENO_INSTALL="/home/dpf/.deno"
-# export PATH="$DENO_INSTALL/bin:$PATH"
-
-# https://github.com/catppuccin/fzf/blob/main/frappe.md
-export FZF_DEFAULT_OPTS=" \
-  --color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
-  --color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
-  --color=marker:#f2d5cf,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284"
-
 export PNPM_HOME="/home/dpf/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-
-# export BUN_HOME="/home/dpf/.bun/bin"
-# export PATH="$BUN_HOME:$PATH"
