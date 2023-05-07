@@ -1,6 +1,9 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      "windwp/nvim-ts-autotag",
+    },
     opts = function(_, opts)
       if type(opts.ensure_installed) == "table" then
         vim.list_extend(opts.ensure_installed, {
@@ -37,6 +40,10 @@ return {
       enable = true,
       use_virtual_text = true,
       lint_events = { "BufWrite", "CursorHold" },
+    },
+    autotag = {
+      -- Setup autotag using treesitter config.
+      enable = true,
     },
   },
 

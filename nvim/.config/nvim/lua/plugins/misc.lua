@@ -7,6 +7,10 @@ return {
         gitsigns = true,
         tmux = true,
       },
+      wezterm = {
+        enabled = false,
+        font = "+4",
+      },
     },
     keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
   },
@@ -146,6 +150,26 @@ return {
       --   end,
       --   desc = "Tmux Resize Right",
       -- },
+    },
+  },
+
+  "gbprod/cutlass.nvim",
+
+  -- open git file/repo
+  {
+    "almo7aya/openingh.nvim",
+    cmd = { "OpenInGHFile", "OpenInGHRepo" },
+    keys = {
+      {
+        "<leader>gr",
+        "<Cmd>OpenInGHRepo<CR>",
+        desc = "Opens the project's git repository",
+      },
+      {
+        "<leader>gf",
+        "<Cmd>OpenInGHFile<CR>",
+        desc = "Opens the current file repository page",
+      },
     },
   },
 }

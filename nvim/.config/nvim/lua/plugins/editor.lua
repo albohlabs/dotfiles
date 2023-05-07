@@ -14,4 +14,11 @@ return {
     config = true,
     keys = { { "<leader>gd", "<cmd>DiffviewOpen<cr>", desc = "DiffView" } },
   },
+
+  {
+    "mbbill/undotree",
+    keys = {
+      { "<leader>ut", "<Cmd>UndotreeToggle<CR>", desc = "toggle Undotree" },
+    },
+  },
 }

@@ -1,36 +1,29 @@
 return {
-  "telescope.nvim",
-  dependencies = {
-    "nvim-telescope/telescope-fzf-native.nvim",
-    build = "make",
-    config = function(_, opts)
-      local telescope = require("telescope")
-      telescope.setup(opts)
-      telescope.load_extension("fzf")
-      telescope.load_extension("notify")
-    end,
-  },
-  opts = {
-    defaults = {
-      layout_strategy = "horizontal",
-      layout_config = { prompt_position = "top" },
-      sorting_strategy = "ascending",
-      winblend = 0,
+  {
+    "telescope.nvim",
+    dependencies = {
+      "nvim-telescope/telescope-fzf-native.nvim",
+      build = "make",
+      config = function(_, opts)
+        local telescope = require("telescope")
+        telescope.setup(opts)
+        telescope.load_extension("fzf")
+        telescope.load_extension("notify")
+        -- require("telescope").load_extension("fzf")
+      end,
     },
-    pickers = {
-      buffers = {
-        prompt_prefix = "﬘ ",
-      },
-      commands = {
-        prompt_prefix = " ",
-      },
-      git_files = {
-        prompt_prefix = " ",
-        show_untracked = true,
-      },
-      find_files = {
-        prompt_prefix = " ",
-        find_command = { "fd", "--follow", "--hidden" },
+    opts = {
+      defaults = {
+        mappings = {
+          i = {
+            ["<C-p>"] = require("telescope.actions.layout").toggle_preview,
+            ["<C-j>"] = require("telescope.actions").move_selection_next,
+            ["<C-k>"] = require("telescope.actions").move_selection_previous,
+            -- ["<Esc>"] = require("telescope.actions").close,
+          },
+          n = { ["<C-p>"] = require("telescope.actions.layout").toggle_preview },
+        },
+        preview = { hide_on_startup = true },
       },
     },
   },
