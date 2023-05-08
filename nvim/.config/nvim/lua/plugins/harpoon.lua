@@ -4,6 +4,10 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope.nvim",
   },
+  config = function()
+    require("harpoon").setup()
+    require("telescope").load_extension("harpoon")
+  end,
   cmd = { "Harpoon" },
   keys = {
     { "<leader>m", desc = "Harpoon" },
@@ -17,7 +21,9 @@ return {
     {
       "<leader>a",
       function()
-        require("harpoon.ui").toggle_quick_menu()
+        -- require("harpoon.ui").toggle_quick_menu()
+        -- TODO: style me
+        require("telescope").extensions.harpoon.marks()
       end,
       desc = "Open harpoon quick menu",
     },
