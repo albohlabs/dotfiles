@@ -1,4 +1,19 @@
 return {
+  {
+    "goolord/alpha-nvim",
+    opts = function(_, dashboard)
+      local logo = [[
+ ███╗   ██╗ ███████╗  ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗
+ ████╗  ██║ ██╔════╝ ██╔═══██╗ ██║   ██║ ██║ ████╗ ████║
+ ██╔██╗ ██║ █████╗   ██║   ██║ ██║   ██║ ██║ ██╔████╔██║
+ ██║╚██╗██║ ██╔══╝   ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║
+ ██║ ╚████║ ███████╗ ╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║
+ ╚═╝  ╚═══╝ ╚══════╝  ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝
+      ]]
+      dashboard.section.header.val = vim.split(logo, "\n")
+    end,
+  },
+
   -- floating winbar
   {
     "b0o/incline.nvim",
@@ -28,7 +43,8 @@ return {
     },
     keys = { { "<leader>Z", "<cmd>WindowsMaximize<cr>", desc = "Zoom" } },
     config = function()
-      vim.o.winwidth = 5
+      vim.o.winwidth = 10
+      vim.o.winminwidth = 10
       vim.o.equalalways = false
       require("windows").setup({
         animation = { enable = false, duration = 150 },

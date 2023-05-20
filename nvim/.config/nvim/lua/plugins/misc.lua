@@ -163,12 +163,25 @@ return {
       {
         "<leader>gr",
         "<Cmd>OpenInGHRepo<CR>",
-        desc = "Opens the project's git repository",
+        desc = "Opens origin repo",
       },
       {
         "<leader>gf",
         "<Cmd>OpenInGHFile<CR>",
-        desc = "Opens the current file repository page",
+        desc = "Opens origin file",
+      },
+    },
+  },
+
+  {
+    "emmanueltouzery/agitator.nvim",
+    keys = {
+      {
+        "<leader>gb",
+        function()
+          require("agitator").git_blame_toggle()
+        end,
+        desc = "Blame file",
       },
     },
   },

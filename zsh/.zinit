@@ -23,8 +23,18 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
+# cache to eval to enhance performance
 zinit light mroth/evalcache
+# this loads zsh-defer faster
 zinit light romkatv/zsh-defer
+
+# zsh plugins
+zinit snippet OMZP::git
+zinit snippet OMZP::docker
+zinit snippet OMZP::docker-compose
+zinit snippet OMZP::node
+zinit snippet OMZP::tmux
+zinit snippet OMZP::ubuntu
 
 # https://starship.rs/
 # Load starship theme
@@ -135,7 +145,7 @@ zinit ice as="program" from="gh-r" mv="tree* -> tree-sitter" pick="tree-sitter"
 zinit light tree-sitter/tree-sitter
 
 # GLOW
-zinit ice lucid wait"0" as"program" from"gh-r" bpick='*linux_amd64.deb' pick"usr/bin/glow"
+zinit ice lucid wait"0" as"program" from"gh-r" bpick="*amd64.deb" pick"usr/bin/glow"
 zinit light charmbracelet/glow
 
 # yt-dlp
@@ -164,17 +174,6 @@ zinit ice wait blockf atpull'zinit creinstall -q .'
 export ATUIN_NOBIND="true"
 zinit load ellie/atuin 
 zsh-defer eval "bindkey '^r' _atuin_search_widget"
-# zinit lucid \
-#   light-mode for @ellie/atuin \
-# bindkey '^r' _atuin_search_widget
-# zsh-defer eval "bindkey '^e' _atuin_search_widget"
-# bindkey '^e' _atuin_search_widget
-
-# zinit ice wait"5" lucid \
-#     from"gh" pick"atuin.plugin.zsh" \
-#     atinit"export ATUIN_NOBIND='true'" \
-#     atload"bindkey '^e' _atuin_search_widget"
-# zinit snippet https://github.com/ellie/atuin/blob/main/atuin.plugin.zsh
 
 # https://github.com/ajeetdsouza/zoxide#installation
 zsh-defer eval "$(zoxide init zsh)"

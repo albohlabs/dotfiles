@@ -19,6 +19,11 @@ vim.opt.fillchars = {
   eob = " ",
 }
 
+vim.opt.grepprg = "rg --vimgrep --smart-case --"
+
+vim.g.os = vim.loop.os_uname().sysname
+vim.g.open_command = vim.g.os == "Darwin" and "open" or "xdg-open"
+
 -- Disable comment continuation
 vim.opt.formatoptions:remove("o") -- Don't continue after 'o' or 'O'
 vim.opt.formatoptions:remove("r") -- Don't continue after <cr>

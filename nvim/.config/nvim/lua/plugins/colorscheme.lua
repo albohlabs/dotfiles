@@ -5,6 +5,7 @@ return {
     lazy = true,
     opts = {
       flavour = "macchiato", -- latte, frappe, macchiato, or mocha
+      -- flavour = "latte",
       background = {
         light = "latte",
         dark = "macchiato",

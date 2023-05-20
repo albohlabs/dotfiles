@@ -1,3 +1,5 @@
+local Util = require("lazyvim.util")
+
 return {
   "telescope.nvim",
   dependencies = {
@@ -10,6 +12,18 @@ return {
       telescope.load_extension("notify")
     end,
   },
+  keys = {
+    {
+      "<leader>sm",
+      Util.telescope("lsp_document_symbols", {
+        symbols = {
+          "Function",
+          "Method",
+        },
+      }),
+      desc = "Goto Symbol",
+    },
+  },
   opts = {
     defaults = {
       layout_config = {
@@ -17,7 +31,7 @@ return {
           width = 0.9,
         },
       },
-      path_display = { "smart" },
+      -- path_display = { "smart" },
       -- path_display = {
       --   shorten = {
       --     len = 2,

@@ -10,17 +10,23 @@ alias copy=pbcopy
 alias paste=pbpaste
 
 # https://github.com/sharkdp/bat
-alias cat='bat -P'
+alias cat='bat'
 # https://github.com/dalance/procs
 # alias ps='procs'
 # https://github.com/denilsonsa/prettyping
 # alias ping='prettyping --nolegend'
 
 alias vo='fd --type f --hidden --exclude .git | fzf-tmux -p --sort | xargs --no-run-if-empty nvim'
-alias vc='g ls-files -m --others --exclude-standard | fzf-tmux -p --sort | xargs --no-run-if-empty nvim'
+alias vg='g ls-files -m --others --exclude-standard | fzf-tmux -p --sort | xargs --no-run-if-empty nvim'
 # alias cbr=git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" --pointer="" | xargs git checkout
 # alias cbr=git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" | xargs git checkout
 alias fzfp='fzf --height 100% --sort --preview "bat --style=numbers --color=always {}"'
+
+# alias diffstaged="git diff --staged | nvim - +Diffurcate '+Telescope find_files'"
+# alias diffmain="git diff main.. | nvim - +Diffurcate '+Telescope find_files'"
+# alias diffmaster="git diff master.. | nvim - +Diffurcate '+Telescope find_files'"
+alias rebasemain='git pull origin main --rebase'
+alias rebasedev='git pull origin develop --rebase'
 
 alias rm='gio trash'
 
@@ -30,11 +36,16 @@ alias mux=tmux
 
 # https://github.com/ogham/exa
 exa_options='--links --group --changed --time-style long-iso --icons'
-# replace ls with exa
-# alias ls='exa $(printf $exa_options)'
-# alias ll="exa --long --header"
 alias ls="exa --icons --sort type -a"
 alias ll="exa --icons --long --sort type -a"
+
+alias gez="$EDITOR ~/.zshrc"
+alias gsz="source ~/.zshrc"
+alias gea="$EDITOR ~/.aliases"
+alias gsa="source ~/.aliases"
+alias get="$EDITOR ~/.tmux.conf"
+alias gst="source ~/.tmux.conf"
+alias ged="$EDITOR ~/.dotfiles"
 
 alias tree="exa --long --tree --level=4 -a $(printf $exa_options)"
 

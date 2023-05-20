@@ -2,24 +2,6 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
--- local number_toggle = vim.api.nvim_create_augroup("RelativeNumber", { clear = true })
---
--- vim.api.nvim_create_autocmd("InsertEnter", {
---   callback = function()
---     vim.cmd("set norelativenumber")
---   end,
---   group = number_toggle,
---   pattern = "*",
--- })
---
--- vim.api.nvim_create_autocmd("InsertLeave", {
---   callback = function()
---     vim.cmd("set relativenumber")
---   end,
---   group = number_toggle,
---   pattern = "*",
--- })
-
 -- show cursor line only in active window
 vim.api.nvim_create_autocmd({ "InsertLeave", "WinEnter" }, {
   callback = function()
@@ -36,6 +18,25 @@ vim.api.nvim_create_autocmd({ "InsertEnter", "WinLeave" }, {
     if cl then
       vim.api.nvim_win_set_var(0, "auto-cursorline", cl)
       vim.wo.cursorline = false
+    end
+  end,
+})
+
+-- Disable diagnostics in a .env file
+vim.api.nvim_create_autocmd("BufRead", {
+  pattern = ".env",
+  callback = function()
+    vim.diagnostic.disable(0)
+  end,
+})
+
+-- Disable tree-sitter for files over 1MB in size
+vim.api.nvim_create_autocmd("BufRead", {
+  pattern = "*",
+  callback = function()
+    local size = vim.fn.getfsize(vim.fn.expand("%:p"))
+    if size > 500000 then
+      vim.treesitter.stop()
     end
   end,
 })
