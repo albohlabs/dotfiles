@@ -43,10 +43,43 @@ return {
       vim.opt.foldenable = true
     end,
     dependencies = { "kevinhwang91/promise-async" },
-    event = "BufReadPost",
+    event = { "BufReadPost", "InsertEnter" },
     keys = {
-      { "zR", "<cmd>lua require('ufo').openAllFolds()<cr>", desc = "Open folds" },
-      { "zM", "<cmd>lua require('ufo').closeAllFolds()<cr>", desc = "Close folds" },
+      {
+        "zR",
+        function()
+          require("ufo").openAllFolds()
+        end,
+        desc = "Open all folds",
+      },
+      {
+        "zM",
+        function()
+          require("ufo").closeAllFolds()
+        end,
+        desc = "Close all folds",
+      },
+      {
+        "zr",
+        function()
+          require("ufo").openFoldsExceptKinds()
+        end,
+        desc = "Fold less",
+      },
+      {
+        "zm",
+        function()
+          require("ufo").closeFoldsWith()
+        end,
+        desc = "Fold more",
+      },
+      {
+        "zp",
+        function()
+          require("ufo").peekFoldedLinesUnderCursor()
+        end,
+        desc = "Peek fold",
+      },
     },
     opts = {
       provider_selector = function()

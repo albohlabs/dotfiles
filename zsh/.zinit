@@ -29,12 +29,13 @@ zinit light mroth/evalcache
 zinit light romkatv/zsh-defer
 
 # zsh plugins
-zinit snippet OMZP::git
+zinit snippet OMZP::1password
+zinit snippet OMZP::aws
+zinit snippet OMZP::cp
 zinit snippet OMZP::docker
 zinit snippet OMZP::docker-compose
-zinit snippet OMZP::node
-zinit snippet OMZP::tmux
-zinit snippet OMZP::ubuntu
+zinit snippet OMZP::git
+# zinit snippet OMZP::tmux
 
 # https://starship.rs/
 # Load starship theme

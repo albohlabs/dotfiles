@@ -55,32 +55,87 @@ return {
   {
     "petertriho/nvim-scrollbar",
     event = "BufReadPost",
-    config = function()
-      local scrollbar = require("scrollbar")
-      scrollbar.setup({
-        excluded_filetypes = { "prompt", "TelescopePrompt", "noice", "notify" },
-      })
-    end,
-  },
-
-  {
-    "akinsho/bufferline.nvim",
     opts = {
-      options = {
-        offsets = { text_align = "left" },
-        separator_style = { "", "" },
-        indicator = { style = "none" },
-        show_buffer_close_icons = false,
-        show_close_icon = false,
-        show_tab_indicators = false,
-        always_show_bufferline = true,
+      set_highlights = false,
+      excluded_filetypes = {
+        "prompt",
+        "TelescopePrompt",
+        "noice",
+        "neo-tree",
+        "dashboard",
+        "alpha",
+        "lazy",
+        "mason",
+        "DressingInput",
+        "",
+      },
+      handlers = {
+        gitsigns = true,
       },
     },
   },
 
   {
-    "luukvbaal/statuscol.nvim",
-    config = true,
+    "kosayoda/nvim-lightbulb",
+    opts = {
+      sign = {
+        enabled = true,
+        -- Priority of the gutter sign
+        priority = 20,
+      },
+      status_text = {
+        enabled = true,
+        -- Text to provide when code actions are available
+        text = "status_text",
+        -- Text to provide when no actions are available
+        text_unavailable = "",
+      },
+      autocmd = {
+        enabled = true,
+        -- see :help autocmd-pattern
+        pattern = { "*" },
+        -- see :help autocmd-events
+        events = { "CursorHold", "CursorHoldI", "LspAttach" },
+      },
+    },
+  },
+
+  {
+    "akinsho/bufferline.nvim",
+    event = { "BufReadPost" },
+    opts = {
+      options = {
+        diagnostics = "nvim_lsp", -- | "nvim_lsp" | "coc",
+        -- separator_style = "", -- | "thick" | "thin" | "slope" | { 'any', 'any' },
+        separator_style = { "", "" }, -- | "thick" | "thin" | { 'any', 'any' },
+        indicator = {
+          -- icon = " ",
+          -- style = 'icon',
+          -- style = "underline",
+          style = "none",
+        },
+        close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
+        diagnostics_indicator = function(count, _, _, _)
+          if count > 9 then
+            return "9+"
+          end
+          return tostring(count)
+        end,
+        offsets = {
+          {
+            filetype = "neo-tree",
+            text = "EXPLORER",
+            text_align = "center",
+            -- separator = true,
+          },
+        },
+        hover = {
+          enabled = true,
+          delay = 0,
+          reveal = { "close" },
+        },
+      },
+    },
   },
 
   {
