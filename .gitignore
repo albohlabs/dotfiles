@@ -1,2 +1,3 @@
 __init__.py
+tmux/.config/tmux/plugins
 ranger/.config/ranger/plugins/__pycache__/

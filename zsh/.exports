@@ -18,3 +18,8 @@ export MANPAGER="/bin/sh -c \"col -b | vi -c 'set ft=man ts=8 nomod nolist nonu 
 
 export PNPM_HOME="/home/dpf/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+
+# ~/.tmux/plugins
+export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
+# ~/.config/tmux/plugins
+export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
