@@ -3,14 +3,17 @@ local Util = require("lazyvim.util")
 return {
   "telescope.nvim",
   dependencies = {
-    "nvim-telescope/telescope-fzf-native.nvim",
-    build = "make",
-    config = function(_, opts)
-      local telescope = require("telescope")
-      telescope.setup(opts)
-      telescope.load_extension("fzf")
-      telescope.load_extension("notify")
-    end,
+    "nvim-telescope/telescope-rg.nvim",
+    {
+      "nvim-telescope/telescope-fzf-native.nvim",
+      build = "make",
+      config = function(_, opts)
+        local telescope = require("telescope")
+        telescope.setup(opts)
+        telescope.load_extension("fzf")
+        telescope.load_extension("notify")
+      end,
+    },
   },
   keys = {
     {
@@ -22,6 +25,11 @@ return {
         },
       }),
       desc = "Goto Symbol",
+    },
+    {
+      "<leader>fg",
+      "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
+      desc = "Find ripgrep",
     },
   },
   opts = {
@@ -72,6 +80,16 @@ return {
         },
       },
       preview = { hide_on_startup = true },
+      vimgrep_arguments = {
+        "rg",
+        "--color=never",
+        "--no-heading",
+        "--with-filename",
+        "--line-number",
+        "--column",
+        "--smart-case",
+        "--trim",
+      },
     },
     pickers = {
       registers = {
@@ -91,7 +109,6 @@ return {
         initial_mode = "normal",
         sort_lastused = true,
         ignore_current_buffer = true,
-        layout_config = { width = 0.5 },
         -- TODO: add me to harpoon
         mappings = {
           n = { x = "delete_buffer" },

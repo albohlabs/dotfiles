@@ -14,67 +14,6 @@ return {
     end,
   },
 
-  -- floating winbar
-  {
-    "b0o/incline.nvim",
-    event = "BufReadPre",
-    config = function()
-      require("incline").setup({
-        hide = {
-          cursorline = true,
-        },
-        window = { margin = { vertical = 0, horizontal = 1 } },
-        render = function(props)
-          local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
-          local icon, color = require("nvim-web-devicons").get_icon_color(filename)
-          return { { icon, guifg = color }, { " " }, { filename } }
-        end,
-      })
-    end,
-  },
-
-  -- auto-resize windows
-  {
-    "anuvyklack/windows.nvim",
-    event = "WinNew",
-    dependencies = {
-      { "anuvyklack/middleclass" },
-      { "anuvyklack/animation.nvim", enabled = false },
-    },
-    keys = { { "<leader>Z", "<cmd>WindowsMaximize<cr>", desc = "Zoom" } },
-    config = function()
-      vim.o.winwidth = 10
-      vim.o.winminwidth = 10
-      vim.o.equalalways = false
-      require("windows").setup({
-        animation = { enable = false, duration = 150 },
-      })
-    end,
-  },
-
-  {
-    "petertriho/nvim-scrollbar",
-    event = "BufReadPost",
-    opts = {
-      set_highlights = false,
-      excluded_filetypes = {
-        "prompt",
-        "TelescopePrompt",
-        "noice",
-        "neo-tree",
-        "dashboard",
-        "alpha",
-        "lazy",
-        "mason",
-        "DressingInput",
-        "",
-      },
-      handlers = {
-        gitsigns = true,
-      },
-    },
-  },
-
   {
     "akinsho/bufferline.nvim",
     event = { "BufReadPost" },
@@ -114,40 +53,19 @@ return {
   },
 
   {
-    "aaronkollasch/nvim-navbuddy",
-    dependencies = {
-      { "neovim/nvim-lspconfig" },
-      { "SmiteshP/nvim-navic" },
-      { "MunifTanjim/nui.nvim" },
-    },
-    event = "LspAttach",
-    opts = {
-      lsp = { auto_attach = true },
-      window = {
-        border = "single", -- "rounded", "double", "solid", "none"
-        size = "100%", -- Or table format example: { height = "40%", width = "100%"}
-        position = "100%",
-      },
-    },
-    keys = {
-      { "<leader>ct", "<cmd>Navbuddy<CR>", desc = "[C]ode  [T]ree" },
-    },
-  },
-
-  {
     "nvim-lualine/lualine.nvim",
     opts = {
       options = {
         theme = "catppuccin",
       },
       sections = {
+        lualine_a = {},
+        -- lualine_b = {},
+        -- lualine_c = { diff, diagnostics },
+        -- lualine_x = {},
+        lualine_y = {},
         lualine_z = {},
       },
     },
-  },
-
-  {
-    "unblevable/quick-scope",
-    event = { "BufReadPost", "BufNewFile" },
   },
 }
