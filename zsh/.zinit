@@ -68,6 +68,9 @@ export FZF_COMPLETION_OPTS="-x"
 # export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 # export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+# Custom options to pass to fzf during interactive selection - https://github.com/ajeetdsouza/zoxide#environment-variables
+export _ZO_FZF_OPTS="$FZF_DEFAULT_OPTS"
+
 _fzf_compgen_path() {
     fd --hidden --follow . "$1"
 }
@@ -117,7 +120,6 @@ zinit light BurntSushi/ripgrep
 
 # NEOVIM
 zinit ice from="gh-r" as="program" bpick="*appimage*" ver="nightly" mv="nvim* -> nvim" pick="nvim"
-# zinit ice from="gh-r" as="program" bpick="*linux64.deb" ver="nightly" pick="usr/bin/nvim"
 zinit light neovim/neovim
 
 # WEZTERM
