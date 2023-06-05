@@ -1,3 +1,8 @@
+local icons = require("lazyvim.config").icons
+local Util = require("lazyvim.util")
+-- https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/palettes/mocha.lua
+local theme = require("catppuccin.palettes").get_palette("mocha")
+
 return {
   {
     "goolord/alpha-nvim",
@@ -56,13 +61,40 @@ return {
     "nvim-lualine/lualine.nvim",
     opts = {
       options = {
-        theme = "catppuccin",
+        component_separators = { left = "", right = "" },
+        section_separators = { left = "", right = "" },
       },
       sections = {
-        lualine_a = {},
-        -- lualine_b = {},
-        -- lualine_c = { diff, diagnostics },
-        -- lualine_x = {},
+        lualine_a = { { "branch", color = { fg = theme.overlay0, bg = theme.base } } },
+        lualine_b = {},
+        lualine_c = {
+          {
+            "diagnostics",
+            symbols = {
+              error = icons.diagnostics.Error,
+              warn = icons.diagnostics.Warn,
+              info = icons.diagnostics.Info,
+              hint = icons.diagnostics.Hint,
+            },
+          },
+        },
+        lualine_x = {
+          -- stylua: ignore
+          {
+            function() return "  " .. require("dap").status() end,
+            cond = function () return package.loaded["dap"] and require("dap").status() ~= "" end,
+            color = Util.fg("Debug"),
+          },
+          { require("lazy.status").updates, cond = require("lazy.status").has_updates, color = Util.fg("Special") },
+          {
+            "diff",
+            symbols = {
+              added = icons.git.added,
+              modified = icons.git.modified,
+              removed = icons.git.removed,
+            },
+          },
+        },
         lualine_y = {},
         lualine_z = {},
       },

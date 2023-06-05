@@ -24,10 +24,10 @@ return {
           "Method",
         },
       }),
-      desc = "Goto Symbol",
+      desc = "Goto Symbol (methods, functions)",
     },
     {
-      "<leader>fg",
+      "<leader>sl",
       "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
       desc = "Find ripgrep",
     },
@@ -92,6 +92,9 @@ return {
       },
     },
     pickers = {
+      live_grep = {
+        find_command = { "rg", "--hidden" },
+      },
       registers = {
         initial_mode = "insert",
         layout_config = { width = 0.7, height = 0.1 },

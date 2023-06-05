@@ -2,7 +2,8 @@ return {
   -- Diagnostics with virtual text. Does multiline well
   "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
   init = function()
-    vim.diagnostic.config({ virtual_lines = { only_current_line = true } })
+    -- vim.diagnostic.config({ virtual_lines = { only_current_line = true } })
+    vim.diagnostic.config({ virtual_lines = false })
   end,
   event = "LspAttach",
   keys = {
