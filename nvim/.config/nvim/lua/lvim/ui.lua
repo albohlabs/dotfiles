@@ -1,7 +1,7 @@
 local icons = require("lazyvim.config").icons
 local Util = require("lazyvim.util")
--- https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/palettes/mocha.lua
-local theme = require("catppuccin.palettes").get_palette("mocha")
+-- https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/palettes/macchiato.lua
+local theme = require("catppuccin.palettes").get_palette("macchiato")
 
 return {
   {
