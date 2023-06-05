@@ -10,8 +10,13 @@ return {
 	-- Cursor style
 	default_cursor_style = "BlinkingBar",
 	-- color_scheme = "Catppuccin Frappe",
-	color_scheme = "Catppuccin Macchiato",
+	-- color_scheme = "Catppuccin Macchiato",
 	-- color_scheme = "Catppuccin Mocha",
+
+	color_scheme = "tokyonight_moon",
+	-- color_scheme = "tokyonight_day",
+	-- color_scheme = "tokyonight_night",
+	-- color_scheme = "tokyonight_storm",
 
 	-- Padding
 	window_padding = {
