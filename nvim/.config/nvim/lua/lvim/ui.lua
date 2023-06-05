@@ -65,9 +65,8 @@ return {
         section_separators = { left = "", right = "" },
       },
       sections = {
-        lualine_a = { { "branch", color = { fg = theme.overlay0, bg = theme.base } } },
-        lualine_b = {},
-        lualine_c = {
+        lualine_a = {
+          -- { "branch", color = { fg = theme.overlay0, bg = theme.base } },
           {
             "diagnostics",
             symbols = {
@@ -76,8 +75,11 @@ return {
               info = icons.diagnostics.Info,
               hint = icons.diagnostics.Hint,
             },
+            color = { bg = theme.base },
           },
         },
+        lualine_b = {},
+        lualine_c = {},
         lualine_x = {
           -- stylua: ignore
           {
@@ -86,6 +88,9 @@ return {
             color = Util.fg("Debug"),
           },
           { require("lazy.status").updates, cond = require("lazy.status").has_updates, color = Util.fg("Special") },
+        },
+        lualine_y = {},
+        lualine_z = {
           {
             "diff",
             symbols = {
@@ -93,10 +98,9 @@ return {
               modified = icons.git.modified,
               removed = icons.git.removed,
             },
+            color = { fg = theme.overlay0, bg = theme.base },
           },
         },
-        lualine_y = {},
-        lualine_z = {},
       },
     },
   },
