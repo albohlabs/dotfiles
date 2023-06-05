@@ -13,9 +13,11 @@
 "query:🎥 TechVideos:tags # \"tech.videos\"" "tech.videos" 
 "query:🎥 TechTwitter:tags # \"tech.social\"" "tech.social" 
 "query:λ Haskell:tags # \"haskell\"" "haskell" 
-"query:🦀 Rust:tags # \"rust\"" "rust" 
-"query:👾 Github:tags # \"github\"" "github" 
-"query:👾 Frontend:tags # \"frontend\"" "frontend" 
+# "query:🦀 Rust:tags # \"rust\"" "rust" 
+"query:Github:tags # \"github\"" "github" 
+"query:Frontend:tags # \"frontend\"" "frontend" 
+"query:Wiki:tags # \"wiki\"" "wiki" 
+"query:Economics:tags # \"economics\"" "economics" 
 
 # Youtube 
 # How to get youtube rss feeds:
@@ -32,6 +34,11 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCHEDNwdgR5TKPBWtaeTgD8w "te
 https://www.youtube.com/feeds/videos.xml?channel_id=UC4tU9QhQAgqIHHWBuocUlFg "tech.videos" "~YouTube lowderdev"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCbRP3c757lWg9M-U7TyEkXA "tech.videos" "~YouTube theobrowne1017"
 
+# https://www.to-rss.xyz/wikipedia/
+https://www.to-rss.xyz/wikipedia/current_events/ "wiki" "~Wikipedia Current Events"
+https://en.wikipedia.org/w/api.php?action=featuredfeed&feed=potd "wiki" "~Wikipedia Picture of the Day"
+https://en.wikipedia.org/w/api.php?action=featuredfeed&feed=onthisday "wiki" "~Wikipedia On This Day"
+http://en.wikipedia.org/w/api.php?action=featuredfeed&feed=featured "wiki" "~Wikipedia Featured Article"
 
 https://github.com/albohlabs.private.atom?token=AABH6UMRRFKC3P3C7WWSPKGAHXFH6 "github" "~github"
 
@@ -319,6 +326,9 @@ https://www.thenewatlantis.com/feed "stuff02"
 # http://feeds.pinboard.in/rss/t:philosophy "stuff02" "~Pinboard: Philosophy"
 # http://feeds.pinboard.in/rss/t:interesting "stuff02" "~Pinboard: Interesting"
 
+https://www.nakedcapitalism.com/feed "economics"
+
+https://marginalrevolution.com/feed "politics" "~Marginal Revolution"
 https://www.kritiknetz.de/?format=feed&type=rss "politics"
 http://www.faz.net/rss/aktuell/feuilleton/aus-dem-maschinenraum/ "politics"
 https://nuss.in-berlin.de/feed/ "politics"
