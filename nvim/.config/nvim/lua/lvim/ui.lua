@@ -104,4 +104,57 @@ return {
       },
     },
   },
+
+  {
+    "folke/edgy.nvim",
+    event = "VeryLazy",
+    keys = {
+      -- stylua: ignore
+      { "<leader>ue", function() require("edgy").select() end, desc = "Edgy Select Window" },
+    },
+    opts = {
+      left = {
+        {
+          title = "  Files",
+          ft = "neo-tree",
+          filter = function(buf)
+            return vim.b[buf].neo_tree_source == "filesystem"
+          end,
+          size = { height = 0.5, width = 0.2 },
+        },
+        {
+          title = "  Git",
+          ft = "neo-tree",
+          filter = function(buf)
+            return vim.b[buf].neo_tree_source == "git_status"
+          end,
+          pinned = true,
+          open = "Neotree position=right git_status",
+        },
+        {
+          title = "  Buffers",
+          ft = "neo-tree",
+          filter = function(buf)
+            return vim.b[buf].neo_tree_source == "buffers"
+          end,
+          pinned = true,
+          open = "Neotree position=top buffers",
+        },
+        -- any other neo-tree windows
+        "neo-tree",
+      },
+      right = {
+        {
+          ft = "Outline",
+          pinned = true,
+          open = "SymbolsOutline",
+          size = { width = 0.2 },
+        },
+      },
+
+      animate = {
+        enabled = false,
+      },
+    },
+  },
 }
