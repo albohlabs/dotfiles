@@ -107,11 +107,6 @@ return {
 
   {
     "folke/edgy.nvim",
-    event = "VeryLazy",
-    keys = {
-      -- stylua: ignore
-      { "<leader>ue", function() require("edgy").select() end, desc = "Edgy Select Window" },
-    },
     opts = {
       left = {
         {

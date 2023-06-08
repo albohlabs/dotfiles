@@ -1,8 +1,8 @@
 return {
   "petertriho/nvim-scrollbar",
+  enabled = false,
   event = "BufReadPost",
   opts = {
-    set_highlights = false,
     excluded_filetypes = {
       "prompt",
       "TelescopePrompt",
@@ -13,7 +13,7 @@ return {
       "lazy",
       "mason",
       "DressingInput",
-      "",
+      "notify",
     },
     handlers = {
       gitsigns = true,
