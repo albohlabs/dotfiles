@@ -115,6 +115,10 @@ return {
           filter = function(buf)
             return vim.b[buf].neo_tree_source == "filesystem"
           end,
+          pinned = true,
+          open = function()
+            vim.api.nvim_input("<esc><space>e")
+          end,
           size = { height = 0.5, width = 0.2 },
         },
         {
@@ -125,15 +129,6 @@ return {
           end,
           pinned = true,
           open = "Neotree position=right git_status",
-        },
-        {
-          title = "  Buffers",
-          ft = "neo-tree",
-          filter = function(buf)
-            return vim.b[buf].neo_tree_source == "buffers"
-          end,
-          pinned = true,
-          open = "Neotree position=top buffers",
         },
         -- any other neo-tree windows
         "neo-tree",

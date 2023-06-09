@@ -1,6 +1,7 @@
 return {
   "lvimuser/lsp-inlayhints.nvim",
-  event = "BufReadPost",
+  branch = "anticonceal",
+  event = "LspAttach",
   opts = {},
   config = function(_, opts)
     require("lsp-inlayhints").setup(opts)

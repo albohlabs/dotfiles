@@ -1,29 +1,17 @@
 return {
   {
     "echasnovski/mini.surround",
-    enabled = false,
-  },
-
-  --    Old text                    Command         New text
-  --------------------------------------------------------------------------------
-  --    surr*ound_words             ysiw)           (surround_words)
-  --    *make strings               ys$"            "make strings"
-  --    [delete ar*ound me!]        ds]             delete around me!
-  --    remove <b>HTML t*ags</b>    dst             remove HTML tags
-  --    'change quot*es'            cs'"            "change quotes"
-  --    <b>or tag* types</b>        csth1<CR>       <h1>or tag types</h1>
-  --    delete(functi*on calls)     dsf             function calls
-  {
-    "kylechui/nvim-surround",
-    enabled = true,
-    event = "VeryLazy",
-    config = true,
-  },
-
-  {
-    "smjonas/inc-rename.nvim",
-    cmd = "IncRename",
-    config = true,
+    opts = {
+      mappings = {
+        add = "gsa",
+        delete = "gsd",
+        find = "gsf",
+        find_left = "gsF",
+        highlight = "gsh",
+        replace = "gsr",
+        update_n_lines = "gsn",
+      },
+    },
   },
 
   {

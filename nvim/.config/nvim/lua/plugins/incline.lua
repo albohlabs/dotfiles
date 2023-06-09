@@ -3,9 +3,13 @@ return {
   "b0o/incline.nvim",
   event = "BufReadPre",
   config = function()
+    local colors = require("tokyonight.colors").setup()
     require("incline").setup({
-      hide = {
-        cursorline = true,
+      highlight = {
+        groups = {
+          InclineNormal = { guibg = "#FC56B1", guifg = colors.black },
+          InclineNormalNC = { guifg = "#FC56B1", guibg = colors.black },
+        },
       },
       window = { margin = { vertical = 0, horizontal = 1 } },
       render = function(props)

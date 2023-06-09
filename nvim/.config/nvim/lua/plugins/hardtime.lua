@@ -5,25 +5,15 @@ return {
       "k",
       "j",
       "^",
-      -- "$", -- conflict with motion.leap-nvim
+      "$", -- conflict with motion.leap-nvim
       "a",
       "i",
       "d",
       "y",
       "c",
-      -- "l", -- conflict with motion.leap-nvim
+      "l", -- conflict with motion.leap-nvim
     },
-    disabled_keys = {
-      "<UP>",
-      "<DOWN>",
-      "<LEFT>",
-      "<RIGHT>",
-      "<Insert>",
-      "<Home>",
-      "<End>",
-      "<PageUp>",
-      "<PageDown>",
-    },
+    disabled_keys = {},
     disabled_filetypes = {
       "qf",
       "netrw",
