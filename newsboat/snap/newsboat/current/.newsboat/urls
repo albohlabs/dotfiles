@@ -14,10 +14,10 @@
 "query:🎥 TechTwitter:tags # \"tech.social\"" "tech.social" 
 "query:λ Haskell:tags # \"haskell\"" "haskell" 
 # "query:🦀 Rust:tags # \"rust\"" "rust" 
-"query:Github:tags # \"github\"" "github" 
-"query:Frontend:tags # \"frontend\"" "frontend" 
-"query:Wiki:tags # \"wiki\"" "wiki" 
-"query:Economics:tags # \"economics\"" "economics" 
+"query:🖥️ Github:tags # \"github\"" "github" 
+"query:💻 Frontend:tags # \"frontend\"" "frontend" 
+"query:📚 Wiki:tags # \"wiki\"" "wiki" 
+"query:💰 Economics:tags # \"economics\"" "economics" 
 
 # Youtube 
 # How to get youtube rss feeds:
