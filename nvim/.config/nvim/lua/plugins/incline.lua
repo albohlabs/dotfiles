@@ -5,6 +5,9 @@ return {
   config = function()
     local colors = require("tokyonight.colors").setup()
     require("incline").setup({
+      hide = {
+        cursorline = true,
+      },
       highlight = {
         groups = {
           InclineNormal = { guibg = "#FC56B1", guifg = colors.black },
