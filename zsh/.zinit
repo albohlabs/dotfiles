@@ -105,6 +105,10 @@ zinit light bigH/git-fuzzy
 zinit wait lucid atload'_zsh_autosuggest_start' light-mode for \
     zsh-users/zsh-autosuggestions
 
+# https://github.com/zsh-users/zsh-autosuggestions#key-bindings
+# use ctrl+space to accept autosuggestion
+zsh-defer eval "bindkey '^ ' autosuggest-accept"
+
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light djui/alias-tips
 
