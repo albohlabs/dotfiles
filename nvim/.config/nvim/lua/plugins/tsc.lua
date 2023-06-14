@@ -1,5 +1,5 @@
 return {
-  enabled = true,
+  enabled = false,
   "dmmulroy/tsc.nvim",
   filetype = "typescript",
   -- name = "tsc",
