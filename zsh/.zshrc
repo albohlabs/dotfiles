@@ -11,6 +11,6 @@ for file in ~/.{zinit,exports,functions,aliases}; do
 done
 unset file
 
-[ -f "/home/dpf/.ghcup/env" ] && source "/home/dpf/.ghcup/env" # ghcup-env
+# [ -f "/home/dpf/.ghcup/env" ] && source "/home/dpf/.ghcup/env" # ghcup-env
 
-source "$HOME/.cargo/env"
+# source "$HOME/.cargo/env"
