@@ -1,3 +1,4 @@
 __init__.py
+lazygit/.config/lazygit/state.yml
 tmux/.config/tmux/plugins
 ranger/.config/ranger/plugins/__pycache__/
