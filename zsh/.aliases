@@ -3,6 +3,10 @@
 # clear out your system logfiles - speed up zsh
 alias clean="sudo rm /private/var/log/asl/*.asl"
 
+# https://github.com/nivekuil/rip
+# alias rm=rip
+# alias rm='gio trash'
+
 alias sshexport='ssh-copy-id -i ~/.ssh/id_rsa.pub '
 alias filesystem='sudo fs_usage -f pathname -w'
 
@@ -28,8 +32,6 @@ alias fzfp='fzf --height 100% --sort --preview "bat --style=numbers --color=alwa
 alias rebasemain='git pull origin main --rebase'
 alias rebasedev='git pull origin develop --rebase'
 
-alias rm='gio trash'
-
 alias tmuxrc="vim ~/.tmux.conf"
 alias tmuxrcs="tmux source-file ~/.tmux.conf"
 alias mux=tmux
@@ -48,9 +50,6 @@ alias gst="source ~/.tmux.conf"
 alias ged="$EDITOR ~/.dotfiles"
 
 alias tree="exa --long --tree --level=4 -a $(printf $exa_options)"
-
-# https://github.com/nivekuil/rip
-alias rm=rip
 
 # https://github.com/tarka/xcp
 alias cp=xcp

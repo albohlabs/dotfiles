@@ -10,13 +10,13 @@ export PATH=~/.local/bin:~/.cargo/bin:$PATH
 
 # export JAVA_HOME=/usr/lib/jvm/default-java
 export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
-export M2_HOME=/opt/maven
-export MAVEN_HOME=/opt/maven
-export PATH=${M2_HOME}/bin:${PATH}
+# export M2_HOME=/opt/maven
+# export MAVEN_HOME=/opt/maven
+# export PATH=${M2_HOME}/bin:${PATH}
 
 export MANPAGER="/bin/sh -c \"col -b | vi -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
-export PNPM_HOME="/home/dpf/.local/share/pnpm"
+export PNPM_HOME="~/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 # ~/.tmux/plugins
@@ -25,7 +25,7 @@ export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
 export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
 
 # https://wezfurlong.org/wezterm/faq.html?h=xcursor_theme#i-use-x11-or-wayland-and-my-mouse-cursor-theme-doesnt-seem-to-work
-export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
-export XCURSOR_THEME=Yaru
-export XCURSOR_PATH=/usr/share/icons:${XDG_DATA_HOME}/icons
+# export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
+# export XCURSOR_THEME=Yaru
+# export XCURSOR_PATH=/usr/share/icons:${XDG_DATA_HOME}/icons
 	
