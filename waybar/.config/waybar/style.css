@@ -1,0 +1,31 @@
+@import "/usr/share/sway/templates/waybar/style.css";
+
+/** 
+#custom-pacman, 
+#custom-menu,
+#clock,
+ * */
+#custom-zeit,
+#custom-help,
+#custom-scratchpad,
+#custom-github,
+#custom-clipboard,
+#custom-dnd,
+#bluetooth,
+#battery,
+#cpu,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#temperature,
+#idle_inhibitor,
+#backlight,
+#language,
+#custom-adaptive-light,
+#custom-sunset,
+#custom-playerctl,
+#tray {
+  color: #909e9b;
+  color: #2eb398;
+}
