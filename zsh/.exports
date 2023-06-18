@@ -25,7 +25,7 @@ export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
 export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
 
 # https://wezfurlong.org/wezterm/faq.html?h=xcursor_theme#i-use-x11-or-wayland-and-my-mouse-cursor-theme-doesnt-seem-to-work
-# export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
-# export XCURSOR_THEME=Yaru
-# export XCURSOR_PATH=/usr/share/icons:${XDG_DATA_HOME}/icons
+export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
+export XCURSOR_THEME=Adwaita
+export XCURSOR_PATH=/usr/share/icons:${XDG_DATA_HOME}/icons
 	
