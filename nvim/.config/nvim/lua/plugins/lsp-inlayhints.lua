@@ -2,7 +2,9 @@ return {
   "lvimuser/lsp-inlayhints.nvim",
   branch = "anticonceal",
   event = "LspAttach",
-  opts = {},
+  opts = {
+    inlay_hints = { priority = vim.highlight.priorities.user + 1 },
+  },
   config = function(_, opts)
     require("lsp-inlayhints").setup(opts)
     vim.api.nvim_create_autocmd("LspAttach", {
