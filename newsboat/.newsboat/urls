@@ -48,6 +48,7 @@ https://github.com/albohlabs.private.atom?token=AABH6UMRRFKC3P3C7WWSPKGAHXFH6 "g
 
 https://reddit.com/r/programming/.rss "~ /r/programming" "tech"
 https://reddit.com/r/neovim/.rss "~ /r/neovim" "tech"
+https://sopuli.xyz/feeds/c/neovim.xml?sort=Active "~ /sopuli/neovim" "tech"
 https://www.trackawesomelist.com/rockerBOO/awesome-neovim/rss.xml "~ awesome-neovim" "tech"
 
 https://nitter.net/alexanderkondov/rss "~Twitter: Alex Kondov" "tech.social"
