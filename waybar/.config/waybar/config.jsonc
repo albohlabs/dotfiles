@@ -1,5 +1,34 @@
 {
-    "include": [
-        "/usr/share/sway/templates/waybar/config.jsonc"
-    ]
+  "include": ["/usr/share/sway/templates/waybar/config.jsonc"],
+
+  "modules-right": [
+    // informational
+    // "sway/language",
+    // "custom/github",
+    // "custom/clipboard",
+    "custom/zeit",
+    "cpu",
+    "memory",
+    "battery",
+    "temperature",
+
+    // connecting
+    "network",
+    "bluetooth",
+
+    // media
+    "custom/playerctl",
+    "idle_inhibitor",
+    "custom/dnd",
+    "pulseaudio",
+    // "backlight",
+
+    // system
+    "custom/adaptive-light",
+    "custom/sunset",
+    // "custom/pacman",
+
+    "tray",
+    "clock"
+  ]
 }
