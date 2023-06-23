@@ -27,3 +27,6 @@ vim.g.open_command = vim.g.os == "Darwin" and "open" or "xdg-open"
 -- Disable comment continuation
 vim.opt.formatoptions:remove("o") -- Don't continue after 'o' or 'O'
 vim.opt.formatoptions:remove("r") -- Don't continue after <cr>
+
+vim.opt.smoothscroll = true --Scroll by screen line rather than by line when wrap is set
+vim.opt.diffopt:append("linematch:60") -- enable linematch diff algorithm

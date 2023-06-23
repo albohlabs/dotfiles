@@ -1,5 +1,6 @@
 return {
   "nvim-telescope/telescope-frecency.nvim",
+  enabled = false,
   dependencies = { "kkharji/sqlite.lua" },
   init = function()
     require("telescope").load_extension("frecency")
