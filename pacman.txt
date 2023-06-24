@@ -177,6 +177,9 @@ web-installer-url-handler
 wezterm
 wget
 which
+whitesur-cursor-theme-git
+whitesur-gtk-theme
+whitesur-icon-theme-git
 wireless-regdb
 wl-clipboard
 wlay

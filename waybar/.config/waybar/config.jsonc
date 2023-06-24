@@ -39,9 +39,7 @@
     "spacing": 5
   },
   "clock": {
-    "format": "  {:%b %d %H:%M}",
-    "tooltip-format": "<b><big>{:%Y %B}</big></b>\n\n<tt>{calendar}</tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "format": "  {:%e.%b %H:%M}"
   },
   "cpu": {
     "format": "󰌢 {load}"
