@@ -31,7 +31,8 @@
     "custom/adaptive-light",
     "custom/sunset",
     "tray",
-    "battery"
+    "battery",
+    "custom/power"
   ],
   "tray": {
     "icon-size": 17,
@@ -72,5 +73,9 @@
     "format-linked": "{ifname} (No IP) 󰈀",
     "format-disconnected": "󰖪",
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "custom/power": {
+    "format": " ",
+    "on-click": "wlogout"
   }
 }

@@ -19,7 +19,7 @@ btrfs-progs
 bzip2
 chromium
 cliphist
-code
+cmus
 coreutils
 cpupower
 cronie
@@ -29,6 +29,7 @@ device-mapper
 dhclient
 dhcpcd
 diffutils
+discord
 dmraid
 dnsmasq
 docker
@@ -56,6 +57,7 @@ grub
 gtk3-nocsd
 gvfs
 gvfs-mtp
+gvfs-smb
 haveged
 httpie
 imv
@@ -90,6 +92,7 @@ manjaro-settings-manager-notifier
 manjaro-sway-settings
 manjaro-system
 manjaro-zsh-config
+markdownlint-cli
 matcha-gtk-theme
 mdadm
 memtest86+
@@ -131,8 +134,11 @@ ripgrep
 rsync
 rustup
 s-nail
+seahorse
+smbclient
 sof-firmware
 spectre-meltdown-checker
+sqlite
 starship
 stow
 sudo
@@ -163,6 +169,7 @@ ttf-victor-mono
 ttf-victor-mono-nerd
 usbutils
 vi
+visual-studio-code-bin
 vlc
 vulkan-intel
 vulkan-radeon
@@ -173,6 +180,7 @@ which
 wireless-regdb
 wl-clipboard
 wlay
+wlogout
 wlsunset
 wluma
 wpa_supplicant
