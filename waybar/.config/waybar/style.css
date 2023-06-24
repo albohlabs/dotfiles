@@ -77,3 +77,141 @@ widget image {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+
+/* @import "/usr/share/sway/templates/waybar/style.css"; */
+
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+
+@keyframes blink-warning {
+  70% {
+    color: @wm_icon_bg;
+  }
+
+  to {
+    color: @wm_icon_bg;
+    background-color: @warning_color;
+  }
+}
+
+@keyframes blink-critical {
+  70% {
+    color: @wm_icon_bg;
+  }
+
+  to {
+    color: @wm_icon_bg;
+    background-color: @error_color;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+#custom-zeit.tracking {
+  background-color: @warning_color;
+}
+
+#battery {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#battery.warning {
+  color: @warning_color;
+}
+
+#battery.critical {
+  color: @error_color;
+}
+
+#battery.warning.discharging {
+  animation-name: blink-warning;
+  animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+  animation-name: blink-critical;
+  animation-duration: 2s;
+}
+
+#cpu.warning {
+  color: @warning_color;
+}
+
+#cpu.critical {
+  color: @error_color;
+}
+
+#custom-menu {
+  padding-left: 8px;
+  padding-right: 13px;
+}
+
+#memory {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#memory.warning {
+  color: @warning_color;
+}
+
+#memory.critical {
+  color: @error_color;
+  animation-name: blink-critical;
+  animation-duration: 2s;
+}
+
+#network.disconnected {
+  color: @warning_color;
+}
+
+#pulseaudio.muted {
+  color: @warning_color;
+}
+
+#temperature.critical {
+  color: @error_color;
+}
+
+#workspaces button {
+  border-top: 2px solid transparent;
+  /* To compensate for the top border and still have vertical centering */
+  padding-bottom: 2px;
+}
+
+#workspaces button.focused {
+  border-color: @theme_selected_bg_color;
+  color: @theme_selected_bg_color;
+}
+
+#workspaces button.urgent {
+  border-color: @error_color;
+  color: @error_color;
+}
+
+#custom-pacman {
+  color: @warning_color;
+}
+
+#bluetooth.disabled {
+  color: @warning_color;
+}
+
+#custom-wf-recorder {
+  color: @error_color;
+  padding-right: 10px;
+}

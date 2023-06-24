@@ -5,12 +5,7 @@
   "spacing": 0,
   "layer": "top",
 
-  "modules-left": [
-    "sway/workspaces",
-    "wlr/workspaces",
-    "hyprland/window",
-    "custom/scratchpad"
-  ],
+  "modules-left": ["sway/workspaces", "custom/scratchpad"],
   "modules-center": [
     "clock",
     "custom/dnd",
@@ -35,8 +30,8 @@
     "custom/power"
   ],
   "tray": {
-    "icon-size": 17,
-    "spacing": 5
+    "icon-size": 14,
+    "spacing": 0
   },
   "clock": {
     "format": "  {:%e.%b %H:%M}"
