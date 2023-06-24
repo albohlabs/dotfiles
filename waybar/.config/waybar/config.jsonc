@@ -1,34 +1,76 @@
 {
   "include": ["/usr/share/sway/templates/waybar/config.jsonc"],
 
-  "modules-right": [
-    // informational
-    // "sway/language",
-    // "custom/github",
-    // "custom/clipboard",
-    "custom/zeit",
-    "cpu",
-    "memory",
-    "battery",
-    "temperature",
+  "height": 24,
+  "spacing": 0,
+  "layer": "top",
 
-    // connecting
+  "modules-left": [
+    "sway/workspaces",
+    "wlr/workspaces",
+    "hyprland/window",
+    "custom/scratchpad"
+  ],
+  "modules-center": [
+    "clock",
+    "custom/dnd",
+    "custom/wf-recorder",
+    "sway/mode",
+    "custom/weather"
+  ],
+  "modules-right": [
+    "custom/zeit",
     "network",
     "bluetooth",
-
-    // media
     "custom/playerctl",
     "idle_inhibitor",
-    "custom/dnd",
+    "memory",
+    "cpu",
+    "temperature",
     "pulseaudio",
-    // "backlight",
-
-    // system
     "custom/adaptive-light",
     "custom/sunset",
-    // "custom/pacman",
-
     "tray",
-    "clock"
-  ]
+    "battery"
+  ],
+  "tray": {
+    "icon-size": 17,
+    "spacing": 5
+  },
+  "clock": {
+    "format": "  {:%b %d %H:%M}",
+    "tooltip-format": "<b><big>{:%Y %B}</big></b>\n\n<tt>{calendar}</tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "cpu": {
+    "format": "󰌢 {load}"
+  },
+  "memory": {
+    "format": " {}%"
+  },
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": ["󰃞", "󰃟", "󰃠"]
+  },
+  "battery": {
+    "on-click": "cpupower-gui",
+    "bat": "BAT0",
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": [" ", " ", " ", " ", " "]
+  },
+  "network": {
+    "format-wifi": "󰖩",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr} 󰈀",
+    "format-linked": "{ifname} (No IP) 󰈀",
+    "format-disconnected": "󰖪",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  }
 }
