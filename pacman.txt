@@ -186,7 +186,6 @@ whitesur-icon-theme-git
 wireless-regdb
 wl-clipboard
 wlay
-wlogout
 wlsunset
 wluma
 wpa_supplicant
