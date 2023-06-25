@@ -47,6 +47,7 @@ ffmpegthumbnailer
 file-roller
 firefox
 flashfocus
+fluent-icon-theme-git
 glow
 gnome-epub-thumbnailer
 gnome-keyring
@@ -104,6 +105,8 @@ mkinitcpio-openswap
 mplayer
 nano
 nano-syntax-highlighting
+nautilus
+nautilus-sendto
 network-manager-applet
 networkmanager
 newsboat
