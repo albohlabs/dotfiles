@@ -194,7 +194,7 @@ widget image {
 }
 
 #workspaces button.focused {
-  border-color: @theme_selected_bg_color;
+  border-color: #f801e8;
   color: @theme_selected_bg_color;
 }
 
