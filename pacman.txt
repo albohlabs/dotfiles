@@ -47,7 +47,6 @@ ffmpegthumbnailer
 file-roller
 firefox
 flashfocus
-fluent-icon-theme-git
 glow
 gnome-epub-thumbnailer
 gnome-keyring

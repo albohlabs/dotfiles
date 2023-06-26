@@ -1,24 +1,47 @@
-layer=overlay
 anchor=top-center
-font=Roboto 10
-max-icon-size=48
-icons=1
-icon-path=/usr/share/icons/Fluent:/usr/share/icons/Adwaita
+font=Fira Code 10
+max-icon-size=36
+icon-path=/usr/share/icons/Papirus-Adapta-Nokto-Maia:/usr/share/icons/Papirus-Maia:/usr/share/icons/Papirus
 default-timeout=5000
 group-by=app-name
-background-color=#FFFFFFee
-text-color=#000000cc
-border-radius=4
-border-color=#00000033
-border-size=1
-progress-color=source #07b5efee
+
+markup=1
+actions=1
+
+# Format
+border-color=#002028
+border-size=2
+background-color=#002b36AA
+text-color=#fdf6e3
+format=<b>%s</b> <span color="#93a1a1">(%a)</span>\n%b
+
+# Hidden format
+[hidden]
+format=Hidden: %h [%t]
 
 [urgency=low]
-border-color=#394b70
+text-color=#93a1a1
 
-[urgency=normal]
-border-color=#00000033
+[urgency=low actionable]
+border-color=#93a1a1
+
+[urgency=normal actionable]
+border-color=#268bd2
 
 [urgency=high]
-border-color=#ff757f
+border-color=#9c2220
 default-timeout=0
+
+[urgency=high actionable]
+border-color=#6c71c4
+
+[app-name=playerctl]
+max-icon-size=96
+
+[app-name=clementine]
+max-icon-size=96
+
+[app-name=i3-hint]
+max-icon-size=48
+format=%s\n%b
+width=150
