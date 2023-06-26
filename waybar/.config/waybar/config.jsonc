@@ -33,7 +33,8 @@
     "spacing": 0
   },
   "clock": {
-    "format": "  {:%e.%b %H:%M}"
+    "format": "  {:%e.%b %H:%M}",
+    "on-click": false
   },
   "cpu": {
     "format": "󰌢 {load}"
