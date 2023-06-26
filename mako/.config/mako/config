@@ -1,4 +1,4 @@
-anchor=top-center
+anchor=bottom-center
 font=Fira Code 10
 max-icon-size=36
 icon-path=/usr/share/icons/Papirus-Adapta-Nokto-Maia:/usr/share/icons/Papirus-Maia:/usr/share/icons/Papirus
@@ -9,8 +9,8 @@ markup=1
 actions=1
 
 # Format
-border-color=#002028
-border-size=2
+border-color=#5c6969
+border-size=1
 background-color=#002b36AA
 text-color=#fdf6e3
 format=<b>%s</b> <span color="#93a1a1">(%a)</span>\n%b
