@@ -100,6 +100,7 @@ http://ubuntuforums.org/external.php?type=RSS2&forumids=100 "Linux"
 https://xfce.org/feed?lang=en "Linux"
 http://www.newthinktank.com/feed/ "Linux" "~DerekBanas"
 https://itsfoss.com/feed/ "~It's FOSS" "Linux"
+https://archlinux.org/feeds/news/ "Linux"
 
 # https://readrust.net/all/feed.rss "~read rust" "rust"
 # http://feeds.pinboard.in/rss/t:rust "~Pinboard: rust" "rust"
