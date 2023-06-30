@@ -1,3 +1,12 @@
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * color https://github.com/folke/tokyonight.nvim/blob/main/lua/tokyonight/colors.lua#L51
+ * =========================================================================== */
+
 * {
   border: none;
   border-radius: 0;
@@ -7,11 +16,9 @@
 }
 
 window#waybar {
-  background: rgba(0, 0, 0, 0.4);
-  background: rgba(30, 32, 48, 0.5);
-  /* background: rgba(0, 0, 0, 0.4); */
-  color: rgba(255, 255, 255, 1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(43, 48, 59, 0.5);
+  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+  color: white;
 }
 
 tooltip {
@@ -24,41 +31,46 @@ tooltip label {
   color: rgba(0, 0, 0, 0.8);
 }
 
-widget label,
-widget image {
-  padding: 0 8px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-#window,
-#custom-media {
-  background: rgba(0, 0, 0, 0);
-  padding-right: 20px;
-}
-
-.modules-right,
-.modules-center {
-  color: white;
-  /* padding: 0 8px; */
-}
-
-#workspaces {
-  color: white;
-  background: rgba(255, 255, 255, 0.2);
-  margin-right: 8px;
-}
-
 #workspaces button {
   padding: 0;
-}
-#workspaces button label {
-  padding: 0 6px 0 8px;
+  background: transparent;
   color: white;
-  font-size: 14px;
+  border-bottom: 3px solid transparent;
 }
 
 #workspaces button.focused {
-  background: rgba(255, 255, 255, 0.3);
+  background: #64727d;
+  border-bottom: 3px solid white;
+}
+
+#workspaces button.urgent {
+  border-color: #ff966c;
+}
+
+#mode,
+#clock,
+#battery {
+  padding: 0 10px;
+  margin-left: 8px;
+}
+
+#mode {
+  background: #64727d;
+  border-bottom: 3px solid white;
+}
+
+#clock {
+  background: #64727d;
+}
+
+#battery {
+  background-color: #ffffff;
+  color: black;
+}
+
+#battery.charging {
+  color: white;
+  background-color: #41a6b5;
 }
 
 @keyframes blink {
@@ -69,7 +81,7 @@ widget image {
 }
 
 #battery.warning:not(.charging) {
-  background: #f87171;
+  background: #ff757f;
   color: white;
   animation-name: blink;
   animation-duration: 0.5s;
@@ -78,13 +90,10 @@ widget image {
   animation-direction: alternate;
 }
 
-/* =============================================================================
- *
- * Waybar configuration
- *
- * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
- *
- * =========================================================================== */
+widget label,
+widget image {
+  padding: 0 8px;
+}
 
 /* @import "/usr/share/sway/templates/waybar/style.css"; */
 
@@ -119,21 +128,7 @@ widget image {
  * -------------------------------------------------------------------------- */
 
 #custom-zeit.tracking {
-  background-color: @warning_color;
-}
-
-#battery {
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-#battery.warning {
-  color: @warning_color;
-}
-
-#battery.critical {
-  color: @error_color;
+  background: #ff757f;
 }
 
 #battery.warning.discharging {
@@ -147,11 +142,11 @@ widget image {
 }
 
 #cpu.warning {
-  color: @warning_color;
+  background: #ff757f;
 }
 
 #cpu.critical {
-  color: @error_color;
+  color: #c53b53;
 }
 
 #custom-menu {
@@ -166,52 +161,32 @@ widget image {
 }
 
 #memory.warning {
-  color: @warning_color;
+  color: #ff757f;
 }
 
 #memory.critical {
-  color: @error_color;
+  color: #c53b53;
   animation-name: blink-critical;
   animation-duration: 2s;
 }
 
 #network.disconnected {
-  color: @warning_color;
+  color: #ff757f;
 }
 
 #pulseaudio.muted {
-  color: @warning_color;
+  color: #ff757f;
 }
 
 #temperature.critical {
-  color: @error_color;
-}
-
-#workspaces button {
-  border-top: 2px solid transparent;
-  /* To compensate for the top border and still have vertical centering */
-  padding-bottom: 2px;
-}
-
-#workspaces button.focused {
-  border-color: #f801e8;
-  color: @theme_selected_bg_color;
-}
-
-#workspaces button.urgent {
-  border-color: @error_color;
-  color: @error_color;
-}
-
-#custom-pacman {
-  color: @warning_color;
+  color: #c53b53;
 }
 
 #bluetooth.disabled {
-  color: @warning_color;
+  color: #ff757f;
 }
 
 #custom-wf-recorder {
-  color: @error_color;
+  color: #c53b53;
   padding-right: 10px;
 }
