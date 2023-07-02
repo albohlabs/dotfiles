@@ -11,7 +11,6 @@ return {
       elseif opts.ensure_installed == "all" then
         return
       end
-      -- Add the "julia" and "toml" language to opts.ensure_installed.
       utils.list_insert_unique(opts.ensure_installed, "bash")
     end,
   },
@@ -22,7 +21,6 @@ return {
       if not opts.ensure_installed then
         opts.ensure_installed = {}
       end
-      -- Add julia lsp and toml lsp to ensure_installed
       utils.list_insert_unique(opts.ensure_installed, "bashls")
     end,
   },
@@ -33,7 +31,6 @@ return {
       if not opts.ensure_installed then
         opts.ensure_installed = {}
       end
-      -- Add julia lsp and toml lsp to ensure_installed
       utils.list_insert_unique(opts.ensure_installed, { "shellcheck", "shfmt" })
     end,
   },
@@ -44,7 +41,6 @@ return {
       if not opts.ensure_installed then
         opts.ensure_installed = {}
       end
-      -- Add julia lsp and toml lsp to ensure_installed
       utils.list_insert_unique(opts.ensure_installed, "bash")
     end,
   },
