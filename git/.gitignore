@@ -19,7 +19,6 @@
 .cabal
 .cache
 .coffee_history
-.config
 .cups/
 .cvspass
 .coverage
@@ -105,7 +104,5 @@ node_modules/
 npm-debug.log
 worktree/
 es6
-Session.vim
 .undodir
-NERD_tree_1
 ~
