@@ -1,0 +1,29 @@
+#main-window #TabsToolbar {
+  height: 40px !important;
+  overflow: hidden;
+  transition: height 0.2s ease-in 0s !important;
+}
+#main-window[titlepreface*="[Sidebery]"] #TabsToolbar {
+  height: 0 !important;
+  min-height: 0 !important;
+}
+#main-window[titlepreface*="[Sidebery]"] #tabbrowser-tabs {
+  position: fixed;
+  z-index: 0 !important;
+}
+#main-window[titlepreface*="[Sidebery]"] .tab-stack {
+  visibility: hidden;
+}
+#main-window[titlepreface*="[Sidebery]"] #toolbar {
+  min-height: 0;
+}
+#main-window[titlepreface*="[Sidebery]"] #sidebar-header {
+  visibility: hidden;
+  height: 0px;
+  padding: 0px !important;
+  border: 0px !important;
+}
+#main-window[titlepreface*="[Sidebery]"] #titlebar {
+  visibility: hidden;
+  height: 0px;
+}
