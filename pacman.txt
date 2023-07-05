@@ -60,6 +60,7 @@ gvfs-mtp
 gvfs-smb
 haveged
 httpie
+hurl-bin
 imv
 inetutils
 intellij-idea-ultimate-edition-jre
@@ -118,6 +119,7 @@ os-prober
 p7zip
 pamac-gtk
 papirus-maia-icon-theme
+paru
 pcmanfm-gtk3
 perl
 playerctl
@@ -200,7 +202,6 @@ xf86-video-nouveau
 xfsprogs
 xorg-xwayland
 xsel
-yay
 zathura
 zathura-pdf-poppler
 zeit
