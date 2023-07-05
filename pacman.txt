@@ -4,7 +4,7 @@ acpid
 amd-ucode
 apparmor
 appimagelauncher
-atuin
+atuin-bin
 autotiling-rs
 avahi
 b43-fwcutter
@@ -12,6 +12,7 @@ base
 base-devel
 bash-completion
 bat
+bat-extras
 bluez
 bluez-utils
 btop
@@ -47,6 +48,7 @@ ffmpegthumbnailer
 file-roller
 firefox
 flashfocus
+git-open
 glow
 gnome-epub-thumbnailer
 gnome-keyring
@@ -70,6 +72,7 @@ jq
 kanshi
 kvantum
 kvantum-theme-matcha
+lazydocker-bin
 lazygit
 less
 lib32-libva-vdpau-driver

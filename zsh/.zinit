@@ -116,66 +116,14 @@ zinit light djui/alias-tips
 zinit ice depth=1
 zinit light jeffreytse/zsh-vi-mode
 
-zinit light paulirish/git-open
-
-# RIPGREP
-zinit ice from="gh-r" as="program" bpick="*amd64.deb" pick="usr/bin/rg"
-zinit light BurntSushi/ripgrep
-
 # NEOVIM
 zinit ice from="gh-r" as="program" bpick="*appimage*" ver="nightly" mv="nvim* -> nvim" pick="nvim"
 zinit light neovim/neovim
-
-# WEZTERM
-# zinit ice from="gh-r" as="program" bpick="*ebian11.deb" ver="nightly" pick="usr/bin/wezterm"
-zinit ice from="gh-r" as="program" bpick="*appimage*" mv="Wez* -> wezterm" pick="wezterm"
-zinit light wez/wezterm
-
-# FORGIT
-zinit ice wait lucid
-zinit load wfxr/forgit
-
-# LAZYGIT
-zinit ice lucid wait="0" as="program" from="gh-r" bpick="*Linux_x86_64*" pick="lazygit" atload="alias lg='lazygit'"
-zinit light jesseduffield/lazygit
-
-# LAZYDOCKER
-zinit ice lucid wait="0" as="program" from="gh-r" bpick="*Linux_x86_64*" pick="lazydocker"
-zinit light jesseduffield/lazydocker
-
-# FD
-zinit ice as="command" from="gh-r" bpick="*amd64.deb" pick="usr/bin/fd"
-zinit light sharkdp/fd
-
-# TREE-SITTER
-zinit ice as="program" from="gh-r" mv="tree* -> tree-sitter" pick="tree-sitter"
-zinit light tree-sitter/tree-sitter
-
-# GLOW
-zinit ice lucid wait"0" as"program" from"gh-r" bpick="*amd64.deb" pick"usr/bin/glow"
-zinit light charmbracelet/glow
 
 # yt-dlp
 zinit ice from="gh-r" as="program" pick="yt-dlp/yt-dlp" bpick="*tar.gz" 
 zinit light yt-dlp/yt-dlp
 alias yta="yt-dlp --extract-audio --audio-format mp3 --add-metadata"
-
-# BAT
-zinit ice from="gh-r" as="program" pick="usr/bin/bat" bpick="*amd64.deb" atload="alias cat=bat"
-zinit light sharkdp/bat
-
-# BAT-EXTRAS
-zinit ice lucid wait="1" as="program" pick="src/batgrep.sh"
-zinit ice lucid wait="1" as="program" pick="src/batdiff.sh"
-zinit light eth-p/bat-extras
-alias rg=batgrep.sh
-alias bd=batdiff.sh
-alias man=batman.sh
-
-# EXA
-zinit ice wait="2" lucid from="gh-r" as="program" mv="bin/exa* -> exa"
-zinit light ogham/exa
-zinit ice wait blockf atpull'zinit creinstall -q .'
 
 # atuin
 export ATUIN_NOBIND="true"
