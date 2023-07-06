@@ -12,21 +12,14 @@
 "query:👾 Tech:tags # \"tech\"" "tech" 
 "query:🎥 TechVideos:tags # \"tech.videos\"" "tech.videos" 
 "query:🎥 TechTwitter:tags # \"tech.social\"" "tech.social" 
-"query:λ Haskell:tags # \"haskell\"" "haskell" 
-# "query:🦀 Rust:tags # \"rust\"" "rust" 
 "query:🖥️ Github:tags # \"github\"" "github" 
 "query:💻 Frontend:tags # \"frontend\"" "frontend" 
-"query:📚 Wiki:tags # \"wiki\"" "wiki" 
 "query:💰 Economics:tags # \"economics\"" "economics" 
 
 # Youtube 
 # How to get youtube rss feeds:
 # https://www.youtube.com/feeds/videos.xml?channel_id=YOUR_CHANNEL_ID
 # find the channel id by looking at the source and search for itemprop="channelId"
-
- 
-https://feeds.pinboard.in/rss/popular "tech" "~Pinboard"
-
 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCptAHlN1gdwD89tFM3ENb6w "tech.videos" "~YouTube Prisma"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC3RKA4vunFAfrfxiJhPEplw "tech.videos" "~YouTube CodeOpinion"
@@ -38,18 +31,10 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCHEDNwdgR5TKPBWtaeTgD8w "te
 https://www.youtube.com/feeds/videos.xml?channel_id=UC4tU9QhQAgqIHHWBuocUlFg "tech.videos" "~YouTube lowderdev"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCbRP3c757lWg9M-U7TyEkXA "tech.videos" "~YouTube theobrowne1017"
 
-# https://www.to-rss.xyz/wikipedia/
-https://www.to-rss.xyz/wikipedia/current_events/ "wiki" "~Wikipedia Current Events"
-https://en.wikipedia.org/w/api.php?action=featuredfeed&feed=potd "wiki" "~Wikipedia Picture of the Day"
-https://en.wikipedia.org/w/api.php?action=featuredfeed&feed=onthisday "wiki" "~Wikipedia On This Day"
-http://en.wikipedia.org/w/api.php?action=featuredfeed&feed=featured "wiki" "~Wikipedia Featured Article"
-
 https://github.com/albohlabs.private.atom?token=AABH6UMRRFKC3P3C7WWSPKGAHXFH6 "github" "~github"
 
 https://reddit.com/r/programming/.rss "~ /r/programming" "tech"
 https://reddit.com/r/neovim/.rss "~ /r/neovim" "tech"
-https://sopuli.xyz/feeds/c/neovim.xml?sort=Active "~ /sopuli/neovim" "tech"
-https://www.trackawesomelist.com/rockerBOO/awesome-neovim/rss.xml "~ awesome-neovim" "tech"
 
 https://nitter.net/alexanderkondov/rss "~Twitter: Alex Kondov" "tech.social"
 https://nitter.net/GabrielVergnaud/rss "~Twitter: Gabriel Vergnaud" "tech.social"
@@ -72,7 +57,7 @@ https://nitter.net/NoriSte/rss "tech.social"
 https://nitter.net/ecyrbedev/rss "tech.social"
 https://nitter.net/khalilstemmler/rss "tech.social"
 https://nitter.net/learnvim/rss "tech.social"
-https://nitter.net/acemarke/rss "tech.social"
+# https://nitter.net/acemarke/rss "tech.social"
 
 
 http://feeds.feedburner.com/tocadotux "Linux" "~Toca do Tux"
@@ -84,7 +69,6 @@ http://www.dedoimedo.com/rss_feed.xml "Linux"
 http://www.flynsarmy.com/feed/ "Linux" "~Flynsarm"
 http://lxer.com/module/newswire/headlines.rss "Linux"
 http://rss.slashdot.org/Slashdot/slashdotLinux "Linux" "~SlashDot"
-http://feeds.pinboard.in/rss/t:linux "Linux" "~Pinboard: Linux"
 http://feeds.pinboard.in/rss/t:manjaro "Linux" "~Pinboard: Manjaro"
 http://feeds.pinboard.in/rss/t:sway "Linux" "~Pinboard: Sway"
 http://www.phoronix.com/rss.php "Linux"
@@ -97,9 +81,6 @@ http://www.newthinktank.com/feed/ "Linux" "~DerekBanas"
 https://itsfoss.com/feed/ "~It's FOSS" "Linux"
 https://archlinux.org/feeds/news/ "Linux"
 https://forum.manjaro.org/c/announcements/11.rss "Linux"
-
-# https://readrust.net/all/feed.rss "~read rust" "rust"
-# http://feeds.pinboard.in/rss/t:rust "~Pinboard: rust" "rust"
 
 https://the-guild.dev/feed.xml "tech" 
 https://www.samhh.com/rss.xml "~samhh" "tech"
@@ -166,22 +147,11 @@ http://scopeweb.mit.edu/feed/ "tech"
 https://blog.awsfundamentals.com/rss.xml "tech"
 https://martinfowler.com/feed.atom "tech"
 
-# http://feeds.pinboard.in/rss/t:aws "tech" "~Pinboard: AWS"
-http://feeds.pinboard.in/rss/t:nestjs "tech" "~Pinboard: nestjs"
-# http://feeds.pinboard.in/rss/t:typescript "tech" "~Pinboard: typescript"
-# http://feeds.pinboard.in/rss/t:neovim "tech" "~Pinboard: neovim"
-
+https://feeds.pinboard.in/rss/popular "tech" "~Pinboard"
 http://feeds.pinboard.in/rss/t:ddd "tech" "~Pinboard: DDD"
 http://feeds.pinboard.in/rss/t:graphql "tech" "~Pinboard: graphql"
-http://feeds.pinboard.in/rss/t:prisma "tech" "~Pinboard: Prisma"
-# http://feeds.pinboard.in/rss/t:postgresql "tech" "~Pinboard: PSQL"
-
-# http://feeds.pinboard.in/rss/t:architecture "tech" "~Pinboard: architecture"
-# http://feeds.pinboard.in/rss/t:monolith "tech" "~Pinboard: monolith"
-# http://feeds.pinboard.in/rss/t:microservice "tech" "~Pinboard: microservice"
 
 https://tinierklaertsichdiewelt.wordpress.com/feed/ "stuff01"
-https://aelkus.github.io/feed.xml "stuff01"
 http://dietotenblog.blogspot.com/feeds/posts/default?alt=rss "stuff01"
 https://what-if.xkcd.com/feed.atom "stuff01"
 http://abgedichtet.org/?feed=atom "stuff01"
@@ -253,11 +223,6 @@ http://feeds.feedburner.com/alltagsforschung "stuff01"
 https://pieceoplastic.com/zk/feed/ "stuff01"
 https://gitta-peyn.de/rss/ "stuff01"
 
-# https://nitter.net/BernardoKastrup/rss "stuff01"
-# https://nitter.net/anitaleirfall/rss "stuff01"
-# https://nitter.net/Plinz/rss "stuff01"
-
-
 https://itsa2amgrunge.com/feed/ "stuff02"
 https://geschichtedergegenwart.ch/feed/atom/ "stuff02"
 http://feeds.feedburner.com/doorofperception "stuff02"
@@ -312,6 +277,7 @@ https://www.inoreader.com/stream/user/1004673878/tag/user-favorites "stuff02"
 https://blog.playstation.com/category/ps4/feed/ "stuff02"
 https://wolframettetexte.wordpress.com/feed/ "stuff02"
 http://wutpilger.org/rss "stuff02"
+https://jakeseliger.com/feed/ "stuff02"
 
 https://api.quantamagazine.org/feed/ "stuff02"
 https://www.noemamag.com/feed/ "stuff02"
@@ -325,9 +291,6 @@ https://harpers.org/feed/ "stuff02"
 https://solar.lowtechmagazine.com/feeds/all-en.atom.xml "stuff02"
 http://www.publicbooks.org/feed "stuff02"
 https://www.thenewatlantis.com/feed "stuff02"
-
-# http://feeds.pinboard.in/rss/t:philosophy "stuff02" "~Pinboard: Philosophy"
-# http://feeds.pinboard.in/rss/t:interesting "stuff02" "~Pinboard: Interesting"
 
 https://www.nakedcapitalism.com/feed "economics"
 
@@ -360,10 +323,6 @@ https://www.spiegel.de/thema/sascha_lobo/index.rss "politics"
 https://www.spiegel.de/thema/spon_lobo/index.rss "politics"
 
 https://nitter.net/frank_rieger/rss "politics"
-# https://nitter.net/elektra_42/rss "politics"
-# https://nitter.net/egghat/rss "politics"
-# https://nitter.net/mspro/rss "politics"
-
 
 https://sindresorhus.com/rss.xml "frontend"
 https://addyosmani.com/rss.xml "frontend"
@@ -502,12 +461,4 @@ https://acloserlisten.com/feed/ "Music"
 https://echoesanddust.com/feed/ "Music"
 https://headphonecommute.com/feed/ "Music"
 http://lowlightmixes.blogspot.com/feeds/posts/default "Music"
-
-# https://postambientlux.tumblr.com/rss "Music"
 https://nitter.net/postambientlux/rss "Music"
-https://nitter.net/AphexTwin/rss "Music"
-
-# https://haskell-explained.gitlab.io/blog/feeds/rss.xml "haskell"
-# http://planet.haskell.org/rss20.xml "haskell"
-# https://haskell.pl-a.net/atom.xml "haskell"
-# https://www.haskellforall.com/feeds/posts/default "haskell"
