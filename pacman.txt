@@ -142,6 +142,7 @@ rsync
 rustup
 s-nail
 seahorse
+simple-scan
 smbclient
 sof-firmware
 spectre-meltdown-checker
