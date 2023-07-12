@@ -15,6 +15,7 @@ bat
 bat-extras
 bluez
 bluez-utils
+bob-bin
 btop
 btrfs-progs
 bzip2
@@ -47,7 +48,10 @@ ffmpeg
 ffmpegthumbnailer
 file-roller
 firefox
+fish
 flashfocus
+fzf
+git-delta
 git-open
 glow
 gnome-epub-thumbnailer
@@ -99,6 +103,7 @@ manjaro-zsh-config
 markdownlint-cli
 matcha-gtk-theme
 mdadm
+mdcat
 memtest86+
 memtest86+-efi
 mesa-vdpau
@@ -127,6 +132,7 @@ pcmanfm-gtk3
 perl
 playerctl
 pnpm
+pokemon-colorscripts-git
 polkit-gnome
 postman-bin
 poweralertd
@@ -139,9 +145,11 @@ qt6ct
 reiserfsprogs
 ripgrep
 rsync
+rtx
 rustup
 s-nail
 seahorse
+shell-color-scripts
 simple-scan
 smbclient
 sof-firmware
@@ -206,6 +214,7 @@ xf86-video-nouveau
 xfsprogs
 xorg-xwayland
 xsel
+yt-dlp
 zathura
 zathura-pdf-poppler
 zeit

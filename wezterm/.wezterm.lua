@@ -51,6 +51,9 @@ function scheme_for_appearance(appearance)
 end
 
 return {
+	-- default_prog = { "/bin/fish", "--login", "--command=tmux attach; or tmux" },
+	default_prog = { "/bin/fish", "--login" },
+
 	font_size = 12,
 	line_height = 1.25,
 
