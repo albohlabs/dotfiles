@@ -84,11 +84,18 @@ return {
         results_title = false,
         mappings = {
           i = {
-            ["<C-x>"] = require("telescope.actions").select_horizontal,
-            ["<C-s>"] = require("telescope.actions").select_horizontal,
-            ["<C-p>"] = require("telescope.actions.layout").toggle_preview,
-            ["<C-j>"] = require("telescope.actions").move_selection_next,
-            ["<C-k>"] = require("telescope.actions").move_selection_previous,
+            ["<C-l>"] = require("telescope.actions.layout").toggle_preview,
+
+            -- open in split/vsplit/tab
+            ["<C-w>s"] = require("telescope.actions").select_horizontal,
+            ["<C-x>"] = false, -- select_horizontal,
+            ["<C-w>v"] = require("telescope.actions").select_vertical,
+            ["<C-v>"] = false, -- select_vertical,
+            ["<C-w>t"] = require("telescope.actions").select_tab,
+            ["<C-t>"] = false, -- select_tab,
+
+            -- ["<C-j>"] = require("telescope.actions").move_selection_next,
+            -- ["<C-k>"] = require("telescope.actions").move_selection_previous,
             ["<C-e>"] = function(picker)
               require("telescope.actions").send_selected_to_qflist(picker)
               vim.cmd("copen")
@@ -96,19 +103,29 @@ return {
             ["<C-c>"] = require("telescope.actions").close,
           },
           n = {
-            q = require("telescope.actions").close,
-            ["<Esc>"] = require("telescope.actions").close,
-            ["<C-c>"] = require("telescope.actions").close,
-            ["<C-s>"] = require("telescope.actions").select_horizontal,
-            ["<C-x>"] = require("telescope.actions").select_horizontal,
+            -- preview
+            ["<C-l>"] = require("telescope.actions.layout").toggle_preview,
+
+            -- open in split/vsplit/tab
+            ["<C-w>s"] = require("telescope.actions").select_horizontal,
+            ["<C-x>"] = false, -- select_horizontal,
+            ["<C-w>v"] = require("telescope.actions").select_vertical,
+            ["<C-v>"] = false, -- select_vertical,
+            ["<C-w>t"] = require("telescope.actions").select_tab,
+            ["<C-t>"] = false, -- select_tab,
+
             o = "toggle_all",
-            p = require("telescope.actions.layout").toggle_preview,
-            J = require("telescope.actions").cycle_history_next,
-            K = require("telescope.actions").cycle_history_prev,
             ["<C-e>"] = function(picker)
               require("telescope.actions").send_selected_to_qflist(picker)
               vim.cmd("copen")
             end,
+
+            -- quit
+            ["<ESC>"] = require("telescope.actions").close,
+            ["<C-c>"] = require("telescope.actions").close,
+            ["<C-[>"] = require("telescope.actions").close,
+            ["q"] = require("telescope.actions").close,
+            ["Q"] = require("telescope.actions").close,
           },
         },
         preview = { hide_on_startup = true },
@@ -116,17 +133,14 @@ return {
           "rg",
           "--color=never",
           "--no-heading",
-          "--with-filename",
-          "--line-number",
+          "-H", -- --with-filename,
+          "-n", -- --line-number
           "--column",
-          "--smart-case",
-          "--trim",
+          "-S", -- --smart-case,
+          "--hidden",
         },
       },
       pickers = {
-        live_grep = {
-          find_command = { "rg", "--hidden" },
-        },
         registers = {
           initial_mode = "insert",
           layout_config = { width = 0.7, height = 0.1 },
@@ -144,9 +158,13 @@ return {
           initial_mode = "normal",
           sort_lastused = true,
           ignore_current_buffer = true,
-          -- TODO: add me to harpoon
           mappings = {
-            n = { x = "delete_buffer" },
+            n = {
+              ["<C-x>"] = "delete_buffer",
+            },
+            i = {
+              ["<C-x>"] = "delete_buffer",
+            },
           },
           sort_mru = true,
         },
