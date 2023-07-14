@@ -17,11 +17,8 @@ return {
       {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",
-        config = function(_, opts)
-          local telescope = require("telescope")
-          telescope.setup(opts)
-          telescope.load_extension("fzf")
-          telescope.load_extension("notify")
+        config = function()
+          require("telescope").load_extension("fzf")
         end,
       },
     },
@@ -71,17 +68,6 @@ return {
             width = 0.9,
           },
         },
-        -- path_display = { "smart" },
-        -- path_display = {
-        --   shorten = {
-        --     len = 2,
-        --     exclude = { -1 },
-        --   },
-        -- },
-        prompt_prefix = "   ",
-        selection_caret = "  ",
-        entry_prefix = "  ",
-        results_title = false,
         mappings = {
           i = {
             ["<C-l>"] = require("telescope.actions.layout").toggle_preview,
@@ -129,31 +115,8 @@ return {
           },
         },
         preview = { hide_on_startup = true },
-        vimgrep_arguments = {
-          "rg",
-          "--color=never",
-          "--no-heading",
-          "-H", -- --with-filename,
-          "-n", -- --line-number
-          "--column",
-          "-S", -- --smart-case,
-          "--hidden",
-        },
       },
       pickers = {
-        registers = {
-          initial_mode = "insert",
-          layout_config = { width = 0.7, height = 0.1 },
-        },
-        colorscheme = {
-          layout_config = { width = 0.2, height = 0.7 },
-        },
-        spell_suggest = {
-          layout_config = { width = 0.2, height = 0.7 },
-        },
-        command_history = {
-          layout_config = { width = 0.6 },
-        },
         buffers = {
           initial_mode = "normal",
           sort_lastused = true,
@@ -167,12 +130,6 @@ return {
             },
           },
           sort_mru = true,
-        },
-        lsp_references = {
-          initial_mode = "normal",
-          jump_type = "never",
-          include_current_line = true,
-          fname_width = 60,
         },
         lsp_document_symbols = {
           fname_width = 10,
@@ -191,14 +148,6 @@ return {
               width = 0.5,
             },
           },
-        },
-      },
-      extensions = {
-        fzf = {
-          fuzzy = true, -- false will only do exact matching
-          override_generic_sorter = true, -- override the generic sorter
-          override_file_sorter = true, -- override the file sorter
-          case_mode = "smart_case", -- or "ignore_case" or "respect_case"
         },
       },
     },
