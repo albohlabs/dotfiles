@@ -57,8 +57,7 @@ https://nitter.net/NoriSte/rss "tech.social"
 https://nitter.net/ecyrbedev/rss "tech.social"
 https://nitter.net/khalilstemmler/rss "tech.social"
 https://nitter.net/learnvim/rss "tech.social"
-# https://nitter.net/acemarke/rss "tech.social"
-
+https://nitter.net/yuriybogomolov/rss "tech.social"
 
 http://feeds.feedburner.com/tocadotux "Linux" "~Toca do Tux"
 http://www.bashoneliners.com/oneliners/feeds/oneliner/ "Linux" "~BashOnliners"
@@ -146,6 +145,7 @@ https://this-week-in-neovim.org/rss "tech"
 http://scopeweb.mit.edu/feed/ "tech"
 https://blog.awsfundamentals.com/rss.xml "tech"
 https://martinfowler.com/feed.atom "tech"
+https://ybogomolov.me/feed "tech"
 
 https://feeds.pinboard.in/rss/popular "tech" "~Pinboard"
 http://feeds.pinboard.in/rss/t:ddd "tech" "~Pinboard: DDD"
