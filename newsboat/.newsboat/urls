@@ -35,6 +35,7 @@ https://github.com/albohlabs.private.atom?token=AABH6UMRRFKC3P3C7WWSPKGAHXFH6 "g
 
 https://reddit.com/r/programming/.rss "~ /r/programming" "tech"
 https://reddit.com/r/neovim/.rss "~ /r/neovim" "tech"
+https://dotfyle.com/this-week-in-neovim/rss.xml "~ this week in neovim" "tech"
 
 https://nitter.net/alexanderkondov/rss "~Twitter: Alex Kondov" "tech.social"
 https://nitter.net/GabrielVergnaud/rss "~Twitter: Gabriel Vergnaud" "tech.social"
