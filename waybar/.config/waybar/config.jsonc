@@ -1,7 +1,7 @@
 {
   "include": ["/usr/share/sway/templates/waybar/config.jsonc"],
 
-  "height": 24,
+  "height": 30,
   "spacing": 0,
   "layer": "top",
 
@@ -14,7 +14,6 @@
     "custom/weather"
   ],
   "modules-right": [
-    "custom/zeit",
     "network",
     "bluetooth",
     "custom/playerctl",
@@ -37,14 +36,12 @@
     "on-click": false
   },
   "cpu": {
-    "format": "󰌢 {load}"
+    "format": "󰌢 {load}",
+    "on-click": "swaymsg exec \\$once \\$term_float btop"
   },
   "memory": {
-    "format": " {}%"
-  },
-  "backlight": {
-    "format": "{percent}% {icon}",
-    "format-icons": ["󰃞", "󰃟", "󰃠"]
+    "format": " {}%",
+    "on-click": "swaymsg exec \\$once \\$term_float btop"
   },
   "battery": {
     "on-click": "cpupower-gui",
@@ -59,12 +56,5 @@
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
     "format-icons": [" ", " ", " ", " ", " "]
-  },
-  "network": {
-    "format-wifi": "󰖩",
-    "format-ethernet": "{ifname}: {ipaddr}/{cidr} 󰈀",
-    "format-linked": "{ifname} (No IP) 󰈀",
-    "format-disconnected": "󰖪",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
   }
 }
