@@ -4,7 +4,14 @@ abbr cp "cp -riv"
 abbr mkdir "mkdir -vp"
 
 # https://github.com/ranger/ranger
-abbr cdc ranger
+abbr f ranger
+
+abbr ".." "cd ../"
+abbr "..." "cd ../../"
+abbr "...." "cd ../../../"
+abbr "....." "cd ../../../../"
+abbr "......" "cd ../../../../../"
+abbr "......." "cd ../../../../../../"
 
 alias ls "exa --color=always --icons --group-directories-first"
 alias la 'exa --color=always --icons --group-directories-first --all'
@@ -14,11 +21,19 @@ abbr l ll
 set -x exa_options '--links --group --changed --time-style long-iso --icons'
 alias tree "exa --long --tree --level=4 -a $(printf $exa_options)"
 
+abbr lsvim 'tmux list-panes -a -F "#{session_name} #{command} #{pane_pid} #{pane_title} #{window_name} #{pane_id} #{session_path}" | grep nvim'
+
+alias astrovim "NVIM_APPNAME=AstroVim nvim"
+abbr av astrovim
+
+alias lazyvim nvim
+abbr lv lazyvim
+
 # Editor
-abbr nvim nvim
-abbr vim nvim
-abbr vi nvim
-abbr v nvim
+abbr nvim astrovim
+abbr vim astrovim
+abbr vi astrovim
+abbr v astrovim
 
 abbr g git
 alias gb 'git branch -vv'
@@ -32,8 +47,8 @@ abbr grep rg
 abbr cat bat
 abbr suod sudo
 
-alias vo 'fd --type f --hidden --exclude .git | fzf-tmux -p --sort | xargs --no-run-if-empty nvim'
-alias vg 'g ls-files -m --others --exclude-standard | fzf-tmux -p --sort | xargs --no-run-if-empty nvim'
+alias vo 'fd --type f --hidden --exclude .git | fzf-tmux -p --sort | NVIM_APPNAME=AstroVim xargs --no-run-if-empty nvim'
+alias vg 'g ls-files -m --others --exclude-standard | fzf-tmux -p --sort | NVIM_APPNAME=AstroVim xargs --no-run-if-empty nvim'
 alias fzfp 'fzf --height 100% --sort --preview "bat --style=numbers --color=always {}"'
 
 # alias node 'docker run --rm -it -v `pwd`:/app -w /app node:16-alpine '
