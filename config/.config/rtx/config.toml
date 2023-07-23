@@ -22,8 +22,7 @@ raw = false         # set to true to directly pipe plugins to stdin/stdout/stder
 shorthands_file = '~/.config/rtx/shorthands.toml' # path to the shorthands file, see `RTX_SHORTHANDS_FILE`
 disable_default_shorthands = false                # disable the default shorthands, see `RTX_DISABLE_DEFAULT_SHORTHANDS`
 disable_tools = ['postgres']
-
-experimental = false # enable experimental features such as shims
+experimental = true
 # shims_dir = '~/.local/share/rtx/shims' # [experimental] directory where shims are stored
 
 [alias.nodejs]
