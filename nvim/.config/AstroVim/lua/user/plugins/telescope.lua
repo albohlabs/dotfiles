@@ -2,6 +2,11 @@ return {
   "telescope.nvim",
   keys = {
     {
+      "<leader>fg",
+      "<cmd>lua require('telescope.builtin').git_status()<cr>",
+      desc = "Find Git Status",
+    },
+    {
       "<leader>fl",
       "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
       desc = "Find ripgrep",
@@ -41,6 +46,9 @@ return {
       },
       mappings = {
         i = {
+          ["<C-n>"] = require("telescope.actions").move_selection_next,
+          ["<C-p>"] = require("telescope.actions").move_selection_previous,
+
           ["<C-l>"] = require("telescope.actions.layout").toggle_preview,
 
           -- open in split/vsplit/tab
@@ -60,6 +68,9 @@ return {
           ["<C-c>"] = require("telescope.actions").close,
         },
         n = {
+          ["<C-n>"] = require("telescope.actions").move_selection_next,
+          ["<C-p>"] = require("telescope.actions").move_selection_previous,
+
           -- preview
           ["<C-l>"] = require("telescope.actions.layout").toggle_preview,
 
