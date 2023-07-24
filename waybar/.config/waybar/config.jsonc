@@ -1,17 +1,19 @@
 {
-  "include": ["/usr/share/sway/templates/waybar/config.jsonc"],
-
+  "include": [
+    "/usr/share/sway/templates/waybar/config.jsonc"
+  ],
   "height": 30,
   "spacing": 0,
   "layer": "top",
-
-  "modules-left": ["sway/workspaces", "custom/scratchpad"],
+  "modules-left": [
+    "sway/workspaces",
+    "custom/scratchpad"
+  ],
   "modules-center": [
     "clock",
     "custom/dnd",
     "custom/wf-recorder",
-    "sway/mode",
-    "custom/weather"
+    "sway/mode"
   ],
   "modules-right": [
     "network",
@@ -55,6 +57,12 @@
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
-    "format-icons": [" ", " ", " ", " ", " "]
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ]
   }
 }
