@@ -146,7 +146,7 @@ ranger
 reiserfsprogs
 ripgrep
 rsync
-rtx
+rtx-bin
 rustup
 s-nail
 seahorse
@@ -172,7 +172,7 @@ thunderbird-beta-bin
 timeshift
 tldr
 tmux
-topgrade
+topgrade-bin
 torbrowser-launcher
 transmission-gtk
 tree
