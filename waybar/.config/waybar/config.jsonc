@@ -35,7 +35,7 @@
   },
   "clock": {
     "format": "  {:%e.%b %H:%M}",
-    "on-click": false
+    "on-click": "gnome-calendar"
   },
   "cpu": {
     "format": "󰌢 {load}",

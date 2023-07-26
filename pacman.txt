@@ -54,6 +54,7 @@ fzf
 git-delta
 git-open
 glow
+gnome-calendar
 gnome-epub-thumbnailer
 gnome-keyring
 google-chrome
