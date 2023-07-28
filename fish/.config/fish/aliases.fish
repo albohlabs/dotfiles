@@ -48,7 +48,7 @@ abbr cat bat
 abbr suod sudo
 
 alias vo 'fd --type f --hidden --exclude .git | fzf-tmux -p --sort | NVIM_APPNAME=AstroVim xargs --no-run-if-empty nvim'
-alias vg 'g ls-files -m --others --exclude-standard | fzf-tmux -p --sort | NVIM_APPNAME=AstroVim xargs --no-run-if-empty nvim'
+alias vg 'git ls-files -m --others --exclude-standard | fzf-tmux -p --sort | NVIM_APPNAME=AstroVim xargs --no-run-if-empty nvim'
 alias fzfp 'fzf --height 100% --sort --preview "bat --style=numbers --color=always {}"'
 
 # alias node 'docker run --rm -it -v `pwd`:/app -w /app node:16-alpine '
