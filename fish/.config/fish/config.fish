@@ -10,6 +10,7 @@ fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
 set -gx EDITOR (which nvim)
 set -gx VISUAL $EDITOR
 set -gx SUDO_EDITOR $EDITOR
+set -gx NVIM_APPNAME AstroVim
 
 # Set cursor theme
 set -gx XCURSOR_THEME Adwaita
