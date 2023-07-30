@@ -54,7 +54,6 @@ fzf
 git-delta
 git-open
 glow
-gnome-calendar
 gnome-epub-thumbnailer
 gnome-keyring
 google-chrome
@@ -95,6 +94,7 @@ man-db
 man-pages
 manjaro-aur-support
 manjaro-pipewire
+manjaro-printer
 manjaro-release
 manjaro-settings-manager
 manjaro-settings-manager-notifier
@@ -165,6 +165,7 @@ swaycwd
 swaylock-effects
 sworkstyle
 sysfsutils
+system-config-printer
 systemd
 telegram-desktop
 texinfo
@@ -178,6 +179,7 @@ torbrowser-launcher
 transmission-gtk
 tree
 tree-sitter
+tree-sitter-cli
 ttf-dejavu
 ttf-fira-code
 ttf-firacode-nerd
