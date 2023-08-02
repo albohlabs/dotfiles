@@ -1,30 +1,6 @@
 -- https://wezfurlong.org/wezterm/config/lua/config/
 local wezterm = require("wezterm")
 
--- https://github.com/folke/zen-mode.nvim#wezterm
-wezterm.on("user-var-changed", function(window, pane, name, value)
-	local overrides = window:get_config_overrides() or {}
-	if name == "ZEN_MODE" then
-		local incremental = value:find("+")
-		local number_value = tonumber(value)
-		if incremental ~= nil then
-			while number_value > 0 do
-				window:perform_action(wezterm.action.IncreaseFontSize, pane)
-				number_value = number_value - 1
-			end
-			overrides.enable_tab_bar = false
-		elseif number_value < 0 then
-			window:perform_action(wezterm.action.ResetFontSize, pane)
-			overrides.font_size = nil
-			overrides.enable_tab_bar = true
-		else
-			overrides.font_size = number_value
-			overrides.enable_tab_bar = false
-		end
-	end
-	window:set_config_overrides(overrides)
-end)
-
 local function font(opts)
 	return wezterm.font_with_fallback({
 		opts,
@@ -34,19 +10,10 @@ end
 
 function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
-		-- color_scheme = "Catppuccin Frappe",
-		-- color_scheme = "Catppuccin Macchiato",
-		-- color_scheme = "Catppuccin Mocha",
-
-		-- color_scheme = "tokyonight_day",
-		-- color_scheme = "tokyonight_night",
-		-- color_scheme = "tokyonight_storm",
-		-- return "Catppuccin Mocha"
 		return "tokyonight_moon"
 	else
-		-- return "Catppuccin Latte"
 		-- return "tokyonight_day"
-		return "tokyonight_moon"
+		return "tokyonight_storm"
 	end
 end
 
@@ -58,8 +25,9 @@ return {
 	line_height = 1.25,
 
 	-- font = font("Hasklug Nerd Font"),
-
 	font = font("FiraCode Nerd Font"),
+	-- font = font("JetbrainsMono Nerd Font"),
+
 	cell_width = 0.9,
 
 	font_rules = {
