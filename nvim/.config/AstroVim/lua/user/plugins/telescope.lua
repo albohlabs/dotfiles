@@ -76,8 +76,13 @@ return {
       },
     },
     pickers = {
+      lsp_definition = {
+        include_declaration = false,
+        show_line = false,
+      },
       lsp_references = {
-        fname_width = 90,
+        include_declaration = false,
+        show_line = false,
       },
       buffers = {
         initial_mode = "normal",
