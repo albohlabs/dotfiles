@@ -11,38 +11,17 @@ return {
       "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
       desc = "Find ripgrep",
     },
-    {
-      "<leader>fs",
-      function()
-        require("telescope.builtin").lsp_document_symbols {
-          symbols = {
-            "Class",
-            "Constant",
-            "Constructor",
-            "Enum",
-            "Field",
-            "Function",
-            "Interface",
-            "Method",
-            "Module",
-            "Property",
-            "Struct",
-            "Struct",
-            "Trait",
-            "Variable",
-          },
-        }
-      end,
-      desc = "Goto Symbol",
-    },
   },
   opts = {
     defaults = {
+      -- preview = { hide_on_startup = true },
+      -- https://github.com/nvim-telescope/telescope.nvim/blob/master/doc/telescope.txt#L150
       layout_config = {
-        vertical = {
-          width = 0.9,
-          height = 0.9,
-        },
+        -- horizontal = { preview_width = 0.6, results_width = 0.8 },
+        -- preview_cutoff = 120,
+        preview_cutoff = 1,
+        width = 0.95,
+        height = 0.95,
       },
       mappings = {
         i = {
@@ -96,9 +75,11 @@ return {
           ["Q"] = require("telescope.actions").close,
         },
       },
-      preview = { hide_on_startup = true },
     },
     pickers = {
+      lsp_references = {
+        fname_width = 80,
+      },
       buffers = {
         initial_mode = "normal",
         sort_lastused = true,
@@ -112,22 +93,6 @@ return {
           },
         },
         sort_mru = true,
-      },
-      lsp_document_symbols = {
-        fname_width = 10,
-        trim_text = true,
-        layout_strategy = "vertical",
-        layout_config = {
-          preview_cutoff = 0, -- Preview should always show (unless previewer = false)
-          width = function(_, max_columns, _) return math.min(max_columns, 9) end,
-
-          --height = function(_, _, max_lines)
-          --  return math.min(max_lines, 15)
-          --end,
-          vertical = {
-            width = 0.5,
-          },
-        },
       },
     },
   },
