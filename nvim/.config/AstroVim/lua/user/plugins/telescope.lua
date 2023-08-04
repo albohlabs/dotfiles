@@ -12,16 +12,15 @@ return {
       desc = "Find ripgrep",
     },
   },
+  -- https://github.com/nvim-telescope/telescope.nvim/blob/master/doc/telescope.txt
   opts = {
     defaults = {
       -- preview = { hide_on_startup = true },
-      -- https://github.com/nvim-telescope/telescope.nvim/blob/master/doc/telescope.txt#L150
       layout_config = {
-        -- horizontal = { preview_width = 0.6, results_width = 0.8 },
-        -- preview_cutoff = 120,
-        preview_cutoff = 1,
-        width = 0.95,
-        height = 0.95,
+        preview_cutoff = 0,
+        -- full screen
+        width = { padding = 0 },
+        height = { padding = 0 },
       },
       mappings = {
         i = {
@@ -78,7 +77,7 @@ return {
     },
     pickers = {
       lsp_references = {
-        fname_width = 80,
+        fname_width = 90,
       },
       buffers = {
         initial_mode = "normal",
