@@ -18,10 +18,12 @@ return {
   { import = "astrocommunity.pack.yaml" },
 
   { import = "astrocommunity.color.mini-hipatterns" },
+  { import = "astrocommunity.color.twilight-nvim" },
   { import = "astrocommunity.comment.mini-comment" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
+  { import = "astrocommunity.editing-support.zen-mode-nvim" },
   { import = "astrocommunity.git.neogit" },
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.motion.vim-matchup" },

@@ -32,6 +32,7 @@ return {
     ["<leader>b"] = { name = "Buffers" },
 
     ["<leader>r"] = { ":Neotree toggle position=right git_status<cr>", desc = "Toggle Git Explorer" },
+    ["<leader>uz"] = { "<cmd>ZenMode<cr>", desc = "Toggle Zen Mode" },
 
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
