@@ -1,3 +1,5 @@
+set -U fish_greeting # disable fish greeting
+
 set -x fish_user_paths
 # Path
 # fish_add_path $HOME/.cargo/bin
