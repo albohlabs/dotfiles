@@ -26,6 +26,9 @@
     "tray",
     "battery"
   ],
+  "network": {
+    "on-click": "swaymsg exec XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
+  },
   "tray": {
     "icon-size": 14,
     "spacing": 0
