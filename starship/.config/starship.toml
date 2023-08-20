@@ -1,8 +1,7 @@
-# Replace the "❯" symbol in the prompt with "➜"
-[character] # The name of the module we are configuring is "character"
-success_symbol = "[](white)"
-error_symbol = "[](red)"
-vicmd_symbol = "[](green)"
+[character]
+success_symbol = "[ ](white)"
+error_symbol = "[ ](red)"
+vicmd_symbol = "[ ](green)"
 
 #symbol = "➜"     # The "symbol" segment is being set to "➜"
 # use_symbol_for_status = true  # Show "✖" when the command failed
@@ -15,14 +14,16 @@ format = "[ $output ]($style)"
 shell = ["bash"]
 
 [git_status]
-untracked = '[ $count](bold yellow) '
-staged = '[ $count](bold green) '
-stashed = "[ ](cyan) "
-deleted = '[ $count](bold red) '
-modified = '[ $count](bold blue) '
-behind = '[ ](bold purple) '
-ahead = '[ ](bold purple) '
-format = '([$all_status$ahead_behind]($style))'
+format = '([$all_status]($style))'
+conflicted = "([⚠️ $count](bold red) )"
+ahead = "([⟫$count])"
+behind = "([⟪$count])"
+stashed = "([↪ $count](bold red)) "
+modified = "([ $count](bold yellow) )"
+staged = "([ $count](bold green) )"
+renamed = "([⇆ $count](vold blue) )"
+deleted = "([ $count](bold red) )"
+untracked = "([ $count](dimmed red) )"
 
 [lua]
 detect_folders = []
@@ -48,6 +49,18 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
+truncate_to_repo = false
+truncation_length = 5
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"~/dotfiles/nvim/.config/AstroVim" = "@dotfiles/astrovim"
+"~/dotfiles" = "@dotfiles"
+"~/Development/nuwork/dev/backend-services" = "@nuwork/backend"
+"~/Development/nuwork/dev/frontend" = "@nuwork/frontend"
+"~/Development/nuwork/dev" = "@nuwork"
+"~/Development/nuwork" = "@nuwork"
+"~/Development" = "@dev"
 
 [docker_context]
 symbol = " "
