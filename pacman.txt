@@ -139,6 +139,7 @@ ranger
 reiserfsprogs
 rsync
 rtx-bin
+rustup
 s-nail
 sof-firmware
 spectre-meltdown-checker
