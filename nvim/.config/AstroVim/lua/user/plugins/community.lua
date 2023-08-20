@@ -27,6 +27,7 @@ return {
   { import = "astrocommunity.git.neogit" },
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.motion.vim-matchup" },
+  { import = "astrocommunity.motion/harpoon" },
   { import = "astrocommunity.project.nvim-spectre" },
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
 }
