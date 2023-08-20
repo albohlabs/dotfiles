@@ -3,7 +3,9 @@ return {
   "anuvyklack/windows.nvim",
   dependencies = {
     "anuvyklack/middleclass",
+    { "anuvyklack/animation.nvim", enabled = false },
   },
+  event = "WinNew",
   keys = {
     { "<C-w>z", "<cmd>WindowsMaximize<cr>", desc = "Maximize" },
     { "<C-w>_", "<cmd>WindowsMaximizeVertically<cr>", desc = "Maximize width" },
@@ -19,10 +21,11 @@ return {
     "WindowsDisableAutowidth",
     "WindowsToggleAutowidth",
   },
-  opts = {},
-  init = function()
-    vim.o.winwidth = 10
-    vim.o.winminwidth = 10
+  config = function()
+    vim.o.winwidth = 5
     vim.o.equalalways = false
+    require("windows").setup {
+      animation = { enable = false, duration = 150 },
+    }
   end,
 }
