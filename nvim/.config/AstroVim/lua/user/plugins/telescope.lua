@@ -1,9 +1,5 @@
 return {
   "telescope.nvim",
-  dependencies = {
-    "kkharji/sqlite.lua",
-    { "prochri/telescope-all-recent.nvim", opts = {} },
-  },
   keys = {
     {
       "<leader>fg",
@@ -26,9 +22,6 @@ return {
         width = { padding = 0 },
         height = { padding = 0 },
       },
-      path_display = { "smart" },
-      prompt_prefix = " ",
-      selection_caret = " ",
       mappings = {
         i = {
           ["<C-n>"] = require("telescope.actions").move_selection_next,
@@ -84,43 +77,21 @@ return {
     },
     pickers = {
       commands = {
-        prompt_prefix = " ",
         layout_config = {
           height = 0.63,
           width = 0.78,
         },
       },
       command_history = {
-        prompt_prefix = " ",
         layout_config = {
           height = 0.63,
           width = 0.58,
         },
       },
-      git_files = {
-        prompt_prefix = "󰊢 ",
-        show_untracked = true,
-      },
       find_files = {
-        prompt_prefix = " ",
         find_command = { "fd", "-H" },
       },
-      live_grep = {
-        prompt_prefix = "󰱽 ",
-      },
-      grep_string = {
-        prompt_prefix = "󰱽 ",
-      },
-      lsp_definition = {
-        include_declaration = false,
-        show_line = false,
-      },
-      lsp_references = {
-        include_declaration = false,
-        show_line = false,
-      },
       buffers = {
-        prompt_prefix = "󰸩 ",
         initial_mode = "normal",
         sort_lastused = true,
         ignore_current_buffer = true,
