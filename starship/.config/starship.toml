@@ -1,17 +1,7 @@
 [character]
-success_symbol = "[ ](white)"
-error_symbol = "[ ](red)"
-vicmd_symbol = "[ ](green)"
-
-#symbol = "➜"     # The "symbol" segment is being set to "➜"
-# use_symbol_for_status = true  # Show "✖" when the command failed
-
-[custom.neovim]
-command = 'bob ls | rg Used | awk "{print \$2}"' # shows output of command
-detect_folders = ["lua"]
-style = "green"
-format = "[ $output ]($style)"
-shell = ["bash"]
+success_symbol = "[\uf054](white)" # 
+vicmd_symbol = "[\ue62b](white)"   # 
+error_symbol = "[\uf467](red)"     # 
 
 [git_status]
 format = '([$all_status]($style))'
@@ -24,28 +14,6 @@ staged = "([ $count](bold green) )"
 renamed = "([⇆ $count](vold blue) )"
 deleted = "([ $count](bold red) )"
 untracked = "([ $count](dimmed red) )"
-
-[lua]
-detect_folders = []
-symbol = " "
-
-[git_metrics]
-disabled = false
-
-[aws]
-symbol = "  "
-
-[buf]
-symbol = " "
-
-[c]
-symbol = " "
-
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
 
 [directory]
 read_only = " 󰌾"
@@ -62,121 +30,8 @@ truncation_symbol = "…/"
 "~/Development/nuwork" = "@nuwork"
 "~/Development" = "@dev"
 
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
-[fossil_branch]
-symbol = " "
-
-[git_branch]
-symbol = " "
-
-[golang]
-symbol = " "
-
-[guix_shell]
-symbol = " "
-
-[haskell]
-symbol = " "
-
-[haxe]
-symbol = "⌘ "
-
-[hg_branch]
-symbol = " "
+[username]
+disabled = true
 
 [hostname]
-ssh_symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[memory_usage]
-symbol = "󰍛 "
-
-[meson]
-symbol = "󰔷 "
-
-[nim]
-symbol = "󰆥 "
-
-[nix_shell]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
-[os.symbols]
-Alpaquita = " "
-Alpine = " "
-Amazon = " "
-Android = " "
-Arch = " "
-Artix = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Windows = "󰍲 "
-
-[package]
-symbol = "󰏗 "
-
-[pijul_channel]
-symbol = "🪺 "
-
-[python]
-symbol = " "
-
-[rlang]
-symbol = "󰟔 "
-
-[ruby]
-symbol = " "
-
-[rust]
-symbol = " "
-
-[scala]
-symbol = " "
-
-[spack]
-symbol = "🅢 "
+disabled = true
