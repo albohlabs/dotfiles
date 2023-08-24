@@ -7,6 +7,7 @@ appimagelauncher
 atuin
 autotiling-rs
 avahi
+aws-cdk
 b43-fwcutter
 base
 base-devel
@@ -109,6 +110,7 @@ nano
 nano-syntax-highlighting
 nautilus
 neofetch
+net-tools
 network-manager-applet
 networkmanager
 newsboat
@@ -207,3 +209,4 @@ zathura
 zathura-pdf-poppler
 zeit
 zoxide
+zsa-wally-bin
