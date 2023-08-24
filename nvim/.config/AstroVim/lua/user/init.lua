@@ -1,3 +1,8 @@
+vim.cmd [[command! -nargs=0 GoToFile :Telescope find_files]]
+vim.cmd [[command! -nargs=0 GoToGitStatus :Telescope git_status]]
+vim.cmd [[command! -nargs=0 GoToCommand :Telescope commands]]
+vim.cmd [[command! -nargs=0 Grep :Telescope live_grep]]
+
 return {
   -- Configure AstroNvim updates
   updater = {

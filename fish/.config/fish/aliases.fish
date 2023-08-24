@@ -13,10 +13,13 @@ abbr "....." "cd ../../../../"
 abbr "......" "cd ../../../../../"
 abbr "......." "cd ../../../../../../"
 
-alias ls "exa --color=always --icons --group-directories-first"
-alias la 'exa --color=always --icons --group-directories-first --all'
-alias ll 'exa --color=always --icons --group-directories-first --all --long'
-abbr l ll
+# alias ls "exa --color=always --icons --group-directories-first"
+# alias la 'exa --color=always --icons --group-directories-first --all'
+# alias ll 'exa --color=always --icons --group-directories-first --all --long'
+
+abbr l "lsd  --group-dirs first -A"
+abbr ll "lsd  --group-dirs first -Al"
+abbr lt "lsd  --group-dirs last -A --tree"
 
 set -x exa_options '--links --group --changed --time-style long-iso --icons'
 alias tree "exa --long --tree --level=4 -a $(printf $exa_options)"
@@ -41,10 +44,6 @@ abbr grep rg
 abbr cat bat
 abbr suod sudo
 
-alias vo 'fd --type f --hidden --exclude .git | fzf-tmux -p --sort | xargs --no-run-if-empty nvim'
-alias vg 'git ls-files -m --others --exclude-standard | fzf-tmux -p --sort | xargs --no-run-if-empty nvim'
-alias fzfp 'fzf --height 100% --sort --preview "bat --style=numbers --color=always {}"'
-
 # alias node 'docker run --rm -it -v `pwd`:/app -w /app node:16-alpine '
 
 # alias somafm 'mplayer -really-quiet -vo none -volume 80 -playlist http://somafm.com/groovesalad.pls'
@@ -60,3 +59,50 @@ alias fzfp 'fzf --height 100% --sort --preview "bat --style=numbers --color=alwa
 # alias deno='docker run --rm -it -v `pwd`:/app -w /app denoland/deno '
 # alias aws='docker run --rm -it -v ~/.aws:/root/.aws amazon/aws-cli '
 # alias ffmpeg='docker run --rm -it -v `pwd`:/app jrottenberg/ffmpeg '
+
+alias fzfp 'fzf --height 100% --sort --preview "bat --style=numbers --color=always {}"'
+
+# alias vo 'fd --type f --hidden --exclude .git | fzf-tmux -p --sort | xargs --no-run-if-empty nvim'
+abbr :GoToFile "nvim +GoToFile"
+alias vo "nvim +GoToFile"
+
+# alias vg 'git ls-files -m --others --exclude-standard | fzf-tmux -p --sort | xargs --no-run-if-empty nvim'
+abbr :GoToGitStatus "nvim +GoToFile"
+alias vg "nvim +GoToFile"
+abbr :Grep "nvim +Grep"
+
+abbr p "pnpm run (jq -r '.scripts|to_entries[]|((.key))' package.json | fzf-tmux -p --border-label='pnpm run')"
+abbr pa "pnpm add"
+abbr pb "pnpm build"
+abbr pd "pnpm dev"
+abbr pe "pnpm e2e"
+abbr pg "pnpm generate"
+abbr ph "pnpm help"
+abbr pi "pnpm install"
+abbr pim "pnpm import"
+abbr pir "pnpm rebuild"
+abbr pit "pnpm install-test"
+abbr pl "pnpm link"
+abbr pls "pnpm ls"
+abbr pr "pnpm run"
+abbr ps "pnpm start"
+abbr psa "pnpm store add"
+abbr psp "pnpm store prune"
+abbr pss "pnpm store status"
+abbr pt "pnpm test"
+abbr pu "pnpm update"
+abbr pul "pnpm unlink"
+abbr pw "pnpm web"
+
+abbr nb "npm run build"
+abbr nd "npm run dev"
+abbr nf neofetch
+abbr ni "npm install"
+abbr nt "npm run test"
+
+abbr c clear
+abbr cl clear
+abbr claer clear
+abbr clera clear
+
+abbr cx "chmod +x"
