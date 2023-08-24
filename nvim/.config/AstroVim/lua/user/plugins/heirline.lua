@@ -4,6 +4,7 @@ return {
   opts = function(_, opts)
     local status = require "astronvim.utils.status"
 
+    opts.winbar = nil
     opts.statusline = { -- statusline
       hl = { fg = "fg", bg = "bg" },
       -- status.component.file_info { filetype = {}, filename = false, file_modified = false },
