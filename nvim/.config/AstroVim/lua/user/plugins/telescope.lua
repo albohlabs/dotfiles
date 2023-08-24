@@ -91,6 +91,14 @@ return {
       find_files = {
         find_command = { "fd", "-H" },
       },
+      lsp_definition = {
+        include_declaration = false,
+        show_line = false,
+      },
+      lsp_references = {
+        include_declaration = false,
+        show_line = false,
+      },
       buffers = {
         initial_mode = "normal",
         sort_lastused = true,
