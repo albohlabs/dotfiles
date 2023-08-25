@@ -22,7 +22,7 @@ return {
 	default_prog = { "/bin/fish", "--login" },
 
 	font_size = 12,
-	line_height = 1.25,
+	line_height = 1.35,
 
 	-- font = font("Hasklug Nerd Font"),
 	font = font("FiraCode Nerd Font"),
