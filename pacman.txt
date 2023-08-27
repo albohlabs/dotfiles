@@ -85,6 +85,7 @@ libva-mesa-driver
 libva-vdpau-driver
 linux61
 logrotate
+lsd
 lvm2
 man-db
 man-pages
