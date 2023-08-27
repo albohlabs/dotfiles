@@ -118,6 +118,7 @@ nfs-utils
 npm
 nss-mdns
 ntfs-3g
+obsidian
 oh-my-zsh
 openvpn
 os-prober

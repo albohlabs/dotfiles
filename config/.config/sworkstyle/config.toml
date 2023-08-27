@@ -1,5 +1,6 @@
 #
-# pattern: Can either be the exact "app_name" (app_id/class) of the window or a regex string in the format of `"/{regex}/"` which will match the window "title".
+# pattern: Can either be the exact "app_name" (app_id/class) of the window or a regex string 
+# in the format of `"/{regex}/"` which will match the window "title".
 # icon: Your beatiful icon
 #
 # verbose format:
@@ -19,6 +20,8 @@
 # https://github.com/manjaro-sway/sworkstyle/blob/master/static/default_config.toml
 # You can find missing icons in the sworkstyle logs, /tmp/sworkstyle.log.
 
+# find id by `swaymsg -t get_tree | jq '.' | grep app_id`
+
 [matching]
 'thunderbird-beta' = ''
 'org.wezfurlong.wezterm' = ''
@@ -26,3 +29,4 @@
 'org.telegram.desktop' = ''
 'Postman' = '󱇯'
 'Bloop' = '󱙺'
+'obsidian' = ''
