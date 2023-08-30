@@ -26,13 +26,4 @@ return {
   { "Shatur/neovim-session-manager", enabled = false },
   { "akinsho/toggleterm.nvim", enabled = false },
   { "windwp/nvim-ts-autotag", enabled = false },
-
-  {
-    "rcarriga/nvim-notify",
-    opts = {
-      timeout = 2500,
-      fps = 15,
-      render = "minimal",
-    },
-  },
 }
