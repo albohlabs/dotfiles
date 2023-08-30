@@ -88,9 +88,6 @@ return {
           width = 0.58,
         },
       },
-      find_files = {
-        find_command = { "fd", "-H" },
-      },
       lsp_definition = {
         include_declaration = false,
         show_line = false,
