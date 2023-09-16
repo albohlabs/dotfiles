@@ -40,12 +40,13 @@
   "network": {
     "interval": 2,
     "max-length": 40,
-    "format-ethernet": "󰈀 {bandwidthUpBits:>}▲ {bandwidthDownBits:>}▼",
+    "format-wifi": "<span foreground='#928374'></span>  {essid} ({signalStrength}%)",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) {bandwidthUpBits:>} {bandwidthDownBits:>}",
+    "format-ethernet": "<span foreground='#928374'>󰈀</span> {ifname}",
     "tooltip-format-ethernet": "{ifname} {bandwidthUpBits:>}▲ {bandwidthDownBits:>}▼",
-    "format-wifi": "  ({signalStrength}%) {bandwidthUpBits:>}▲ {bandwidthDownBits:>}▼",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%) {bandwidthUpBits:>}▲ {bandwidthDownBits:>}▼",
-    "format-disconnected": "󰖪",
-    "tooltip-format": "{icon} {ifname}: {ipaddr}",
+    "format-linked": "<span foreground='#928374'></span> {ifname}",
+    "format-disconnected": " <span foreground='#928374'></span> ",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}  {bandwidthDownBits}  {bandwidthUpBits}",
     "tooltip-format-disconnected": "{icon} disconnected",
     "tooltip-format-disabled": "{icon} disabled",
     "on-click": "swaymsg exec XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
