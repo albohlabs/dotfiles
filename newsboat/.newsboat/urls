@@ -9,6 +9,7 @@
 "query:🏦 Politics:tags # \"politics\"" "politics"
 "query:👍 Stuff1:tags # \"stuff01\"" "stuff01"
 "query:🗣 Stuff2:tags # \"stuff02\"" "stuff02"
+"query:🗣 Stuff3:tags # \"stuff03\"" "stuff03"
 "query:👾 Tech:tags # \"tech\"" "tech" 
 "query:🎥 TechVideos:tags # \"tech.videos\"" "tech.videos" 
 "query:🎥 TechTwitter:tags # \"tech.social\"" "tech.social" 
@@ -63,6 +64,7 @@ https://nitter.d420.de/learnvim/rss "tech.social"
 https://nitter.d420.de/yuriybogomolov/rss "tech.social"
 
 https://fosstodon.org/@rauschma.rss "tech.social"
+https://hachyderm.io/@fasterthanlime.rss "tech.social"
 
 http://feeds.feedburner.com/tocadotux "Linux" "~Toca do Tux"
 http://www.bashoneliners.com/oneliners/feeds/oneliner/ "Linux" "~BashOnliners"
@@ -298,6 +300,8 @@ https://harpers.org/feed/ "stuff02"
 https://solar.lowtechmagazine.com/feeds/all-en.atom.xml "stuff02"
 http://www.publicbooks.org/feed "stuff02"
 https://www.thenewatlantis.com/feed "stuff02"
+
+https://kagi.com/api/v1/smallweb/feed "stuff03"
 
 https://www.nakedcapitalism.com/feed "economics"
 

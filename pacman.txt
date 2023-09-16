@@ -200,6 +200,7 @@ wireless-regdb
 wl-clipboard
 wlay
 wlsunset
+wluma
 wpa_supplicant
 wqy-microhei
 xclip

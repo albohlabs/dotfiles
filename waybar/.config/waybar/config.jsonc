@@ -21,13 +21,14 @@
   ],
   "modules-right": [
     "network",
-    "custom/vpn",
     "bluetooth",
-    "custom/playerctl",
     "memory",
     "cpu",
     "temperature",
     "pulseaudio",
+    "custom/playerctl",
+    "custom/adaptive-light",
+    "custom/sunset",
     "tray",
     "battery"
   ],
@@ -39,11 +40,11 @@
   "network": {
     "interval": 2,
     "max-length": 40,
-    "format-ethernet": " {bandwidthUpBits:>}▲ {bandwidthDownBits:>}▼",
+    "format-ethernet": "󰈀 {bandwidthUpBits:>}▲ {bandwidthDownBits:>}▼",
     "tooltip-format-ethernet": "{ifname} {bandwidthUpBits:>}▲ {bandwidthDownBits:>}▼",
-    "format-wifi": "{ifname} ({signalStrength}%) {bandwidthUpBits:>}▲ {bandwidthDownBits:>}▼",
+    "format-wifi": "  ({signalStrength}%) {bandwidthUpBits:>}▲ {bandwidthDownBits:>}▼",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) {bandwidthUpBits:>}▲ {bandwidthDownBits:>}▼",
-    "format-disconnected": "",
+    "format-disconnected": "󰖪",
     "tooltip-format": "{icon} {ifname}: {ipaddr}",
     "tooltip-format-disconnected": "{icon} disconnected",
     "tooltip-format-disabled": "{icon} disabled",
@@ -54,7 +55,7 @@
     "spacing": 0
   },
   "clock": {
-    "format": "  {:%e.%b %H:%M}",
+    "format": "{:%e.%b %H:%M}",
     "on-click": "gnome-calendar"
   },
   "cpu": {
@@ -62,7 +63,7 @@
     "on-click": "swaymsg exec \\$once \\$term_float btop"
   },
   "memory": {
-    "format": " {percentage:2}%",
+    "format": "󰍛 {percentage:2}%",
     "on-click": "swaymsg exec \\$once \\$term_float btop"
   },
   "battery": {
@@ -104,26 +105,5 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
-  },
-  "pulseaudio": {
-    "format": "<span foreground='#928374'>{icon}</span> {volume}%   {format_source}",
-    "format-bluetooth": "<span foreground='#928374'>{icon}</span> {volume}%   {format_source}",
-    "format-bluetooth-muted": "<span foreground='#928374'> {icon}</span>   {format_source}",
-    "format-muted": "<span foreground='#928374'></span>   {format_source}",
-    "format-source": "<span foreground='#928374'></span> {volume}%",
-    "format-source-muted": "<span foreground='#928374'></span>",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
-    }
   }
 }
