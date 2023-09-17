@@ -183,6 +183,7 @@ ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-mono
 ttf-victor-mono
 ttf-victor-mono-nerd
+unarchiver
 usbutils
 vi
 visual-studio-code-bin
@@ -215,6 +216,7 @@ xfsprogs
 xorg-xwayland
 xsel
 yay
+yazi
 yt-dlp
 zathura
 zathura-pdf-poppler
