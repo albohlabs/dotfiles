@@ -61,11 +61,11 @@
   },
   "cpu": {
     "format": "󰘚 {usage:2}%",
-    "on-click": "swaymsg exec \\$once \\$term_float btop"
+    "on-click": "swaymsg exec \\$once \\$term_fullscreen btop"
   },
   "memory": {
     "format": "󰍛 {percentage:2}%",
-    "on-click": "swaymsg exec \\$once \\$term_float btop"
+    "on-click": "swaymsg exec \\$once \\$term_fullscreen btop"
   },
   "battery": {
     "on-click": "cpupower-gui",
