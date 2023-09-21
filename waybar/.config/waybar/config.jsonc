@@ -12,6 +12,7 @@
   "modules-center": [
     "clock",
     "custom/notification",
+    "custom/github",
     "custom/wf-recorder",
     "sway/mode",
     "custom/mail",
@@ -38,17 +39,15 @@
     "interval": 10
   },
   "network": {
-    "interval": 2,
-    "max-length": 40,
-    "format-wifi": "<span foreground='#928374'></span>  {essid} ({signalStrength}%)",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%) {bandwidthUpBits:>} {bandwidthDownBits:>}",
-    "format-ethernet": "<span foreground='#928374'>󰈀</span> {ifname}",
-    "tooltip-format-ethernet": "{ifname} {bandwidthUpBits:>}▲ {bandwidthDownBits:>}▼",
-    "format-linked": "<span foreground='#928374'></span> {ifname}",
-    "format-disconnected": " <span foreground='#928374'></span> ",
-    "tooltip-format": "{ifname}: {ipaddr}/{cidr}  {bandwidthDownBits}  {bandwidthUpBits}",
+    "format": "{ifname}",
+    "format-wifi": "  ({signalStrength}%)",
+    "format-ethernet": "󰈀  {ipaddr}/{cidr}",
+    "format-disconnected": " ",
     "tooltip-format-disconnected": "{icon} disconnected",
     "tooltip-format-disabled": "{icon} disabled",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
     "on-click": "swaymsg exec XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
   },
   "tray": {
