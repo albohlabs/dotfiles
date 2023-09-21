@@ -53,6 +53,7 @@ fwupd
 fzf
 git-delta
 git-open
+github-cli
 glow
 gnome-calendar
 gnome-control-center
@@ -172,7 +173,7 @@ timeshift
 tldr
 tmux
 topgrade-bin
-torbrowser-launcher
+tor-browser
 transmission-gtk
 tree-sitter
 tree-sitter-cli
