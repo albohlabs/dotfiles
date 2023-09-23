@@ -45,6 +45,9 @@ return {
     ["<leader>4"] = { function() require("harpoon.ui").nav_file(4) end, desc = "Goto mark 4" },
     ["<leader>5"] = { function() require("harpoon.ui").nav_file(5) end, desc = "Goto mark 5" },
     ["<leader>6"] = { function() require("harpoon.ui").nav_file(6) end, desc = "Goto mark 6" },
+
+    ["]q"] = { "<cmd>cnext<CR>", desc = "Next quicklist item" },
+    ["[q"] = { "<cmd>cprev<CR>", desc = "Previous quicklist item" },
   },
   t = {
     -- setting a mapping to false will disable it
