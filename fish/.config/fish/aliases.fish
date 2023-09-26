@@ -13,16 +13,14 @@ abbr "....." "cd ../../../../"
 abbr "......" "cd ../../../../../"
 abbr "......." "cd ../../../../../../"
 
-# alias ls "exa --color=always --icons --group-directories-first"
-# alias la 'exa --color=always --icons --group-directories-first --all'
-# alias ll 'exa --color=always --icons --group-directories-first --all --long'
-
 abbr l "lsd  --group-dirs first -A"
 abbr ll "lsd  --group-dirs first -Al"
 abbr lt "lsd  --group-dirs last -A --tree"
 
-set -x exa_options '--links --group --changed --time-style long-iso --icons'
-alias tree "exa --long --tree --level=4 -a $(printf $exa_options)"
+# -A, --almost-all Do not list implied . and ..
+# -l, --long       Display extended file metadata as a table
+# -F, --classify   Append indicator (one of */=>@|) at the end of the file names
+abbr tree "lsd -AF --tree"
 
 abbr lsvim 'tmux list-panes -a -F "#{session_name} #{command} #{pane_pid} #{pane_title} #{window_name} #{pane_id} #{session_path}" | grep nvim'
 
