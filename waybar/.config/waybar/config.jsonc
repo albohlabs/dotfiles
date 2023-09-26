@@ -41,13 +41,13 @@
   "network": {
     "format": "{ifname}",
     "format-wifi": "  ({signalStrength}%)",
-    "format-ethernet": "󰈀  {ipaddr}/{cidr}",
-    "format-disconnected": " ",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "",
     "tooltip-format-disconnected": "{icon} disconnected",
     "tooltip-format-disabled": "{icon} disabled",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-ethernet": "{ipaddr}/{cidr} ",
     "on-click": "swaymsg exec XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
   },
   "tray": {
