@@ -33,6 +33,10 @@
     "tray",
     "battery"
   ],
+  "bluetooth": {
+    "format-on": "󰂯",
+    "format-off": "󰂲",
+  },
   "custom/systemd": {
     "exec": "waybar-systemd",
     "return-type": "json",
