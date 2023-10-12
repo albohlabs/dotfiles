@@ -65,42 +65,10 @@ abbr :GoToFile "nvim +GoToFile"
 alias vo "nvim +GoToFile"
 
 # alias vg 'git ls-files -m --others --exclude-standard | fzf-tmux -p --sort | xargs --no-run-if-empty nvim'
-abbr :GoToGitStatus "nvim +GoToFile"
-alias vg "nvim +GoToFile"
+abbr :GoToGitStatus "nvim +GoToGitStatus"
+alias vg "nvim +GoToGitStatus"
+
 abbr :Grep "nvim +Grep"
+alias vf "nvim +Grep"
 
 abbr p "pnpm run (jq -r '.scripts|to_entries[]|((.key))' package.json | fzf-tmux -p --border-label='pnpm run')"
-abbr pa "pnpm add"
-abbr pb "pnpm build"
-abbr pd "pnpm dev"
-abbr pe "pnpm e2e"
-abbr pg "pnpm generate"
-abbr ph "pnpm help"
-abbr pi "pnpm install"
-abbr pim "pnpm import"
-abbr pir "pnpm rebuild"
-abbr pit "pnpm install-test"
-abbr pl "pnpm link"
-abbr pls "pnpm ls"
-abbr pr "pnpm run"
-abbr ps "pnpm start"
-abbr psa "pnpm store add"
-abbr psp "pnpm store prune"
-abbr pss "pnpm store status"
-abbr pt "pnpm test"
-abbr pu "pnpm update"
-abbr pul "pnpm unlink"
-abbr pw "pnpm web"
-
-abbr nb "npm run build"
-abbr nd "npm run dev"
-abbr nf neofetch
-abbr ni "npm install"
-abbr nt "npm run test"
-
-abbr c clear
-abbr cl clear
-abbr claer clear
-abbr clera clear
-
-abbr cx "chmod +x"
