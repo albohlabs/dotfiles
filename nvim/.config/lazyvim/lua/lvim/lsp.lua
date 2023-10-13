@@ -40,9 +40,9 @@ return {
           end,
         },
         tsserver = {
-          root_dir = function(...)
-            return require("lspconfig.util").root_pattern(".git")(...)
-          end,
+          -- root_dir = function(...)
+          --   return require("lspconfig.util").root_pattern(".git")(...)
+          -- end,
           single_file_support = false,
           settings = {
             typescript = {
@@ -164,6 +164,56 @@ return {
         vimls = {},
       },
       setup = {},
+    },
+  },
+
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      diagnostics = { virtual_text = { prefix = "icons" } },
+    },
+  },
+
+  {
+    "stevearc/conform.nvim",
+    optional = true,
+    opts = {
+      formatters_by_ft = {
+        ["markdown"] = { { "prettierd", "prettier" } },
+        ["markdown.mdx"] = { { "prettierd", "prettier" } },
+        ["javascript"] = { { "dprint", "prettierd" } },
+        ["javascriptreact"] = { { "dprint", "prettierd" } },
+        ["typescript"] = { { "dprint", "prettierd" } },
+        ["typescriptreact"] = { { "dprint", "prettierd" } },
+      },
+      formatters = {
+        dprint = {
+          condition = function(ctx)
+            return vim.fs.find({ "dprint.json" }, { path = ctx.filename, upward = true })[1]
+          end,
+        },
+      },
+    },
+  },
+  {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters_by_ft = {
+        lua = { "selene", "luacheck" },
+        markdown = { "markdownlint" },
+      },
+      linters = {
+        selene = {
+          condition = function(ctx)
+            return vim.fs.find({ "selene.toml" }, { path = ctx.filename, upward = true })[1]
+          end,
+        },
+        luacheck = {
+          condition = function(ctx)
+            return vim.fs.find({ ".luacheckrc" }, { path = ctx.filename, upward = true })[1]
+          end,
+        },
+      },
     },
   },
 }

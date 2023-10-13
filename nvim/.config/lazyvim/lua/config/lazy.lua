@@ -13,7 +13,6 @@ vim.cmd([[command! -nargs=0 SmartGoTo :Telescope smart_goto]])
 
 require("lazy").setup({
   spec = {
-    -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
     { import = "lazyvim.plugins.extras.lang.json" },
@@ -21,21 +20,18 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.docker" },
     { import = "lazyvim.plugins.extras.lang.rust" },
-    { import = "lazyvim.plugins.extras.linting.eslint" },
-    { import = "lazyvim.plugins.extras.formatting.prettier" },
+    -- { import = "lazyvim.plugins.extras.linting.eslint" },
+    -- { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
     { import = "lazyvim.plugins.extras.coding.yanky" },
-    { import = "lazyvim.plugins.extras.ui.edgy" },
+    -- { import = "lazyvim.plugins.extras.ui.edgy" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
     { import = "lazyvim.plugins.extras.editor.mini-files" },
     { import = "lazyvim.plugins.extras.editor.aerial" },
 
-    -- import/override with your plugins
-    --
     { import = "lvim" },
     { import = "plugins" },
-    -- { import = "plugins.lsp" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.

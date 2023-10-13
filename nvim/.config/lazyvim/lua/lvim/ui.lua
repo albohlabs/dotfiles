@@ -1,6 +1,4 @@
 local icons = require("lazyvim.config").icons
--- https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/palettes/macchiato.lua
-local theme = require("catppuccin.palettes").get_palette("macchiato")
 
 return {
   {
@@ -11,8 +9,9 @@ return {
         section_separators = { left = "", right = "" },
       },
       sections = {
-        lualine_a = {
-          -- { "branch", color = { fg = theme.overlay0, bg = theme.base } },
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = {
           {
             "diagnostics",
             symbols = {
@@ -21,14 +20,9 @@ return {
               info = icons.diagnostics.Info,
               hint = icons.diagnostics.Hint,
             },
-            color = { bg = theme.base },
           },
         },
-        lualine_b = {},
-        lualine_c = {},
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {
+        lualine_x = {
           {
             "diff",
             symbols = {
@@ -36,9 +30,10 @@ return {
               modified = icons.git.modified,
               removed = icons.git.removed,
             },
-            color = { fg = theme.overlay0, bg = theme.base },
           },
         },
+        lualine_y = {},
+        lualine_z = {},
       },
     },
   },

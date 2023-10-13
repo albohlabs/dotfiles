@@ -36,6 +36,7 @@ dnsmasq
 docker
 docker-compose
 dosfstools
+dprint-bin
 e2fsprogs
 ecryptfs-utils
 efibootmgr

@@ -24,6 +24,13 @@ return {
         require("telescope").load_extension("fzf")
       end,
     },
+    {
+      "debugloop/telescope-undo.nvim",
+      keys = { { "<leader>U", "<cmd>Telescope undo<cr>" } },
+      config = function()
+        require("telescope").load_extension("undo")
+      end,
+    },
   },
 
   -- https://github.com/nvim-telescope/telescope.nvim/blob/master/doc/telescope.txt
