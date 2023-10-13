@@ -1,11 +1,8 @@
 return {
-  "andymass/vim-matchup",
-  event = "BufReadPost",
+  "nvim-treesitter/nvim-treesitter",
+  dependencies = { "andymass/vim-matchup" },
   init = function()
-    vim.o.matchpairs = "(:),{:},[:],<:>"
+    vim.g.matchup_matchparen_offscreen = { method = "popup", fullwidth = 1, highlight = "Normal", syntax_hl = 1 }
   end,
-  config = function()
-    vim.g.matchup_matchparen_deferred = 1
-    vim.g.matchup_matchparen_offscreen = { method = "status_manual" }
-  end,
+  opts = { matchup = { enable = true } },
 }

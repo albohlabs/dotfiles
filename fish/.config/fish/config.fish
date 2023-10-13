@@ -11,13 +11,14 @@ fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
 
 set -gx PNPM_HOME $HOME/.local/share/pnpm
 if not string match -q -- $PNPM_HOME $PATH
-  fish_add_path $PNPM_HOME
+    fish_add_path $PNPM_HOME
 end
 
 set -gx EDITOR (which nvim)
 set -gx VISUAL $EDITOR
 set -gx SUDO_EDITOR $EDITOR
-set -gx NVIM_APPNAME AstroVim
+# set -gx NVIM_APPNAME AstroVim
+set -gx NVIM_APPNAME lazyvim
 
 # Set cursor theme
 set -gx XCURSOR_THEME Adwaita

@@ -1,4 +1,4 @@
 return {
-  "folke/flash.nvim",
+  "folke/noice.nvim",
   enabled = false,
 }

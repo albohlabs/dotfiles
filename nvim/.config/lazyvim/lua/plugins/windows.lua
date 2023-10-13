@@ -1,15 +1,28 @@
 -- auto-resize windows
 return {
   "anuvyklack/windows.nvim",
-  event = "WinNew",
   dependencies = {
-    { "anuvyklack/middleclass" },
+    "anuvyklack/middleclass",
     { "anuvyklack/animation.nvim", enabled = false },
   },
-  keys = { { "<leader>Z", "<cmd>WindowsMaximize<cr>", desc = "Zoom" } },
+  event = "WinNew",
+  keys = {
+    { "<C-w>z", "<cmd>WindowsMaximize<cr>", desc = "Maximize" },
+    { "<C-w>_", "<cmd>WindowsMaximizeVertically<cr>", desc = "Maximize width" },
+    { "<C-w>|", "<cmd>WindowsMaximizeHorizontally<cr>", desc = "Maximize height" },
+    { "<C-w>=", "<cmd>WindowsEqualize<cr>", desc = "Equalize heights and widths" },
+  },
+  cmd = {
+    "WindowsMaximize",
+    "WindowsMaximizeVertically",
+    "WindowsMaximizeHorizontally",
+    "WindowsEqualize",
+    "WindowsEnableAutowidth",
+    "WindowsDisableAutowidth",
+    "WindowsToggleAutowidth",
+  },
   config = function()
-    vim.o.winwidth = 10
-    vim.o.winminwidth = 10
+    vim.o.winwidth = 5
     vim.o.equalalways = false
     require("windows").setup({
       animation = { enable = false, duration = 150 },

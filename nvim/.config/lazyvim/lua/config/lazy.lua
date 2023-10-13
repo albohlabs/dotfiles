@@ -6,14 +6,21 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+vim.cmd([[command! -nargs=0 GoToFile :Telescope find_files]])
+vim.cmd([[command! -nargs=0 GoToGitStatus :Telescope git_status]])
+vim.cmd([[command! -nargs=0 Grep :Telescope live_grep]])
+vim.cmd([[command! -nargs=0 SmartGoTo :Telescope smart_goto]])
+
 require("lazy").setup({
   spec = {
-    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "tokyonight" } },
+    -- add LazyVim and import its plugins
+    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.docker" },
+    { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
@@ -22,10 +29,13 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
     { import = "lazyvim.plugins.extras.editor.mini-files" },
+    { import = "lazyvim.plugins.extras.editor.aerial" },
 
+    -- import/override with your plugins
+    --
     { import = "lvim" },
     { import = "plugins" },
-    { import = "plugins.lsp" },
+    -- { import = "plugins.lsp" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -36,9 +46,6 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  dev = {
-    path = "~/Development/lua",
-  },
   install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
@@ -48,7 +55,7 @@ require("lazy").setup({
         "gzip",
         -- "matchit",
         -- "matchparen",
-        "netrwPlugin",
+        -- "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",

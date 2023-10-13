@@ -1,6 +1,7 @@
+local prefix = "<leader><leader>"
+
 return {
   "ThePrimeagen/harpoon",
-  enabled = false,
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope.nvim",
@@ -10,86 +11,32 @@ return {
     require("telescope").load_extension("harpoon")
   end,
   cmd = { "Harpoon" },
+
   keys = {
-    { "<leader>m", desc = "Harpoon" },
     {
-      "<leader>ma",
+      prefix .. "a",
       function()
         require("harpoon.mark").add_file()
       end,
-      desc = "Add harpoon file",
+      desc = "Add file",
     },
     {
-      "<leader>a",
+      prefix .. "e",
       function()
-        -- require("harpoon.ui").toggle_quick_menu()
-        -- TODO: style me
-        require("telescope").extensions.harpoon.marks()
+        require("harpoon.ui").toggle_quick_menu()
       end,
-      desc = "Open harpoon quick menu",
+      desc = "Toggle quick menu",
     },
-    {
-      "<leader>mc",
-      function()
-        require("harpoon.mark").clear_all()
-      end,
-      desc = "Clear all harpoon files",
-    },
-    {
-      "<leader>md",
-      function()
-        require("harpoon.mark").rm_file()
-      end,
-      desc = "Delete harpoon file",
-    },
-    {
-      "<leader>mk",
-      function()
-        require("harpoon.ui").nav_next()
-      end,
-      desc = "Next harpoon file",
-    },
-    {
-      "<leader>mj",
-      function()
-        require("harpoon.ui").nav_prev()
-      end,
-      desc = "[harpoon] Prev file",
-    },
-    -- {
-    --   "<leader>1",
-    --   function()
-    --     require("harpoon.ui").nav_file(1)
-    --   end,
-    --   desc = "harpoon 1",
-    -- },
-    -- {
-    --   "<leader>2",
-    --   function()
-    --     require("harpoon.ui").nav_file(2)
-    --   end,
-    --   desc = "harpoon 2",
-    -- },
-    -- {
-    --   "<leader>3",
-    --   function()
-    --     require("harpoon.ui").nav_file(3)
-    --   end,
-    --   desc = "harpoon 3",
-    -- },
-    -- {
-    --   "<leader>4",
-    --   function()
-    --     require("harpoon.ui").nav_file(4)
-    --   end,
-    --   desc = "harpoon 4",
-    -- },
-    -- {
-    --   "<leader>5",
-    --   function()
-    --     require("harpoon.ui").nav_file(5)
-    --   end,
-    --   desc = "harpoon 5",
-    -- },
+    { prefix .. "m", "<cmd>Telescope harpoon marks<CR>", desc = "Show marks in Telescope" },
+
+    { "<leader>1", "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", desc = "Harpoon Buffer 1" },
+    { "<leader>2", "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", desc = "Harpoon Buffer 2" },
+    { "<leader>3", "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", desc = "Harpoon Buffer 3" },
+    { "<leader>4", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", desc = "Harpoon Buffer 4" },
+    { "<leader>5", "<cmd>lua require('harpoon.ui').nav_file(5)<cr>", desc = "Harpoon Buffer 5" },
+    { "<leader>6", "<cmd>lua require('harpoon.ui').nav_file(6)<cr>", desc = "Harpoon Buffer 6" },
+    { "<leader>7", "<cmd>lua require('harpoon.ui').nav_file(7)<cr>", desc = "Harpoon Buffer 7" },
+    { "<leader>8", "<cmd>lua require('harpoon.ui').nav_file(8)<cr>", desc = "Harpoon Buffer 8" },
+    { "<leader>9", "<cmd>lua require('harpoon.ui').nav_file(9)<cr>", desc = "Harpoon Buffer 9" },
   },
 }

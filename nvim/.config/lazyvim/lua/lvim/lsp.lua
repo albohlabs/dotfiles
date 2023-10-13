@@ -1,22 +1,44 @@
 return {
+  -- tools
+  {
+    "williamboman/mason.nvim",
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
+        "stylua",
+        "selene",
+        "luacheck",
+        "shellcheck",
+        "shfmt",
+      })
+    end,
+  },
+
+  -- lsp servers
   {
     "neovim/nvim-lspconfig",
     opts = {
-      inlay_hints = {
-        enabled = true,
+      inlay_hints = { enabled = true },
+      capabilities = {
+        workspace = {
+          didChangeWatchedFiles = {
+            dynamicRegistration = false,
+          },
+        },
       },
       ---@type lspconfig.options
       servers = {
+        ansiblels = {},
         bashls = {},
+        clangd = {},
         -- denols = {},
         cssls = {},
         dockerls = {},
+        ruff_lsp = {},
         tailwindcss = {
           root_dir = function(...)
             return require("lspconfig.util").root_pattern(".git")(...)
           end,
         },
-        graphql = {},
         tsserver = {
           root_dir = function(...)
             return require("lspconfig.util").root_pattern(".git")(...)
@@ -47,19 +69,24 @@ return {
             },
           },
         },
-        svelte = {},
+        -- svelte = {},
         html = {},
+        -- gopls = {},
+        marksman = {},
+        -- pyright = {
+        --   enabled = false,
+        -- },
         rust_analyzer = {
-          settings = {
-            ["rust-analyzer"] = {
-              procMacro = { enable = true },
-              cargo = { allFeatures = true },
-              checkOnSave = {
-                command = "clippy",
-                extraArgs = { "--no-deps" },
-              },
-            },
-          },
+          -- settings = {
+          --   ["rust-analyzer"] = {
+          --     procMacro = { enable = true },
+          --     cargo = { allFeatures = true },
+          --     checkOnSave = {
+          --       command = "clippy",
+          --       extraArgs = { "--no-deps" },
+          --     },
+          --   },
+          -- },
         },
         yamlls = {
           settings = {
@@ -69,6 +96,8 @@ return {
           },
         },
         lua_ls = {
+          -- enabled = false,
+          -- cmd = { "/home/folke/projects/lua-language-server/bin/lua-language-server" },
           single_file_support = true,
           settings = {
             Lua = {
@@ -81,11 +110,25 @@ return {
               },
               misc = {
                 parameters = {
-                  "--log-level=trace",
+                  -- "--log-level=trace",
                 },
               },
+              hint = {
+                enable = true,
+                setType = false,
+                paramType = true,
+                paramName = "Disable",
+                semicolon = "Disable",
+                arrayIndex = "Disable",
+              },
+              doc = {
+                privateName = { "^_" },
+              },
+              type = {
+                castNumberToInteger = true,
+              },
               diagnostics = {
-                disable = { "incomplete-signature-doc" },
+                disable = { "incomplete-signature-doc", "trailing-space" },
                 -- enable = false,
                 groupSeverity = {
                   strong = "Warning",
@@ -118,41 +161,9 @@ return {
             },
           },
         },
+        vimls = {},
       },
       setup = {},
     },
-    keys = {
-      {
-        "<leader>xo",
-        "<cmd> lua vim.diagnostic.open_float()<CR>",
-        desc = "Open diagnostics",
-      },
-    },
-  },
-
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      diagnostics = { virtual_text = { prefix = "icons" } },
-    },
-  },
-
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    opts = function(_, opts)
-      local nls = require("null-ls")
-      vim.list_extend(opts.sources, {
-        nls.builtins.diagnostics.markdownlint,
-
-        -- nls.builtins.formatting.rustfmt,
-
-        -- nls.builtins.formatting.stylua,
-        nls.builtins.diagnostics.luacheck.with({
-          condition = function(utils)
-            return utils.root_has_file({ ".luacheckrc" })
-          end,
-        }),
-      })
-    end,
   },
 }

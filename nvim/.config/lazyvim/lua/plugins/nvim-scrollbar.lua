@@ -12,7 +12,6 @@ return {
         "noice",
         "neo-tree",
         "dashboard",
-        "alpha",
         "lazy",
         "mason",
         "DressingInput",
