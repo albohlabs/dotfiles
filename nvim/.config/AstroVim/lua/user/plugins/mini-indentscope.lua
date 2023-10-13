@@ -7,7 +7,6 @@ return {
     version = false, -- wait till new 0.7.0 release to put it back on semver
     event = { "BufReadPre", "BufNewFile" },
     opts = {
-      -- symbol = "▏",
       symbol = "│",
       options = { try_as_border = true },
     },
@@ -32,9 +31,11 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     opts = {
-      char = "│",
-      show_trailing_blankline_indent = false,
-      show_current_context = false,
+      indent = {
+        char = "│",
+        tab_char = "│",
+      },
+      scope = { enabled = false },
     },
   },
 }

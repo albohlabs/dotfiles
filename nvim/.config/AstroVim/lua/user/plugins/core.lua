@@ -26,4 +26,5 @@ return {
   { "Shatur/neovim-session-manager", enabled = false },
   { "akinsho/toggleterm.nvim", enabled = false },
   { "windwp/nvim-ts-autotag", enabled = false },
+  { "rcarriga/nvim-notify", enabled = false },
 }
