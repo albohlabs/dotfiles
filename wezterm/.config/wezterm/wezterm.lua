@@ -75,6 +75,14 @@ return {
 		bottom = 0,
 	},
 
+	-- use GPU accelerated rasterization
+	front_end = "WebGpu",
+	webgpu_power_preference = "HighPerformance",
+
+	-- config.animation_fps = 1
+	cursor_blink_ease_in = "Constant",
+	cursor_blink_ease_out = "Constant",
+
 	-- Tab Bar
 	enable_tab_bar = false,
 	hide_tab_bar_if_only_one_tab = true,
