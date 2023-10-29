@@ -1,192 +1,153 @@
-/* =============================================================================
- *
- * Waybar configuration
- *
- * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
- *
- * color https://github.com/folke/tokyonight.nvim/blob/main/lua/tokyonight/colors.lua#L51
- * =========================================================================== */
-
 * {
-  border: none;
-  border-radius: 0;
-  font-family: FiraCode Nerd Font, Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  min-height: 0;
+    border: none;
+    border-radius: 0px;
+    font-family: FiraCode Nerd Font, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    min-height: 10px;
 }
 
+@import "themes/theme.css";
+
 window#waybar {
-  background: rgba(43, 48, 59, 0.5);
-  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-  color: white;
+    background: @bar-bg;
 }
 
 tooltip {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-tooltip label {
-  font-size: 13px;
-  color: rgba(0, 0, 0, 0.8);
+    background: @main-bg;
+    color: @main-fg;
+    border-radius: 7px;
+    border-width: 0px;
 }
 
 #workspaces button {
-  padding: 0;
-  background: transparent;
-  color: white;
-  border-bottom: 3px solid transparent;
+    box-shadow: none;
+	text-shadow: none;
+    padding: 0px;
+    border-radius: 9px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: @main-fg;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
-#workspaces button.focused {
-  background: #64727d;
-  border-bottom: 3px solid white;
+#workspaces button.active {
+    background: @wb-act-bg;
+    color: @wb-act-fg;
+    margin-left: 3px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 3px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
-#workspaces button.urgent {
-  border-color: #ff966c;
+#workspaces button:hover {
+    background: @wb-hvr-bg;
+    color: @wb-hvr-fg;
+    padding-left: 3px;
+    padding-right: 3px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
-#mode,
+#taskbar button {
+    box-shadow: none;
+	text-shadow: none;
+    padding: 0px;
+    border-radius: 9px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: @wb-color;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#taskbar button.active {
+    background: @wb-act-bg;
+    color: @wb-act-color;
+    margin-left: 3px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 3px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#taskbar button:hover {
+    background: @wb-hvr-bg;
+    color: @wb-hvr-color;
+    padding-left: 3px;
+    padding-right: 3px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#custom-github,
+#custom-wallchange,
+#custom-mode {
+    color: @main-fg;
+    opacity: 1;
+    margin: 4 2;
+    padding: 0 4;
+}
+
+
+#battery,
+#bluetooth,
+#custom-cliphist,
 #clock,
-#battery {
-  padding: 0 10px;
-  margin-left: 8px;
+#cpu,
+#custom-gpuinfo,
+#idle_inhibitor,
+#language,
+#memory,
+#temperature,
+#mpris,
+#network,
+#custom-power,
+#pulseaudio,
+#custom-spotify,
+#taskbar,
+#tray,
+#custom-updates,
+#custom-wbar,
+#window,
+#workspaces,
+#backlight,
+#custom-playerctl,
+#custom-l_end,
+#custom-r_end {
+    color: @main-fg;
+    background: @main-bg;
+    opacity: 1;
+    margin: 4px 0px 4px 0px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
-#mode {
-  background: #64727d;
-  border-bottom: 3px solid white;
+#tray .passive,
+#tray .active {
+    opacity: 0.75;
 }
 
-#clock {
-  background: #64727d;
+#workspaces,
+#taskbar {
+    padding: 0px;
 }
 
-#battery {
-  background-color: #ffffff;
-  color: black;
+#custom-r_end {
+    border-radius: 0px 21px 21px 0px;
+    margin-right: 9px;
+    padding-right: 3px;
 }
 
-#battery.charging {
-  color: white;
-  background-color: #41a6b5;
-}
-
-@keyframes blink {
-  to {
-    background-color: #ffffff;
-    color: black;
-  }
-}
-
-#battery.warning:not(.charging) {
-  background: #ff757f;
-  color: white;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-widget label,
-widget image {
-  padding: 0 8px;
-}
-
-/* @import "/usr/share/sway/templates/waybar/style.css"; */
-
-/* -----------------------------------------------------------------------------
- * Keyframes
- * -------------------------------------------------------------------------- */
-
-@keyframes blink-warning {
-  70% {
-    color: @wm_icon_bg;
-  }
-
-  to {
-    color: @wm_icon_bg;
-    background-color: @warning_color;
-  }
-}
-
-@keyframes blink-critical {
-  70% {
-    color: @wm_icon_bg;
-  }
-
-  to {
-    color: @wm_icon_bg;
-    background-color: @error_color;
-  }
-}
-
-/* -----------------------------------------------------------------------------
- * Module styles
- * -------------------------------------------------------------------------- */
-
-#custom-zeit.tracking {
-  background: #ff757f;
-}
-
-#battery.warning.discharging {
-  animation-name: blink-warning;
-  animation-duration: 3s;
-}
-
-#battery.critical.discharging {
-  animation-name: blink-critical;
-  animation-duration: 2s;
-}
-
-#cpu.warning {
-  background: #ff757f;
-}
-
-#cpu.critical {
-  color: #c53b53;
-}
-
-#custom-menu {
-  padding-left: 8px;
-  padding-right: 13px;
-}
-
-#memory {
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-#memory.warning {
-  color: #ff757f;
-}
-
-#memory.critical {
-  color: #c53b53;
-  animation-name: blink-critical;
-  animation-duration: 2s;
-}
-
-#network.disconnected {
-  color: #ff757f;
-}
-
-#pulseaudio.muted {
-  color: #ff757f;
-}
-
-#temperature.critical {
-  color: #c53b53;
-}
-
-#bluetooth.disabled {
-  color: #ff757f;
-}
-
-#custom-wf-recorder {
-  color: #c53b53;
-  padding-right: 10px;
+#custom-l_end {
+    border-radius: 21px 0px 0px 21px;
+    margin-left: 9px;
+    padding-left: 3px;
 }
