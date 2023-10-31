@@ -1,10 +1,10 @@
 0|Catppuccin-Mocha|~/.config/swww/Catppuccin-Mocha/firewatch.jpg
 0|Catppuccin-Latte|~/.config/swww/Catppuccin-Latte/samurai_bebop.png
 0|Decay-Green|~/.config/swww/Decay-Green/night_city.png
-1|Rose-Pine|~/.config/swww/Rose-Pine/lakeside_sunset.png
+0|Rose-Pine|~/.config/swww/Rose-Pine/lakeside_sunset.png
 0|Tokyo-Night|~/.config/swww/Tokyo-Night/lowpoly_street.png
 0|Material-Sakura|~/.config/swww/Material-Sakura/material_pastel_5.jpg
-0|Graphite-Mono|~/.config/swww/Graphite-Mono/japan_lake.jpg
-0|Cyberpunk-Edge|~/.config/swww/Cyberpunk-Edge/lucy_1.jpg
+0|Graphite-Mono|~/.config/swww/Graphite-Mono/rocket.jpg
+0|Cyberpunk-Edge|~/.config/swww/Cyberpunk-Edge/lucy_2.png
 0|Frosted-Glass|~/.config/swww/Frosted-Glass/lake_mountain.jpg
-0|Gruvbox-Retro|~/.config/swww/Gruvbox-Retro/future_town.jpg
+1|Gruvbox-Retro|~/.config/swww/Gruvbox-Retro/future_town.jpg
