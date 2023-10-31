@@ -189,6 +189,7 @@ tmux
 topgrade-bin
 tor-browser
 transmission-gtk
+trashy
 tree-sitter
 tree-sitter-cli
 ttf-cascadia-code-nerd
