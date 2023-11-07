@@ -1,0 +1,284 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "output": "eDP-1",
+  "height": 31,
+  "modules-left": [
+    "custom/l_end",
+    "battery",
+    "memory",
+    "cpu",
+    "temperature",
+    "network",
+    "bluetooth",
+    "custom/r_end",
+    "custom/l_end",
+    "clock",
+    "custom/r_end"
+  ],
+  "modules-center": [
+    "custom/wallchange",
+    "custom/mode",
+    "hyprland/mode",
+    "hyprland/submap",
+    "custom/l_end",
+    "hyprland/workspaces",
+    "custom/r_end",
+    "custom/github",
+    "custom/systemd"
+  ],
+  "modules-right": [
+    "custom/l_end",
+    "pulseaudio",
+    "pulseaudio#microphone",
+    "custom/spotify",
+    "custom/playerctl",
+    "custom/r_end",
+    "custom/l_end",
+    "tray",
+    "backlight",
+    "custom/r_end"
+  ],
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "", // an empty format will hide the module
+    "format-connected": " {num_connections}",
+    "tooltip-format": " {device_alias}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": " {device_alias}"
+  },
+  "custom/systemd": {
+    "exec": "waybar-systemd",
+    "return-type": "json",
+    "interval": 10
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "  ({signalStrength}%)",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "",
+    "tooltip-format-disconnected": "{icon} disconnected",
+    "tooltip-format-disabled": "{icon} disabled",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ipaddr}/{cidr} ",
+    "on-click": "XDG_CURRENT_DESKTOP=GNOME gnome-control-center",
+    "interval": 5,
+  },
+  "tray": {
+    "icon-size": 14,
+    "spacing": 5
+  },
+  "clock": {
+    "format": "{:%d.%m. %H:%M}",
+    "on-click": "gnome-calendar",
+    "interval": 60,
+    "tooltip": true,
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>"
+  },
+  "cpu": {
+    "interval": 10,
+    "format": "󰍛 {usage}%",
+    "format-alt": "{icon0}{icon1}{icon2}{icon3}",
+    "format-icons": [
+      "▁",
+      "▂",
+      "▃",
+      "▄",
+      "▅",
+      "▆",
+      "▇",
+      "█"
+    ]
+  },
+  "memory": {
+    "interval": 30,
+    "format": "󰾆 {percentage}%",
+    "format-alt": "󰾅 {used}GB",
+    "max-length": 10,
+    "tooltip": true,
+    "tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": []
+    }
+  },
+  "custom/wallchange": {
+    "format": "{}",
+    "exec": "echo ; echo 󰆊 switch wallpaper",
+    "on-click": "~/.config/hypr/scripts/swwwallpaper.sh -n",
+    "on-click-right": "~/.config/hypr/scripts/swwwallpaper.sh -p",
+    "on-click-middle": "sleep 0.1 && ~/.config/hypr/scripts/swwwallselect.sh",
+    "interval": 86400, // once every day
+    "tooltip": true
+  },
+  "custom/mode": {
+    "format": "{}",
+    "exec": "echo ; echo 󰟡 switch mode",
+    "on-click": "~/.config/hypr/scripts/themeswitch.sh -n",
+    "on-click-right": "~/.config/hypr/scripts/themeswitch.sh -p",
+    "on-click-middle": "sleep 0.1 && ~/.config/hypr/scripts/themeselect.sh",
+    "interval": 86400, // once every day
+    "tooltip": true
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁",
+    "format-icons": {
+      "headphone": "󰋋",
+      "headset": "󰋎",
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    },
+    "tooltip-format": "{icon}  {volume}% {format_source}",
+    "on-click-middle": "~/.config/hypr/scripts/volumecontrol.sh -o m",
+    "on-scroll-up": "~/.config/hypr/scripts/volumecontrol.sh -o i",
+    "on-scroll-down": "~/.config/hypr/scripts/volumecontrol.sh -o d",
+    "on-click": "XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "",
+    "format-source-muted": "",
+    "on-click": "XDG_CURRENT_DESKTOP=GNOME gnome-control-center",
+    "on-click-middle": "~/.config/hypr/scripts/volumecontrol.sh -i m",
+    "on-scroll-up": "~/.config/hypr/scripts/volumecontrol.sh -i i",
+    "on-scroll-down": "~/.config/hypr/scripts/volumecontrol.sh -i d",
+    "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
+    "scroll-step": 5
+  },
+  "temperature": {
+    "critical-threshold": 90,
+    "interval": 5,
+    "format": "{icon}",
+    "tooltip-format": "{temperatureC}°C",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
+    "tooltip": true,
+    "on-click": "foot -T 'sensors' watch sensors"
+  },
+  "backlight": {
+    "format": "{icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "on-scroll-up": "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-",
+    "on-click": "hyprshade toggle blue-light-filter",
+    "on-click-right": "hyprshade toggle vibrance"
+  },
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>",
+    "tooltip": false
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰒳",
+      "deactivated": "󰒲"
+    },
+    "tooltip": true,
+    "tooltip-format-activated": "power-saving disabled",
+    "tooltip-format-deactivated": "power-saving enabled"
+  },
+  "custom/github": {
+    "interval": 300,
+    "tooltip": false,
+    "return-type": "json",
+    "format": " {} ",
+    "exec": "gh api '/notifications' -q '{ text: length }' | cat -",
+    "exec-if": "[ -x \"$(command -v gh)\" ] && gh auth status 2>&1 | grep -q -m 1 'Logged in' && test $(gh api '/notifications' -q 'length') -ne 0",
+    "on-click": "xdg-open https://github.com/notifications && sleep 30 && pkill -RTMIN+4 waybar",
+    "signal": 4
+  },
+  "custom/playerctl": {
+    "interval": "once",
+    "tooltip": true,
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "Playing": "󰏦",
+      "Paused": "󰐍"
+    },
+    "exec": "playerctl metadata --format '{\"alt\": \"{{status}}\", \"tooltip\": \"{{playerName}}:  {{markup_escape(title)}} - {{markup_escape(artist)}}\" }'",
+    "on-click": "playerctl play-pause; pkill -RTMIN+5 waybar",
+    "on-click-right": "playerctl next; pkill -RTMIN+5 waybar",
+    "on-scroll-up": "playerctl position 10+; pkill -RTMIN+5 waybar",
+    "on-scroll-down": "playerctl position 10-; pkill -RTMIN+5 waybar",
+    "signal": 5
+  },
+  "custom/spotify": {
+    "exec": "/usr/bin/python3 $HOME/.config/waybar/mediaplayer.py --player spotify",
+    "format": "{}",
+    "return-type": "json",
+    "on-click": "playerctl play-pause --player spotify",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  },
+  "custom/l_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/r_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/padd": {
+    "format": "  ",
+    "interval": "once",
+    "tooltip": false
+  }
+}
