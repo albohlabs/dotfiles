@@ -24,6 +24,7 @@ return {
         "ninja",
         "nix",
         "org",
+        "prisma",
         "php",
         "regex",
         "scss",
@@ -37,5 +38,4 @@ return {
       })
     end,
   },
-  { "windwp/nvim-ts-autotag", opts = {}, event = "InsertEnter" },
 }

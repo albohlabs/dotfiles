@@ -6,29 +6,23 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+vim.cmd([[command! -nargs=0 GoToCommand :Telescope commands]])
 vim.cmd([[command! -nargs=0 GoToFile :Telescope find_files]])
-vim.cmd([[command! -nargs=0 GoToGitStatus :Telescope git_status]])
 vim.cmd([[command! -nargs=0 Grep :Telescope live_grep]])
 vim.cmd([[command! -nargs=0 SmartGoTo :Telescope smart_goto]])
 
 require("lazy").setup({
   spec = {
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-
-    { import = "lazyvim.plugins.extras.lang.json" },
-    { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.lang.tailwind" },
-    { import = "lazyvim.plugins.extras.lang.docker" },
-    { import = "lazyvim.plugins.extras.lang.rust" },
-    -- { import = "lazyvim.plugins.extras.linting.eslint" },
-    -- { import = "lazyvim.plugins.extras.formatting.prettier" },
-    { import = "lazyvim.plugins.extras.coding.copilot" },
-    { import = "lazyvim.plugins.extras.coding.yanky" },
-    -- { import = "lazyvim.plugins.extras.ui.edgy" },
-    -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
-    { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
-    { import = "lazyvim.plugins.extras.editor.mini-files" },
-    { import = "lazyvim.plugins.extras.editor.aerial" },
+    {
+      "LazyVim/LazyVim",
+      import = "lazyvim.plugins",
+      opts = {
+        news = {
+          lazyvim = true,
+          neovim = true,
+        },
+      },
+    },
 
     { import = "lvim" },
     { import = "plugins" },

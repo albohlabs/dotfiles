@@ -69,8 +69,8 @@ return {
 	xcursor_theme = "Yaru",
 
 	window_padding = {
-		left = 0,
-		right = 0,
+		left = 8,
+		right = 8,
 		top = 0,
 		bottom = 0,
 	},

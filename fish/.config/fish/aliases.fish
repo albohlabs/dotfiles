@@ -2,6 +2,7 @@
 abbr mv "mv -iv"
 abbr cp "cp -riv"
 abbr mkdir "mkdir -vp"
+abbr put trash
 
 # https://github.com/ranger/ranger
 abbr f ranger
@@ -59,6 +60,9 @@ abbr suod sudo
 # alias ffmpeg='docker run --rm -it -v `pwd`:/app jrottenberg/ffmpeg '
 
 alias fzfp 'fzf --height 100% --sort --preview "bat --style=numbers --color=always {}"'
+
+alias pempty "trash list | fzf-tmux --multi -p --sort | awk '{print $5}' | xargs --no-run-if-empty trash empty --match=exact --force"
+alias prestore "trash list | fzf-tmux --multi -p --sort | awk '{print $1}' | xargs --no-run-if-empty trash restore --match=exact --force"
 
 # alias vo 'fd --type f --hidden --exclude .git | fzf-tmux -p --sort | xargs --no-run-if-empty nvim'
 abbr :GoToFile "nvim +GoToFile"

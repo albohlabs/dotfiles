@@ -162,6 +162,7 @@ return {
           },
         },
         vimls = {},
+        prismals = {},
       },
       setup = {},
     },
@@ -181,10 +182,10 @@ return {
       formatters_by_ft = {
         ["markdown"] = { { "prettierd", "prettier" } },
         ["markdown.mdx"] = { { "prettierd", "prettier" } },
-        ["javascript"] = { { "dprint", "prettierd" } },
-        ["javascriptreact"] = { { "dprint", "prettierd" } },
-        ["typescript"] = { { "dprint", "prettierd" } },
-        ["typescriptreact"] = { { "dprint", "prettierd" } },
+        ["javascript"] = { { "dprint", "prettierd", "prettier" } },
+        ["javascriptreact"] = { { "dprint", "prettierd", "prettier" } },
+        ["typescript"] = { { "dprint", "prettierd", "prettier" } },
+        ["typescriptreact"] = { { "dprint", "prettierd", "prettier" } },
       },
       formatters = {
         dprint = {
