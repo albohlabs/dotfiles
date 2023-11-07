@@ -221,6 +221,7 @@ noto-fonts-emoji
 nss-mdns
 ntfs-3g
 nwg-look
+obs-studio
 obsidian
 oh-my-zsh-git
 openresolv
@@ -233,7 +234,7 @@ pamac-gtk
 pamixer
 papirus-maia-icon-theme
 parallel
-paru
+paru-bin
 pavucontrol
 perl
 pipewire-alsa
@@ -263,6 +264,7 @@ rsync
 rtx-bin
 rygel
 s-nail
+safeeyes
 sddm-git
 seahorse
 simple-scan
