@@ -6,8 +6,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+vim.cmd([[command! -nargs=0 GoToCommand :Telescope commands]])
 vim.cmd([[command! -nargs=0 GoToFile :Telescope find_files]])
-vim.cmd([[command! -nargs=0 GoToGitStatus :Telescope git_status]])
 vim.cmd([[command! -nargs=0 Grep :Telescope live_grep]])
 vim.cmd([[command! -nargs=0 SmartGoTo :Telescope smart_goto]])
 
@@ -17,7 +17,6 @@ require("lazy").setup({
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
       opts = {
-        -- colorscheme = "rose-pine",
         news = {
           lazyvim = true,
           neovim = true,
