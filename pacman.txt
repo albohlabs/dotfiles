@@ -139,6 +139,7 @@ haveged
 htop
 hurl-bin
 hyprland-git
+hyprpicker-git
 iagno
 ibus
 inetutils
@@ -317,7 +318,7 @@ visual-studio-code-bin
 vlc
 vulkan-intel
 vulkan-radeon
-waybar
+waybar-git
 webapp-manager
 wget
 which
@@ -338,7 +339,8 @@ xfsprogs
 xorg-server
 xorg-xinit
 xsel
+yay
 yt-dlp
 zoxide
-zsa-wally-bin
+zsa-keymapp-bin
 zsh-theme-powerlevel10k-git
