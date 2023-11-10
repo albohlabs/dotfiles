@@ -1,9 +1,30 @@
     "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "active-only": false,
-        "on-click": "activate",
-        "persistent-workspaces": {
-            "1": []
-        }
+      "format": " {windows} <sub>{icon}</sub> ",
+      "format-window-separator": "\n",
+      "window-rewrite-default": "",
+      "window-rewrite": {
+        "code": "󰨞",
+        "dbeaver": "",
+        "[dD]iscord": "󰙯",
+        "foot": "",
+        "footclient": "",
+        "kitty": "",
+        "firefox": "",
+        "google-chrome": "",
+        "telegram": "",
+        "thunderbird-beta": "",
+        "1Password": "",
+        "obsidian": "󰠮",
+        "keepassxc": "󱕴",
+        "rofi": "",
+        "Spotify": "󰓇",
+        "class<vlc>": "󰕼"
+      },
+      "disable-scroll": true,
+      "all-outputs": true,
+      "active-only": false,
+      "on-click": "activate",
+      "persistent-workspaces": {
+        "1": []
+      }
     },

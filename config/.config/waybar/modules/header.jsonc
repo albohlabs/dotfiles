@@ -5,8 +5,7 @@
   "position": "${w_position}",
   "mod": "dock",
   "output": "eDP-1",
-  "height": ${w_height
-  },
+  "height": ${w_height},
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
