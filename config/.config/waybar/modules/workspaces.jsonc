@@ -1,5 +1,5 @@
     "hyprland/workspaces": {
-      "format": " {windows} <sub>{icon}</sub> ",
+      "format": " <span font='12'>{windows}</span> <sub>{icon}</sub> ",
       "format-window-separator": "\n",
       "window-rewrite-default": "",
       "window-rewrite": {
@@ -13,6 +13,7 @@
         "google-chrome": "",
         "telegram": "",
         "thunderbird-beta": "",
+        "keymapp": "",
         "1Password": "",
         "obsidian": "󰠮",
         "keepassxc": "󱕴",
