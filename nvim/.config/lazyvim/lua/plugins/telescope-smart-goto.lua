@@ -4,7 +4,9 @@ return {
     "ThePrimeagen/harpoon",
     "joshmedeski/telescope-smart-goto.nvim",
   },
-  opts = function()
-    require("telescope").load_extension("smart_goto")
+  config = function(_, opts)
+    local telescope = require("telescope")
+    telescope.setup(opts)
+    telescope.load_extension("smart_goto")
   end,
 }
