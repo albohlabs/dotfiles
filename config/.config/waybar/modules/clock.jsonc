@@ -1,5 +1,4 @@
     "clock": {
-      "format": "{:%H:%M %p 󰃭 %d.%m}",
-      "format-alt": "{:%H:%M  %b %Y}",
+      "format": "{:%H:%M 󰃭 %d.%m}",
       "tooltip-format": "<tt><big>{calendar}</big></tt>"
     },
