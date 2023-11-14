@@ -77,6 +77,7 @@ return {
 
 	-- use GPU accelerated rasterization
 	front_end = "WebGpu",
+	enable_wayland = false,
 	webgpu_power_preference = "HighPerformance",
 
 	-- config.animation_fps = 1
