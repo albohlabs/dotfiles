@@ -1,6 +1,6 @@
     "hyprland/workspaces": {
       "format": " {windows} <sub>{icon}</sub> ",
-      "format-window-separator": "\n",
+      "format-window-separator": " ",
       "window-rewrite-default": "",
       "window-rewrite": {
         "code": "󰨞",
