@@ -11,7 +11,7 @@ return {
       },
       sections = {
         lualine_a = {},
-        lualine_b = {},
+        lualine_b = { "branch" },
         lualine_c = {
           {
             "diagnostics",
