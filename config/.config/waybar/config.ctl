@@ -1,4 +1,5 @@
-1|29|bottom|( cpu memory custom/gpuinfo ) ( idle_inhibitor clock )|( hyprland/workspaces )|( network bluetooth pulseaudio pulseaudio#microphone custom/spotify custom/playerctl ) ( tray battery ) ( custom/cliphist custom/power )
+0|28|top|( cpu memory custom/gpuinfo ) ( idle_inhibitor clock )|( hyprland/workspaces )|( network bluetooth pulseaudio pulseaudio#microphone custom/spotify custom/playerctl ) ( tray battery ) ( custom/cliphist custom/power )
+1|28|top|( hyprland/workspaces )| ( idle_inhibitor clock )|( network bluetooth pulseaudio pulseaudio#microphone custom/spotify custom/playerctl ) ( cpu memory custom/gpuinfo ) ( tray battery ) ( custom/cliphist custom/power )
 0||bottom|( hyprland/workspaces )|( idle_inhibitor clock )|( cpu memory custom/gpuinfo ) ( network bluetooth pulseaudio pulseaudio#microphone custom/spotify custom/playerctl ) ( tray battery ) ( custom/cliphist custom/power )
 0|31|bottom|( custom/power custom/cliphist custom/mode custom/wallchange ) ( wlr/taskbar custom/spotify custom/playerctl ) |( idle_inhibitor clock )|( tray battery ) ( network bluetooth pulseaudio pulseaudio#microphone )
 0|32|bottom||( custom/power ) ( tray battery ) ( wlr/taskbar idle_inhibitor clock ) |
