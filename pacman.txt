@@ -28,6 +28,7 @@ btrfs-progs
 btrfsmaintenance
 bzip2
 caffeine-ng
+chafa
 cheese
 cliphist
 collision
@@ -201,6 +202,7 @@ mhwd-db
 mkinitcpio-openswap
 modemmanager
 mplayer
+musikcube-bin
 nano
 nano-syntax-highlighting
 nautilus
@@ -228,6 +230,7 @@ oh-my-zsh-git
 openresolv
 openssh
 os-prober
+otf-monaspace
 p7zip
 pacui
 pamac-gnome-integration
@@ -269,6 +272,7 @@ safeeyes
 sddm-git
 seahorse
 simple-scan
+slack-desktop
 slurp
 sof-firmware
 spectre-meltdown-checker
@@ -320,7 +324,9 @@ vulkan-intel
 vulkan-radeon
 waybar-git
 webapp-manager
+wezterm
 wget
+whatsapp-for-linux-bin
 which
 wireless-regdb
 wireplumber
