@@ -47,6 +47,7 @@ dmidecode
 dmraid
 dnsmasq
 docker
+docker-buildx
 docker-compose
 dolphin
 dosfstools
@@ -66,6 +67,7 @@ ffmpeg-audio-thumbnailer
 ffmpegthumbnailer
 ffmpegthumbs
 file-roller
+filezilla
 firefox
 fish
 foot
@@ -290,6 +292,7 @@ swww
 sysfsutils
 system-config-printer
 systemd
+teams-for-linux
 telegram-desktop-bin
 texinfo
 the_silver_searcher
@@ -299,6 +302,7 @@ timeshift-autosnap-manjaro
 tldr
 tmux
 topgrade-bin
+torbrowser-launcher
 totem
 touche
 tracker3-miners
