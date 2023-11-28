@@ -6,7 +6,7 @@ return {
     flags = {
       watch = true,
     },
-    auto_start_watch_mode = true,
+    auto_start_watch_mode = false,
     auto_close_qflist = true,
   },
 }
