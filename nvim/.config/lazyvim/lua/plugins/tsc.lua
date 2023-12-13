@@ -1,5 +1,6 @@
 return {
   "dmmulroy/tsc.nvim",
+  enabled = false,
   lazy = false,
   cmd = { "TSC" },
   opts = {

@@ -3,6 +3,7 @@
 -- Add any additional keymaps here
 
 local opts = { noremap = true, expr = true }
+local silent = { silent = true }
 
 local util = require("utils")
 util.cowboy()
@@ -49,3 +50,41 @@ end, opts)
 vim.keymap.set("n", "%%", function()
   vim.api.nvim_feedkeys(vim.fn.expand("%:p:h") .. "/", "c", false)
 end, opts)
+
+-- Store relative line number jumps in the jumplist if they exceed a threshold.
+vim.keymap.set("n", "k", '(v:count > 5 ? "m\'" . v:count : "") . "k"', { expr = true })
+vim.keymap.set("n", "j", '(v:count > 5 ? "m\'" . v:count : "") . "j"', { expr = true })
+
+-- Navigate merge conflict markers
+vim.keymap.set("n", "]n", [[<cmd>call search('^\(@@ .* @@\|[<=>|]\{7}[<=>|]\@!\)', 'W')<cr>]], silent)
+vim.keymap.set("n", "[n", [[<cmd>call search('^\(@@ .* @@\|[<=>|]\{7}[<=>|]\@!\)', 'bW')<cr>]], silent)
+
+-- Open the current file's directory
+vim.keymap.set(
+  "n",
+  "-",
+  [[expand('%') == '' ? ':e ' . getcwd() . '<cr>' : ':e %:h<cr>']],
+  { expr = true, silent = true }
+)
+
+-- Close floating windows, clear highlights, etc.
+local function close_all_floating_windows()
+  local ignored_filetypes = {}
+
+  for _, window in ipairs(vim.api.nvim_list_wins()) do
+    local config = vim.api.nvim_win_get_config(window)
+
+    local bufnr = vim.fn.winbufnr(window)
+    local buf_filetype = vim.fn.getbufvar(bufnr, "&filetype")
+    if config.relative ~= "" and not vim.tbl_contains(ignored_filetypes, buf_filetype) then
+      vim.api.nvim_win_close(window, false)
+    end
+  end
+end
+
+vim.keymap.set("n", "<esc>", function()
+  vim.lsp.buf.clear_references()
+  vim.cmd.nohlsearch()
+
+  close_all_floating_windows()
+end)

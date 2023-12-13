@@ -57,6 +57,7 @@ ecryptfs-utils
 efibootmgr
 emote
 endeavour
+eslint_d
 etcher-bin
 evince
 exfatprogs
