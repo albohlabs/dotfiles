@@ -11,6 +11,7 @@
         "kitty": "",
         "firefox": "",
         "google-chrome": "",
+        "edge": "󰇩",
         "telegram": "",
         "thunderbird-beta": "<span font='12'></span>",
         "slack": "",
@@ -26,7 +27,5 @@
       "all-outputs": true,
       "active-only": false,
       "on-click": "activate",
-        "persistent-workspaces": {
-        }
+      "persistent-workspaces": {}
     },
-
