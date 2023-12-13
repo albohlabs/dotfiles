@@ -166,6 +166,7 @@ libreoffice-still
 libva-mesa-driver
 libva-vdpau-driver
 linux65
+linux66
 logrotate
 lollypop
 lrzip
@@ -201,6 +202,7 @@ mesa-utils
 mesa-vdpau
 mhwd
 mhwd-db
+microsoft-edge-dev-bin
 mkinitcpio-openswap
 modemmanager
 mplayer
@@ -225,6 +227,7 @@ noto-fonts
 noto-fonts-emoji
 nss-mdns
 ntfs-3g
+nwg-displays
 nwg-look
 obs-studio
 obsidian
@@ -335,6 +338,7 @@ which
 wireless-regdb
 wireplumber
 wlogout
+wlr-randr
 wlsunset
 wpa_supplicant
 xdg-desktop-portal-gnome
