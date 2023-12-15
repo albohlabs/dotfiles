@@ -36,11 +36,6 @@
     "custom/playerctl",
     "custom/r_end",
     "custom/l_end",
-    "cpu",
-    "memory",
-    "custom/gpuinfo",
-    "custom/r_end",
-    "custom/l_end",
     "tray",
     "battery",
     "custom/r_end",
@@ -59,8 +54,8 @@
       "footclient": "",
       "kitty": "",
       "firefox": "",
-      "edge": "󰇩",
       "google-chrome": "",
+      "edge": "󰇩",
       "telegram": "",
       "thunderbird-beta": "<span font='12'></span>",
       "slack": "",
@@ -191,37 +186,6 @@
     "on-scroll-up": "playerctl position 10+; pkill -RTMIN+5 waybar",
     "on-scroll-down": "playerctl position 10-; pkill -RTMIN+5 waybar",
     "signal": 5
-  },
-  "cpu": {
-    "interval": 10,
-    "format": "󰍛 {usage}%",
-    "format-alt": "{icon0}{icon1}{icon2}{icon3}",
-    "format-icons": [
-      "▁",
-      "▂",
-      "▃",
-      "▄",
-      "▅",
-      "▆",
-      "▇",
-      "█"
-    ]
-  },
-  "memory": {
-    "interval": 30,
-    "format": "󰾆 {percentage}%",
-    "format-alt": "󰾅 {used}GB",
-    "max-length": 10,
-    "tooltip": true,
-    "tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
-  },
-  "custom/gpuinfo": {
-    "exec": " ~/.config/hypr/scripts/gpuinfo.sh",
-    "return-type": "json",
-    "format": " {}",
-    "interval": 5, // once every 5 seconds
-    "tooltip": true,
-    "max-length": 1000
   },
   "tray": {
     "icon-size": 13,
