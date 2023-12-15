@@ -25,12 +25,6 @@ abbr tree "lsd -AF --tree"
 
 abbr lsvim 'tmux list-panes -a -F "#{session_name} #{command} #{pane_pid} #{pane_title} #{window_name} #{pane_id} #{session_path}" | grep nvim'
 
-# Editor
-abbr nvim nvim
-abbr vim nvim
-abbr vi nvim
-abbr v nvim
-
 abbr g git
 alias gb 'git branch -vv'
 alias gp 'git push'
@@ -64,15 +58,17 @@ alias fzfp 'fzf --height 100% --sort --preview "bat --style=numbers --color=alwa
 alias pempty "trash list | fzf-tmux --multi -p --sort | awk '{print $5}' | xargs --no-run-if-empty trash empty --match=exact --force"
 alias prestore "trash list | fzf-tmux --multi -p --sort | awk '{print $1}' | xargs --no-run-if-empty trash restore --match=exact --force"
 
+# Editor
+abbr nvim nvim
+abbr vim nvim
+abbr vi nvim
+abbr v nvim
+
+abbr vo "nvim +GoToFile"
 # alias vo 'fd --type f --hidden --exclude .git | fzf-tmux -p --sort | xargs --no-run-if-empty nvim'
-abbr :GoToFile "nvim +GoToFile"
-alias vo "nvim +GoToFile"
-
+abbr vf "fd --type f --hidden --follow --exclude .git | fzf-tmux -p -w 100 --reverse --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs --no-run-if-empty nvim"
 # alias vg 'git ls-files -m --others --exclude-standard | fzf-tmux -p --sort | xargs --no-run-if-empty nvim'
-abbr :GoToGitStatus "nvim +GoToGitStatus"
-alias vg "nvim +GoToGitStatus"
 
-abbr :Grep "nvim +Grep"
-alias vf "nvim +Grep"
+abbr gd "nvim +DiffviewOpen"
 
 abbr p "pnpm run (jq -r '.scripts|to_entries[]|((.key))' package.json | fzf-tmux -p --border-label='pnpm run')"
