@@ -40,6 +40,11 @@ return {
     },
     { "<leader>*", "<cmd>Telescope grep_string<cr>", silent = true, desc = "Grep Word Under Cursor" },
     -- { "<leader>bb", "<cmd>Telescope buffers<cr>", desc = "Telescope buffers" },
+    {
+      "<leader><leader>",
+      "<cmd>Telescope smart_open<cr>",
+      desc = "Smart open",
+    },
   },
 
   -- https://github.com/nvim-telescope/telescope.nvim/blob/master/doc/telescope.txt
