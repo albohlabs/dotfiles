@@ -1,7 +1,32 @@
-local Util = require("lazyvim.util")
-
 return {
   "telescope.nvim",
+  dependencies = {
+    {
+      "debugloop/telescope-undo.nvim",
+      keys = {
+        { "<leader>fu", "<cmd>Telescope undo<cr>", desc = "Find Undo Tree" },
+      },
+      config = function()
+        require("telescope").load_extension("undo")
+      end,
+    },
+    {
+      "danielfalk/smart-open.nvim",
+      branch = "0.2.x",
+      config = function() end,
+      dependencies = {
+        "kkharji/sqlite.lua",
+        { "nvim-telescope/telescope-fzy-native.nvim" },
+      },
+    },
+  },
+  config = function(_, opts)
+    local telescope = require("telescope")
+    telescope.setup(opts)
+    telescope.load_extension("undo")
+    telescope.load_extension("smart_open")
+  end,
+
   keys = {
     {
       "<leader>fg",
@@ -15,15 +40,6 @@ return {
     },
     { "<leader>*", "<cmd>Telescope grep_string<cr>", silent = true, desc = "Grep Word Under Cursor" },
     -- { "<leader>bb", "<cmd>Telescope buffers<cr>", desc = "Telescope buffers" },
-  },
-  dependencies = {
-    {
-      "debugloop/telescope-undo.nvim",
-      keys = { { "<leader>U", "<cmd>Telescope undo<cr>" } },
-      config = function()
-        require("telescope").load_extension("undo")
-      end,
-    },
   },
 
   -- https://github.com/nvim-telescope/telescope.nvim/blob/master/doc/telescope.txt
@@ -124,6 +140,12 @@ return {
           },
         },
         sort_mru = true,
+      },
+    },
+    extensions = {
+      smart_open = {
+        cwd_only = true,
+        filename_first = true,
       },
     },
   },
