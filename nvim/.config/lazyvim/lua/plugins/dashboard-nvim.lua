@@ -8,6 +8,12 @@ end
 
 return {
   "nvimdev/dashboard-nvim",
+  -- Only load when no arguments
+  event = function()
+    if vim.fn.argc() == 0 then
+      return "VimEnter"
+    end
+  end,
   opts = function()
     math.randomseed(os.time())
     local randomNumber = math.random(4)
