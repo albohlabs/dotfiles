@@ -6,7 +6,7 @@ return {
       "fdschmidt93/telescope-egrepify.nvim",
       keys = {
         {
-          "<leader>fg",
+          "<leader>sg",
           function()
             require("telescope").extensions.egrepify.egrepify({})
           end,
