@@ -196,6 +196,7 @@ manjaro-settings-manager
 manjaro-settings-manager-notifier
 manjaro-system
 manjaro-zsh-config
+markdownlint-cli
 mdadm
 memtest86+
 memtest86+-efi
@@ -288,7 +289,9 @@ squashfs-tools
 starship
 steam
 stow
+stylua
 sudo
+surfshark-client
 sushi
 swappy
 swaylock-effects-git
@@ -355,6 +358,7 @@ xorg-server
 xorg-xinit
 xsel
 yay
+yq
 yt-dlp
 zoxide
 zsa-keymapp-bin
