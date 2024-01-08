@@ -2,6 +2,22 @@ return {
   "telescope.nvim",
   dependencies = {
     {
+      -- https://github.com/fdschmidt93/telescope-egrepify.nvim
+      "fdschmidt93/telescope-egrepify.nvim",
+      keys = {
+        {
+          "<leader>fg",
+          function()
+            require("telescope").extensions.egrepify.egrepify({})
+          end,
+          desc = "Live Grep",
+        },
+      },
+      config = function()
+        require("telescope").load_extension("egrepify")
+      end,
+    },
+    {
       "debugloop/telescope-undo.nvim",
       keys = {
         { "<leader>fu", "<cmd>Telescope undo<cr>", desc = "Find Undo Tree" },
