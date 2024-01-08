@@ -1,6 +1,11 @@
 return {
   -- vs https://github.com/mrjones2014/smart-splits.nvim
   "aserowy/tmux.nvim",
+  event = function()
+    if vim.fn.executable("$tmux") == 1 then
+      return "VeryLazy"
+    end
+  end,
   opts = {
     navigation = {
       enable_default_keybindings = false,
