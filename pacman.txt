@@ -1,4 +1,5 @@
 1password
+aardvark-dns
 acpi
 acpid
 adobe-source-han-sans-cn-fonts
@@ -254,6 +255,8 @@ pipewire-jack
 pipewire-pulse
 plymouth-theme-manjaro
 pnpm
+podman
+podman-compose
 pokemon-colorscripts-git
 polkit-kde-agent
 postman-bin
