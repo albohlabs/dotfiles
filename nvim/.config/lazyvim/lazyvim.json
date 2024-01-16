@@ -1,8 +1,8 @@
 {
   "extras": [
+    "lazyvim.plugins.extras.dap.core",
     "lazyvim.plugins.extras.coding.copilot",
     "lazyvim.plugins.extras.coding.yanky",
-    "lazyvim.plugins.extras.dap.core",
     "lazyvim.plugins.extras.editor.mini-files",
     "lazyvim.plugins.extras.lang.docker",
     "lazyvim.plugins.extras.lang.java",
@@ -16,7 +16,7 @@
   ],
   "news": {
     "NEWS.md": "2123",
-    "doc/news.txt": "13995"
+    "doc/news.txt": "20007"
   },
   "version": 2
 }
