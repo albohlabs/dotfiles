@@ -7,7 +7,8 @@ SETUVAR _fisher_franciscolourenco_2F_done_files:\x7e/\x2econfig/fish/conf\x2ed/d
 SETUVAR _fisher_halostatue_2F_fish_2D_docker_files:\x7e/\x2econfig/fish/conf\x2ed/halostatue_fish_docker\x2efish\x1e\x7e/\x2econfig/fish/completions/docker\x2dcompose\x2efish\x1e\x7e/\x2econfig/fish/completions/docker\x2efish
 SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:\x7e/\x2econfig/fish/functions/_autopair_backspace\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_left\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_right\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_same\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_tab\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/autopair\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/autopair\x2efish\x1efranciscolourenco/done\x1ehalostatue/fish\x2ddocker
+SETUVAR _fisher_kidonng_2F_zoxide_2E_fish_files:\x7e/\x2econfig/fish/functions/__zoxide_cd\x2efish\x1e\x7e/\x2econfig/fish/functions/__zoxide_pwd\x2efish\x1e\x7e/\x2econfig/fish/functions/__zoxide_z\x2efish\x1e\x7e/\x2econfig/fish/functions/__zoxide_z_complete\x2efish\x1e\x7e/\x2econfig/fish/functions/__zoxide_zi\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/zoxide\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/autopair\x2efish\x1efranciscolourenco/done\x1ehalostatue/fish\x2ddocker\x1ekidonng/zoxide\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
