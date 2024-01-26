@@ -56,6 +56,7 @@ dunst
 e2fsprogs
 ecryptfs-utils
 efibootmgr
+element-desktop
 emote
 endeavour
 eslint_d
@@ -148,6 +149,7 @@ hyprpicker-git
 iagno
 ibus
 inetutils
+intellij-idea-ultimate-edition-jre
 inxi
 jdk11-openjdk
 jfsutils
