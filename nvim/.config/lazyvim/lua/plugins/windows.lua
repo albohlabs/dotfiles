@@ -12,15 +12,6 @@ return {
     { "<C-w>|", "<cmd>WindowsMaximizeHorizontally<cr>", desc = "Maximize height" },
     { "<C-w>=", "<cmd>WindowsEqualize<cr>", desc = "Equalize heights and widths" },
   },
-  cmd = {
-    "WindowsMaximize",
-    "WindowsMaximizeVertically",
-    "WindowsMaximizeHorizontally",
-    "WindowsEqualize",
-    "WindowsEnableAutowidth",
-    "WindowsDisableAutowidth",
-    "WindowsToggleAutowidth",
-  },
   config = function()
     vim.o.winwidth = 5
     vim.o.equalalways = false

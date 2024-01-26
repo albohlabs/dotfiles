@@ -9,6 +9,7 @@ return {
         "luacheck",
         "shellcheck",
         "shfmt",
+        "oxlint",
       })
     end,
   },
@@ -182,10 +183,21 @@ return {
       formatters_by_ft = {
         ["markdown"] = { { "prettierd", "prettier" } },
         ["markdown.mdx"] = { { "prettierd", "prettier" } },
+
         ["javascript"] = { "eslint_d", { "dprint", "prettierd", "prettier" } },
         ["javascriptreact"] = { "eslint_d", { "dprint", "prettierd", "prettier" } },
         ["typescript"] = { "eslint_d", { "dprint", "prettierd", "prettier" } },
         ["typescriptreact"] = { "eslint_d", { "dprint", "prettierd", "prettier" } },
+
+        -- ["javascript"] = { "dprint", "prettierd", "prettier" },
+        -- ["javascriptreact"] = { "dprint", "prettierd", "prettier" },
+        -- ["typescript"] = { "dprint", "prettierd", "prettier" },
+        -- ["typescriptreact"] = { "dprint", "prettierd", "prettier" },
+
+        -- ["javascript"] = { { "dprint", "prettierd", "prettier" } },
+        -- ["javascriptreact"] = { { "dprint", "prettierd", "prettier" } },
+        -- ["typescript"] = { { "dprint", "prettierd", "prettier" } },
+        -- ["typescriptreact"] = { { "dprint", "prettierd", "prettier" } },
       },
       formatters = {
         dprint = {
@@ -203,8 +215,9 @@ return {
         lua = { "selene", "luacheck" },
         markdown = { "markdownlint" },
         typescript = { "eslint_d" },
-        typescriptreact = { "eslint_d" },
         javascript = { "eslint_d" },
+        javascriptreact = { "eslint_d" },
+        typescriptreact = { "eslint_d" },
       },
       linters = {
         selene = {

@@ -8,9 +8,6 @@ return {
       right = { size = 40 },
       top = { size = 10 },
     },
-    animate = {
-      enabled = false,
-    },
     bottom = {
       {
         ft = "toggleterm",
