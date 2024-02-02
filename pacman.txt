@@ -9,6 +9,7 @@ adobe-source-sans-fonts
 adw-gtk-theme
 amd-ucode
 apparmor
+appimagelauncher
 ark
 atuin-bin
 aws-cli-v2
@@ -133,6 +134,7 @@ grub-theme-manjaro
 gst-plugin-pipewire
 gthumb
 gtksourceview-pkgbuild
+gtrash-bin
 gufw
 gvfs
 gvfs-afc
@@ -319,7 +321,6 @@ totem
 touche
 tracker3-miners
 transmission-gtk
-trashy
 tree-sitter
 tree-sitter-cli
 ttf-dejavu
@@ -340,7 +341,7 @@ vulkan-intel
 vulkan-radeon
 waybar-git
 webapp-manager
-wezterm
+wezterm-git
 wget
 whatsapp-for-linux-bin
 which
