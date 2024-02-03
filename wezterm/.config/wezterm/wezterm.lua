@@ -15,8 +15,8 @@ config.line_height = 1.25
 config.cell_width = 0.92
 
 -- font = wezterm.font("Hasklug Nerd Font");
-config.font = wezterm.font("FiraCode Nerd Font")
 -- font = wezterm.font("JetbrainsMono Nerd Font");
+config.font = wezterm.font("FiraCode Nerd Font")
 
 config.bold_brightens_ansi_colors = true
 config.font_rules = {
