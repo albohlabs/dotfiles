@@ -10,7 +10,7 @@ require("links").setup(config)
 -- default_prog = { "/bin/fish", "--login", "--command=tmux attach; or tmux" },
 config.default_prog = { "/bin/fish", "--login" }
 
-config.font_size = 14
+config.font_size = 12
 config.line_height = 1.25
 config.cell_width = 0.92
 
