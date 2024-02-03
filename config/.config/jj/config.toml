@@ -1,0 +1,46 @@
+[user]
+email = "github@alboh.de"
+name = "alboh"
+
+[core]
+fsmonitor = 'watchman'
+
+[ui]
+editor = "nvim"
+# diff-editor = ['scm-diff-editor', '--dir-diff', '$left', '$right']
+diff-editor = 'meld'
+# diff-editor = ["kdiff3", "--merge", "$left", "$right"]
+merge-editor = [
+  'code',
+  '--merge',
+  '$left',
+  '$right',
+  '$base',
+  '$output',
+  '--wait',
+]
+
+pager = ["sh", "-c", "diff-so-fancy | less -RFX"]
+
+[ui.diff]
+format = "git"
+
+[template-aliases]
+'format_short_id(id)' = 'id.shortest()'
+'format_timestamp(timestamp)' = 'timestamp.ago()'
+
+[aliases]
+# clone = ['git', 'clone', '--colocate']
+# fetch = ['git', 'fetch']
+# push = ['git', 'push']
+
+d = ['diff']
+l = ['log']
+s = ['status']
+
+# `jj l` shows commits on the working-copy commit's (anonymous) branch
+# compared to the `main` branch
+# l = ["log", "-r", "(main..@):: | (main..@)-"]
+
+# here = ['branch', 'set', '-r', 'HEAD@git']
+# mutably = ['--config-toml', 'revset-aliases."immutable_heads()" = "none()"']
