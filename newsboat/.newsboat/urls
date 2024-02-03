@@ -9,7 +9,7 @@
 "query:🏦 Politics:tags # \"politics\"" "politics"
 "query:👍 Stuff1:tags # \"stuff01\"" "stuff01"
 "query:🗣 Stuff2:tags # \"stuff02\"" "stuff02"
-"query:🗣 Stuff3:tags # \"stuff03\"" "stuff03"
+"query:🎭️ culture:tags # \"culture\"" "culture"
 "query:👾 Tech:tags # \"tech\"" "tech" 
 "query:🎥 TechVideos:tags # \"tech.videos\"" "tech.videos" 
 "query:🎥 TechTwitter:tags # \"tech.social\"" "tech.social" 
@@ -299,6 +299,9 @@ https://harpers.org/feed/ "stuff02"
 https://solar.lowtechmagazine.com/feeds/all-en.atom.xml "stuff02"
 http://www.publicbooks.org/feed "stuff02"
 https://www.thenewatlantis.com/feed "stuff02"
+
+https://blog.tobiasrevell.com/feed/ "culture"
+https://raindrop.io/collection/35738708/feed "culture"
 
 https://www.nakedcapitalism.com/feed "economics"
 
