@@ -1,11 +1,3 @@
-local tips = function()
-  local tip = vim.fn.system("curl -s " .. "https://vtip.43z.one")
-  if tip == "" then
-    return ""
-  end
-  return "  " .. tip
-end
-
 return {
   "nvimdev/dashboard-nvim",
   -- Only load when no arguments
@@ -99,10 +91,8 @@ return {
             icon = " ",
             key = "q",
           },
-        },
-        footer = function()
-          return { tips() }
-        end,
+        }
+,
       },
     }
 
