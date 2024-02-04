@@ -23,9 +23,6 @@ vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buff
 vim.keymap.del("n", "<S-h>")
 vim.keymap.del("n", "<S-l>")
 
--- go out of closing bracket
-vim.keymap.set("i", "jj", "<c-o>:call search('}\\|)\\|]\\|>\\|\"', 'cW')<cr><Right>")
-
 -- smart deletion, dd
 -- Code will check if u are deleting empty line, if so - use black hole register.
 vim.keymap.set("n", "dd", function()
