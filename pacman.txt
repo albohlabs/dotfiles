@@ -43,6 +43,7 @@ deja-dup
 device-mapper
 dhclient
 dhcpcd
+diff-so-fancy
 diffutils
 discord
 dmidecode
@@ -156,6 +157,7 @@ inxi
 jdk11-openjdk
 jfsutils
 jq
+jujutsu
 kde-cli-tools
 keepassxc
 kitty
@@ -203,6 +205,7 @@ manjaro-system
 manjaro-zsh-config
 markdownlint-cli
 mdadm
+meld
 memtest86+
 memtest86+-efi
 mesa-utils
@@ -339,6 +342,7 @@ visual-studio-code-bin
 vlc
 vulkan-intel
 vulkan-radeon
+watchman-bin
 waybar-git
 webapp-manager
 wezterm-git
