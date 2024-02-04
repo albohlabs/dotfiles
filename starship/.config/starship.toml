@@ -17,18 +17,18 @@ untracked = "([ $count](dimmed red) )"
 
 [directory]
 read_only = " 󰌾"
-truncate_to_repo = false
-truncation_length = 5
-truncation_symbol = "…/"
+# truncate_to_repo = false
+# truncation_length = 5
+# truncation_symbol = "…/"
 
-[directory.substitutions]
-"~/dotfiles/nvim/.config/AstroVim" = "@dotfiles/astrovim"
-"~/dotfiles" = "@dotfiles"
-"~/Development/nuwork/dev/backend-services" = "@nuwork/backend"
-"~/Development/nuwork/dev/frontend" = "@nuwork/frontend"
-"~/Development/nuwork/dev" = "@nuwork"
-"~/Development/nuwork" = "@nuwork"
-"~/Development" = "@dev"
+# [directory.substitutions]
+# "~/dotfiles/nvim/.config/AstroVim" = "@dotfiles/astrovim"
+# "~/dotfiles" = "@dotfiles"
+# "~/Development/nuwork/dev/backend-services" = "@nuwork/backend"
+# "~/Development/nuwork/dev/frontend" = "@nuwork/frontend"
+# "~/Development/nuwork/dev" = "@nuwork"
+# "~/Development/nuwork" = "@nuwork"
+# "~/Development" = "@dev"
 
 [username]
 disabled = true
