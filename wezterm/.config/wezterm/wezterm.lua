@@ -10,9 +10,13 @@ require("links").setup(config)
 -- default_prog = { "/bin/fish", "--login", "--command=tmux attach; or tmux" },
 config.default_prog = { "/bin/fish", "--login" }
 
-config.font_size = 12
+config.font_size = 11
 config.line_height = 1.25
-config.cell_width = 0.92
+-- config.cell_width = 0.92
+
+config.underline_thickness = 3
+config.cursor_thickness = 4
+config.underline_position = -6
 
 -- font = wezterm.font("Hasklug Nerd Font");
 -- font = wezterm.font("JetbrainsMono Nerd Font");
