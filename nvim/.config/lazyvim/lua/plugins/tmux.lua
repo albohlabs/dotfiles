@@ -1,5 +1,4 @@
 return {
-  -- vs https://github.com/mrjones2014/smart-splits.nvim
   "aserowy/tmux.nvim",
   event = function()
     if vim.fn.executable("$tmux") == 1 then
@@ -9,13 +8,12 @@ return {
   opts = {
     navigation = {
       enable_default_keybindings = false,
-      persist_zoom = false,
     },
     resize = {
-      enable_default_keybindings = false,
+      enable_default_keybindings = true,
     },
     copy_sync = {
-      enable = false,
+      enable = true,
     },
   },
   keys = {
@@ -47,34 +45,5 @@ return {
       end,
       desc = "Tmux Move Right",
     },
-
-    -- {
-    --   "<C-Left>",
-    --   function()
-    --     require("tmux").resize_left()
-    --   end,
-    --   desc = "Tmux Resize Left",
-    -- },
-    -- {
-    --   "<C-Down>",
-    --   function()
-    --     require("tmux").resize_bottom()
-    --   end,
-    --   desc = "Tmux Resize Bottom",
-    -- },
-    -- {
-    --   "<C-Up>",
-    --   function()
-    --     require("tmux").resize_top()
-    --   end,
-    --   desc = "Tmux Resize Top",
-    -- },
-    -- {
-    --   "<C-Right>",
-    --   function()
-    --     require("tmux").resize_right()
-    --   end,
-    --   desc = "Tmux Resize Right",
-    -- },
   },
 }
