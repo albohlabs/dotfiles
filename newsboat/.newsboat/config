@@ -23,7 +23,7 @@ notify-format "Newsboat: %n unread articles in %f feeds"
 show-read-feeds no
 show-read-articles no
 
-text-width 80
+# text-width 80
 
 # https://newsboat.org/releases/2.14.1/docs/newsboat.html#_format_strings
 # feedlist-format " %n %4i %11u %t -- %T"
@@ -60,7 +60,7 @@ bind-key I rev-sort
 
 # -- color -------------------------------------------------------------------
 
-color background          color236   default
+# color background          color236   default
 color listnormal          color248   default
 color listnormal_unread   color6     default
 color listfocus           color236   color12
@@ -69,11 +69,11 @@ color info                color248   color236
 color article             color248   default
 
 
+# highlights
 highlight all "(neovim|vim|typescript|nestjs|gql|graphql|fp-ts|tmux|aws|effect)" red
 highlight article "^(Feed|Title|Author|Link|Date):" default default underline
 highlight feedlist "https?://[^ ]+" yellow red bold
 
-# highlights
 highlight article "^(Feed|Link):.*$" color6 default bold
 highlight article "^(Title|Date|Author):.*$" color6 default bold
 highlight article "https?://[^ ]+" color10 default underline

@@ -1,27 +1,9 @@
-# http://www.offensivethinking.org/blog/2009/05/12/efficient-rss-reading.html
-# https://github.com/gpakosz/.newsbeuter/blob/master/urls
 # http://www.newsbeuter.org/doc/newsbeuter.html#_query_feeds
-# query:<name of feed>:<filter expression> [<tag> ...]
 
-# "query:All Unread Articles:unread = \"yes\""
-"query:🐧 Linux:tags # \"Linux\"" "Linux"
-"query:🎵 Music:tags # \"Music\"" "Music"
-"query:🏦 Politics:tags # \"politics\"" "politics"
-"query:👍 Stuff1:tags # \"stuff01\"" "stuff01"
-"query:🗣 Stuff2:tags # \"stuff02\"" "stuff02"
-"query:🎭️ culture:tags # \"culture\"" "culture"
-"query:👾 Tech:tags # \"tech\"" "tech" 
-"query:🎥 TechVideos:tags # \"tech.videos\"" "tech.videos" 
-"query:🎥 TechTwitter:tags # \"tech.social\"" "tech.social" 
-"query:🖥️ Github:tags # \"github\"" "github" 
-"query:💻 Frontend:tags # \"frontend\"" "frontend" 
-"query:💰 Economics:tags # \"economics\"" "economics" 
-
-# Youtube 
-# How to get youtube rss feeds:
 # https://www.youtube.com/feeds/videos.xml?channel_id=YOUR_CHANNEL_ID
 # find the channel id by looking at the source and search for itemprop="channelId"
 
+"query:🟢 TechVideos:tags # \"tech.videos\"" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCptAHlN1gdwD89tFM3ENb6w "tech.videos" "~YouTube Prisma"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC3RKA4vunFAfrfxiJhPEplw "tech.videos" "~YouTube CodeOpinion"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCr7Quur3eIyA_oe8FNYexfg "tech.videos" "~YouTube Storybook"
@@ -33,18 +15,18 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC4tU9QhQAgqIHHWBuocUlFg "te
 https://www.youtube.com/feeds/videos.xml?channel_id=UCbRP3c757lWg9M-U7TyEkXA "tech.videos" "~YouTube theobrowne1017"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCzBDmYcmynHX7mELvD0sWEA "tech.videos" "~YouTube JesseWarden"
 
+"query:🟢 Github:tags # \"github\"" 
 https://github.com/albohlabs.private.atom?token=AABH6UMRRFKC3P3C7WWSPKGAHXFH6 "github" "~github"
 
-https://reddit.com/r/programming/.rss "~ /r/programming" "tech"
-https://reddit.com/r/neovim/.rss "~ /r/neovim" "tech"
-https://dotfyle.com/this-week-in-neovim/rss.xml "~ this week in neovim" "tech"
+https://reddit.com/r/programming/.rss ~r/programming reddit
+https://reddit.com/r/neovim/.rss ~r/neovim reddit neovim 
+https://reddit.com/r/unixporn/.rss ~r/unixporn reddit 
 
-# use nitter instance which has rss enabled
-# https://github.com/zedeus/nitter/wiki/Instances
+"query:🟢 TechTwitter:tags # \"tech.social\"" 
 # https://status.d420.de/
-https://nitter.adminforge.de/alexanderkondov/rss "~Twitter: Alex Kondov" "tech.social"
-https://nitter.adminforge.de/GabrielVergnaud/rss "~Twitter: Gabriel Vergnaud" "tech.social"
-https://nitter.adminforge.de/Folke/rss "~Twitter: Folke Lemaitre" "tech.social"
+https://nitter.adminforge.de/alexanderkondov/rss "tech.social"
+https://nitter.adminforge.de/GabrielVergnaud/rss "tech.social"
+https://nitter.adminforge.de/Folke/rss  "tech.social"
 https://nitter.adminforge.de/mattpocockuk/rss "tech.social"
 https://nitter.adminforge.de/rtfeldman/rss "tech.social"
 https://nitter.adminforge.de/trilon_io/rss "tech.social"
@@ -68,37 +50,39 @@ https://nitter.adminforge.de/yuriybogomolov/rss "tech.social"
 https://fosstodon.org/@rauschma.rss "tech.social"
 https://hachyderm.io/@fasterthanlime.rss "tech.social"
 
-http://feeds.feedburner.com/tocadotux "Linux" "~Toca do Tux"
-http://www.bashoneliners.com/oneliners/feeds/oneliner/ "Linux" "~BashOnliners"
+"query:🟢 Linux:tags # \"Linux\""
+http://feeds.feedburner.com/tocadotux "Linux" 
+http://www.bashoneliners.com/oneliners/feeds/oneliner/ "Linux" 
 http://www.tuxmachines.org/node/feed "Linux"
 http://linuxblog.darkduck.com/feeds/posts/default "Linux"
-http://www.tecmint.com/feed "Linux" "~TecMint"
+http://www.tecmint.com/feed "Linux" 
 http://www.dedoimedo.com/rss_feed.xml "Linux"
-http://www.flynsarmy.com/feed/ "Linux" "~Flynsarm"
+http://www.flynsarmy.com/feed/ "Linux"
 http://lxer.com/module/newswire/headlines.rss "Linux"
-http://rss.slashdot.org/Slashdot/slashdotLinux "Linux" "~SlashDot"
+http://rss.slashdot.org/Slashdot/slashdotLinux "Linux" 
 http://www.phoronix.com/rss.php "Linux"
 http://www.techdrivein.com/feeds/posts/default?alt=rss "Linux"
 http://www.ghacks.net/feed/ "Linux"
-http://www.noobslab.com/feeds/posts/default "Linux" "~NoobsLab"
+http://www.noobslab.com/feeds/posts/default "Linux" 
 http://blog.dustinkirkland.com/feeds/posts/default?alt=rss "Linux"
 https://xfce.org/feed?lang=en "Linux"
-http://www.newthinktank.com/feed/ "Linux" "~DerekBanas"
+http://www.newthinktank.com/feed/ "Linux" 
 https://itsfoss.com/feed/ "~It's FOSS" "Linux"
 https://archlinux.org/feeds/news/ "Linux"
 https://forum.manjaro.org/c/announcements/11.rss "Linux"
 
+"query:🟢 Tech:tags # \"tech\"" 
 https://jessewarden.com/feed "tech" 
 https://the-guild.dev/feed.xml "tech" 
 https://www.samhh.com/rss.xml "~samhh" "tech"
 https://increment.com/feed.xml "~Increment" "tech"
 https://hacks.mozilla.org/feed/ "~Mozilla Hacks" "tech"
 https://alistapart.com/main/feed/ "~A List Apart" "tech"
-https://lexi-lambda.github.io/feeds/all.rss.xml "~Alexis King" "tech"
-https://codersteve.dev/post/index.xml "~Coder Steve" "tech"
-https://nasamuffin.github.io/feed.xml "~Emily Shaffer" "tech"
+https://lexi-lambda.github.io/feeds/all.rss.xml "tech"
+https://codersteve.dev/post/index.xml "tech"
+https://nasamuffin.github.io/feed.xml "tech"
 https://juliu.is/rss.xml "~Ju Liu" "tech"
-https://www.michaelpj.com/blog/feed.xml "~Michael Peyton Jones" "tech"
+https://www.michaelpj.com/blog/feed.xml "tech"
 https://www.snoyman.com/rss.xml "~Michael Snoyman" "tech"
 https://blog.drewolson.org/feed.xml "~Drew Olson" "tech"
 https://benhoyt.com/writings/rss.xml "~Ben Hoyt" "tech"
@@ -132,7 +116,6 @@ http://audio.javascriptair.com/feed.xml "tech"
 http://feeds.feedburner.com/blogspot/dtKx "tech"
 https://anchor.fm/s/28ba964/podcast/rss "tech"
 https://byorgey.wordpress.com/feed/ "tech"
-https://fettblog.eu/atom.xml "tech"
 https://swissangular.com/feed/ "tech"
 https://markkarpov.com/feed.atom "tech"
 https://staltz.com/feed.xml "tech"
@@ -154,12 +137,13 @@ http://scopeweb.mit.edu/feed/ "tech"
 https://blog.awsfundamentals.com/rss.xml "tech"
 https://martinfowler.com/feed.atom "tech"
 https://ybogomolov.me/feed "tech"
-https://fasterthanli.me/index.xml "tech"
 https://darknetlive.com/rss "tech"
 https://threatpost.com/feed "tech"
 
 https://feeds.pinboard.in/rss/popular "tech" "~Pinboard"
+https://dotfyle.com/this-week-in-neovim/rss.xml "tech"
 
+"query:🟢 Stuff1:tags # \"stuff01\""
 https://tinierklaertsichdiewelt.wordpress.com/feed/ "stuff01"
 http://dietotenblog.blogspot.com/feeds/posts/default?alt=rss "stuff01"
 https://what-if.xkcd.com/feed.atom "stuff01"
@@ -232,6 +216,7 @@ http://feeds.feedburner.com/alltagsforschung "stuff01"
 https://pieceoplastic.com/zk/feed/ "stuff01"
 https://gitta-peyn.de/rss/ "stuff01"
 
+"query:🟢 Stuff2:tags # \"stuff02\""
 https://pluralistic.net/feed/ "stuff02"
 https://itsa2amgrunge.com/feed/ "stuff02"
 https://geschichtedergegenwart.ch/feed/atom/ "stuff02"
@@ -301,9 +286,11 @@ https://solar.lowtechmagazine.com/feeds/all-en.atom.xml "stuff02"
 http://www.publicbooks.org/feed "stuff02"
 https://www.thenewatlantis.com/feed "stuff02"
 
+"query:🟢 Culture:tags # \"culture\""
 https://blog.tobiasrevell.com/feed/ "culture"
 https://raindrop.io/collection/35738708/feed "culture"
 
+"query:🟢 Economics:tags # \"economics\"" 
 https://www.nakedcapitalism.com/feed "economics"
 https://www.economist.com/the-world-this-week/rss.xml "economics"
 https://www.economist.com/special-report/rss.xml "economics"
@@ -312,6 +299,7 @@ https://www.economist.com/finance-and-economics/rss.xml "economics"
 https://www.economist.com/science-and-technology/rss.xml "economics"
 https://www.economist.com/international/rss.xml "economics"
 
+"query:🟢 Politics:tags # \"politics\""
 https://marginalrevolution.com/feed "politics" "~Marginal Revolution"
 https://www.kritiknetz.de/?format=feed&type=rss "politics"
 http://www.faz.net/rss/aktuell/feuilleton/aus-dem-maschinenraum/ "politics"
@@ -348,138 +336,7 @@ https://social.tchncs.de/@mspro.rss "politics"
 
 https://forum.jungundnaiv.de/index.php?board-feed/3/&at=179-0cdf8021a79c89cb3617201d72957b887e0f338a "politics"
 
-https://sindresorhus.com/rss.xml "frontend"
-https://addyosmani.com/rss.xml "frontend"
-https://2ality.com/ "frontend"
-https://feeds.feedburner.com/brad-frosts-blog "frontend"
-https://christianheilmann.com/feed/ "frontend"
-https://daverupert.com/atom.xml "frontend"
-https://davidflanagan.com/feed.xml "frontend"
-https://davidwalsh.name/feed/atom "frontend"
-https://ethanmarcotte.com/wrote/feed.xml "frontend"
-https://feeds.feedburner.com/csswizardry "frontend"
-https://jakearchibald.com/posts.rss "frontend"
-https://meiert.com/en/feed/ "frontend"
-https://adactio.com/articles/rss "frontend"
-https://adactio.com/journal/rss "frontend"
-https://snook.ca/jonathan/index.rdf "frontend"
-https://kentcdodds.com/blog/rss.xml "frontend"
-https://lea.verou.me/feed/ "frontend"
-https://markdotto.com/atom.xml "frontend"
-https://mathiasbynens.be/notes.atom "frontend"
-https://humanwhocodes.com/feeds/blog.xml "frontend"
-https://www.quirksmode.org/blog/atom.xml "frontend"
-https://feeds.feedburner.com/philipwalton "frontend"
-https://rachelandrew.co.uk/archives/rss.php "frontend"
-https://remysharp.com/feed.xml "frontend"
-https://www.sarasoueidan.com/blog/index.xml "frontend"
-https://www.phpied.com/feed/ "frontend"
-https://www.xanthir.com/blog/atom/ "frontend"
-https://timkadlec.com/remembers/atom.xml "frontend"
-https://trentwalton.com/feed.xml "frontend"
-https://una.im/feed.xml "frontend"
-https://www.zachleat.com/web/feed/ "frontend"
-https://www.aaron-powell.com/posts/index.xml "frontend"
-https://adamsilver.io/atom.xml "frontend"
-https://adrianroselli.com/feed "frontend"
-https://ishadeed.com/feed.xml "frontend"
-https://frontend.horse/rss.xml "frontend"
-https://wattenberger.com/rss "frontend"
-https://hankchizljaw.com/feed/all.xml "frontend"
-https://vuejsdevelopers.com/atom.xml "frontend"
-https://antoinevastel.com/feed.xml "frontend"
-https://ashleynolan.co.uk/feed.xml "frontend"
-https://stegosource.com/feed/ "frontend"
-https://benfrain.com/feed/ "frontend"
-https://benmccormick.org/rss/ "frontend"
-https://blog.benmyers.dev/feed.xml "frontend"
-https://uglyduck.ca/feed/ "frontend"
-https://www.bram.us/feed/ "frontend"
-https://remotesynthesis.com/feed.xml "frontend"
-https://www.brucelawson.co.uk/feed/ "frontend"
-https://bryanlrobinson.com/feed.xml "frontend"
-https://catalin.red/feed "frontend"
-https://www.chenhuijing.com/feed.xml "frontend"
-https://www.dan-davies.co.uk/feed "frontend"
-https://daveceddia.com/feed.xml "frontend"
-https://dbushell.com/rss.xml "frontend"
-https://accessibledreams.home.blog/feed/ "frontend"
-https://dmitripavlutin.com/rss.xml "frontend"
-https://dutzi.party/rss.xml "frontend"
-https://textslashplain.com/feed/ "frontend"
-https://meyerweb.com/eric/thoughts/category/tech/rss2/full/ "frontend"
-https://erikrunyon.com/feed.xml "frontend"
-https://flaviocopes.com/index.xml "frontend"
-https://writingjavascript.com/rss.xml "frontend"
-https://geoffgraham.me/feed/ "frontend"
-https://www.giftegwuenu.com/rss.xml "frontend"
-https://harrycresswell.com/articles/feed.xml "frontend"
-https://hswolff.com/rss.xml "frontend"
-https://heydonworks.com/feed.xml "frontend"
-https://hiddedevries.nl/rss/full/ "frontend"
-https://foobartel.com/stream/feed "frontend"
-https://hugogiraudel.com/rss "frontend"
-https://hussein-alhammad.com/blog/rss.xml "frontend"
-https://bitsofco.de/rss/ "frontend"
-https://www.jackfranklin.co.uk/feed.xml "frontend"
-https://jrsinclair.com/index.rss "frontend"
-https://feeds.feedburner.com/perishablepress "frontend"
-https://jameshfisher.com/feed.xml "frontend"
-https://destroytoday.com/feeds/all "frontend"
-https://joshwcomeau.com/rss.xml "frontend"
-https://kilianvalkhof.com/feed/ "frontend"
-https://krasimirtsonev.com/blog/rss "frontend"
-https://laurakalbag.com/posts/index.xml "frontend"
-https://www.a11ywithlindsey.com/rss.xml "frontend"
-https://www.impressivewebs.com/feed "frontend"
-https://www.matuzo.at/feed.xml "frontend"
-https://marcozehe.de/feed/ "frontend"
-https://marcus.io/feed "frontend"
-https://feeds.feedburner.com/mariusschulz "frontend"
-https://blog.isquaredsoftware.com/index.xml "frontend"
-https://markosaric.com/feed/ "frontend"
-https://betterwebtype.com/feed.xml "frontend"
-https://mxstbr.blog/feed.atom "frontend"
-https://justmarkup.com/feed/feed.xml "frontend"
-https://michaelnthiessen.com/rss.xml "frontend"
-https://css-irl.info/rss.xml "frontend"
-https://www.madebymike.com.au/feed.xml "frontend"
-https://mike.sherov.com/rss.xml "frontend"
-https://miketaylr.com/posts/rss.xml "frontend"
-https://programmingwithmosh.com/feed "frontend"
-https://typeofnan.dev/rss.xml "frontend"
-https://paul.kinlan.me/index.xml "frontend"
-https://philna.sh/feed.xml "frontend"
-https://www.prestonlamb.com/blog-feed.xml "frontend"
-https://www.digitala11y.com/feed/ "frontend"
-https://www.raymondcamden.com/feed.xml "frontend"
-https://raganwald.com/atom.xml "frontend"
-https://pqina․nl/feed.xml "frontend"
-https://htmlcssjavascript.com/feed/ "frontend"
-https://feeds.feedburner.com/robertnyman "frontend"
-https://www.robinosborne.co.uk/feed/ "frontend"
-https://www.robinwieruch.de/index.xml "frontend"
-https://fossheim.io/feed.xml "frontend"
-https://www.scottohara.me/feed.xml "frontend"
-https://scottvinkle.me/blogs/blog.atom "frontend"
-https://www.swyx.io/rss.xml "frontend"
-https://blog.sindresorhus.com/feed "frontend"
-https://www.voorhoede.nl/blog-feed.xml "frontend"
-https://moderncss.dev/feed/ "frontend"
-https://www.stefanjudis.com/rss.xml "frontend"
-https://blog.stephaniestimac.com/feed/feed.xml "frontend"
-https://stephaniewalter.design/feed/ "frontend"
-https://alwaystwisted.com/rss.php "frontend"
-https://swizec.com/blog/feed "frontend"
-https://lihautan.com/rss.xml "frontend"
-https://www.taniarascia.com/rss.xml "frontend"
-https://www.iamtimsmith.com/rss.xml "frontend"
-https://www.trysmudford.com/blog/index.xml "frontend"
-https://thecodebarbarian.com/feed.xml "frontend"
-https://viljamis.com/atom.xml "frontend"
-https://zellwk.com/feed.xml "frontend"
-https://dev.to/feed/jkettmann "frontend"
-
+"query:🟢 Music:tags # \"Music\""
 https://igloomag.com/feed "Music"
 https://acloserlisten.com/feed/ "Music"
 https://echoesanddust.com/feed/ "Music"
@@ -488,3 +345,46 @@ http://lowlightmixes.blogspot.com/feeds/posts/default "Music"
 https://nitter.adminforge.de/postambientlux/rss "Music"
 https://www.orbmag.com/feed/ "Music"
 
+"query:🟢 Rust:(tags # \"rust\")"
+https://this-week-in-rust.org/atom.xml rust
+https://fasterthanli.me/index.xml rust
+https://raphlinus.github.io/feed.xml rust
+https://matklad.github.io/feed.xml rust
+https://blog.burntsushi.net/index.xml rust
+https://blog.verbum.org/feed/ rust
+https://andreabergia.com/post/index.xml rust
+https://nnethercote.github.io/feed.xml rust
+https://jmmv.dev/feed.xml rust
+https://blog.wesleyac.com/feed.xml rust
+https://nereux.blog/feed.xml rust
+https://ktkaufman03.github.io/feed.xml rust
+https://domwillia.ms/index.xml rust 
+https://ricardoanderegg.com/posts/index.xml rust
+https://samsartor.com/atom.xml rust
+https://hashrust.com/rss.xml ~HashRust rust
+http://cliffle.com/rss.xml rust
+https://zamundaaa.github.io/feed.xml rust
+https://faultlore.com/blah/rss.xml rust
+https://thesquareplanet.com/feed.xml rust
+https://blog.m-ou.se/index.xml rust
+https://raphlinus.github.io/feed.xml rust
+https://matklad.github.io/feed.xml rust
+https://limpet.net/mbrubeck/atom.xml rust
+https://polymonster.github.io/feed rust
+https://model-checking.github.io/kani-verifier-blog/feed.xml rust
+https://nnethercote.github.io/feed.xml rust
+https://billydm.github.io/atom.xml rust
+https://www.brandons.me/feed.xml rust
+https://stevedonovan.github.io/rustifications/feed.xml rust
+https://blog.turbo.fish/rss.xml rust
+https://blog.pnkfx.org/atom.xml rust
+https://blog.burntsushi.net/index.xml rust
+https://aloso.github.io/feed.xml rust
+https://pwy.io/feed.xml rust
+https://kdheepak.com/index.xml rust
+https://lucumr.pocoo.org/feed.atom rust
+https://www.ralfj.de/blog/feed.xml rust
+https://os.phil-opp.com/rss.xml rust
+https://smallcultfollowing.com/babysteps//index.xml rust
+https://kobzol.github.io/feed.xml rust
+https://fettblog.eu/feed.xml rust
