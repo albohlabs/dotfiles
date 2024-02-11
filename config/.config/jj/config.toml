@@ -26,7 +26,7 @@ pager = ["sh", "-c", "diff-so-fancy | less -RFX"]
 format = "git"
 
 [template-aliases]
-'format_short_id(id)' = 'id.shortest()'
+# 'format_short_id(id)' = 'id.shortest()'
 'format_timestamp(timestamp)' = 'timestamp.ago()'
 
 [aliases]
@@ -35,7 +35,7 @@ format = "git"
 # push = ['git', 'push']
 
 d = ['diff']
-l = ['log']
+l = ['log', '--limit', '10']
 s = ['status']
 
 # `jj l` shows commits on the working-copy commit's (anonymous) branch
