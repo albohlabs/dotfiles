@@ -41,6 +41,7 @@
 
 [branch]
   autosetuprebase = always
+	sort = -committerdate
 
 [push]
 	default = current
@@ -124,3 +125,7 @@
 
 [jump]
 	grepCmd = ag --column
+[rerere]
+	enabled = true
+[column]
+	ui = auto

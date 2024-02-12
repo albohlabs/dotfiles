@@ -1,6 +1,13 @@
 [user]
    name = Daniel_Pfefferkorn
    email = daniel@nuwork.de
+   signingkey = 9EC274609E9BF131
 
 [core]
   sshCommand = ssh -i ~/.ssh/id_nuwork
+
+[commit]
+  gpgsign = true
+
+[maintenance]
+	repo = /home/dpf/Development/nuwork/dev/monorepo
