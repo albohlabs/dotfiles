@@ -129,3 +129,7 @@
 	enabled = true
 [column]
 	ui = auto
+
+[commit]
+  gpgsign = true
+

@@ -6,8 +6,5 @@
 [core]
   sshCommand = ssh -i ~/.ssh/id_nuwork
 
-[commit]
-  gpgsign = true
-
 [maintenance]
 	repo = /home/dpf/Development/nuwork/dev/monorepo
