@@ -21,6 +21,7 @@ merge-editor = [
 ]
 
 pager = ["sh", "-c", "diff-so-fancy | less -RFX"]
+default-command = "log"
 
 [ui.diff]
 format = "git"
