@@ -8,7 +8,7 @@
   autosquash = true
 
 [merge]
-  conflictstyle = diff3
+	conflictStyle = zdiff3
   summary = true
   tool = vscode
 
@@ -36,6 +36,7 @@
 
 [interactive]
   diffFilter = delta --color-only
+
 [add.interactive]
   useBuiltin = false # required for git 2.37.0
 
@@ -44,7 +45,7 @@
 	sort = -committerdate
 
 [push]
-	default = current
+	default = current # push the local branch to a remote branch with the same name
   followTags = true
 	autoSetupRemote = true
 
@@ -57,9 +58,6 @@
 [format]
   pretty=cmedium
 
-[pull]
-  rebase = false
-
 [init]
   defaultBranch = main
 
@@ -71,6 +69,7 @@
 
 [diff]
   colorMoved = default
+  algorithm = histogram 
 
 [filter "media"]
   clean = git media clean %f
@@ -97,6 +96,7 @@
 [url "git@github.com:"]
   insteadof = "gh:"
   insteadof = "git://github.com"
+  insteadof = "https://github.com/"
   pushinsteadof = "github:"
   pushinsteadof = "git://github.com/"
   pushinsteadof = "https://github.com/"
@@ -119,17 +119,19 @@
 [help]
   autocorrect = 1
 
-[include]
-  # https://github.com/GitAlias/gitalias
-  path = ~/.gitalias
-
 [jump]
 	grepCmd = ag --column
+
 [rerere]
-	enabled = true
+	enabled = true # remembers how you resolved merge conflicts during a git rebase and automatically resolves conflicts for you when it can
+
 [column]
 	ui = auto
 
 [commit]
   gpgsign = true
+
+[include]
+  # https://github.com/GitAlias/gitalias
+  path = ~/.gitalias
 
