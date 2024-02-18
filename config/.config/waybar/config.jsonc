@@ -3,7 +3,7 @@
   "output": "eDP-1",
   // sourced from header module //
   "layer": "top",
-  "position": "top",
+  "position": "bottom",
   "mod": "dock",
   "height": 28,
   "exclusive": true,
@@ -30,6 +30,7 @@
     "custom/l_end",
     "cpu",
     "memory",
+    // "custom/cpuinfo",
     "custom/r_end",
     "custom/l_end",
     "network",
@@ -37,7 +38,6 @@
     "pulseaudio",
     "pulseaudio#microphone",
     "custom/spotify",
-    "custom/playerctl",
     "custom/r_end",
     "custom/l_end",
     "tray",
@@ -86,19 +86,16 @@
     }
   },
   "clock": {
-    "format": "{:%H:%M 󰃭 %d.%m}",
-    "format-alt": "{:%R 󰃭 %a %d %b'%y}",
+    "format": "{:%I:%M %p}",
+    "format-alt": "{:%R 󰃭 %d·%m·%y}",
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "mode": "month",
       "mode-mon-col": 3,
-      // "weeks-pos": "left",
       "on-scroll": 1,
       "on-click-right": "mode",
       "format": {
         "months": "<span color='#ffead3'><b>{}</b></span>",
-        // "days": "<span color='#ecc6d9'><b>{}</b></span>",
-        // "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
         "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
         "today": "<span color='#ff6699'><b>{}</b></span>"
       }
@@ -127,12 +124,20 @@
     ]
   },
   "memory": {
+    "states": {
+      "c": 90, // critical
+      "h": 60, // high
+      "m": 30, // medium
+    },
     "interval": 30,
-    "format": "󰾆 {percentage}%",
-    "format-alt": "󰾅 {used}GB",
+    "format": "󰾆 {used}GB",
+    "format-m": "󰾅 {used}GB",
+    "format-h": "󰓅 {used}GB",
+    "format-c": " {used}GB",
+    "format-alt": "󰾆 {percentage}%",
     "max-length": 10,
     "tooltip": true,
-    "tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
+    "tooltip-format": "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB"
   },
   "network": {
     "tooltip": true,
@@ -151,7 +156,19 @@
     "format-connected": " {num_connections}",
     "format-connected-battery": "{icon} {num_connections}",
     // "format-connected-battery": "{icon} {device_alias}-{device_battery_percentage}%",
-    "format-icons": ["󰥇", "󰤾", "󰤿", "󰥀", "󰥁", "󰥂", "󰥃", "󰥄", "󰥅", "󰥆", "󰥈"],
+    "format-icons": [
+      "󰥇",
+      "󰤾",
+      "󰤿",
+      "󰥀",
+      "󰥁",
+      "󰥂",
+      "󰥃",
+      "󰥄",
+      "󰥅",
+      "󰥆",
+      "󰥈"
+    ],
     // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device If this config option is not defined or none of the devices in the list are connected, it will fall back to showing the last connected device.
     "tooltip-format": "{controller_alias}\n{num_connections} connected",
     "tooltip-format-connected": "{controller_alias}\n{num_connections} connected\n\n{device_enumerate}",
@@ -205,22 +222,6 @@
     "escape": true,
     "tooltip": true
   },
-  "custom/playerctl": {
-    "interval": "once",
-    "tooltip": true,
-    "return-type": "json",
-    "format": "{icon}",
-    "format-icons": {
-      "Playing": "󰏦",
-      "Paused": "󰐍"
-    },
-    "exec": "playerctl metadata --format '{\"alt\": \"{{status}}\", \"tooltip\": \"{{playerName}}:  {{markup_escape(title)}} - {{markup_escape(artist)}}\" }'",
-    "on-click": "playerctl play-pause; pkill -RTMIN+5 waybar",
-    "on-click-right": "playerctl next; pkill -RTMIN+5 waybar",
-    "on-scroll-up": "playerctl position 10+; pkill -RTMIN+5 waybar",
-    "on-scroll-down": "playerctl position 10-; pkill -RTMIN+5 waybar",
-    "signal": 5
-  },
   "tray": {
     "icon-size": 13,
     "spacing": 5
@@ -248,6 +249,14 @@
       "󰂂",
       "󰁹"
     ]
+  },
+  "custom/cpuinfo": {
+    "exec": " ~/.config/hypr/scripts/cpuinfo.sh",
+    "return-type": "json",
+    "format": "{}",
+    "interval": 5, // once every 5 seconds
+    "tooltip": true,
+    "max-length": 1000
   },
   // modules for padding //
   "custom/l_end": {
