@@ -30,6 +30,7 @@ btrfs-progs
 btrfsmaintenance
 bzip2
 caffeine-ng
+cava-git
 chafa
 cheese
 cliphist
@@ -159,6 +160,7 @@ jfsutils
 jq
 jujutsu
 kde-cli-tools
+kdiff3
 keepassxc
 kitty
 kvantum-manjaro
@@ -168,6 +170,7 @@ lib32-libva-vdpau-driver
 lib32-mesa-vdpau
 lib32-vulkan-intel
 lib32-vulkan-radeon
+libdrm-git
 libdvdcss
 libpamac-flatpak-plugin
 libreoffice-still
@@ -288,6 +291,7 @@ s-nail
 safeeyes
 sddm-git
 seahorse
+shellcheck-bin
 simple-scan
 slack-desktop
 slurp
