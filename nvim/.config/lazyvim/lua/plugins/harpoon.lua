@@ -2,41 +2,27 @@ local prefix = "<leader><leader>"
 
 return {
   "ThePrimeagen/harpoon",
+  branch = "harpoon2",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope.nvim",
   },
-  config = function()
-    require("harpoon").setup()
-    require("telescope").load_extension("harpoon")
-  end,
   cmd = { "Harpoon" },
 
-  keys = {
-    {
-      prefix .. "a",
-      function()
-        require("harpoon.mark").add_file()
-      end,
-      desc = "Add file",
-    },
-    {
-      prefix .. "e",
-      function()
-        require("harpoon.ui").toggle_quick_menu()
-      end,
-      desc = "Toggle quick menu",
-    },
-    { prefix .. "m", "<cmd>Telescope harpoon marks<CR>", desc = "Show marks in Telescope" },
+  keys = function()
+    local harpoon = require("harpoon")
 
-    { "<leader>1", "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", desc = "Harpoon Buffer 1" },
-    { "<leader>2", "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", desc = "Harpoon Buffer 2" },
-    { "<leader>3", "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", desc = "Harpoon Buffer 3" },
-    { "<leader>4", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", desc = "Harpoon Buffer 4" },
-    { "<leader>5", "<cmd>lua require('harpoon.ui').nav_file(5)<cr>", desc = "Harpoon Buffer 5" },
-    { "<leader>6", "<cmd>lua require('harpoon.ui').nav_file(6)<cr>", desc = "Harpoon Buffer 6" },
-    { "<leader>7", "<cmd>lua require('harpoon.ui').nav_file(7)<cr>", desc = "Harpoon Buffer 7" },
-    { "<leader>8", "<cmd>lua require('harpoon.ui').nav_file(8)<cr>", desc = "Harpoon Buffer 8" },
-    { "<leader>9", "<cmd>lua require('harpoon.ui').nav_file(9)<cr>", desc = "Harpoon Buffer 9" },
-  },
+    -- stylua: ignore
+    return {
+      { prefix .. "a", function() require("harpoon"):list():append() end, desc = "Add location", },
+      { prefix .. "r", function() require("harpoon"):list():remove() end, desc = "Remove location", },
+      { "<LocalLeader>1", function() require("harpoon"):list():select(1) end, desc = "Harpoon select 1", },
+      { "<LocalLeader>2", function() require("harpoon"):list():select(2) end, desc = "Harpoon select 2", },
+      { "<LocalLeader>3", function() require("harpoon"):list():select(3) end, desc = "Harpoon select 3", },
+      { "<LocalLeader>4", function() require("harpoon"):list():select(4) end, desc = "Harpoon select 4", },
+      { "<LocalLeader>5", function() require("harpoon"):list():select(4) end, desc = "Harpoon select 5", },
+      { "<LocalLeader>6", function() require("harpoon"):list():select(4) end, desc = "Harpoon select 5", },
+      { prefix .. "e", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, desc = "List locations", },
+    }
+  end,
 }
