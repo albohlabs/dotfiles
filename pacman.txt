@@ -30,7 +30,7 @@ btrfs-progs
 btrfsmaintenance
 bzip2
 caffeine-ng
-cava-git
+cava
 chafa
 cheese
 cliphist
