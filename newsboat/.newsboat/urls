@@ -14,6 +14,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCHEDNwdgR5TKPBWtaeTgD8w "te
 https://www.youtube.com/feeds/videos.xml?channel_id=UC4tU9QhQAgqIHHWBuocUlFg "tech.videos" "~YouTube lowderdev"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCbRP3c757lWg9M-U7TyEkXA "tech.videos" "~YouTube theobrowne1017"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCzBDmYcmynHX7mELvD0sWEA "tech.videos" "~YouTube JesseWarden"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCs_tLP3AiwYKwdUHpltJPuA "tech.videos" "~YouTube GOTO Conf"
 
 "query:🟢 Github:tags # \"github\"" 
 https://github.com/albohlabs.private.atom?token=AABH6UMRRFKC3P3C7WWSPKGAHXFH6 "github" "~github"
