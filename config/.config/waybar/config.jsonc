@@ -86,8 +86,8 @@
     }
   },
   "clock": {
-    "format": "{:%I:%M %p}",
-    "format-alt": "{:%R 󰃭 %d·%m·%y}",
+    "format": "{:%H:%M 󰃭 %d.%m}",
+    "format-alt": "{:%R 󰃭 %a %d %b'%y}",
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "mode": "month",
