@@ -178,6 +178,7 @@ libva-mesa-driver
 libva-vdpau-driver
 linux65
 linux66
+lld
 logrotate
 lollypop
 lrzip
@@ -286,6 +287,7 @@ reiserfsprogs
 rofi-lbonn-wayland-git
 rsync
 rtx-bin
+rustup
 rygel
 s-nail
 safeeyes
