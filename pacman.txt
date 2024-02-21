@@ -272,6 +272,7 @@ podman
 podman-compose
 pokemon-colorscripts-git
 polkit-kde-agent
+postgresql
 postman-bin
 power-profiles-daemon
 prettierd
