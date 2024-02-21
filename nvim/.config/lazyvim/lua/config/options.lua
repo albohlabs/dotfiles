@@ -14,6 +14,8 @@ vim.opt.scrolloff = 5
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
+vim.opt.wrap = false
+
 --  Autoformatting
 --  TODO: Can we get rid of concat here?
 vim.opt.formatoptions = table.concat({
