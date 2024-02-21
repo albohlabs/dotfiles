@@ -22,7 +22,6 @@ bat-extras
 bibata-cursor-theme
 blueman
 bluez-utils
-bmenu
 bob
 brightnessctl
 btop
@@ -80,6 +79,7 @@ floorp-bin
 foot
 fprintd
 fragments
+fzf
 gdm
 geary
 gedit
@@ -253,7 +253,6 @@ openssh
 os-prober
 otf-monaspace
 p7zip
-pacui
 pamac-gnome-integration
 pamac-gtk
 pamixer
