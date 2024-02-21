@@ -76,6 +76,7 @@ file-roller
 filezilla
 firefox
 fish
+floorp-bin
 foot
 fprintd
 fragments
@@ -219,6 +220,7 @@ mhwd-db
 microsoft-edge-dev-bin
 mkinitcpio-openswap
 modemmanager
+mongodb-tools-bin
 mplayer
 musikcube-bin
 nano
