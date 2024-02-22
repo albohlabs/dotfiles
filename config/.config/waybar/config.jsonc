@@ -30,7 +30,7 @@
     "custom/l_end",
     "cpu",
     "memory",
-    // "custom/cpuinfo",
+    "custom/cpuinfo",
     "custom/r_end",
     "custom/l_end",
     "network",
