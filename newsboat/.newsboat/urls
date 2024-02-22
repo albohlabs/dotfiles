@@ -19,9 +19,9 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCs_tLP3AiwYKwdUHpltJPuA "te
 "query:🟢 Github:tags # \"github\"" 
 https://github.com/albohlabs.private.atom?token=AABH6UMRRFKC3P3C7WWSPKGAHXFH6 "github" "~github"
 
+"query:🟢 Reddit:tags # \"reddit\"" 
 https://reddit.com/r/programming/.rss ~r/programming reddit
 https://reddit.com/r/neovim/.rss ~r/neovim reddit neovim 
-https://reddit.com/r/unixporn/.rss ~r/unixporn reddit 
 
 "query:🟢 TechTwitter:tags # \"tech.social\"" 
 # https://status.d420.de/
