@@ -139,6 +139,7 @@ gthumb
 gtksourceview-pkgbuild
 gtrash-bin
 gufw
+gum
 gvfs
 gvfs-afc
 gvfs-google
