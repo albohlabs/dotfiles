@@ -11,6 +11,10 @@ fish_add_path $HOME/.local/share/bob/nvim-bin
 fish_add_path /bin
 fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
 
+# golang - https://golang.google.cn/
+set -Ux GOPATH (go env GOPATH)
+fish_add_path $GOPATH/bin
+
 set -gx PNPM_HOME $HOME/.local/share/pnpm
 if not string match -q -- $PNPM_HOME $PATH
     fish_add_path $PNPM_HOME

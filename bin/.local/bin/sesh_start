@@ -1,0 +1,4 @@
+#!/usr/bin/env fish
+sesh connect $(
+	sesh list -tz | gum filter --limit 1 --placeholder "Choose a session" --height 15 --prompt="⚡"
+)

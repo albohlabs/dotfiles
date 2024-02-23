@@ -7,6 +7,28 @@ abbr put trash
 # https://github.com/ranger/ranger
 abbr f ranger
 
+abbr c clear
+abbr cl clear
+abbr claer clear
+abbr clera clear
+abbr cx "chmod +x"
+
+abbr s sesh_start
+abbr s. "sesh connect ."
+abbr sc "sesh connect"
+
+abbr pc podman-compose
+abbr pcd "podman-compose down"
+abbr pcdv "podman-compose down -v"
+abbr pcr "podman-compose restart"
+abbr pcu "podman-compose up -d"
+abbr pps "podman ps --format 'table {{.Names}}\t{{.Status}}'"
+
+abbr fi "fisher install"
+abbr fr "fisher refresh"
+abbr fu "fisher update"
+abbr fl "fisher list | sed 's/.*/"&"/'"
+
 abbr ".." "cd ../"
 abbr "..." "cd ../../"
 abbr "...." "cd ../../../"
@@ -17,7 +39,6 @@ abbr "......." "cd ../../../../../../"
 abbr l "lsd  --group-dirs first -A"
 abbr ll "lsd  --group-dirs first -Al"
 abbr lt "lsd  --group-dirs last -A --tree"
-
 # -A, --almost-all Do not list implied . and ..
 # -l, --long       Display extended file metadata as a table
 # -F, --classify   Append indicator (one of */=>@|) at the end of the file names

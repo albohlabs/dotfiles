@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export --path GOPATH:/home/dpf/go
 SETUVAR --export SSH_AUTH_SOCK:/run/user/1000/gnupg/S\x2egpg\x2dagent\x2essh
 SETUVAR __done_exclude:nvim\x7cvim
 SETUVAR __fish_initialized:3400
