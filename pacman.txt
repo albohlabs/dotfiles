@@ -150,6 +150,7 @@ gvfs-smb
 haveged
 htop
 hurl-bin
+hyprdots-ctl
 hyprland-git
 hyprpicker-git
 iagno
