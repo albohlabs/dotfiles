@@ -10,6 +10,14 @@ awk '{print $1}'  packman.txt |  xargs pacman -S
 
 ### Misc
 
+### Setting default applications
+
+```
+xdg-settings set default-web-browser firefox.desktop
+xdg-mime default thunar.desktop inode/directory
+xdg-mime default kitty.desktop application/x-shellscript
+```
+
 ### Switch between NVIDIA and Intel
 
 ```bash
