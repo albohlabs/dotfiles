@@ -50,6 +50,7 @@
         "class<vlc>": "󰕼"
       },
       "disable-scroll": true,
+      "rotate": 0,
       "all-outputs": true,
       "active-only": false,
       "on-click": "activate",
@@ -57,6 +58,7 @@
     },
     "idle_inhibitor": {
         "format": "{icon}",
+        "rotate": 0,
         "format-icons": {
             "activated": "󰥔",
             "deactivated": ""
@@ -66,6 +68,7 @@
     "clock": {
       "format": "{:%H:%M 󰃭 %d.%m}",
         "format-alt": "{:%R 󰃭 %a %d %b'%y}",
+        "rotate": 0,
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "month",
@@ -90,6 +93,7 @@
     "cpu": {
         "interval": 10,
         "format": "󰍛 {usage}%",
+        "rotate": 0,
         "format-alt": "{icon0}{icon1}{icon2}{icon3}",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
     },
@@ -102,6 +106,7 @@
         },
         "interval": 30,
         "format": "󰾆 {used}GB",
+        "rotate": 0,
         "format-m": "󰾅 {used}GB",
         "format-h": "󰓅 {used}GB",
         "format-c": " {used}GB",
@@ -115,6 +120,7 @@
         "exec": " ~/.config/hypr/scripts/cpuinfo.sh",
         "return-type": "json",
         "format": "{}",
+        "rotate": 0,
         "interval": 5, // once every 5 seconds
         "tooltip": true,
         "max-length": 1000
@@ -123,6 +129,7 @@
     "network": {
         "tooltip": true,
         "format-wifi": " ",
+        "rotate": 0,
         "format-ethernet": "󰈀 ",
         "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
         "format-linked": "󰈀 {ifname} (No IP)",
@@ -134,6 +141,7 @@
 
     "bluetooth": {
         "format": "",
+        "rotate": 0,
         "format-disabled": "",
         "format-connected": " {num_connections}",
         "format-connected-battery": "{icon} {num_connections}",
@@ -148,6 +156,7 @@
 
     "pulseaudio": {
         "format": "{icon} {volume}",
+        "rotate": 0,
         "format-muted": "婢",
         "on-click": "pavucontrol -t 3",
         "on-click-middle": "~/.config/hypr/scripts/volumecontrol.sh -o m",
@@ -168,6 +177,7 @@
 
     "pulseaudio#microphone": {
         "format": "{format_source}",
+        "rotate": 0,
         "format-source": "",
         "format-source-muted": "",
         "on-click": "pavucontrol -t 4",
@@ -181,24 +191,27 @@
     "custom/spotify": {
         "exec": "/usr/bin/python3 /home/dpf/.config/waybar/modules/mediaplayer.py --player spotify",
         "format": " {}",
+        "rotate": 0,
         "return-type": "json",
         "on-click": "playerctl play-pause --player spotify",
         "on-click-right": "playerctl next --player spotify",
         "on-click-middle": "playerctl previous --player spotify",
-        "on-scroll-up": "~/.config/hypr/scripts/spotifyvolumecontrol.sh up",
-        "on-scroll-down": "~/.config/hypr/scripts/spotifyvolumecontrol.sh down",
+        "on-scroll-up": "~/.config/hypr/scripts/volumecontrol.sh -p spotify i",
+        "on-scroll-down": "~/.config/hypr/scripts/volumecontrol.sh -p spotify d",
         "max-length": 25,
         "escape": true,
         "tooltip": true
     },
 
     "tray": {
-      // "icon-size": 16,
-      "icon-size": 13,
-      "spacing": 5
+        "icon-size": 16,
+        "rotate": 0,
+        "spacing": 5
     },
+
     "custom/keybindhint": {
         "format": " ",
+        "rotate": 0,
         "on-click": "Hyprdots show binds",
     },
 
@@ -209,6 +222,7 @@
             "critical": 20
         },
         "format": "{icon} {capacity}%",
+        "rotate": 0,
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
