@@ -18,6 +18,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
+      -- diagnostics = { virtual_text = { prefix = "icons" } },
       inlay_hints = { enabled = true },
       capabilities = {
         workspace = {
@@ -77,18 +78,6 @@ return {
         -- pyright = {
         --   enabled = false,
         -- },
-        rust_analyzer = {
-          -- settings = {
-          --   ["rust-analyzer"] = {
-          --     procMacro = { enable = true },
-          --     cargo = { allFeatures = true },
-          --     checkOnSave = {
-          --       command = "clippy",
-          --       extraArgs = { "--no-deps" },
-          --     },
-          --   },
-          -- },
-        },
         yamlls = {
           settings = {
             yaml = {
@@ -166,13 +155,6 @@ return {
         prismals = {},
       },
       setup = {},
-    },
-  },
-
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      diagnostics = { virtual_text = { prefix = "icons" } },
     },
   },
 

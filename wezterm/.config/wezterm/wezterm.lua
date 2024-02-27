@@ -13,6 +13,7 @@ config.default_prog = { "/bin/fish", "--login" }
 config.font_size = 11
 config.line_height = 1.25
 -- config.cell_width = 0.92
+config.window_background_opacity = 0.7
 
 -- font = wezterm.font("Hasklug Nerd Font");
 -- font = wezterm.font("JetbrainsMono Nerd Font");

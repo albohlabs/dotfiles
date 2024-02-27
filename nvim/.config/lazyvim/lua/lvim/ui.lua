@@ -2,6 +2,29 @@ local icons = require("lazyvim.config").icons
 
 return {
   {
+    "folke/noice.nvim",
+    opts = function(_, opts)
+      table.insert(opts.routes, {
+        filter = {
+          event = "notify",
+          find = "No information available",
+        },
+        opts = { skip = true },
+      })
+
+      opts.views = {
+        mini = {
+          win_options = {
+            winblend = 0,
+          },
+        },
+      }
+
+      opts.presets.lsp_doc_border = true
+    end,
+  },
+
+  {
     "nvim-lualine/lualine.nvim",
     opts = {
       options = {
