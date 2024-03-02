@@ -32,9 +32,12 @@ return {
         section_separators = { left = "", right = "" },
         theme = "auto",
       },
+      -- https://github.com/nvim-lualine/lualine.nvim#available-options
       sections = {
-        lualine_a = {},
-        lualine_b = { "branch" },
+        lualine_a = { "branch" },
+        lualine_b = {
+          { "filename", file_status = false, path = 1 },
+        },
         lualine_c = {
           {
             "diagnostics",
