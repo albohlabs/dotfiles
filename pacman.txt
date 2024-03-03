@@ -151,7 +151,7 @@ haveged
 htop
 hurl-bin
 hyprdots-ctl
-hyprland-git
+hyprland
 hyprpicker-git
 iagno
 ibus
@@ -295,7 +295,7 @@ rustup
 rygel
 s-nail
 safeeyes
-sddm-git
+sddm
 seahorse
 shellcheck-bin
 simple-scan
@@ -353,9 +353,11 @@ vlc
 vulkan-intel
 vulkan-radeon
 watchman-bin
-waybar-git
+waybar
 webapp-manager
-wezterm-git
+wezterm
+wezterm-shell-integration
+wezterm-terminfo
 wget
 whatsapp-for-linux-bin
 which
