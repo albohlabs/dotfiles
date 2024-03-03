@@ -25,6 +25,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCx3Vist13GWLzRPvhUxQ3Jg "te
 https://www.youtube.com/feeds/videos.xml?channel_id=UCaYhcUwRBNscFNUKTjgPFiA "tech.videos" "~YouTube Rust"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCERcwLeheOXp_u61jEXxHMA "tech.videos" "~YouTube GraphQL Foundation"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCC-TcJ0SuGz21uIVIH0QGlQ "tech.videos" "~YouTube Adventures in Nodeland - Matteo Collina"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCs4fQRyl1TJvoeOdekW6lYA "tech.videos" "~YouTube fasterthanlime"
 
 "query:🟢 MusicVideos:tags # \"music.videos\"" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCjSJqyRtwq59W4c-x89u8uw "music.videos" "~YouTube Max Cooper"
