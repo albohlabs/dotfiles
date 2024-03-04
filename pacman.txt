@@ -179,7 +179,6 @@ libpamac-flatpak-plugin
 libreoffice-still
 libva-mesa-driver
 libva-vdpau-driver
-linux65
 linux66
 lld
 logrotate
