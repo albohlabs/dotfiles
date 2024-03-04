@@ -220,6 +220,7 @@ mesa-vdpau
 mhwd
 mhwd-db
 microsoft-edge-dev-bin
+mise-bin
 mkinitcpio-openswap
 modemmanager
 mongodb-tools-bin
@@ -290,7 +291,6 @@ quadrapassel
 reiserfsprogs
 rofi-lbonn-wayland-git
 rsync
-rtx-bin
 rustup
 rygel
 s-nail
