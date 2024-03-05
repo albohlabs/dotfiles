@@ -52,4 +52,7 @@ require("lazy").setup({
       },
     },
   },
+  dev = {
+    path = "~/Development/lua-lang",
+  },
 })
