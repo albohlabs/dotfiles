@@ -21,6 +21,13 @@ return {
       -- diagnostics = { virtual_text = { prefix = "icons" } },
       inlay_hints = { enabled = true },
       capabilities = {
+        textDocument = {
+          completion = {
+            completionItem = {
+              snippetSupport = false,
+            },
+          },
+        },
         workspace = {
           didChangeWatchedFiles = {
             dynamicRegistration = false,
