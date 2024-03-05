@@ -26,7 +26,11 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCaYhcUwRBNscFNUKTjgPFiA "te
 https://www.youtube.com/feeds/videos.xml?channel_id=UCERcwLeheOXp_u61jEXxHMA "tech.videos" "~YouTube GraphQL Foundation"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCC-TcJ0SuGz21uIVIH0QGlQ "tech.videos" "~YouTube Adventures in Nodeland - Matteo Collina"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCs4fQRyl1TJvoeOdekW6lYA "tech.videos" "~YouTube fasterthanlime"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCSp-OaMpsO8K0KkOqyBl7_w "tech.videos" "~YouTube Let's Get Rusty"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUMwY9iS8oMyWDYIe6_RmoA "tech.videos" "~YouTube No Boilerplate"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC_iD0xppBwwsrM9DegC5cQQ "tech.videos" "~YouTube Jon Gjengset"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCiT_r1GD7JSftnbViKHcOtQ "tech.videos" "~YouTube Jeremy Chone"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwUBA8snH6xQdgXqgOs5qOQ "tech.videos" "~YouTube Noise Code"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCjREVt2ZJU8ql-NC9Gu-TJw "tech.videos" "~YouTube Code to the Moon"
 
 "query:🟢 MusicVideos:tags # \"music.videos\"" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCjSJqyRtwq59W4c-x89u8uw "music.videos" "~YouTube Max Cooper"
