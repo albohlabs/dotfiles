@@ -117,7 +117,7 @@
     },
 
     "custom/cpuinfo": {
-        "exec": " ~/.config/hypr/scripts/cpuinfo.sh",
+        "exec": " /home/dpf/.config/hyprdots/scripts/cpuinfo.sh",
         "return-type": "json",
         "format": "{}",
         "rotate": 0,
@@ -159,9 +159,9 @@
         "rotate": 0,
         "format-muted": "婢",
         "on-click": "pavucontrol -t 3",
-        "on-click-middle": "~/.config/hypr/scripts/volumecontrol.sh -o m",
-        "on-scroll-up": "~/.config/hypr/scripts/volumecontrol.sh -o i",
-        "on-scroll-down": "~/.config/hypr/scripts/volumecontrol.sh -o d",
+        "on-click-middle": "/home/dpf/.config/hyprdots/scripts/volumecontrol.sh -o m",
+        "on-scroll-up": "/home/dpf/.config/hyprdots/scripts/volumecontrol.sh -o i",
+        "on-scroll-down": "/home/dpf/.config/hyprdots/scripts/volumecontrol.sh -o d",
         "tooltip-format": "{icon} {desc} // {volume}%",
         "scroll-step": 5,
         "format-icons": {
@@ -181,9 +181,9 @@
         "format-source": "",
         "format-source-muted": "",
         "on-click": "pavucontrol -t 4",
-        "on-click-middle": "~/.config/hypr/scripts/volumecontrol.sh -i m",
-        "on-scroll-up": "~/.config/hypr/scripts/volumecontrol.sh -i i",
-        "on-scroll-down": "~/.config/hypr/scripts/volumecontrol.sh -i d",
+        "on-click-middle": "/home/dpf/.config/hyprdots/scripts/volumecontrol.sh -i m",
+        "on-scroll-up": "/home/dpf/.config/hyprdots/scripts/volumecontrol.sh -i i",
+        "on-scroll-down": "/home/dpf/.config/hyprdots/scripts/volumecontrol.sh -i d",
         "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
         "scroll-step": 5
     },
@@ -196,8 +196,8 @@
         "on-click": "playerctl play-pause --player spotify",
         "on-click-right": "playerctl next --player spotify",
         "on-click-middle": "playerctl previous --player spotify",
-        "on-scroll-up": "~/.config/hypr/scripts/volumecontrol.sh -p spotify i",
-        "on-scroll-down": "~/.config/hypr/scripts/volumecontrol.sh -p spotify d",
+        "on-scroll-up": "/home/dpf/.config/hyprdots/scripts/volumecontrol.sh -p spotify i",
+        "on-scroll-down": "/home/dpf/.config/hyprdots/scripts/volumecontrol.sh -p spotify d",
         "max-length": 25,
         "escape": true,
         "tooltip": true

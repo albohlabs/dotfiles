@@ -76,6 +76,7 @@ filezilla
 firefox
 fish
 floorp-bin
+foliate
 foot
 fprintd
 fragments
@@ -250,6 +251,7 @@ nwg-look
 obs-studio
 obsidian
 oh-my-zsh-git
+ollama
 openresolv
 openssh
 os-prober
