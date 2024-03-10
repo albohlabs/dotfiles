@@ -5,7 +5,7 @@
 // sourced from header module //
 
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     "mod": "dock",
     "height": 28,
     "exclusive": true,
