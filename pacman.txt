@@ -30,7 +30,6 @@ btrfsmaintenance
 bzip2
 caffeine-ng
 cava
-chafa
 cheese
 cliphist
 collision
@@ -157,7 +156,6 @@ hyprpicker-git
 iagno
 ibus
 inetutils
-intellij-idea-ultimate-edition-jre
 inxi
 jdk11-openjdk
 jfsutils
@@ -320,7 +318,6 @@ swww
 sysfsutils
 system-config-printer
 systemd
-teams-for-linux
 telegram-desktop-bin
 texinfo
 the_silver_searcher
