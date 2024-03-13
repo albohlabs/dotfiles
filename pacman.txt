@@ -152,7 +152,7 @@ htop
 hurl-bin
 hyprdots-ctl
 hyprland
-hyprpicker-git
+hyprpicker
 iagno
 ibus
 inetutils
