@@ -27,4 +27,13 @@ return {
       { "<leader>9", "<cmd>Grapple select index=9<cr>", desc = "Grapple select 9" },
     },
   },
+  -- {
+  --   "nvim-lualine/lualine.nvim",
+  --   opts = function(_, opts)
+  --     table.insert(opts.sections.lualine_x, 1, {
+  --       require("grapple").statusline,
+  --       cond = require("grapple").exists,
+  --     })
+  --   end,
+  -- },
 }
