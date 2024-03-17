@@ -4,8 +4,11 @@ abbr cp "cp -riv"
 abbr mkdir "mkdir -vp"
 abbr put trash
 
-# https://github.com/ranger/ranger
-abbr f ranger
+abbr --add f ranger
+abbr --add e yazi
+
+abbr --add "?" "tlm suggest"
+abbr --add "??" "tlm explain"
 
 abbr c clear
 abbr cl clear
