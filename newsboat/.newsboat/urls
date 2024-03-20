@@ -52,7 +52,7 @@ https://reddit.com/r/neovim/.rss ~r/neovim reddit neovim
 
 "query:🟢 TechTwitter:tags # \"tech.social\"" 
 # https://status.d420.de/
-https://fediverse.zachleat.com/@zachleat.rss
+# https://fediverse.zachleat.com/@zachleat.rss
 # https://nitter.adminforge.de/alexanderkondov/rss "tech.social"
 # https://nitter.adminforge.de/GabrielVergnaud/rss "tech.social"
 # https://nitter.adminforge.de/Folke/rss  "tech.social"
@@ -76,8 +76,8 @@ https://fediverse.zachleat.com/@zachleat.rss
 # https://nitter.adminforge.de/learnvim/rss "tech.social"
 # https://nitter.adminforge.de/yuriybogomolov/rss "tech.social"
 
-https://fosstodon.org/@rauschma.rss "tech.social"
-https://hachyderm.io/@fasterthanlime.rss "tech.social"
+# https://fosstodon.org/@rauschma.rss "tech.social"
+# https://hachyderm.io/@fasterthanlime.rss "tech.social"
 
 "query:🟢 Linux:tags # \"Linux\""
 http://feeds.feedburner.com/tocadotux "Linux" 
