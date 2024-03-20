@@ -60,24 +60,11 @@ bind-key I rev-sort
 
 # -- color -------------------------------------------------------------------
 
-# color background          color236   default
-color listnormal          color248   default
-color listnormal_unread   color6     default
-color listfocus           color236   color12
-color listfocus_unread    color15    color12
-color info                color248   color236
-color article             color248   default
-
+# include ~/.newsboat/latte
+include ~/.newsboat/dark
 
 # highlights
-highlight all "(neovim|vim|typescript|nestjs|gql|graphql|fp-ts|tmux|aws|effect)" red
-highlight article "^(Feed|Title|Author|Link|Date):" default default underline
-highlight feedlist "https?://[^ ]+" yellow red bold
-
+highlight all "(neovim|vim|fp-ts|tmux|aws)" red
 highlight article "^(Feed|Link):.*$" color6 default bold
 highlight article "^(Title|Date|Author):.*$" color6 default bold
-highlight article "https?://[^ ]+" color10 default underline
-highlight article "\\[[0-9]+\\]" color10 default bold
-highlight article "\\[image\\ [0-9]+\\]" color10 default bold
-highlight feedlist "^─.*$" color6 color236 bold
 
