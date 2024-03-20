@@ -48,8 +48,8 @@ return {
 
   {
     "catppuccin/nvim",
-    lazy = true,
     name = "catppuccin",
+    priority = 2000,
     opts = {
       flavour = "macchiato", -- latte, frappe, macchiato, mocha
       dim_inactive = {
@@ -95,7 +95,7 @@ return {
           },
         },
         coc_nvim = false,
-        lsp_trouble = false,
+        lsp_trouble = true,
         cmp = true,
         lsp_saga = false,
         gitgutter = false,
@@ -116,7 +116,7 @@ return {
           enabled = false,
           enable_ui = false,
         },
-        which_key = false,
+        which_key = true,
         indent_blankline = {
           enabled = true,
           colored_indent_levels = false,
