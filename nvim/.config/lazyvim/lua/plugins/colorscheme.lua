@@ -1,6 +1,7 @@
 return {
   {
     "neanias/everforest-nvim",
+    enable = fals,
     version = false,
     lazy = false,
     priority = 1000, -- make sure to load this before all the other start plugins
@@ -23,6 +24,7 @@ return {
 
   {
     "tokyonight.nvim",
+    enable = fals,
     priority = 1000,
     opts = function()
       return {
