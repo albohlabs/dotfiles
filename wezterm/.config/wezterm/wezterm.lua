@@ -12,7 +12,7 @@ config.default_prog = { "/bin/fish", "--login" }
 
 config.font_size = 11
 config.line_height = 1.25
--- config.cell_width = 0.92
+config.cell_width = 0.9
 config.window_background_opacity = 0.8
 
 -- font = wezterm.font("Hasklug Nerd Font");
@@ -53,6 +53,7 @@ config.window_padding = {
 
 -- use GPU accelerated rasterization
 config.front_end = "WebGpu"
+config.enable_wayland = true
 config.webgpu_power_preference = "HighPerformance"
 
 -- config.animation_fps = 1
