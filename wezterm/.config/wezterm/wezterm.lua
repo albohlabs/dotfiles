@@ -38,9 +38,8 @@ config.font_rules = {
 	},
 }
 
--- color_scheme = "tokyonight_night";
-config.color_scheme = "Everforest Dark (Gogh)"
--- color_scheme = 'Everforest Light (Gogh)';
+-- https://wezfurlong.org/wezterm/colorschemes/c/index.html#catppuccin-mocha-gogh
+config.color_scheme = "Catppuccin Macchiato (Gogh)"
 
 -- Cursor style
 config.default_cursor_style = "BlinkingBar"
