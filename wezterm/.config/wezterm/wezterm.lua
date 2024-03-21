@@ -15,6 +15,16 @@ config.line_height = 1.25
 config.cell_width = 0.9
 config.window_background_opacity = 0.8
 
+config.window_close_confirmation = "NeverPrompt"
+config.skip_close_confirmation_for_processes_named = {
+	"bash",
+	"sh",
+	"zsh",
+	"fish",
+	"tmux",
+	"nu",
+}
+
 -- font = wezterm.font("Hasklug Nerd Font");
 -- font = wezterm.font("JetbrainsMono Nerd Font");
 config.font = wezterm.font("FiraCode Nerd Font")
