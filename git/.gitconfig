@@ -63,13 +63,19 @@
 
 [fetch]
   prune = true
+  
+[diff]
+  tool = difftastic
+  external = difft
 
 [difftool]
   prompt = false
 
-[diff]
-  colorMoved = default
-  algorithm = histogram 
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
+
+[pager]
+  difftool = true
 
 [filter "media"]
   clean = git media clean %f

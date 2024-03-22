@@ -25,6 +25,8 @@ default-command = "log"
 
 [ui.diff]
 format = "git"
+# FIXME: not working
+# tool = ["difft", "--color=always", "$left", "$right"]
 
 [template-aliases]
 # 'format_short_id(id)' = 'id.shortest()'
