@@ -8,22 +8,12 @@ wezterm.log_info("reloading")
 require("links").setup(config)
 
 -- default_prog = { "/bin/fish", "--login", "--command=tmux attach; or tmux" },
-config.default_prog = { "/bin/fish", "--login" }
+-- config.default_prog = { "/bin/fish", "--login" }
 
 config.font_size = 11
 config.line_height = 1.25
 config.cell_width = 0.9
 config.window_background_opacity = 0.8
-
-config.window_close_confirmation = "NeverPrompt"
-config.skip_close_confirmation_for_processes_named = {
-	"bash",
-	"sh",
-	"zsh",
-	"fish",
-	"tmux",
-	"nu",
-}
 
 -- font = wezterm.font("Hasklug Nerd Font");
 -- font = wezterm.font("JetbrainsMono Nerd Font");
@@ -62,9 +52,9 @@ config.window_padding = {
 }
 
 -- use GPU accelerated rasterization
-config.front_end = "WebGpu"
-config.enable_wayland = true
-config.webgpu_power_preference = "HighPerformance"
+-- config.front_end = "WebGpu"
+-- config.enable_wayland = true
+-- config.webgpu_power_preference = "HighPerformance"
 
 -- config.animation_fps = 1
 config.cursor_blink_ease_in = "Constant"
