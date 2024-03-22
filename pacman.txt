@@ -164,6 +164,7 @@ jujutsu
 kde-cli-tools
 kdiff3
 keepassxc
+keyd
 kitty
 kvantum-manjaro
 lazygit
@@ -277,6 +278,7 @@ postgresql
 postman-bin
 power-profiles-daemon
 prettierd
+procs
 python-pyamdgpuinfo
 qt5-graphicaleffects
 qt5-imageformats
@@ -325,6 +327,7 @@ thunderbird-beta-bin
 timeshift
 timeshift-autosnap-manjaro
 tldr
+tlm
 tmux
 topgrade-bin
 torbrowser-launcher
@@ -378,6 +381,7 @@ xorg-server
 xorg-xinit
 xsel
 yay
+yazi
 yq
 yt-dlp
 zoxide
