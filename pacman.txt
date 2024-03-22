@@ -43,6 +43,7 @@ device-mapper
 dhclient
 dhcpcd
 diff-so-fancy
+difftastic
 diffutils
 discord
 dmidecode
@@ -54,6 +55,7 @@ docker-compose
 dolphin
 dosfstools
 dunst
+dust
 e2fsprogs
 ecryptfs-utils
 efibootmgr
@@ -157,6 +159,7 @@ iagno
 ibus
 inetutils
 inxi
+jan-bin
 jdk11-openjdk
 jfsutils
 jq
