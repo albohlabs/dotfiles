@@ -82,6 +82,10 @@ alias fzfp 'fzf --height 100% --sort --preview "bat --style=numbers --color=alwa
 alias pempty "trash list | fzf-tmux --multi -p --sort | awk '{print $5}' | xargs --no-run-if-empty trash empty --match=exact --force"
 alias prestore "trash list | fzf-tmux --multi -p --sort | awk '{print $1}' | xargs --no-run-if-empty trash restore --match=exact --force"
 
+abbr s sesh_start
+abbr s. "sesh connect ."
+abbr sc "sesh connect"
+
 # Editor
 abbr nvim nvim
 abbr vim nvim
