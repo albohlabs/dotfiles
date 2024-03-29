@@ -1,20 +1,16 @@
 [default_session]
-startup_command = "nvim +GoToFile"
+# startup_command = "nvim +GoToFile"
 
 [[session]]
 name = "tmux config"
 path = "~/dotfiles/tmux/.config/tmux"
-# tmuxp = "~/c/dotfiles/.config/tmux/tmuxp-tmux.yml"
-# tmuxp = "/Users/joshmedeski/c/dotfiles/.config/tmux/tmuxp-tmux.yml"
 startup_command = "nvim tmux.conf"
 
-# [[session]]
-# TODO: update the name fo the session to "update done ✅" when the u script ends
-# name = "update" 
-# path = "~/c/dotfiles"
-# startup_command = "u"
-# TODO: implement "detatched feature"
-# detached = true # never attach to this session, just create it in the background
+[[session]]
+name = "newsboat"
+path = "~/dotfiles/newsboat/.newsboat"
+startup_command = "newsboat"
+
 
 [[session]]
 name = "neovim config"
