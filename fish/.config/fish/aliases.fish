@@ -4,7 +4,6 @@ abbr cp "cp -riv"
 abbr mkdir "mkdir -vp"
 abbr put trash
 
-abbr --add f ranger
 abbr --add e yazi
 
 abbr --add "?" "tlm suggest"
