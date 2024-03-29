@@ -4,7 +4,7 @@
 [[session]]
 name = "hypr config"
 path = "~/dotfiles/config/.config/hypr"
-startup_command = "nvim hyprland.conf"
+startup_command = "nvim userprefs.conf"
 
 
 [[session]]
