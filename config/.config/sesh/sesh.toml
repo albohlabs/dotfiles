@@ -2,6 +2,12 @@
 # startup_command = "nvim +GoToFile"
 
 [[session]]
+name = "hypr config"
+path = "~/dotfiles/hypr/.config/hypr"
+startup_command = "nvim hyprland.conf"
+
+
+[[session]]
 name = "tmux config"
 path = "~/dotfiles/tmux/.config/tmux"
 startup_command = "nvim tmux.conf"
@@ -21,10 +27,16 @@ name = "fish config"
 path = "~/dotfiles/fish/.config/fish"
 startup_command = "nvim config.fish"
 
+# [[session]]
+# name = "wezterm config"
+# path = "~/dotfiles/wezterm/.config/wezterm"
+# startup_command = "nvim wezterm.lua"
+
 [[session]]
-name = "wezterm config"
-path = "~/dotfiles/wezterm/.config/wezterm"
-startup_command = "nvim wezterm.lua"
+name = "kitty config"
+path = "~/dotfiles/kitty/.config/kitty"
+startup_command = "nvim kitty.conf"
+
 
 [[session]]
 name = "sesh config"
@@ -32,7 +44,7 @@ path = "~/dotfiles/config/.config/sesh"
 startup_command = "nvim sesh.toml"
 
 [[session]]
-name = "my custom binaries"
+name = "local binaries"
 path = "~/dotfiles/bin/.local/bin"
 
 [[session]]
