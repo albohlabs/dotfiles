@@ -3,7 +3,7 @@
 
 [[session]]
 name = "hypr config"
-path = "~/dotfiles/hypr/.config/hypr"
+path = "~/dotfiles/config/.config/hypr"
 startup_command = "nvim hyprland.conf"
 
 
@@ -34,7 +34,7 @@ startup_command = "nvim config.fish"
 
 [[session]]
 name = "kitty config"
-path = "~/dotfiles/kitty/.config/kitty"
+path = "~/dotfiles/config/.config/kitty"
 startup_command = "nvim kitty.conf"
 
 
