@@ -4,6 +4,9 @@
 [includeIf "gitdir:~/Development/alboh"]
   path = .gitconfig-albohlabs
 
+[includeIf "gitdir:~/Development/dhd"]
+  path = .gitconfig-dhd
+
 [rebase]
   autosquash = true
 

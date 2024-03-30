@@ -1,10 +1,10 @@
 [user]
    name = Daniel_Pfefferkorn
-   email = daniel@nuwork.de
-   signingkey = 9EC274609E9BF131
+   email = dp@dhddigital.de
+   signingkey = 4FB083C6D90ED50816F58E4BB29B39A4566201DF
 
 [core]
-  sshCommand = ssh -i ~/.ssh/id_nuwork
+  sshCommand = ssh -i ~/.ssh/id_ed25519
 
 [maintenance]
-	repo = /home/dpf/Development/nuwork/dev/monorepo
+	repo = /home/dpf/Development/dhd
