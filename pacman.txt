@@ -45,7 +45,6 @@ ecryptfs-utils
 efibootmgr
 endeavour
 eslint_d
-etcher-bin
 evince
 exfatprogs
 eza
@@ -107,7 +106,6 @@ gnome-user-docs
 gnome-user-share
 gnome-weather
 gnuchess
-go
 google-chrome
 grilo-plugins
 grimblast-git
@@ -189,6 +187,7 @@ mhwd-db
 mise-bin
 mkinitcpio-openswap
 modemmanager
+mpv
 nano
 nano-syntax-highlighting
 nautilus
@@ -211,7 +210,6 @@ noto-fonts-emoji
 noto-fonts-extra
 nss-mdns
 ntfs-3g
-nwg-displays
 nwg-look
 oh-my-zsh-git
 ollama
@@ -247,6 +245,7 @@ quadrapassel
 reiserfsprogs
 rofi-lbonn-wayland-git
 rsync
+rustup
 rygel
 s-nail
 safeeyes
@@ -263,7 +262,6 @@ starship
 stow
 stylua
 sudo
-surfshark-client
 sushi
 swappy
 swaylock-effects-git
@@ -321,7 +319,7 @@ xfsprogs
 xorg-server
 xorg-xinit
 xsel
-yay-bin
+yay
 yazi
 yt-dlp
 zoxide
