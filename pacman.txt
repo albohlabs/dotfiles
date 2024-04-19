@@ -20,6 +20,7 @@ btop
 btrfs-progs
 btrfsmaintenance
 bzip2
+chromium
 cliphist
 collision
 coreutils
@@ -28,6 +29,7 @@ cronie
 cryptsetup
 deja-dup
 device-mapper
+devpod
 dhclient
 dhcpcd
 diff-so-fancy
@@ -37,6 +39,8 @@ discord
 dmidecode
 dmraid
 dnsmasq
+docker
+docker-compose
 dolphin
 dosfstools
 dunst
@@ -106,6 +110,7 @@ gnome-user-docs
 gnome-user-share
 gnome-weather
 gnuchess
+golangci-lint-bin
 google-chrome
 grilo-plugins
 grimblast-git
@@ -123,8 +128,9 @@ gvfs-gphoto2
 gvfs-mtp
 gvfs-nfs
 gvfs-smb
+heroic-games-launcher-bin
 htop
-hyprdots-ctl-git
+hyde-cli-git
 hyprland
 hyprpicker
 iagno
@@ -140,6 +146,7 @@ keyd
 kitty
 kservice5
 kvantum-manjaro
+kvantum-qt5
 lazygit
 less
 lib32-libva-vdpau-driver
@@ -148,6 +155,7 @@ lib32-vulkan-intel
 lib32-vulkan-radeon
 libdvdcss
 libpamac-flatpak-plugin
+libreoffice-still
 libva-mesa-driver
 libva-vdpau-driver
 linux66
@@ -187,7 +195,9 @@ mhwd-db
 mise-bin
 mkinitcpio-openswap
 modemmanager
+mplayer
 mpv
+musikcube
 nano
 nano-syntax-highlighting
 nautilus
@@ -210,6 +220,7 @@ noto-fonts-emoji
 noto-fonts-extra
 nss-mdns
 ntfs-3g
+nwg-displays
 nwg-look
 oh-my-zsh-git
 ollama
@@ -227,6 +238,7 @@ pavucontrol
 perl
 pipewire-jack
 plymouth-theme-manjaro
+pnpm
 podman
 podman-compose
 pokemon-colorscripts-git
@@ -252,6 +264,7 @@ safeeyes
 sddm
 seahorse
 shellcheck-bin
+signal-desktop
 simple-scan
 slurp
 snapshot
@@ -259,6 +272,7 @@ sof-firmware
 spectre-meltdown-checker
 squashfs-tools
 starship
+steam
 stow
 stylua
 sudo
@@ -322,5 +336,6 @@ xsel
 yay
 yazi
 yt-dlp
+zed-editor
 zoxide
 zsa-keymapp-bin
