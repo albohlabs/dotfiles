@@ -48,6 +48,11 @@ name = "local binaries"
 path = "~/dotfiles/bin/.local/bin"
 
 [[session]]
+name = "dhd daily"
+path = "~/Development/dhd/wiki"
+startup_command = "nvim daily.md"
+
+[[session]]
 name = "Downloads 📥"
 path = "~/Downloads"
 startup_command = "yazi"
