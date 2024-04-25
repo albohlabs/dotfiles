@@ -8,7 +8,7 @@ fsmonitor = 'watchman'
 [ui]
 editor = "nvim"
 # diff-editor = ['scm-diff-editor', '--dir-diff', '$left', '$right']
-diff-editor = 'meld'
+# diff-editor = 'meld'
 # diff-editor = ["kdiff3", "--merge", "$left", "$right"]
 merge-editor = [
   'code',

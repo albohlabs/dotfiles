@@ -5,6 +5,7 @@ adw-gtk-theme
 apparmor
 ark
 atuin-bin
+aws-sam-cli-bin
 b43-fwcutter
 baobab
 base
@@ -20,6 +21,9 @@ btop
 btrfs-progs
 btrfsmaintenance
 bzip2
+cargo-lambda-bin
+chaotic-keyring
+chaotic-mirrorlist
 chromium
 cliphist
 collision
@@ -47,12 +51,14 @@ dunst
 e2fsprogs
 ecryptfs-utils
 efibootmgr
+emote
 endeavour
 eslint_d
 evince
 exfatprogs
 eza
 f2fs-tools
+fastfetch
 fd
 ffmpeg-audio-thumbnailer
 ffmpegthumbnailer
@@ -61,7 +67,8 @@ file-roller
 firefox
 fish
 fprintd
-fragments
+gamemode
+gamescope
 gdm
 gedit
 git-delta
@@ -128,6 +135,7 @@ gvfs-gphoto2
 gvfs-mtp
 gvfs-nfs
 gvfs-smb
+helix
 heroic-games-launcher-bin
 htop
 hyde-cli-git
@@ -140,6 +148,7 @@ intel-ucode
 inxi
 jfsutils
 jq
+jre-openjdk
 jujutsu
 kde-cli-tools
 keyd
@@ -159,10 +168,12 @@ libreoffice-still
 libva-mesa-driver
 libva-vdpau-driver
 linux66
+linux68
 logrotate
 lollypop
 lrzip
 lsd
+lutris
 lvm2
 malcontent
 man-db
@@ -186,6 +197,7 @@ manjaro-settings-manager-notifier
 manjaro-system
 manjaro-zsh-config
 mdadm
+meld
 memtest86+
 memtest86+-efi
 mesa-utils
@@ -203,7 +215,6 @@ nano-syntax-highlighting
 nautilus
 nautilus-admin
 nautilus-empty-file
-neofetch
 network-manager-applet
 network-manager-sstp
 networkmanager
@@ -218,8 +229,10 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
+npm
 nss-mdns
 ntfs-3g
+nvimpager
 nwg-displays
 nwg-look
 oh-my-zsh-git
@@ -242,10 +255,13 @@ pnpm
 podman
 podman-compose
 pokemon-colorscripts-git
+polkit-gnome
 polkit-kde-agent
 power-profiles-daemon
 prettierd
+proton-vpn-gtk-app
 python-pyamdgpuinfo
+qbittorrent-enhanced-qt5
 qt5-graphicaleffects
 qt5-imageformats
 qt5-quickcontrols
@@ -257,6 +273,7 @@ quadrapassel
 reiserfsprogs
 rofi-lbonn-wayland-git
 rsync
+rustrover-eap
 rustup
 rygel
 s-nail
@@ -304,6 +321,7 @@ ttf-droid
 ttf-firacode-nerd
 ttf-hack
 ttf-indic-otf
+udiskie
 unace
 unrar
 update-grub
@@ -315,6 +333,8 @@ vulkan-intel
 vulkan-radeon
 waybar
 webapp-manager
+wezterm
+wf-recorder
 wget
 which
 wireless-regdb

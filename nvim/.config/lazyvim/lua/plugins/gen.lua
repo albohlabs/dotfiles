@@ -1,6 +1,7 @@
 return {
   {
     "David-Kunz/gen.nvim",
+    enabled = false,
     name = "gen.nvim",
     cmd = { "Gen" },
     dev = true,

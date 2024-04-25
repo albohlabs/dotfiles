@@ -1,4 +1,15 @@
+#
+# ███████╗██╗███████╗██╗  ██╗
+# ██╔════╝██║██╔════╝██║  ██║
+# █████╗  ██║███████╗███████║
+# ██╔══╝  ██║╚════██║██╔══██║
+# ██║     ██║███████║██║  ██║
+# ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
+# A smart and user-friendly command line
+# https://fishshell.com/
+
 set -U fish_greeting # disable fish greeting
+set -U fish_key_bindings fish_vi_key_bindings
 
 set -gx GPG_TTY (tty)
 
@@ -15,35 +26,16 @@ fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
 set -Ux GOPATH (go env GOPATH)
 fish_add_path $GOPATH/bin
 
-set -gx PNPM_HOME $HOME/.local/share/pnpm
-if not string match -q -- $PNPM_HOME $PATH
-    fish_add_path $PNPM_HOME
-end
-
 set -gx EDITOR (which nvim)
 set -gx VISUAL $EDITOR
 set -gx SUDO_EDITOR $EDITOR
 # set -gx NVIM_APPNAME AstroVim
 set -gx NVIM_APPNAME lazyvim
-
-# Set cursor theme
-set -gx XCURSOR_THEME Adwaita
-set -gx SWAY_CURSOR_THEME Adwaita
-set -gx XCURSOR_SIZE 16
-set -gx SWAY_CURSOR_SIZE 16
+set -Ux PAGER nvimpager
 
 # configure franciscolourenco/done
 set -g __done_exclude 'nvim|vim|vi|man|less|journalctl'
 
-# FZF options
-set -gx FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git --exclude node_modules'
-set -gx FZF_DEFAULT_OPTS '--height 50% --layout=reverse --border --info=inline --marker="*" --bind "ctrl-y:execute(echo {+} | wl-copy)" --bind "ctrl-a:select-all" --bind "?:toggle-preview"'
-set fzf_history_opts --sort --exact --history-size=30000
-set fzf_fd_opts --hidden --follow --exclude=.git
-set fzf_preview_dir_cmd exa --all --color=always
-
 set -x LESS -rF
 set -x BAT_THEME Dracula
 set -x MANPAGER "nvim +Man!"
-
-source $__fish_config_dir/aliases.fish

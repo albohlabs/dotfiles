@@ -1,7 +1,7 @@
 return {
   {
     "neanias/everforest-nvim",
-    enable = fals,
+    enable = false,
     version = false,
     lazy = false,
     priority = 1000, -- make sure to load this before all the other start plugins
@@ -24,16 +24,13 @@ return {
 
   {
     "tokyonight.nvim",
-    enable = fals,
+    enabled = true,
     priority = 1000,
     opts = function()
       return {
-        style = "moon",
+        style = "storm", -- storm, moon, night, day
+        transparent = true,
 
-        styles = {
-          sidebars = "transparent",
-          floats = "transparent",
-        },
         sidebars = {
           "qf",
           "vista_kind",
@@ -49,6 +46,7 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
+    enabled = false,
     priority = 2000,
     opts = {
       flavour = "macchiato", -- latte, frappe, macchiato, mocha
@@ -147,7 +145,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "tokyonight",
+      -- colorscheme = "catppuccin",
     },
   },
 }

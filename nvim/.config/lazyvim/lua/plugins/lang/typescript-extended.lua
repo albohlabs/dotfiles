@@ -122,23 +122,8 @@ return {
     end,
   },
   {
-    "dmmulroy/tsc.nvim",
-    opts = {
-      auto_start_watch_mode = false,
-      flags = {
-        watch = false,
-      },
-    },
-    keys = {
-      { "<leader>ct", ft = { "typescript", "typescriptreact" }, "<cmd>TSC<cr>", desc = "Type Check" },
-    },
-    ft = {
-      "typescript",
-      "typescriptreact",
-    },
-  },
-  {
     "dmmulroy/ts-error-translator.nvim",
+    enabled = false,
     ft = { "typescript", "typescriptreact" },
     opts = {},
   },

@@ -62,11 +62,11 @@ return {
 
     require("ufo").setup({
       fold_virt_text_handler = handler,
-      close_fold_kinds_for_ft = {
-        default = { "imports", "comment" },
-        json = { "array" },
-        c = { "comment", "region" },
-      },
+      -- close_fold_kinds_for_ft = {
+      --   default = { "imports", "comment" },
+      --   json = { "array" },
+      --   c = { "comment", "region" },
+      -- },
     })
   end,
 }

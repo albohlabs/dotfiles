@@ -10,9 +10,9 @@ require("links").setup(config)
 -- default_prog = { "/bin/fish", "--login", "--command=tmux attach; or tmux" },
 -- config.default_prog = { "/bin/fish", "--login" }
 
-config.font_size = 11
+config.font_size = 16
 config.line_height = 1.25
-config.cell_width = 0.9
+-- config.cell_width = 1
 config.window_background_opacity = 0.8
 
 -- font = wezterm.font("Hasklug Nerd Font");
@@ -39,7 +39,11 @@ config.font_rules = {
 }
 
 -- https://wezfurlong.org/wezterm/colorschemes/c/index.html#catppuccin-mocha-gogh
-config.color_scheme = "Catppuccin Macchiato (Gogh)"
+-- config.color_scheme = "Catppuccin Macchiato (Gogh)"
+-- config.color_scheme = "Catppuccin Mocha (Gogh)"
+config.color_scheme = "Tokyo Night (Gogh)"
+-- config.color_scheme = "Tokyo Night Day"
+-- config.color_scheme = "Tokyo Night Storm (Gogh)"
 
 -- Cursor style
 config.default_cursor_style = "BlinkingBar"
@@ -51,12 +55,11 @@ config.window_padding = {
 	bottom = 0,
 }
 
--- use GPU accelerated rasterization
--- config.front_end = "WebGpu"
--- config.enable_wayland = true
--- config.webgpu_power_preference = "HighPerformance"
+config.enable_wayland = false -- https://github.com/wez/wezterm/issues/5103
 
--- config.animation_fps = 1
+-- use GPU accelerated rasterization
+config.front_end = "WebGpu"
+config.webgpu_power_preference = "HighPerformance"
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 
