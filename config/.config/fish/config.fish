@@ -15,11 +15,11 @@ set -gx GPG_TTY (tty)
 
 set -x fish_user_paths
 # Path
+fish_add_path /bin
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.local/share/pnpm
 fish_add_path $HOME/.local/share/bob/nvim-bin
-fish_add_path /bin
 fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
 
 # golang - https://golang.google.cn/
