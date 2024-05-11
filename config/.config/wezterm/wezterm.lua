@@ -42,7 +42,7 @@ config.font_rules = {
 -- config.color_scheme = "Catppuccin Macchiato (Gogh)"
 -- config.color_scheme = "Catppuccin Mocha (Gogh)"
 config.color_scheme = "Tokyo Night (Gogh)"
--- config.color_scheme = "Tokyo Night Day"
+-- config.color_scheme = "Tokyo Night Light (Gogh)"
 -- config.color_scheme = "Tokyo Night Storm (Gogh)"
 
 -- Cursor style
