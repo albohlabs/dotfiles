@@ -295,6 +295,7 @@ stylua
 sudo
 sushi
 swappy
+swayidle
 swaylock-effects-git
 swww
 sysfsutils
