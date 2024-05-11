@@ -1,9 +1,10 @@
 return {
   "petertriho/nvim-scrollbar",
+  enabled = true,
   event = "BufReadPost",
   config = function()
     local scrollbar = require("scrollbar")
-    local colors = require("tokyonight.colors").setup()
+    local colors = require("tokyonight.colors").setup({ transform = true })
     scrollbar.setup({
       handle = { color = colors.bg_highlight },
       excluded_filetypes = {
