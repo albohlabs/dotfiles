@@ -59,16 +59,15 @@ return {
     },
   },
 
-  "folke/twilight.nvim",
   {
     "folke/zen-mode.nvim",
     cmd = "ZenMode",
     opts = {
       plugins = {
-        gitsigns = true,
-        tmux = { enabled = vim.env.TMUX ~= nil },
-        kitty = { enabled = true, font = "+2" },
-        wezterm = { enabled = true, font = "+2" },
+        -- gitsigns = { enabled = true },
+        -- tmux = { enabled = vim.env.TMUX ~= nil },
+        -- kitty = { enabled = true, font = "+2" },
+        -- wezterm = { enabled = true, font = "+2" },
       },
     },
     keys = { { "<leader>Z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
