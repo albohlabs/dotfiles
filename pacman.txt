@@ -13,6 +13,7 @@ base-devel
 bat
 bat-extras
 bibata-cursor-theme
+bind
 blueman
 bluez-utils
 bob
@@ -47,6 +48,7 @@ docker
 docker-compose
 dolphin
 dosfstools
+downgrade
 dunst
 e2fsprogs
 ecryptfs-utils
@@ -118,7 +120,6 @@ gnome-user-share
 gnome-weather
 gnuchess
 golangci-lint-bin
-google-chrome
 grilo-plugins
 grimblast-git
 grub
@@ -167,8 +168,8 @@ libpamac-flatpak-plugin
 libreoffice-still
 libva-mesa-driver
 libva-vdpau-driver
-linux66
 linux68
+linux69
 logrotate
 lollypop
 lrzip
@@ -360,3 +361,4 @@ yt-dlp
 zed-editor
 zoxide
 zsa-keymapp-bin
+zsh-theme-powerlevel10k-git
