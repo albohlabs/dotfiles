@@ -3,7 +3,7 @@ return {
   "anuvyklack/windows.nvim",
   dependencies = {
     "anuvyklack/middleclass",
-    { "anuvyklack/animation.nvim", enabled = false },
+    "anuvyklack/animation.nvim",
   },
   event = "WinNew",
   keys = {
@@ -16,7 +16,7 @@ return {
     vim.o.winwidth = 5
     vim.o.equalalways = false
     require("windows").setup({
-      animation = { enable = false, duration = 150 },
+      animation = { enable = true, duration = 150 },
     })
   end,
 }
