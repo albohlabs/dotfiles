@@ -284,6 +284,7 @@ seahorse
 shellcheck-bin
 signal-desktop
 simple-scan
+slides
 slurp
 snapshot
 sof-firmware
