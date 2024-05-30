@@ -1,0 +1,109 @@
+#!/bin/bash
+
+export CLI_PATH=$(dirname $(dirname ${0}))
+export libDir=${CLI_PATH}/lib/hyde-cli
+export PATH="$libDir:$PATH"
+
+export is_fresh_install=true
+
+. GLOBAL-hyde
+. FUNCTIONS-hyde
+
+#? One time set up on terminal
+install_distro() {
+    if [ "${1}" = "--fresh" ]; then export fresh=true; fi
+    # . /etc/os-release
+
+    PACKAGE_MANAGER=$(which pacman >/dev/null 2>&1 && echo "pacman" || true)
+    # PACKAGE_MANAGER=${PACKAGE_MANAGER:-$(which apt >/dev/null 2>&1 && echo "apt" || true)}
+    # PACKAGE_MANAGER=${PACKAGE_MANAGER:-$(which zypper >/dev/null 2>&1 && echo "zypper" || true)}
+    # PACKAGE_MANAGER=${PACKAGE_MANAGER:-$(which yum >/dev/null 2>&1 && echo "yum" || true)}
+    echo "Package manager: $PACKAGE_MANAGER"
+
+    case "${PACKAGE_MANAGER}" in
+    "dnf")
+        Install_Hyde-DNF "${newCloneDir}" "${GIT}"
+        ;;
+    "pacman")
+        Install-Hyde-pacman "${newCloneDir}" "${GIT}"
+        ;;
+    *)
+        print_prompt -r "Can't recognize your package manager: '${PACKAGE_MANAGER}'  "
+        # Install-Hyde-pacman "${newCloneDir}" "${GIT}"
+        # Add the commands for other distributions here
+        echo ""
+        ;;
+    esac
+}
+
+# Variables
+export install_packages_list="${HYDE_RUNTIME_DIR}/temporary-apps"
+export barLine="$(printf '=%.0s' $(seq 1 "$(tput cols)"))"
+export cacheDir="${HOME}/.cache/hyde"
+export meta_file="${cacheDir}/hyde.meta"
+
+is_link=false
+while (("$#")); do
+    case "$1" in
+    -d | --dir)
+        newCloneDir="$2"
+        shift 2
+        ;;
+    -l | --link)
+        is_link=true
+        shift 1
+        ;;
+    -g | --git)
+        GIT="$2"
+        shift 2
+        ;;
+    *)
+        cat <<HANDLE_ERROR
+Unknown option: $1
+Please run: 'Hyde-install'                                Install Hyde (Defaults)
+
+Advanced usage: [Hyde-install] --[options]
+        -d|--dir /path/to/Clone/Hyde                       Clone Hyde in a Custom path then run installation
+                                                                    Default: '${HOME}/.cache/hyde/Hyde'
+        -g|--git https://gitclone/repo/link/                     Remote Repository link to be cloned
+                                                                    Default: 'https://github.com/prasanthrangan/hyprdots'
+        -l|--link                                                Flag to transfer the link to a Clone Directory
+                                                                    Default: 'false'
+HANDLE_ERROR
+        exit 1
+        ;;
+    esac
+done
+
+[[ -n ${newCloneDir} ]] && print_prompt -y "Custom clone directory: ${newCloneDir}"
+[[ ${is_link} == true ]] && print_prompt - "Linked to custom clone directory: ${newCloneDir}"
+[[ -n ${GIT} ]] && print_prompt -"Custom repository from: ${GIT}"
+
+# Set default values if not provided
+newCloneDir=${newCloneDir:-${HOME}/.cache/hyde/Hyde-Clone}
+#TODO Change this to the upstream
+# GIT=${GIT:-"https://github.com/prasanthrangan/hyde"}
+GIT=${GIT:-"https://github.com/prasanthrangan/hyprdots"}
+
+export newCloneDir
+export GIT
+
+export CloneDir=${newCloneDir}
+    if cd "${newCloneDir}"/Scripts; then
+        print_prompt -m "[*] " -y "Using existing directory"
+        if [[ ${is_link} == true ]]; then
+            echo -e "Hyde-cli will make ${newCloneDir} your clone directory By restoring the links"
+            # set_branch
+            check_integrity
+            print_prompt -y "Successfully migrated the clone directory: ${newCloneDir}"
+        else
+            install_distro
+        fi
+    else
+        install_distro --fresh
+    fi
+set_metadata "${newCloneDir}"
+if ! grep -q "$HOME/.local/share/bin" <<<$PATH; then
+    print_prompt -y "Restarting to make Hyde Work"
+    pkg_installed sddm && systemctl restart sddm
+fi
