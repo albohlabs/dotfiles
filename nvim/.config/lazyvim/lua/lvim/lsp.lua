@@ -11,32 +11,9 @@ return {
         "shellcheck",
         "shfmt",
         "oxlint",
+        "biome",
       })
     end,
-  },
-
-  -- lsp servers
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      -- diagnostics = { virtual_text = { prefix = "icons" } },
-      inlay_hints = { enabled = true },
-      capabilities = {
-        textDocument = {
-          completion = {
-            completionItem = {
-              snippetSupport = false,
-            },
-          },
-        },
-        workspace = {
-          didChangeWatchedFiles = {
-            dynamicRegistration = false,
-          },
-        },
-      },
-      setup = {},
-    },
   },
 
   {
@@ -47,25 +24,16 @@ return {
         ["markdown"] = { { "prettierd", "prettier" } },
         ["markdown.mdx"] = { { "prettierd", "prettier" } },
 
-        ["javascript"] = { "eslint_d", { "dprint", "prettierd", "prettier" } },
-        ["javascriptreact"] = { "eslint_d", { "dprint", "prettierd", "prettier" } },
-        ["typescript"] = { "eslint_d", { "dprint", "prettierd", "prettier" } },
-        ["typescriptreact"] = { "eslint_d", { "dprint", "prettierd", "prettier" } },
-
-        -- ["javascript"] = { "dprint", "prettierd", "prettier" },
-        -- ["javascriptreact"] = { "dprint", "prettierd", "prettier" },
-        -- ["typescript"] = { "dprint", "prettierd", "prettier" },
-        -- ["typescriptreact"] = { "dprint", "prettierd", "prettier" },
-
-        -- ["javascript"] = { { "dprint", "prettierd", "prettier" } },
-        -- ["javascriptreact"] = { { "dprint", "prettierd", "prettier" } },
-        -- ["typescript"] = { { "dprint", "prettierd", "prettier" } },
-        -- ["typescriptreact"] = { { "dprint", "prettierd", "prettier" } },
+        ["javascript"] = { "biome", { "prettierd", "prettier" } },
+        ["javascriptreact"] = { "biome", { "prettierd", "prettier" } },
+        ["typescript"] = { "biome", { "prettierd", "prettier" } },
+        ["typescriptreact"] = { "biome", { "prettierd", "prettier" } },
+        ["vue"] = { { "prettierd", "prettier" } },
       },
       formatters = {
-        dprint = {
-          condition = function(ctx)
-            return vim.fs.find({ "dprint.json" }, { path = ctx.filename, upward = true })[1]
+        biome = {
+          condition = function(self, ctx)
+            return vim.fs.find({ "biome.json" }, { path = ctx.filename, upward = true })[1]
           end,
         },
       },

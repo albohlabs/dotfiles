@@ -1,6 +1,6 @@
 return {
   "dgagn/diagflow.nvim",
-  enabled = true,
+  enabled = false,
   event = "LspAttach",
   opts = {
     scope = "line",

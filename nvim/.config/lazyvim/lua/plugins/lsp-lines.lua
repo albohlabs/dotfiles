@@ -1,5 +1,6 @@
 return {
   "https://git.sr.ht/~whynothugo/lsp_lines.nvim", -- show diagnostics using virtual lines
+  enabled = false,
   config = function()
     local lsp_lines = require("lsp_lines")
 
