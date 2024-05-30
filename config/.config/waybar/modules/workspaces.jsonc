@@ -1,5 +1,5 @@
     "hyprland/workspaces": {
-      "format": " {windows} <sub>{icon}</sub> ",
+      "format": " <span font='8'>{windows} <sub>{icon}</sub></span> ",
       "format-window-separator": " ",
       "window-rewrite-default": "",
       "window-rewrite": {
@@ -16,15 +16,15 @@
         "chromium": "",
         "edge": "󰇩",
         "telegram": "",
-        "thunderbird": "<span font='12'></span>",
+        "thunderbird": "",
         "slack": "",
-        "keymapp": "<span font='12'></span>",
+        "keymapp": "",
         "1Password": "",
         "obsidian": "󰠮",
         "keepassxc": "󱕴",
         "rofi": "",
         "Spotify": "󰓇",
-        "class<vlc>": "󰕼"
+        "class<vlc>": "󰕼",
       },
       "disable-scroll": true,
       "rotate": ${r_deg},

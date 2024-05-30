@@ -7,4 +7,4 @@ gui:
 git:
   paging:
     colorArg: always
-    externalDiffCommand: difft --color=always
+    pager: diff-so-fancy

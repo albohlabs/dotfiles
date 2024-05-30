@@ -6,6 +6,7 @@ apparmor
 ark
 atuin-bin
 aws-sam-cli-bin
+aylurs-gtk-shell
 b43-fwcutter
 baobab
 base
@@ -14,6 +15,7 @@ bat
 bat-extras
 bibata-cursor-theme
 bind
+biome
 blueman
 bluez-utils
 bob
@@ -21,8 +23,10 @@ brightnessctl
 btop
 btrfs-progs
 btrfsmaintenance
+bun-bin
 bzip2
 cargo-lambda-bin
+cava
 chaotic-keyring
 chaotic-mirrorlist
 chromium
@@ -32,13 +36,13 @@ coreutils
 cpupower
 cronie
 cryptsetup
+dart-sass
 deja-dup
 device-mapper
 devpod
 dhclient
 dhcpcd
 diff-so-fancy
-difftastic
 diffutils
 discord
 dmidecode
@@ -140,8 +144,11 @@ helix
 heroic-games-launcher-bin
 htop
 hyde-cli-git
+hypridle
 hyprland
+hyprlock
 hyprpicker
+hyprshade
 iagno
 ibus
 inetutils
@@ -197,6 +204,7 @@ manjaro-settings-manager
 manjaro-settings-manager-notifier
 manjaro-system
 manjaro-zsh-config
+matugen-bin
 mdadm
 meld
 memtest86+
@@ -258,6 +266,7 @@ podman-compose
 pokemon-colorscripts-git
 polkit-gnome
 polkit-kde-agent
+postgresql
 power-profiles-daemon
 prettierd
 proton-vpn-gtk-app
@@ -274,11 +283,12 @@ quadrapassel
 reiserfsprogs
 rofi-lbonn-wayland-git
 rsync
+rust-analyzer
 rustrover-eap
 rustup
 rygel
 s-nail
-safeeyes
+safeeyes-git
 sddm
 seahorse
 shellcheck-bin
@@ -289,7 +299,10 @@ slurp
 snapshot
 sof-firmware
 spectre-meltdown-checker
+sptlrx-bin
+sqlx-cli
 squashfs-tools
+sshpass
 starship
 steam
 stow
@@ -297,7 +310,6 @@ stylua
 sudo
 sushi
 swappy
-swayidle
 swaylock-effects-git
 swww
 sysfsutils
@@ -342,7 +354,6 @@ wget
 which
 wireless-regdb
 wlogout
-wlsunset
 wpa_supplicant
 xdg-desktop-portal-gnome
 xdg-desktop-portal-hyprland

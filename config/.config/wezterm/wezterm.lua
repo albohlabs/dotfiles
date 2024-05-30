@@ -13,10 +13,10 @@ require("links").setup(config)
 config.font_size = 16
 config.line_height = 1.25
 -- config.cell_width = 1
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.85
 
--- font = wezterm.font("Hasklug Nerd Font");
--- font = wezterm.font("JetbrainsMono Nerd Font");
+-- font = wezterm.font("Hasklug Nerd Font")
+-- font = wezterm.font("JetbrainsMono Nerd Font")
 config.font = wezterm.font("FiraCode Nerd Font")
 
 config.bold_brightens_ansi_colors = true

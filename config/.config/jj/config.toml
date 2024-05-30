@@ -25,8 +25,6 @@ default-command = "log"
 
 [ui.diff]
 format = "git"
-# FIXME: not working
-# tool = ["difft", "--color=always", "$left", "$right"]
 
 [template-aliases]
 # 'format_short_id(id)' = 'id.shortest()'
@@ -47,3 +45,14 @@ s = ['status']
 
 # here = ['branch', 'set', '-r', 'HEAD@git']
 # mutably = ['--config-toml', 'revset-aliases."immutable_heads()" = "none()"']
+
+# [revsets]
+# log = "@ | bases | branches | curbranch::@ | @::nextbranch | downstream(@, branchesandheads)"
+#
+# [revset-aliases]
+# 'bases' = 'main'
+# 'downstream(x,y)' = '(x::y) & y'
+# 'branches' = 'downstream(trunk(), branches()) & mine()'
+# 'branchesandheads' = 'branches | (heads(trunk()::) & mine())'
+# 'curbranch' = 'latest(branches::@- & branches)'
+# 'nextbranch' = 'roots(@:: & branchesandheads)'
