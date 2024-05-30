@@ -15,9 +15,10 @@ config.line_height = 1.25
 -- config.cell_width = 1
 config.window_background_opacity = 0.85
 
--- font = wezterm.font("Hasklug Nerd Font")
--- font = wezterm.font("JetbrainsMono Nerd Font")
-config.font = wezterm.font("FiraCode Nerd Font")
+config.font = wezterm.font("Hasklug Nerd Font")
+-- config.font = wezterm.font("SourceCodePro")
+-- config.font = wezterm.font("JetbrainsMono Nerd Font")
+-- config.font = wezterm.font("FiraCode Nerd Font")
 
 config.bold_brightens_ansi_colors = true
 config.font_rules = {
@@ -41,9 +42,9 @@ config.font_rules = {
 -- https://wezfurlong.org/wezterm/colorschemes/c/index.html#catppuccin-mocha-gogh
 -- config.color_scheme = "Catppuccin Macchiato (Gogh)"
 -- config.color_scheme = "Catppuccin Mocha (Gogh)"
-config.color_scheme = "Tokyo Night (Gogh)"
+-- config.color_scheme = "Tokyo Night (Gogh)"
 -- config.color_scheme = "Tokyo Night Light (Gogh)"
--- config.color_scheme = "Tokyo Night Storm (Gogh)"
+config.color_scheme = "Tokyo Night Storm (Gogh)"
 
 -- Cursor style
 config.default_cursor_style = "BlinkingBar"
