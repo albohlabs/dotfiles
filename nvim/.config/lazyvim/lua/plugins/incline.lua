@@ -1,7 +1,7 @@
 -- floating winbar
 return {
   "b0o/incline.nvim",
-  enabled = false,
+  enabled = true,
   event = "BufReadPre",
   opts = {
     hide = {
