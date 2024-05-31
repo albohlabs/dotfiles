@@ -249,6 +249,7 @@ ollama
 openresolv
 openssh
 os-prober
+otf-hasklig-nerd
 p7zip
 pacman-contrib
 pamac-gnome-integration
@@ -336,6 +337,7 @@ ttf-droid
 ttf-firacode-nerd
 ttf-hack
 ttf-indic-otf
+ttf-sourcecodepro-nerd
 udiskie
 unace
 unrar
