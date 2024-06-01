@@ -29,7 +29,7 @@ return {
     opts = function()
       return {
         style = "day", -- storm, moon, night, day
-        -- transparent = true,
+        transparent = true,
 
         sidebars = {
           "qf",
