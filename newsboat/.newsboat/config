@@ -60,9 +60,6 @@ bind-key I rev-sort
 
 # -- color -------------------------------------------------------------------
 
-# include ~/.newsboat/latte
-include ~/.newsboat/dark
-
 # highlights
 highlight all "(neovim|vim|fp-ts|tmux|aws)" red
 highlight article "^(Feed|Link):.*$" color6 default bold
