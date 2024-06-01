@@ -28,8 +28,8 @@ return {
     priority = 1000,
     opts = function()
       return {
-        style = "storm", -- storm, moon, night, day
-        transparent = true,
+        style = "day", -- storm, moon, night, day
+        -- transparent = true,
 
         sidebars = {
           "qf",
@@ -152,11 +152,23 @@ return {
     },
   },
 
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     colorscheme = "tokyonight",
+  --     -- colorscheme = "catppuccin",
+  --   },
+  -- },
+
   {
-    "LazyVim/LazyVim",
+    "f-person/auto-dark-mode.nvim",
     opts = {
-      colorscheme = "tokyonight",
-      -- colorscheme = "catppuccin",
+      set_dark_mode = function()
+        vim.cmd("colorscheme tokyonight-night")
+      end,
+      set_light_mode = function()
+        vim.cmd("colorscheme tokyonight-day")
+      end,
     },
   },
 }
