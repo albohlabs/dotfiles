@@ -287,7 +287,7 @@ reiserfsprogs
 rofi-lbonn-wayland-git
 rsync
 rust-analyzer
-rustrover-eap
+rustrover
 rustup
 rygel
 s-nail
@@ -375,7 +375,7 @@ xsel
 yay
 yazi
 yt-dlp
-zed-editor
+zed
 zoxide
 zsa-keymapp-bin
 zsh-theme-powerlevel10k-git
