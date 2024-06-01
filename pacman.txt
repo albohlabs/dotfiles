@@ -26,6 +26,7 @@ btrfsmaintenance
 bun-bin
 bzip2
 cargo-lambda-bin
+cargo-nextest
 cava
 chaotic-keyring
 chaotic-mirrorlist
@@ -37,6 +38,7 @@ cpupower
 cronie
 cryptsetup
 dart-sass
+dbeaver
 deja-dup
 device-mapper
 devpod
@@ -337,6 +339,7 @@ ttf-droid
 ttf-firacode-nerd
 ttf-hack
 ttf-indic-otf
+ttf-nerd-fonts-symbols-mono
 ttf-sourcecodepro-nerd
 udiskie
 unace
