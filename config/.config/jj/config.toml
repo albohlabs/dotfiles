@@ -31,17 +31,14 @@ format = "git"
 'format_timestamp(timestamp)' = 'timestamp.ago()'
 
 [aliases]
-# clone = ['git', 'clone', '--colocate']
-# fetch = ['git', 'fetch']
-# push = ['git', 'push']
-
+n = ['new']
 d = ['diff']
-l = ['log', '--limit', '10']
 s = ['status']
 
+# l = ['log', '--limit', '10']
 # `jj l` shows commits on the working-copy commit's (anonymous) branch
 # compared to the `main` branch
-# l = ["log", "-r", "(main..@):: | (main..@)-"]
+l = ["log", "-r", "(main..@):: | (main..@)-"]
 
 # here = ['branch', 'set', '-r', 'HEAD@git']
 # mutably = ['--config-toml', 'revset-aliases."immutable_heads()" = "none()"']
