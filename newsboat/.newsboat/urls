@@ -1,5 +1,7 @@
 # http://www.newsbeuter.org/doc/newsbeuter.html#_query_feeds
 
+"query:Unread Articles:unread = \"yes\""
+
 # https://www.youtube.com/feeds/videos.xml?channel_id=YOUR_CHANNEL_ID
 # find the channel id by looking at the source and search for itemprop="channelId"
 
