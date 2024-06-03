@@ -142,6 +142,7 @@ gvfs-gphoto2
 gvfs-mtp
 gvfs-nfs
 gvfs-smb
+hadolint-bin
 helix
 heroic-games-launcher-bin
 htop
@@ -177,7 +178,6 @@ libpamac-flatpak-plugin
 libreoffice-still
 libva-mesa-driver
 libva-vdpau-driver
-linux68
 linux69
 logrotate
 lollypop
