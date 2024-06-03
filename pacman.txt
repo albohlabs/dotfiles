@@ -142,7 +142,6 @@ gvfs-gphoto2
 gvfs-mtp
 gvfs-nfs
 gvfs-smb
-hadolint-bin
 helix
 heroic-games-launcher-bin
 htop

@@ -44,7 +44,6 @@ return {
     opts = {
       linters_by_ft = {
         lua = { "selene", "luacheck" },
-        dockerfile = { "hadolint" },
         markdown = { "markdownlint" },
         typescript = { "eslint_d" },
         javascript = { "eslint_d" },
