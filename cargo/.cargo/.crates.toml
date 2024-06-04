@@ -1,5 +1,6 @@
 [v1]
 "bunyan 0.1.9 (registry+https://github.com/rust-lang/crates.io-index)" = ["bunyan"]
+"cargo-expand 1.0.88 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-expand"]
 "cargo-geiger 0.11.7 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-geiger"]
 "cargo-update 13.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = [
     "cargo-install-update",
