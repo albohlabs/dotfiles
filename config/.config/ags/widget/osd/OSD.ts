@@ -27,32 +27,36 @@ function OnScreenProgress(vertical: boolean) {
   })
 
   let count = 0
+  let last = -1
   function show(value: number, icon: string) {
+    if (last === -1) last = value
+    if (value === last) return
+    last = value
     revealer.reveal_child = true
     indicator.icon = icon
     progress.setValue(value)
     count++
     Utils.timeout(DELAY, () => {
       count--
-
-      if (count === 0)
-        revealer.reveal_child = false
+      if (count === 0) revealer.reveal_child = false
     })
   }
 
   return revealer
-    .hook(brightness, () => show(
-      brightness.screen,
-      icons.brightness.screen,
-    ), "notify::screen")
-    .hook(brightness, () => show(
-      brightness.kbd,
-      icons.brightness.keyboard,
-    ), "notify::kbd")
-    .hook(audio.speaker, () => show(
-      audio.speaker.volume,
-      icon(audio.speaker.icon_name || "", icons.audio.type.speaker),
-    ), "notify::volume")
+    .hook(brightness, () => show(brightness.screen, icons.brightness.screen), "notify::screen")
+    .hook(brightness, () => show(brightness.kbd, icons.brightness.keyboard), "notify::kbd")
+    .hook(
+      audio.speaker,
+      () =>
+        show(
+          audio.speaker.is_muted ? 0 : audio.speaker.volume,
+          icon(
+            audio.speaker.is_muted ? icons.audio.volume.muted : audio.speaker.icon_name || "",
+            icons.audio.type.speaker
+          )
+        )
+      // "notify::volume"
+    )
 }
 
 function MicrophoneMute() {
@@ -68,44 +72,46 @@ function MicrophoneMute() {
   let count = 0
   let mute = audio.microphone.stream?.is_muted ?? false
 
-  return revealer.hook(audio.microphone, () => Utils.idle(() => {
-    if (mute !== audio.microphone.stream?.is_muted) {
-      mute = audio.microphone.stream!.is_muted
-      icon.icon = icons.audio.mic[mute ? "muted" : "high"]
-      revealer.reveal_child = true
-      count++
+  return revealer.hook(audio.microphone, () =>
+    Utils.idle(() => {
+      if (mute !== audio.microphone.stream?.is_muted) {
+        mute = audio.microphone.stream!.is_muted
+        icon.icon = icons.audio.mic[mute ? "muted" : "high"]
+        revealer.reveal_child = true
+        count++
 
-      Utils.timeout(DELAY, () => {
-        count--
-        if (count === 0)
-          revealer.reveal_child = false
-      })
-    }
-  }))
+        Utils.timeout(DELAY, () => {
+          count--
+          if (count === 0) revealer.reveal_child = false
+        })
+      }
+    })
+  )
 }
 
-export default (monitor: number) => Widget.Window({
-  monitor,
-  name: `indicator${monitor}`,
-  class_name: "indicator",
-  layer: "overlay",
-  click_through: true,
-  anchor: ["right", "left", "top", "bottom"],
-  child: Widget.Box({
-    css: "padding: 2px;",
-    expand: true,
-    child: Widget.Overlay(
-      { child: Widget.Box({ expand: true }) },
-      Widget.Box({
-        hpack: progress.pack.h.bind(),
-        vpack: progress.pack.v.bind(),
-        child: progress.vertical.bind().as(OnScreenProgress),
-      }),
-      Widget.Box({
-        hpack: microphone.pack.h.bind(),
-        vpack: microphone.pack.v.bind(),
-        child: MicrophoneMute(),
-      }),
-    ),
-  }),
-})
+export default (monitor: number) =>
+  Widget.Window({
+    monitor,
+    name: `indicator${monitor}`,
+    class_name: "indicator",
+    layer: "overlay",
+    click_through: true,
+    anchor: ["right", "left", "top", "bottom"],
+    child: Widget.Box({
+      css: "padding: 2px;",
+      expand: true,
+      child: Widget.Overlay(
+        { child: Widget.Box({ expand: true }) },
+        Widget.Box({
+          hpack: progress.pack.h.bind(),
+          vpack: progress.pack.v.bind(),
+          child: progress.vertical.bind().as(OnScreenProgress),
+        }),
+        Widget.Box({
+          hpack: microphone.pack.h.bind(),
+          vpack: microphone.pack.v.bind(),
+          child: MicrophoneMute(),
+        })
+      ),
+    }),
+  })

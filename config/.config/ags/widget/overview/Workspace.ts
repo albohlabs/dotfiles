@@ -12,8 +12,7 @@ const dispatch = (args: string) => hyprland.messageAsync(`dispatch ${args}`)
 const size = (id: number) => {
   const def = { h: 1080, w: 1920 }
   const ws = hyprland.getWorkspace(id)
-  if (!ws)
-    return def
+  if (!ws) return def
 
   const mon = hyprland.getMonitor(ws.monitorID)
   return mon ? { h: mon.height, w: mon.width } : def
@@ -25,14 +24,13 @@ export default (id: number) => {
   // TODO: early return if position is unchaged
   async function update() {
     const json = await hyprland.messageAsync("j/clients").catch(() => null)
-    if (!json)
-      return
+    if (!json) return
 
-    fixed.get_children().forEach(ch => ch.destroy())
+    fixed.get_children().forEach((ch) => ch.destroy())
     const clients = JSON.parse(json) as typeof hyprland.clients
     clients
       .filter(({ workspace }) => workspace.id === id)
-      .forEach(c => {
+      .forEach((c) => {
         const x = c.at[0] - (hyprland.getMonitor(c.monitor)?.x || 0)
         const y = c.at[1] - (hyprland.getMonitor(c.monitor)?.y || 0)
         c.mapped && fixed.put(Window(c), scale(x), scale(y))
@@ -45,10 +43,12 @@ export default (id: number) => {
     tooltipText: `${id}`,
     class_name: "workspace",
     vpack: "center",
-    css: options.overview.scale.bind().as(v => `
+    css: options.overview.scale.bind().as(
+      (v) => `
             min-width: ${(v / 100) * size(id).w}px;
             min-height: ${(v / 100) * size(id).h}px;
-        `),
+        `
+    ),
     setup(box) {
       box.hook(options.overview.scale, update)
       box.hook(hyprland, update, "notify::clients")
@@ -63,7 +63,7 @@ export default (id: number) => {
         App.closeWindow("overview")
         dispatch(`workspace ${id}`)
       },
-      setup: eventbox => {
+      setup: (eventbox) => {
         eventbox.drag_dest_set(Gtk.DestDefaults.ALL, TARGET, Gdk.DragAction.COPY)
         eventbox.connect("drag-data-received", (_w, _c, _x, _y, data) => {
           const address = new TextDecoder().decode(data.get_data())

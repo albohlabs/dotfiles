@@ -6,19 +6,25 @@ export type Action = "sleep" | "reboot" | "logout" | "shutdown"
 
 class PowerMenu extends Service {
   static {
-    Service.register(this, {}, {
-      "title": ["string"],
-      "cmd": ["string"],
-    })
+    Service.register(
+      this,
+      {},
+      {
+        title: ["string"],
+        cmd: ["string"],
+      }
+    )
   }
 
   #title = ""
   #cmd = ""
 
-  get title() { return this.#title }
+  get title() {
+    return this.#title
+  }
 
   action(action: Action) {
-    [this.#cmd, this.#title] = {
+    ;[this.#cmd, this.#title] = {
       sleep: [sleep.value, "Sleep"],
       reboot: [reboot.value, "Reboot"],
       logout: [logout.value, "Log Out"],
@@ -42,6 +48,6 @@ class PowerMenu extends Service {
   }
 }
 
-const powermenu = new PowerMenu
+const powermenu = new PowerMenu()
 Object.assign(globalThis, { powermenu })
 export default powermenu

@@ -48,11 +48,11 @@ function Animated(id: number) {
 }
 
 function PopupList() {
-  const map: Map<number, ReturnType<typeof Animated>> = new Map
+  const map: Map<number, ReturnType<typeof Animated>> = new Map()
   const box = Widget.Box({
     hpack: "end",
     vertical: true,
-    css: options.notifications.width.bind().as(w => `min-width: ${w}px;`),
+    css: options.notifications.width.bind().as((w) => `min-width: ${w}px;`),
   })
 
   function remove(_: unknown, id: number) {
@@ -61,30 +61,33 @@ function PopupList() {
   }
 
   return box
-    .hook(notifications, (_, id: number) => {
-      if (id !== undefined) {
-        if (map.has(id))
-          remove(null, id)
+    .hook(
+      notifications,
+      (_, id: number) => {
+        if (id !== undefined) {
+          if (map.has(id)) remove(null, id)
 
-        if (notifications.dnd)
-          return
+          if (notifications.dnd) return
 
-        const w = Animated(id)
-        map.set(id, w)
-        box.children = [w, ...box.children]
-      }
-    }, "notified")
+          const w = Animated(id)
+          map.set(id, w)
+          box.children = [w, ...box.children]
+        }
+      },
+      "notified"
+    )
     .hook(notifications, remove, "dismissed")
     .hook(notifications, remove, "closed")
 }
 
-export default (monitor: number) => Widget.Window({
-  monitor,
-  name: `notifications${monitor}`,
-  anchor: position.bind(),
-  class_name: "notifications",
-  child: Widget.Box({
-    css: "padding: 2px;",
-    child: PopupList(),
-  }),
-})
+export default (monitor: number) =>
+  Widget.Window({
+    monitor,
+    name: `notifications${monitor}`,
+    anchor: position.bind(),
+    class_name: "notifications",
+    child: Widget.Box({
+      css: "padding: 2px;",
+      child: PopupList(),
+    }),
+  })

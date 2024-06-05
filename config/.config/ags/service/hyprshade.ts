@@ -9,7 +9,7 @@ class Hyprshade extends Service {
       {},
       {
         shader: ["string"],
-      },
+      }
     )
   }
 
@@ -26,6 +26,10 @@ class Hyprshade extends Service {
   async toggle() {
     Utils.exec("hyprshade toggle blue-light-filter")
     this.#update()
+  }
+
+  get isNight() {
+    return this.#shader === "blue-light-filter"
   }
 
   constructor() {

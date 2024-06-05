@@ -91,7 +91,8 @@ window#launcher .launcher {
     }
   }
 
-  button.help {
+  button.help,
+  button.nix-item {
     @include button($flat: true, $reactive: false);
     padding: 0 ($padding * 0.5);
 
@@ -136,6 +137,41 @@ window#launcher .launcher {
     &:hover,
     &:focus {
       color: $primary-bg;
+      text-shadow: $text-shadow;
+    }
+  }
+
+  button.cliphist-item {
+    @include button($flat: true, $reactive: false);
+    padding: 0 ($padding * 0.5);
+
+    transition: $transition;
+    color: $fg;
+
+    &:hover,
+    &:focus {
+      color: $primary-bg;
+      background-color: transparentize($primary-bg, 0.9);
+      border-radius: 0;
+      text-shadow: $text-shadow;
+    }
+  }
+
+  button.emoji-item {
+    @include button($flat: true, $reactive: false);
+    padding: 0 ($padding * 0.5);
+    label {
+      font-size: 2em;
+    }
+
+    transition: $transition;
+    color: $fg;
+
+    &:hover,
+    &:focus {
+      color: $primary-bg;
+      background-color: transparentize($primary-bg, 0.6);
+      border-radius: 0;
       text-shadow: $text-shadow;
     }
   }

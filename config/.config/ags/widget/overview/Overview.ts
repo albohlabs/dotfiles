@@ -12,36 +12,31 @@ const Overview = (ws: number) =>
       ws > 0
         ? range(ws).map(Workspace)
         : hyprland.workspaces
-          .map(({ id }) => Workspace(id))
-          .sort((a, b) => a.attribute.id - b.attribute.id),
+            .map(({ id }) => Workspace(id))
+            .sort((a, b) => a.attribute.id - b.attribute.id),
 
-    setup: w => {
-      if (ws > 0)
-        return
+    setup: (w) => {
+      if (ws > 0) return
 
       w.hook(
         hyprland,
         (w, id?: string) => {
-          if (id === undefined)
-            return
+          if (id === undefined) return
 
-          w.children = w.children.filter(
-            ch => ch.attribute.id !== Number(id),
-          )
+          w.children = w.children.filter((ch) => ch.attribute.id !== Number(id))
         },
-        "workspace-removed",
+        "workspace-removed"
       )
       w.hook(
         hyprland,
         (w, id?: string) => {
-          if (id === undefined)
-            return
+          if (id === undefined) return
 
           w.children = [...w.children, Workspace(Number(id))].sort(
-            (a, b) => a.attribute.id - b.attribute.id,
+            (a, b) => a.attribute.id - b.attribute.id
           )
         },
-        "workspace-added",
+        "workspace-added"
       )
     },
   })

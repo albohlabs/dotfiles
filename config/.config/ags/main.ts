@@ -8,7 +8,6 @@ import NotificationPopups from "widget/notifications/NotificationPopups"
 import OSD from "widget/osd/OSD"
 import Overview from "widget/overview/Overview"
 import PowerMenu from "widget/powermenu/PowerMenu"
-import ScreenCorners from "widget/bar/ScreenCorners"
 import SettingsDialog from "widget/settings/SettingsDialog"
 import Verification from "widget/powermenu/Verification"
 import { forMonitors } from "lib/utils"
@@ -22,15 +21,15 @@ App.config({
     init()
   },
   closeWindowDelay: {
-    "launcher": options.transition.value,
-    "overview": options.transition.value,
-    "quicksettings": options.transition.value,
-    "datemenu": options.transition.value,
+    launcher: options.transition.value,
+    overview: options.transition.value,
+    quicksettings: options.transition.value,
+    datemenu: options.transition.value,
   },
   windows: () => [
     ...forMonitors(Bar),
     ...forMonitors(NotificationPopups),
-    ...forMonitors(ScreenCorners),
+    // ...forMonitors(ScreenCorners),
     ...forMonitors(OSD),
     Launcher(),
     Overview(),

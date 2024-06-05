@@ -10,13 +10,14 @@ import Taskbar from "./buttons/Taskbar"
 import Workspaces from "./buttons/Workspaces"
 import ScreenRecord from "./buttons/ScreenRecord"
 import Messages from "./buttons/Messages"
-import options from "options"
 import Hyprshade from "./buttons/Hyprshade"
+import SystemInfo from "./buttons/SystemInfo"
+import options from "options"
 
 const { start, center, end } = options.bar.layout
 const { transparent, position } = options.bar
 
-export type BarWidget = keyof typeof widget;
+export type BarWidget = keyof typeof widget
 
 const widget = {
   battery: BatteryBar,
@@ -28,10 +29,11 @@ const widget = {
   systray: SysTray,
   system: SystemIndicators,
   taskbar: Taskbar,
-  hyprshade: Hyprshade,
   workspaces: Workspaces,
   screenrecord: ScreenRecord,
+  hyprshade: Hyprshade,
   messages: Messages,
+  ["system-info"]: SystemInfo,
   expander: () => Widget.Box({ expand: true }),
 }
 
@@ -41,23 +43,23 @@ export default (monitor: number) =>
     class_name: "bar",
     name: `bar${monitor}`,
     exclusivity: "exclusive",
-    anchor: position.bind().as(pos => [pos, "right", "left"]),
+    anchor: position.bind().as((pos) => [pos, "right", "left"]),
     child: Widget.CenterBox({
       css: "min-width: 2px; min-height: 2px;",
       startWidget: Widget.Box({
         hexpand: true,
-        children: start.bind().as(s => s.map(w => widget[w]())),
+        children: start.bind().as((s) => s.map((w) => widget[w]())),
       }),
       centerWidget: Widget.Box({
         hpack: "center",
-        children: center.bind().as(c => c.map(w => widget[w]())),
+        children: center.bind().as((c) => c.map((w) => widget[w]())),
       }),
       endWidget: Widget.Box({
         hexpand: true,
-        children: end.bind().as(e => e.map(w => widget[w]())),
+        children: end.bind().as((e) => e.map((w) => widget[w]())),
       }),
     }),
-    setup: self =>
+    setup: (self) =>
       self.hook(transparent, () => {
         self.toggleClassName("transparent", transparent.value)
       }),

@@ -1,10 +1,10 @@
-import { opt, mkOptions } from "lib/option";
-import { distro } from "lib/variables";
-import { icon } from "lib/utils";
-import icons from "lib/icons";
+import { opt, mkOptions } from "lib/option"
+import { distro } from "lib/variables"
+import { icon } from "lib/utils"
+import icons from "lib/icons"
 
 const options = mkOptions(OPTIONS, {
-  autotheme: opt(false),
+  autotheme: opt(true),
 
   wallpaper: {
     resolution: opt<import("service/wallpaper").Resolution>(1920),
@@ -42,10 +42,10 @@ const options = mkOptions(OPTIONS, {
     },
 
     blur: opt(0),
-    scheme: opt<"dark" | "light">("dark"),
+    scheme: opt<"dark" | "light">("light"),
     widget: { opacity: opt(94) },
     border: {
-      width: opt(0),
+      width: opt(1),
       opacity: opt(96),
     },
 
@@ -59,21 +59,21 @@ const options = mkOptions(OPTIONS, {
 
   font: {
     size: opt(8),
-    name: opt("JetBrainsMono Nerd Font"),
+    name: opt("Hasklug Nerd Font Regular"),
   },
 
   bar: {
-    flatButtons: opt(false),
+    flatButtons: opt(true),
     position: opt<"top" | "bottom">("top"),
     corners: opt(true),
-    transparent: opt(true),
+    transparent: opt(false),
     layout: {
       start: opt<Array<import("widget/bar/Bar").BarWidget>>([
         // "launcher",
-        "taskbar",
-        // "workspaces",
+        "workspaces",
+        // "taskbar",
         "expander",
-        "messages",
+        // "messages",
       ]),
       center: opt<Array<import("widget/bar/Bar").BarWidget>>(["date"]),
       end: opt<Array<import("widget/bar/Bar").BarWidget>>([
@@ -81,11 +81,12 @@ const options = mkOptions(OPTIONS, {
         "expander",
         "systray",
         // "colorpicker",
-        "screenrecord",
-        "system",
+        // "screenrecord",
         "hyprshade",
+        "system-info",
+        "system",
         "battery",
-        "powermenu",
+        // "powermenu",
       ]),
     },
     launcher: {
@@ -112,7 +113,7 @@ const options = mkOptions(OPTIONS, {
       low: opt(30),
     },
     workspaces: {
-      workspaces: opt(0),
+      workspaces: opt(7),
     },
     taskbar: {
       iconSize: opt(0),
@@ -133,7 +134,7 @@ const options = mkOptions(OPTIONS, {
       length: opt(40),
     },
     powermenu: {
-      monochrome: opt(true),
+      monochrome: opt(false),
       action: opt(() => App.toggleWindow("powermenu")),
     },
   },
@@ -141,20 +142,21 @@ const options = mkOptions(OPTIONS, {
   launcher: {
     width: opt(0),
     margin: opt(80),
+    nix: {
+      pkgs: opt("nixpkgs/nixos-unstable"),
+      max: opt(8),
+    },
     sh: {
+      max: opt(16),
+    },
+    cliphist: {
       max: opt(16),
     },
     apps: {
       iconSize: opt(62),
       max: opt(6),
       favorites: opt([
-        [
-          "firefox",
-          "wezterm",
-          "org.gnome.Nautilus",
-          "org.gnome.Calendar",
-          "spotify",
-        ],
+        ["microsoft-edge-dev", "wezterm", "org.gnome.Nautilus", "org.gnome.Calendar", "spotify"],
       ]),
     },
   },
@@ -169,7 +171,7 @@ const options = mkOptions(OPTIONS, {
     sleep: opt("systemctl suspend"),
     reboot: opt("systemctl reboot"),
     logout: opt("pkill Hyprland"),
-    shutdown: opt("shutdown now"),
+    shutdown: opt("systemctl poweroff"),
     layout: opt<"line" | "box">("line"),
     labels: opt(true),
   },
@@ -193,13 +195,9 @@ const options = mkOptions(OPTIONS, {
     weather: {
       interval: opt(60_000),
       unit: opt<"metric" | "imperial" | "standard">("metric"),
-      key: opt<string>(
-        JSON.parse(Utils.readFile(`${App.configDir}/.weather`) || "{}")?.key ||
-          "",
-      ),
+      key: opt<string>(JSON.parse(Utils.readFile(`${App.configDir}/.weather`) || "{}")?.key || ""),
       cities: opt<Array<number>>(
-        JSON.parse(Utils.readFile(`${App.configDir}/.weather`) || "{}")
-          ?.cities || [],
+        JSON.parse(Utils.readFile(`${App.configDir}/.weather`) || "{}")?.cities || []
       ),
     },
   },
@@ -235,7 +233,7 @@ const options = mkOptions(OPTIONS, {
     inactiveBorder: opt("#282828"),
     gapsWhenOnly: opt(false),
   },
-});
+})
 
-globalThis["options"] = options;
-export default options;
+globalThis["options"] = options
+export default options

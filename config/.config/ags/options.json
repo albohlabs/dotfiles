@@ -1,0 +1,21 @@
+{
+  "bar.battery.percentage": true,
+  "autotheme": true,
+  "theme.scheme": "light",
+  "font.size": 7,
+  "bar.workspaces.workspaces": 5,
+  "bar.taskbar.iconSize": 18,
+  "quicksettings.avatar.image": "/home/dpf/Pictures/katsuhiro otomo mc escher.jpg",
+  "bar.transparent": false,
+  "theme.blur": 7,
+  "bar.powermenu.monochrome": true,
+  "bar.date.format": " %d.%m - %H:%M",
+  "bar.launcher.icon.colored": true,
+  "bar.launcher.label.label": " Applications",
+  "bar.taskbar.monochrome": false,
+  "bar.taskbar.exclusive": true,
+  "font.name": "Hasklug Nerd Font",
+  "theme.light.primary.bg": "#07b5ef",
+  "overview.monochromeIcon": false,
+  "launcher.apps.max": 9
+}

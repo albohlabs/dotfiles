@@ -1,17 +1,17 @@
-import { ArrowToggleButton, Menu } from "../ToggleButton";
-import icons from "lib/icons";
+import { ArrowToggleButton, Menu } from "../ToggleButton"
+import icons from "lib/icons"
 
-const pp = await Service.import("powerprofiles");
-const profile = pp.bind("active_profile");
-const profiles = pp.profiles.map((p) => p.Profile);
+const pp = await Service.import("powerprofiles")
+const profile = pp.bind("active_profile")
+const profiles = pp.profiles.map((p) => p.Profile)
 
 const pretty = (str: string) =>
   str
     .split("-")
     .map((str) => `${str.at(0)?.toUpperCase()}${str.slice(1)}`)
-    .join(" ");
+    .join(" ")
 
-export const ProfileToggle = () =>
+const PowerProfileToggle = () =>
   ArrowToggleButton({
     name: "asusctl-profile",
     icon: profile.as((p) => icons.powerprofile[p]),
@@ -20,9 +20,9 @@ export const ProfileToggle = () =>
     activate: () => (pp.active_profile = profiles[0]),
     deactivate: () => (pp.active_profile = profiles[1]),
     activateOnArrow: false,
-  });
+  })
 
-export const ProfileSelector = () =>
+const PowerProfileSelector = () =>
   Menu({
     name: "asusctl-profile",
     icon: profile.as((p) => icons.powerprofile[p]),
@@ -37,14 +37,15 @@ export const ProfileSelector = () =>
             Widget.Button({
               on_clicked: () => (pp.active_profile = prof),
               child: Widget.Box({
-                children: [
-                  Widget.Icon(icons.powerprofile[prof]),
-                  Widget.Label(pretty(prof)),
-                ],
+                children: [Widget.Icon(icons.powerprofile[prof]), Widget.Label(pretty(prof))],
               }),
-            }),
+            })
           ),
         }),
       }),
     ],
-  });
+  })
+
+export const ProfileToggle = PowerProfileToggle
+
+export const ProfileSelector = PowerProfileSelector

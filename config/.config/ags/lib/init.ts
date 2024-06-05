@@ -7,9 +7,9 @@ import notifications from "./notifications"
 
 export default function init() {
   try {
-    gtk()
-    tmux()
-    matugen()
+    // gtk();
+    // tmux();
+    // matugen();
     lowBattery()
     notifications()
     hyprland()

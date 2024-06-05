@@ -4,18 +4,13 @@ import { range } from "lib/utils"
 import options from "options"
 
 type ProgressProps = {
-    height?: number
-    width?: number
-    vertical?: boolean
-    child: Gtk.Widget
+  height?: number
+  width?: number
+  vertical?: boolean
+  child: Gtk.Widget
 }
 
-export default ({
-  height = 18,
-  width = 180,
-  vertical = false,
-  child,
-}: ProgressProps) => {
+export default ({ height = 18, width = 180, vertical = false, child }: ProgressProps) => {
   const fill = Widget.Box({
     class_name: "fill",
     hexpand: vertical,
@@ -39,12 +34,10 @@ export default ({
 
   return Object.assign(container, {
     setValue(value: number) {
-      if (value < 0)
-        return
+      if (value < 0) return
 
       if (animations.length > 0) {
-        for (const id of animations)
-          GLib.source_remove(id)
+        for (const id of animations) GLib.source_remove(id)
 
         animations = []
       }
@@ -64,11 +57,13 @@ export default ({
       const goal = preferred - fill_size
       const step = goal / frames
 
-      animations = range(frames, 0).map(i => Utils.timeout(5 * i, () => {
-        fill_size += step
-        fill.css = `min-${axis}: ${fill_size}px`
-        animations.shift()
-      }))
+      animations = range(frames, 0).map((i) =>
+        Utils.timeout(5 * i, () => {
+          fill_size += step
+          fill.css = `min-${axis}: ${fill_size}px`
+          animations.shift()
+        })
+      )
     },
   })
 }

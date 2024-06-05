@@ -12,23 +12,24 @@ const poweroff = PanelButton({
   class_name: "powermenu",
   child: Widget.Icon(icons.powermenu.shutdown),
   on_clicked: () => Utils.exec("shutdown now"),
-  setup: self => self.hook(monochrome, () => {
-    self.toggleClassName("colored", !monochrome.value)
-    self.toggleClassName("box")
-  }),
+  setup: (self) =>
+    self.hook(monochrome, () => {
+      self.toggleClassName("colored", !monochrome.value)
+      self.toggleClassName("box")
+    }),
 })
 
 const date = PanelButton({
   class_name: "date",
   child: Widget.Label({
-    label: clock.bind().as(c => c.format(`${format}`)!),
+    label: clock.bind().as((c) => c.format(`${format}`)!),
   }),
 })
 
 const darkmode = PanelButton({
   class_name: "darkmode",
-  child: Widget.Icon({ icon: scheme.bind().as(s => icons.color[s]) }),
-  on_clicked: () => scheme.value = scheme.value === "dark" ? "light" : "dark",
+  child: Widget.Icon({ icon: scheme.bind().as((s) => icons.color[s]) }),
+  on_clicked: () => (scheme.value = scheme.value === "dark" ? "light" : "dark"),
 })
 
 export default Widget.CenterBox({
@@ -37,10 +38,6 @@ export default Widget.CenterBox({
   center_widget: date,
   end_widget: Widget.Box({
     hpack: "end",
-    children: [
-      darkmode,
-      BatteryBar(),
-      poweroff,
-    ],
+    children: [darkmode, BatteryBar(), poweroff],
   }),
 })

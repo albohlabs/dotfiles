@@ -20,7 +20,7 @@ function Item(bin: string) {
         Utils.execAsync(bin)
         App.closeWindow("launcher")
       },
-    }),
+    })
   )
 }
 
@@ -49,8 +49,7 @@ export function ShRun() {
   async function filter(term: string) {
     iconVisible.value = Boolean(term)
 
-    if (!term)
-      revealer.reveal_child = false
+    if (!term) revealer.reveal_child = false
 
     if (term.trim()) {
       const found = await sh.query(term)

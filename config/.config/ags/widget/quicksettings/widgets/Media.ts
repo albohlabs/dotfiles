@@ -18,15 +18,14 @@ const Player = (player: MprisPlayer) => {
   const cover = Widget.Box({
     class_name: "cover",
     vpack: "start",
-    css: Utils.merge([
-      player.bind("cover_path"),
-      player.bind("track_cover_url"),
-      media.coverSize.bind(),
-    ], (path, url, size) => `
+    css: Utils.merge(
+      [player.bind("cover_path"), player.bind("track_cover_url"), media.coverSize.bind()],
+      (path, url, size) => `
             min-width: ${size}px;
             min-height: ${size}px;
             background-image: url('${path || url}');
-        `),
+        `
+    ),
   })
 
   const title = Widget.Label({
@@ -42,14 +41,14 @@ const Player = (player: MprisPlayer) => {
     max_width_chars: 20,
     truncate: "end",
     hpack: "start",
-    label: player.bind("track_artists").as(a => a.join(", ")),
+    label: player.bind("track_artists").as((a) => a.join(", ")),
   })
 
   const positionSlider = Widget.Slider({
     class_name: "position",
     draw_value: false,
-    on_change: ({ value }) => player.position = value * player.length,
-    setup: self => {
+    on_change: ({ value }) => (player.position = value * player.length),
+    setup: (self) => {
       const update = () => {
         const { length, position } = player
         self.visible = length > 0
@@ -64,7 +63,7 @@ const Player = (player: MprisPlayer) => {
   const positionLabel = Widget.Label({
     class_name: "position",
     hpack: "start",
-    setup: self => {
+    setup: (self) => {
       const update = (_: unknown, time?: number) => {
         self.label = lengthStr(time || player.position)
         self.visible = player.length > 0
@@ -77,7 +76,7 @@ const Player = (player: MprisPlayer) => {
   const lengthLabel = Widget.Label({
     class_name: "length",
     hpack: "end",
-    visible: player.bind("length").as(l => l > 0),
+    visible: player.bind("length").as((l) => l > 0),
     label: player.bind("length").as(lengthStr),
   })
 
@@ -98,11 +97,13 @@ const Player = (player: MprisPlayer) => {
     on_clicked: () => player.playPause(),
     visible: player.bind("can_play"),
     child: Widget.Icon({
-      icon: player.bind("play_back_status").as(s => {
+      icon: player.bind("play_back_status").as((s) => {
         switch (s) {
-          case "Playing": return icons.mpris.playing
+          case "Playing":
+            return icons.mpris.playing
           case "Paused":
-          case "Stopped": return icons.mpris.stopped
+          case "Stopped":
+            return icons.mpris.stopped
         }
       }),
     }),
@@ -125,29 +126,23 @@ const Player = (player: MprisPlayer) => {
     cover,
     Widget.Box(
       { vertical: true },
-      Widget.Box([
-        title,
-        playericon,
-      ]),
+      Widget.Box([title, playericon]),
       artist,
       Widget.Box({ vexpand: true }),
       positionSlider,
       Widget.CenterBox({
         class_name: "footer horizontal",
         start_widget: positionLabel,
-        center_widget: Widget.Box([
-          prev,
-          playPause,
-          next,
-        ]),
+        center_widget: Widget.Box([prev, playPause, next]),
         end_widget: lengthLabel,
-      }),
-    ),
+      })
+    )
   )
 }
 
-export const Media = () => Widget.Box({
-  vertical: true,
-  class_name: "media vertical",
-  children: players.as(p => p.map(Player)),
-})
+export const Media = () =>
+  Widget.Box({
+    vertical: true,
+    class_name: "media vertical",
+    children: players.as((p) => p.map(Player)),
+  })

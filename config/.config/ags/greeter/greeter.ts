@@ -7,7 +7,7 @@ import auth from "./auth"
 
 const win = RegularWindow({
   name: "greeter",
-  setup: self => {
+  setup: (self) => {
     self.set_default_size(500, 500)
     self.show_all()
     auth.attribute.password.grab_focus()
