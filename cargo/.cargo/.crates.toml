@@ -7,4 +7,3 @@
     "cargo-install-update-config",
 ]
 "cargo-watch 8.5.2 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-watch"]
-"workshop-runner 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)" = ["wr"]
