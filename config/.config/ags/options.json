@@ -3,7 +3,6 @@
   "autotheme": true,
   "theme.scheme": "light",
   "font.size": 7,
-  "bar.workspaces.workspaces": 5,
   "bar.taskbar.iconSize": 18,
   "quicksettings.avatar.image": "/home/dpf/Pictures/katsuhiro otomo mc escher.jpg",
   "bar.transparent": false,
@@ -19,3 +18,4 @@
   "overview.monochromeIcon": false,
   "launcher.apps.max": 9
 }
+
