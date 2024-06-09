@@ -80,7 +80,6 @@ const options = mkOptions(OPTIONS, {
         "media",
         "expander",
         "systray",
-        // "colorpicker",
         // "screenrecord",
         "hyprshade",
         "system-info",

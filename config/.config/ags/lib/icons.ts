@@ -26,7 +26,6 @@ export default {
   },
   ui: {
     close: "window-close-symbolic",
-    colorpicker: "color-select-symbolic",
     info: "info-symbolic",
     link: "external-link-symbolic",
     lock: "system-lock-screen-symbolic",
