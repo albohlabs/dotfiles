@@ -46,6 +46,8 @@ const Workspaces = () =>
           hyprland,
           (self) =>
             (self.children = hyprland.workspaces
+              // remove special workspaces
+              .filter((a) => a.id >= 0)
               // the workspaces are in random order
               .sort((a, b) => a.id - b.id)
               .map((w) =>
