@@ -7,6 +7,7 @@ const { workspaces } = options.bar.workspaces
 
 const classToIcons = {
   default: "",
+  empty: "",
   code: "󰨞",
   dbeaver: "",
   // "[dD]iscord": "󰙯",
@@ -44,38 +45,47 @@ const Workspaces = () =>
       ["workspace-added", "workspace-removed"].forEach((signal) =>
         box.hook(
           hyprland,
-          (self) =>
-            (self.children = hyprland.workspaces
-              // remove special workspaces
-              .filter((a) => a.id >= 0)
-              // the workspaces are in random order
-              .sort((a, b) => a.id - b.id)
-              .map((w) =>
-                Widget.Label({
-                  vpack: "center",
-                  setup: (self) =>
-                    self.hook(hyprland, () => {
-                      // the clients on the current workspace
-                      const clientClasses = hyprland.clients
-                        .filter((c) => c.workspace.id === w.id)
-                        .map((c) => c.class)
+          (self) => {
+            const lastId =
+              hyprland.workspaces
+                // remove special workspaces
+                .filter((a) => a.id >= 0)
+                // the workspaces are in random order
+                .sort((a, b) => a.id - b.id)
+                .at(-1)?.id ?? 1
 
-                      const icons = clientClasses
-                        .map((c) => classToIcons[c] ?? classToIcons.default)
-                        .join(" ")
+            // empty workspace list
+            const workspaces = Array.from({ length: lastId }, (_, i) => ({
+              id: i + 1,
+            }))
 
-                      // TODO: add workspace id via <sub> markup
-                      // FIXME: initial render of default icon is black but should be white
-                      self.set_label(icons.length ? icons : classToIcons.default)
+            self.children = workspaces.map((w) =>
+              Widget.Label({
+                vpack: "center",
+                setup: (self) =>
+                  self.hook(hyprland, () => {
+                    // the clients on the current workspace
+                    const clientClasses = hyprland.clients
+                      .filter((c) => c.workspace.id === w.id)
+                      .map((c) => c.class)
 
-                      self.toggleClassName("active", hyprland.active.workspace.id === w.id)
-                      self.toggleClassName(
-                        "occupied",
-                        (hyprland.getWorkspace(w.id)?.windows || 0) > 0
-                      )
-                    }),
-                })
-              )),
+                    const icons = clientClasses
+                      .map((c) => classToIcons[c] ?? classToIcons.default)
+                      .join(" ")
+
+                    // TODO: add workspace id via <sub> markup
+                    // FIXME: initial render of default icon is black but should be white
+                    self.set_label(icons.length ? icons : classToIcons.empty)
+
+                    self.toggleClassName("active", hyprland.active.workspace.id === w.id)
+                    self.toggleClassName(
+                      "occupied",
+                      (hyprland.getWorkspace(w.id)?.windows || 0) > 0
+                    )
+                  }),
+              })
+            )
+          },
           signal
         )
       ),

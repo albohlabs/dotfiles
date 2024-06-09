@@ -65,10 +65,10 @@ $button-radius: $radius;
     label {
       min-width: 12pt;
       min-height: 12pt;
-      margin: 0 $padding * 0.75;
+      margin: 0 $padding * 0.5;
 
       font-size: 12;
-      color: transparentize(#000, 0.2);
+      color: transparentize(#000, 0.8);
       transition: all ease-in 0.3s;
 
       &.occupied {
