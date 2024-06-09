@@ -8,7 +8,7 @@
   "bar.transparent": false,
   "theme.blur": 7,
   "bar.powermenu.monochrome": true,
-  "bar.date.format": " %d.%m - %H:%M",
+  "bar.date.format": " %H:%M - %d.%m",
   "bar.launcher.icon.colored": true,
   "bar.launcher.label.label": " Applications",
   "bar.taskbar.monochrome": false,
@@ -18,4 +18,3 @@
   "overview.monochromeIcon": false,
   "launcher.apps.max": 9
 }
-
