@@ -91,8 +91,7 @@ window#launcher .launcher {
     }
   }
 
-  button.help,
-  button.nix-item {
+  button.help {
     @include button($flat: true, $reactive: false);
     padding: 0 ($padding * 0.5);
 

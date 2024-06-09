@@ -2,23 +2,18 @@ import { type Binding } from "lib/utils"
 import PopupWindow, { Padding } from "widget/PopupWindow"
 import icons from "lib/icons"
 import options from "options"
-import nix from "service/nix"
 import * as AppLauncher from "./AppLauncher"
-import * as NixRun from "./NixRun"
 import * as ShRun from "./ShRun"
 import * as Cliphist from "./Cliphist"
 import * as Emoji from "./Emoji"
 
 const { width, margin } = options.launcher
-const isnix = nix.available
 
 function Launcher() {
   const favs = AppLauncher.Favorites()
   const applauncher = AppLauncher.Launcher()
   const sh = ShRun.ShRun()
   const shicon = ShRun.Icon()
-  const nix = NixRun.NixRun()
-  const nixload = NixRun.Spinner()
   const ch = Cliphist.Cliphist()
   const chicon = Cliphist.Icon()
   const emoji = Emoji.Emoji()
@@ -58,13 +53,7 @@ function Launcher() {
       { vertical: true },
       HelpButton("sh", "run a binary"),
       HelpButton("ch", "copy a clipboard history entry"),
-      HelpButton("em", "copy an emoji"),
-      isnix
-        ? HelpButton(
-            "nx",
-            options.launcher.nix.pkgs.bind().as((pkg) => `run a nix package from ${pkg}`)
-          )
-        : Widget.Box()
+      HelpButton("em", "copy an emoji")
     ),
   })
 
@@ -72,8 +61,7 @@ function Launcher() {
     hexpand: true,
     primary_icon_name: icons.ui.search,
     on_accept: ({ text }) => {
-      if (text?.startsWith(":nx")) nix.run(text.substring(3))
-      else if (text?.startsWith(":sh")) sh.run(text.substring(3))
+      if (text?.startsWith(":sh")) sh.run(text.substring(3))
       else if (text?.startsWith(":ch")) {
         ch.runFirst()
       } else if (text?.startsWith(":em")) {
@@ -87,9 +75,6 @@ function Launcher() {
       text ||= ""
       favs.reveal_child = text === ""
       help.reveal_child = text.length < 3 && text?.startsWith(":")
-
-      if (text?.startsWith(":nx")) nix.filter(text.substring(3))
-      else nix.filter("")
 
       if (text?.startsWith(":sh")) sh.filter(text.substring(3))
       else sh.filter("")
@@ -140,11 +125,10 @@ function Launcher() {
         if (visible) focus()
       }),
     children: [
-      Widget.Box([entry, nixload, shicon, chicon, emojiicon]),
+      Widget.Box([entry, shicon, chicon, emojiicon]),
       favs,
       help,
       applauncher,
-      nix,
       sh,
       ch,
       emoji,

@@ -91,6 +91,7 @@ class Wallpaper extends Service {
       if (!this.#blockMonitor) this.#wallpaper()
     })
 
+    // TODO:
     Utils.execAsync("swww-daemon")
       .then(this.#wallpaper)
       .catch(() => null)

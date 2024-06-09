@@ -142,10 +142,6 @@ const options = mkOptions(OPTIONS, {
   launcher: {
     width: opt(0),
     margin: opt(80),
-    nix: {
-      pkgs: opt("nixpkgs/nixos-unstable"),
-      max: opt(8),
-    },
     sh: {
       max: opt(16),
     },

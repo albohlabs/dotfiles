@@ -1,6 +1,5 @@
 import PanelButton from "../PanelButton"
 import options from "options"
-import nix from "service/nix"
 
 const { icon, action } = options.bar.launcher
 
@@ -8,7 +7,7 @@ function Spinner() {
   const child = Widget.Icon({
     icon: icon.icon.bind(),
     class_name: Utils.merge(
-      [icon.colored.bind(), nix.bind("ready")],
+      [icon.colored.bind()],
       (c, r) => `${c ? "colored" : ""} ${r ? "" : "spinning"}`
     ),
     css: `
@@ -28,7 +27,7 @@ function Spinner() {
   return Widget.Revealer({
     transition: "slide_left",
     child,
-    reveal_child: Utils.merge([icon.icon.bind(), nix.bind("ready")], (i, r) => Boolean(i || r)),
+    reveal_child: Utils.merge([icon.icon.bind()], (i, r) => Boolean(i || r)),
   })
 }
 
