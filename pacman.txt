@@ -190,7 +190,6 @@ man-pages
 manjaro-alsa
 manjaro-base-skel
 manjaro-browser-settings
-manjaro-gdm-branding
 manjaro-gnome-backgrounds
 manjaro-gnome-extension-settings
 manjaro-gnome-settings
@@ -302,6 +301,7 @@ snapshot
 sof-firmware
 spectre-meltdown-checker
 sptlrx-bin
+sqlfluff
 sqlx-cli
 squashfs-tools
 sshpass
