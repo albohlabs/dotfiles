@@ -60,29 +60,32 @@ const Workspaces = () =>
             }))
 
             self.children = workspaces.map((w) =>
-              Widget.Label({
-                vpack: "center",
-                setup: (self) =>
-                  self.hook(hyprland, () => {
-                    // the clients on the current workspace
-                    const clientClasses = hyprland.clients
-                      .filter((c) => c.workspace.id === w.id)
-                      .map((c) => c.class)
+              PanelButton({
+                on_clicked: () => dispatch(w.id),
+                child: Widget.Label({
+                  vpack: "center",
+                  setup: (self) =>
+                    self.hook(hyprland, () => {
+                      // the clients on the current workspace
+                      const clientClasses = hyprland.clients
+                        .filter((c) => c.workspace.id === w.id)
+                        .map((c) => c.class)
 
-                    const icons = clientClasses
-                      .map((c) => classToIcons[c] ?? classToIcons.default)
-                      .join(" ")
+                      const icons = clientClasses
+                        .map((c) => classToIcons[c] ?? classToIcons.default)
+                        .join(" ")
 
-                    // TODO: add workspace id via <sub> markup
-                    // FIXME: initial render of default icon is black but should be white
-                    self.set_label(icons.length ? icons : classToIcons.empty)
+                      // TODO: add workspace id via <sub> markup
+                      // FIXME: initial render of default icon is black but should be white
+                      self.set_label(icons.length ? icons : classToIcons.empty)
 
-                    self.toggleClassName("active", hyprland.active.workspace.id === w.id)
-                    self.toggleClassName(
-                      "occupied",
-                      (hyprland.getWorkspace(w.id)?.windows || 0) > 0
-                    )
-                  }),
+                      self.toggleClassName("active", hyprland.active.workspace.id === w.id)
+                      self.toggleClassName(
+                        "occupied",
+                        (hyprland.getWorkspace(w.id)?.windows || 0) > 0
+                      )
+                    }),
+                }),
               })
             )
           },
@@ -93,10 +96,6 @@ const Workspaces = () =>
 
 export default () =>
   PanelButton({
-    window: "overview",
     class_name: "workspaces",
-    on_scroll_up: () => dispatch("m+1"),
-    on_scroll_down: () => dispatch("m-1"),
-    on_clicked: () => App.toggleWindow("overview"),
     child: workspaces.bind().as(Workspaces),
   })

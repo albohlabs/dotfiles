@@ -1,5 +1,4 @@
 import PopupWindow from "widget/PopupWindow"
-import NotificationColumn from "./NotificationColumn"
 import DateColumn from "./DateColumn"
 import options from "options"
 
@@ -11,7 +10,7 @@ const Settings = () =>
   Widget.Box({
     class_name: "datemenu horizontal",
     vexpand: false,
-    children: [NotificationColumn(), Widget.Separator({ orientation: 1 }), DateColumn()],
+    children: [DateColumn()],
   })
 
 const DateMenu = () =>

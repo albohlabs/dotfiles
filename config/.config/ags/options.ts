@@ -2,14 +2,10 @@ import { opt, mkOptions } from "lib/option"
 import { distro } from "lib/variables"
 import { icon } from "lib/utils"
 import icons from "lib/icons"
+import { BarWidget } from "widget/bar/Bar"
 
 const options = mkOptions(OPTIONS, {
   autotheme: opt(true),
-
-  wallpaper: {
-    resolution: opt<import("service/wallpaper").Resolution>(1920),
-    market: opt<import("service/wallpaper").Market>("random"),
-  },
 
   theme: {
     dark: {
@@ -68,17 +64,23 @@ const options = mkOptions(OPTIONS, {
     corners: opt(true),
     transparent: opt(false),
     layout: {
-      start: opt<Array<import("widget/bar/Bar").BarWidget>>([
+      start: opt<Array<BarWidget>>([
         // "launcher",
         "workspaces",
+        "roundedAngleEnd",
         // "taskbar",
-        "expander",
         // "messages",
       ]),
-      center: opt<Array<import("widget/bar/Bar").BarWidget>>(["date"]),
-      end: opt<Array<import("widget/bar/Bar").BarWidget>>([
-        "media",
+      center: opt<Array<BarWidget>>([
         "expander",
+        "roundedAngleStart",
+        "date",
+        "media",
+        "roundedAngleEnd",
+      ]),
+      end: opt<Array<BarWidget>>([
+        "expander",
+        "roundedAngleStart",
         "systray",
         // "screenrecord",
         "hyprshade",
@@ -112,7 +114,7 @@ const options = mkOptions(OPTIONS, {
       low: opt(30),
     },
     workspaces: {
-      workspaces: opt(7),
+      workspaces: opt(0),
     },
     taskbar: {
       iconSize: opt(0),
@@ -154,12 +156,6 @@ const options = mkOptions(OPTIONS, {
         ["microsoft-edge-dev", "wezterm", "org.gnome.Nautilus", "org.gnome.Calendar", "spotify"],
       ]),
     },
-  },
-
-  overview: {
-    scale: opt(9),
-    workspaces: opt(7),
-    monochromeIcon: opt(true),
   },
 
   powermenu: {
@@ -215,12 +211,6 @@ const options = mkOptions(OPTIONS, {
         v: opt<"start" | "center" | "end">("end"),
       },
     },
-  },
-
-  notifications: {
-    position: opt<Array<"top" | "bottom" | "left" | "right">>(["top", "right"]),
-    blacklist: opt(["Spotify"]),
-    width: opt(440),
   },
 
   hyprland: {

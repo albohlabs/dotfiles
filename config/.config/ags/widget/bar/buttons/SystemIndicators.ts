@@ -17,12 +17,13 @@ const ProfileIndicator = () => {
     ? asusctl.bind("profile").as((p) => icons.asusctl.profile[p])
     : powerprof.bind("active_profile").as((p) => icons.powerprofile[p])
 
-  return Widget.Icon({ visible, icon })
+  return Widget.Icon({ visible, icon, size: 12 })
 }
 
 const ModeIndicator = () => {
   if (!asusctl.available) {
     return Widget.Icon({
+      size: 12,
       setup(self) {
         Utils.idle(() => (self.visible = false))
       },
@@ -30,6 +31,7 @@ const ModeIndicator = () => {
   }
 
   return Widget.Icon({
+    size: 12,
     visible: asusctl.bind("mode").as((m) => m !== "Hybrid"),
     icon: asusctl.bind("mode").as((m) => icons.asusctl.mode[m]),
   })
@@ -51,10 +53,12 @@ const MicrophoneIndicator = () =>
         [0, muted],
       ] as const
       self.icon = cons.find(([n]) => n <= vol * 100)?.[1] || ""
+      self.size = 12
     })
 
 const DNDIndicator = () =>
   Widget.Icon({
+    size: 12,
     visible: notifications.bind("dnd"),
     icon: icons.notifications.silent,
   })
@@ -66,6 +70,7 @@ const BluetoothIndicator = () =>
     visible: bluetooth.bind("enabled"),
     child: Widget.Icon({
       icon: icons.bluetooth.enabled,
+      size: 12,
     }),
     overlay: Widget.Label({
       hpack: "end",
@@ -80,6 +85,7 @@ const NetworkIndicator = () =>
     const icon = network[network.primary || "wifi"]?.icon_name
     self.icon = icon || ""
     self.visible = !!icon
+    self.size = 12
   })
 
 const AudioIndicator = () =>
@@ -94,6 +100,7 @@ const AudioIndicator = () =>
       [0, muted],
     ] as const
     self.icon = cons.find(([n]) => n <= vol * 100)?.[1] || ""
+    self.size = 12
   })
 
 export default () =>

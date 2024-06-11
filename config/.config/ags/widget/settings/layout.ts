@@ -2,7 +2,6 @@
 import Row from "./Row"
 import Group from "./Group"
 import Page from "./Page"
-import Wallpaper from "./Wallpaper"
 import options from "options"
 import icons from "lib/icons"
 
@@ -12,7 +11,6 @@ const {
   theme,
   bar: b,
   launcher: l,
-  overview: ov,
   powermenu: pm,
   quicksettings: qs,
   osd,
@@ -27,7 +25,6 @@ export default [
     icons.ui.themes,
     Group(
       "",
-      Wallpaper() as ReturnType<typeof Row>,
       Row({ opt: at, title: "Auto Generate Color Scheme" }),
       Row({ opt: scheme, title: "Color Scheme", type: "enum", enums: ["dark", "light"] })
     ),
@@ -146,17 +143,6 @@ export default [
       Row({ opt: l.width, title: "Width" }),
       Row({ opt: l.apps.iconSize, title: "Icon Size" }),
       Row({ opt: l.apps.max, title: "Max Items" })
-    ),
-    Group(
-      "Overview",
-      Row({ opt: ov.scale, title: "Scale", max: 100 }),
-      Row({
-        opt: ov.workspaces,
-        title: "Workspaces",
-        max: 11,
-        note: "set this to 0 to make it dynamic",
-      }),
-      Row({ opt: ov.monochromeIcon, title: "Monochrome Icons" })
     ),
     Group(
       "Powermenu",

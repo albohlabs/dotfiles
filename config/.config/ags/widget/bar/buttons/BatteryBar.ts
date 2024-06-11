@@ -7,6 +7,8 @@ const { bar, percentage, blocks, width, low } = options.bar.battery
 
 const Indicator = () =>
   Widget.Icon({
+    size: 12,
+    css: "margin-right: 2px",
     setup: (self) =>
       self.hook(battery, () => {
         self.icon = battery.charging || battery.charged ? icons.battery.charging : battery.icon_name

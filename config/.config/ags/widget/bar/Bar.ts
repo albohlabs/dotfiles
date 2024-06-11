@@ -12,6 +12,7 @@ import Messages from "./buttons/Messages"
 import Hyprshade from "./buttons/Hyprshade"
 import SystemInfo from "./buttons/SystemInfo"
 import options from "options"
+import { RoundedAngleEnd } from "widget/RoundedCorner"
 
 const { start, center, end } = options.bar.layout
 const { transparent, position } = options.bar
@@ -33,6 +34,8 @@ const widget = {
   messages: Messages,
   ["system-info"]: SystemInfo,
   expander: () => Widget.Box({ expand: true }),
+  roundedAngleEnd: () => RoundedAngleEnd("topright", { class_name: "angle" }),
+  roundedAngleStart: () => RoundedAngleEnd("topleft", { class_name: "angle" }),
 }
 
 export default (monitor: number) =>

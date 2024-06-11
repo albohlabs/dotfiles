@@ -1,7 +1,9 @@
 @use "sass:color";
 
-$bar-spacing: $spacing * 0.3;
-$button-radius: $radius;
+// $bar-spacing: $spacing * 0.3;
+$bar-spacing: 0;
+// $button-radius: $radius;
+$button-radius: 0;
 
 @mixin panel-button($flat: true, $reactive: true) {
   @include accs-button($flat, $reactive);
@@ -9,15 +11,17 @@ $button-radius: $radius;
   > * {
     border-radius: $button-radius;
     margin: $bar-spacing;
-    background: rgba(255, 255, 255, 0.15);
+    // background: rgba(255, 255, 255, 0.15);
+    background: #000;
   }
+  &.active > *,
   &:hover > * {
-    background: rgba(255, 255, 255, 0.35);
+    // background: rgba(255, 255, 255, 0.35);
+    background: #000;
   }
 
   label,
   image {
-    // font-weight: bold;
     color: white;
   }
 
@@ -34,8 +38,8 @@ $button-radius: $radius;
 }
 
 .bar {
-  transition: $transition;
-  background-color: rgba(30, 32, 48, 0.5);
+  // transition: $transition;
+  // background-color: rgba(30, 32, 48, 0.5);
   // border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
   .panel-button {
@@ -68,11 +72,11 @@ $button-radius: $radius;
       margin: 0 $padding * 0.5;
 
       font-size: 12;
-      color: transparentize(#000, 0.8);
-      transition: all ease-in 0.3s;
+      color: transparentize(#fff, 0.8);
+      transition: color ease-in 0.3s;
 
       &.occupied {
-        color: transparentize(#000, 0.2);
+        color: transparentize(#fff, 0.6);
       }
 
       &.active {
@@ -83,14 +87,14 @@ $button-radius: $radius;
     &.active,
     &:active {
       label {
-        background-color: transparentize($primary-fg, 0.3);
+        // background-color: transparentize($primary-fg, 0.3);
 
         &.occupied {
-          background-color: transparentize($primary-fg, 0.15);
+          // background-color: transparentize($primary-fg, 0.15);
         }
 
         &.active {
-          background-color: $primary-fg;
+          // background-color: $primary-fg;
         }
       }
     }
@@ -260,10 +264,10 @@ $button-radius: $radius;
 
   .panel-button {
     &:hover > * {
-      box-shadow:
-        1px 1px 3px 0 $shadow-color,
-        inset 0 0 0 $border-width $border-color;
-      background-color: $bg;
+      // box-shadow:
+      //   1px 1px 3px 0 $shadow-color,
+      //   inset 0 0 0 $border-width $border-color;
+      // background-color: $bg;
     }
 
     &:not(:hover):not(.active) {

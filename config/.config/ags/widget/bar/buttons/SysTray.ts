@@ -9,7 +9,7 @@ const { ignore } = options.bar.systray
 const SysTrayItem = (item: TrayItem) =>
   PanelButton({
     class_name: "tray-item",
-    child: Widget.Icon({ icon: item.bind("icon") }),
+    child: Widget.Icon({ size: 14, icon: item.bind("icon") }),
     tooltip_markup: item.bind("tooltip_markup"),
     setup: (self) => {
       const { menu } = item
