@@ -333,12 +333,13 @@ https://raindrop.io/collection/35738708/feed "culture"
 
 "query:🟢 Economics:tags # \"economics\"" 
 https://www.nakedcapitalism.com/feed "economics"
-https://www.economist.com/the-world-this-week/rss.xml "economics"
-https://www.economist.com/special-report/rss.xml "economics"
-https://www.economist.com/leaders/rss.xml "economics"
+https://www.economist.com/europe/rss.xml economics
 https://www.economist.com/finance-and-economics/rss.xml "economics"
-https://www.economist.com/science-and-technology/rss.xml "economics"
 https://www.economist.com/international/rss.xml "economics"
+https://www.economist.com/leaders/rss.xml "economics"
+https://www.economist.com/science-and-technology/rss.xml "economics"
+https://www.economist.com/special-report/rss.xml "economics"
+https://www.economist.com/the-world-this-week/rss.xml "economics"
 
 "query:🟢 Politics:tags # \"politics\""
 https://marginalrevolution.com/feed "politics" "~Marginal Revolution"
@@ -375,7 +376,25 @@ https://chaos.social/@frank_rieger.rss
 https://library.fes.de/library/html/rss/digbib/rss-all.xml "politics"
 https://social.tchncs.de/@mspro.rss "politics"
 
-https://rivva.de/rss.xml "~Rivva"
+https://rivva.de/rss.xml "~Rivva" rivva
+
+"query:🟢 Daily:tags # \"deutschlandfunk\" or tags # \"rivva\"" 
+https://www.deutschlandfunk.de/nachrichten-100.rss "~DFunk nachrichten" deutschlandfunk
+https://www.deutschlandfunk.de/politikportal-100.rss "~DFunk politikportal" deutschlandfunk
+https://www.deutschlandfunk.de/wirtschaft-106.rss "~DFunk wirtschaft" deutschlandfunk
+https://www.deutschlandfunk.de/wissen-106.rss "~DFunk wissen" deutschlandfunk
+https://www.deutschlandfunk.de/kulturportal-100.rss "~DFunk kulturportal" deutschlandfunk
+https://www.deutschlandfunk.de/europa-112.rss "~DFunk europa" deutschlandfunk
+https://www.deutschlandfunk.de/gesellschaft-106.rss "~DFunk gesellschaft" deutschlandfunk
+
+https://www.deutschlandfunkkultur.de/politik-114.rss "~DFunk politik" deutschlandfunk
+https://www.deutschlandfunkkultur.de/musikportal-100.rss "~DFunk musikportal" deutschlandfunk
+https://www.deutschlandfunkkultur.de/wissenschaft-108.rss "~DFunk wissenschaft" deutschlandfunk
+https://www.deutschlandfunkkultur.de/meinung-debatte-100.rss "~DFunk meinung" deutschlandfunk
+https://www.deutschlandfunkkultur.de/umwelt-104.rss "~DFunk umwelt" deutschlandfunk
+https://www.deutschlandfunkkultur.de/philosophie-104.rss "~DFunk philosophie" deutschlandfunk
+https://www.deutschlandfunkkultur.de/psychologie-100.rss "~DFunk psychologie" deutschlandfunk
+https://www.deutschlandfunkkultur.de/geschichte-136.rss "~DFunk geschichte" deutschlandfunk
 
 https://forum.jungundnaiv.de/index.php?board-feed/3/&at=179-0cdf8021a79c89cb3617201d72957b887e0f338a "politics"
 
