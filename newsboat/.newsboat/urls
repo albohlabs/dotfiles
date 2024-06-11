@@ -6,9 +6,7 @@
 # find the channel id by looking at the source and search for itemprop="channelId"
 
 "query:🟢 TechVideos:tags # \"tech.videos\"" 
-# https://www.youtube.com/feeds/videos.xml?channel_id=UCptAHlN1gdwD89tFM3ENb6w "tech.videos" "~YouTube Prisma"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC3RKA4vunFAfrfxiJhPEplw "tech.videos" "~YouTube CodeOpinion"
-# https://www.youtube.com/feeds/videos.xml?channel_id=UCr7Quur3eIyA_oe8FNYexfg "tech.videos" "~YouTube Storybook"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCLLVlcmcCP4CUe7xSqVEnxw "tech.videos" "~YouTube ryansolid"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC8wNHsXmEuoikbwRdLeoJQg "tech.videos" "~YouTube EFFECT-TS"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC74WfvCbjsgrvEEhqhDO7AQ "tech.videos" "~YouTube ybogomolov"
@@ -35,6 +33,8 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCwUBA8snH6xQdgXqgOs5qOQ "te
 https://www.youtube.com/feeds/videos.xml?channel_id=UCjREVt2ZJU8ql-NC9Gu-TJw "tech.videos" "~YouTube Code to the Moon"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCL0w2IAjTBx3NNka-l7InPw "tech.videos" "~YouTube Luciano Mammino"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCTdw38Cw6jcm0atBPA39a0Q "tech.videos" "~YouTube NDC Conferences"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC0BtS97KQR7I4Xqa9VYlkvg "tech.videos" "~YouTube the native web GmbH "
+
 
 
 "query:🟢 MusicVideos:tags # \"music.videos\"" 
