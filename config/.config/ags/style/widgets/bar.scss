@@ -69,9 +69,8 @@ $button-radius: 0;
     label {
       min-width: 12pt;
       min-height: 12pt;
-      margin: 0 $padding * 0.5;
 
-      font-size: 12;
+      font-size: 8pt;
       color: transparentize(#fff, 0.8);
       transition: color ease-in 0.3s;
 
