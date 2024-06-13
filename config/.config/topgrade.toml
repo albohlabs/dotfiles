@@ -58,12 +58,9 @@
 no_self_update = true
 
 [git]
+repos = ["~/Development/tokyonight.nvim/"]
 #max_concurrency = 5
 # Additional git repositories to pull
-#repos = [
-#    "~/src/*/",
-#    "~/.config/something"
-#]
 
 # Don't pull the predefined git repos
 pull_predefined = false

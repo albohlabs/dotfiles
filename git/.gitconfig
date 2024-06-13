@@ -1,11 +1,17 @@
-[includeIf "gitdir:~/Development/nuwork"]
-  path = .gitconfig-nuwork
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
 
 [includeIf "gitdir:~/Development/alboh"]
   path = .gitconfig-albohlabs
 
 [includeIf "gitdir:~/Development/dhd"]
   path = .gitconfig-dhd
+
+[commit]
+  gpgsign = true
 
 [rebase]
   autosquash = true
@@ -129,9 +135,6 @@
 
 [column]
 	ui = auto
-
-[commit]
-  gpgsign = true
 
 [include]
   # https://github.com/GitAlias/gitalias

@@ -1,7 +1,4 @@
 [user]
-   name = albohlabs
-   email = github@alboh.de
-   signingkey = 2E429507E42CA129
-
-[core]
-  sshCommand = ssh -i ~/.ssh/id_rsa
+  name = albohlabs
+  email = github@alboh.de
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBY6qu2rg/5QELypzwTYiUIbLlNUgMpeFSq8GYfgT40Y

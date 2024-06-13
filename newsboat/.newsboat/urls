@@ -1,4 +1,3 @@
-# http://www.newsbeuter.org/doc/newsbeuter.html#_query_feeds
 
 "query:Unread Articles:unread = \"yes\""
 
@@ -27,7 +26,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCERcwLeheOXp_u61jEXxHMA "te
 https://www.youtube.com/feeds/videos.xml?channel_id=UCC-TcJ0SuGz21uIVIH0QGlQ "tech.videos" "~YouTube Adventures in Nodeland - Matteo Collina"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCs4fQRyl1TJvoeOdekW6lYA "tech.videos" "~YouTube fasterthanlime"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCUMwY9iS8oMyWDYIe6_RmoA "tech.videos" "~YouTube No Boilerplate"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC_iD0xppBwwsrM9DegC5cQQ "tech.videos" rust "~YouTube Jon Gjengset"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC_iD0xppBwwsrM9DegC5cQQ "tech.videos" "rust" "~YouTube Jon Gjengset"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCiT_r1GD7JSftnbViKHcOtQ "tech.videos" "~YouTube Jeremy Chone"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCwUBA8snH6xQdgXqgOs5qOQ "tech.videos" "~YouTube Noise Code"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCjREVt2ZJU8ql-NC9Gu-TJw "tech.videos" "~YouTube Code to the Moon"
@@ -88,18 +87,18 @@ http://feeds.feedburner.com/tocadotux "Linux"
 http://www.bashoneliners.com/oneliners/feeds/oneliner/ "Linux" 
 http://www.tuxmachines.org/node/feed "Linux"
 http://linuxblog.darkduck.com/feeds/posts/default "Linux"
-http://www.tecmint.com/feed "Linux" 
+http://www.tecmint.com/feed "Linux"
 http://www.dedoimedo.com/rss_feed.xml "Linux"
 http://www.flynsarmy.com/feed/ "Linux"
 http://lxer.com/module/newswire/headlines.rss "Linux"
-http://rss.slashdot.org/Slashdot/slashdotLinux "Linux" 
+http://rss.slashdot.org/Slashdot/slashdotLinux "Linux"
 http://www.phoronix.com/rss.php "Linux"
 http://www.techdrivein.com/feeds/posts/default?alt=rss "Linux"
 http://www.ghacks.net/feed/ "Linux"
-http://www.noobslab.com/feeds/posts/default "Linux" 
+http://www.noobslab.com/feeds/posts/default "Linux"
 http://blog.dustinkirkland.com/feeds/posts/default?alt=rss "Linux"
 https://xfce.org/feed?lang=en "Linux"
-http://www.newthinktank.com/feed/ "Linux" 
+http://www.newthinktank.com/feed/ "Linux"
 https://itsfoss.com/feed/ "~It's FOSS" "Linux"
 https://archlinux.org/feeds/news/ "Linux"
 https://forum.manjaro.org/c/announcements/11.rss "Linux"
@@ -110,7 +109,7 @@ https://the-guild.dev/feed.xml "tech"
 https://www.samhh.com/rss.xml "~samhh" "tech"
 https://increment.com/feed.xml "~Increment" "tech"
 https://hacks.mozilla.org/feed/ "~Mozilla Hacks" "tech"
-https://alistapart.com/main/feed/ "~A List Apart" "tech"
+https://alistapart.com/main/feed/ "~A List Apart" "tech" "blogroll"
 https://lexi-lambda.github.io/feeds/all.rss.xml "tech"
 https://codersteve.dev/post/index.xml "tech"
 https://nasamuffin.github.io/feed.xml "tech"
@@ -147,7 +146,6 @@ http://blog.sigfpe.com/feeds/posts/default "tech"
 https://requestforcomments.de/feed/mp3 "tech"
 http://audio.javascriptair.com/feed.xml "tech"
 http://feeds.feedburner.com/blogspot/dtKx "tech"
-https://anchor.fm/s/28ba964/podcast/rss "tech"
 https://byorgey.wordpress.com/feed/ "tech"
 https://swissangular.com/feed/ "tech"
 https://markkarpov.com/feed.atom "tech"
@@ -175,19 +173,17 @@ https://threatpost.com/feed "tech"
 https://socket.dev/api/feed.atom "tech"
 https://antfu.me/feed.xml "tech"
 https://blog.holz.nu/atom.xml "tech"
-https://jessitron.com/feed/ tech
-https://tonsky.me/subscribe/ tech
-https://mcfunley.com/feed.xml tech
-https://brandur.org/articles.atom tech
-https://thenewobjective.com/feed.xml tech
-
+https://jessitron.com/feed/ "tech"
+https://tonsky.me/subscribe/ "tech"
+https://mcfunley.com/feed.xml "tech"
+https://brandur.org/articles.atom "tech"
+https://thenewobjective.com/feed.xml "tech"
 https://feeds.pinboard.in/rss/popular "tech" "~Pinboard"
 https://dotfyle.com/this-week-in-neovim/rss.xml "tech"
 
 "query:🟢 Stuff1:tags # \"stuff01\""
 https://tinierklaertsichdiewelt.wordpress.com/feed/ "stuff01"
 http://dietotenblog.blogspot.com/feeds/posts/default?alt=rss "stuff01"
-https://what-if.xkcd.com/feed.atom "stuff01"
 http://abgedichtet.org/?feed=atom "stuff01"
 http://feeds2.feedburner.com/feedburnerstatus "stuff01"
 https://opentheory.net/feed/ "stuff01"
@@ -240,7 +236,7 @@ http://tim.pritlove.org/feed/ "stuff01"
 http://www.blogkollektiv.net/feed/ "stuff01"
 http://feeds.feedburner.com/PinkTentacle "stuff01"
 https://le-bohemien.net/feed "stuff01"
-https://wordpress.com/blog/feed/ "stuff01"
+https://wordpress.com/blog/feed/ "stuff01" "blogroll"
 https://bemme51.blogspot.com/feeds/posts/default?alt=rss "stuff01"
 https://pieceoplastic.com/index.php/cat/rufflinkage/feed/ "stuff01"
 http://christophkappes.de/feed/ "stuff01"
@@ -333,7 +329,7 @@ https://raindrop.io/collection/35738708/feed "culture"
 
 "query:🟢 Economics:tags # \"economics\"" 
 https://www.nakedcapitalism.com/feed "economics"
-https://www.economist.com/europe/rss.xml economics
+https://www.economist.com/europe/rss.xml "economics"
 https://www.economist.com/finance-and-economics/rss.xml "economics"
 https://www.economist.com/international/rss.xml "economics"
 https://www.economist.com/leaders/rss.xml "economics"
@@ -375,26 +371,16 @@ https://www.volksverpetzer.de/feed/ "politics"
 https://chaos.social/@frank_rieger.rss
 https://library.fes.de/library/html/rss/digbib/rss-all.xml "politics"
 https://social.tchncs.de/@mspro.rss "politics"
+https://rivva.de/rss.xml "~Rivva" "rivva"
 
-https://rivva.de/rss.xml "~Rivva" rivva
-
-"query:🟢 Daily:tags # \"deutschlandfunk\" or tags # \"rivva\"" 
-https://www.deutschlandfunk.de/nachrichten-100.rss "~DFunk nachrichten" deutschlandfunk
-https://www.deutschlandfunk.de/politikportal-100.rss "~DFunk politikportal" deutschlandfunk
-https://www.deutschlandfunk.de/wirtschaft-106.rss "~DFunk wirtschaft" deutschlandfunk
-https://www.deutschlandfunk.de/wissen-106.rss "~DFunk wissen" deutschlandfunk
-https://www.deutschlandfunk.de/kulturportal-100.rss "~DFunk kulturportal" deutschlandfunk
-https://www.deutschlandfunk.de/europa-112.rss "~DFunk europa" deutschlandfunk
-https://www.deutschlandfunk.de/gesellschaft-106.rss "~DFunk gesellschaft" deutschlandfunk
-
-https://www.deutschlandfunkkultur.de/politik-114.rss "~DFunk politik" deutschlandfunk
-https://www.deutschlandfunkkultur.de/musikportal-100.rss "~DFunk musikportal" deutschlandfunk
-https://www.deutschlandfunkkultur.de/wissenschaft-108.rss "~DFunk wissenschaft" deutschlandfunk
-https://www.deutschlandfunkkultur.de/meinung-debatte-100.rss "~DFunk meinung" deutschlandfunk
-https://www.deutschlandfunkkultur.de/umwelt-104.rss "~DFunk umwelt" deutschlandfunk
-https://www.deutschlandfunkkultur.de/philosophie-104.rss "~DFunk philosophie" deutschlandfunk
-https://www.deutschlandfunkkultur.de/psychologie-100.rss "~DFunk psychologie" deutschlandfunk
-https://www.deutschlandfunkkultur.de/geschichte-136.rss "~DFunk geschichte" deutschlandfunk
+"query:🟢 Daily:tags # \"deutschlandfunk\" or tags # \"rivva\""
+https://www.deutschlandfunk.de/politikportal-100.rss "~DFunk politikportal" "deutschlandfunk"
+https://www.deutschlandfunkkultur.de/wissenschaft-108.rss "~DFunk wissenschaft" "deutschlandfunk"
+https://www.deutschlandfunkkultur.de/meinung-debatte-100.rss "~DFunk meinung" "deutschlandfunk"
+https://www.deutschlandfunkkultur.de/umwelt-104.rss "~DFunk umwelt" "deutschlandfunk"
+https://www.deutschlandfunkkultur.de/philosophie-104.rss "~DFunk philosophie" "deutschlandfunk"
+https://www.deutschlandfunkkultur.de/psychologie-100.rss "~DFunk psychologie" "deutschlandfunk"
+https://www.deutschlandfunkkultur.de/geschichte-136.rss "~DFunk geschichte" "deutschlandfunk"
 
 https://forum.jungundnaiv.de/index.php?board-feed/3/&at=179-0cdf8021a79c89cb3617201d72957b887e0f338a "politics"
 
@@ -406,55 +392,113 @@ https://headphonecommute.com/feed/ "Music"
 http://lowlightmixes.blogspot.com/feeds/posts/default "Music"
 https://www.orbmag.com/feed/ "Music"
 
-"query:🟢 Rust:(tags # \"rust\")"
-https://this-week-in-rust.org/atom.xml rust
-https://fasterthanli.me/index.xml rust
-https://raphlinus.github.io/feed.xml rust
-https://matklad.github.io/feed.xml rust
-https://blog.burntsushi.net/index.xml rust
-https://blog.verbum.org/feed/ rust
-https://andreabergia.com/post/index.xml rust
-https://nnethercote.github.io/feed.xml rust
-https://jmmv.dev/feed.xml rust
-https://blog.wesleyac.com/feed.xml rust
-https://nereux.blog/feed.xml rust
-https://ktkaufman03.github.io/feed.xml rust
-https://domwillia.ms/index.xml rust 
-https://ricardoanderegg.com/posts/index.xml rust
-https://samsartor.com/atom.xml rust
-https://hashrust.com/rss.xml ~HashRust rust
-http://cliffle.com/rss.xml rust
-https://zamundaaa.github.io/feed.xml rust
-https://faultlore.com/blah/rss.xml rust
-https://thesquareplanet.com/feed.xml rust
-https://blog.m-ou.se/index.xml rust
-https://raphlinus.github.io/feed.xml rust
-https://matklad.github.io/feed.xml rust
-https://limpet.net/mbrubeck/atom.xml rust
-https://polymonster.github.io/feed rust
-https://model-checking.github.io/kani-verifier-blog/feed.xml rust
-https://nnethercote.github.io/feed.xml rust
-https://billydm.github.io/atom.xml rust
-https://www.brandons.me/feed.xml rust
-https://stevedonovan.github.io/rustifications/feed.xml rust
-https://blog.turbo.fish/rss.xml rust
-https://blog.pnkfx.org/atom.xml rust
-https://blog.burntsushi.net/index.xml rust
-https://aloso.github.io/feed.xml rust
-https://pwy.io/feed.xml rust
-https://kdheepak.com/index.xml rust
-https://lucumr.pocoo.org/feed.atom rust
-https://www.ralfj.de/blog/feed.xml rust
-https://os.phil-opp.com/rss.xml rust
-https://smallcultfollowing.com/babysteps//index.xml rust
-https://kobzol.github.io/feed.xml rust
-https://fettblog.eu/feed.xml rust
-https://www.artificialworlds.net/blog/feed/?dontcache=true rust
-https://corrode.dev/rss.xml rust
-https://without.boats/index.xml rust
-https://danluu.com/atom.xml rust
-https://matklad.github.io/feed.xml rust
-https://www.ralfj.de/blog/feed.xml rust
-https://faultlore.com/blah/rss.xml rust
-https://www.evanmiller.org/news.xml rust
-https://blog.regehr.org/rss rust
+"query:🟢 Rust:tags # \"rust\""
+https://this-week-in-rust.org/atom.xml "rust"
+https://fasterthanli.me/index.xml "rust"
+https://raphlinus.github.io/feed.xml "rust"
+https://matklad.github.io/feed.xml "rust"
+https://blog.burntsushi.net/index.xml "rust"
+https://blog.verbum.org/feed/ "rust"
+https://andreabergia.com/post/index.xml "rust"
+https://nnethercote.github.io/feed.xml "rust"
+https://jmmv.dev/feed.xml "rust"
+https://blog.wesleyac.com/feed.xml "rust"
+https://nereux.blog/feed.xml "rust"
+https://ktkaufman03.github.io/feed.xml "rust"
+https://domwillia.ms/index.xml "rust"
+https://ricardoanderegg.com/posts/index.xml "rust"
+https://samsartor.com/atom.xml "rust"
+https://hashrust.com/rss.xml "~HashRust" "rust"
+http://cliffle.com/rss.xml "rust"
+https://zamundaaa.github.io/feed.xml "rust"
+https://faultlore.com/blah/rss.xml "rust"
+https://thesquareplanet.com/feed.xml "rust"
+https://blog.m-ou.se/index.xml "rust"
+https://raphlinus.github.io/feed.xml "rust"
+https://matklad.github.io/feed.xml "rust"
+https://limpet.net/mbrubeck/atom.xml "rust"
+https://polymonster.github.io/feed "rust"
+https://model-checking.github.io/kani-verifier-blog/feed.xml "rust"
+https://nnethercote.github.io/feed.xml "rust"
+https://billydm.github.io/atom.xml "rust"
+https://www.brandons.me/feed.xml "rust"
+https://stevedonovan.github.io/rustifications/feed.xml "rust"
+https://blog.turbo.fish/rss.xml "rust"
+https://blog.pnkfx.org/atom.xml "rust"
+https://blog.burntsushi.net/index.xml "rust"
+https://aloso.github.io/feed.xml "rust"
+https://pwy.io/feed.xml "rust"
+https://kdheepak.com/index.xml "rust"
+https://lucumr.pocoo.org/feed.atom "rust"
+https://www.ralfj.de/blog/feed.xml "rust"
+https://os.phil-opp.com/rss.xml "rust"
+https://smallcultfollowing.com/babysteps//index.xml "rust"
+https://kobzol.github.io/feed.xml "rust"
+https://fettblog.eu/feed.xml "rust"
+https://www.artificialworlds.net/blog/feed/?dontcache=true "rust"
+https://corrode.dev/rss.xml "rust"
+https://without.boats/index.xml "rust"
+https://danluu.com/atom.xml "rust"
+https://matklad.github.io/feed.xml "rust"
+https://www.ralfj.de/blog/feed.xml "rust"
+https://faultlore.com/blah/rss.xml "rust"
+https://www.evanmiller.org/news.xml "rust"
+https://blog.regehr.org/rss "rust"
+
+"query:🟢 Blogroll:tags # \"blogroll\""
+http://om.co/feed/ "blogroll" "tech" "bloggers"
+https://werd.io/?_t=rss "blogroll" "bloggers"
+https://tantek.com/updates.atom "blogroll" "tech"
+https://about.fb.com/news/category/threads/feed/ "blogroll" "tech"
+https://bsky.social/about/rss.xml "blogroll" "tech"
+https://doc.searls.com/feed "blogroll" "tech" "politics"
+https://scotusblog.com/feed "blogroll" "politics"
+http://xProPublicakcd.com/rss.xml "blogroll" "tech" "politics" "bloggers"
+http://feedpress.me/sixcolors "blogroll" "tech" "bloggers"
+https://bijansabet.com/feed "blogroll" "bloggers"
+https://battellemedia.com/feed "blogroll"
+https://www.joelonsoftware.com/feed "blogroll" "bloggers"
+http://jetpack.com/feed "blogroll"
+https://ma.tt/feed/ "blogroll" "tech" "bloggers"
+https://wptavern.com/feed "blogroll"
+https://www.schneier.com/feed/ "blogroll" "tech" "politics" "bloggers"
+https://www.techdirt.com/feed "blogroll" "tech" "politics" "bloggers"
+https://val.demar.in/feed/ "blogroll" "bloggers"
+https://www.zeldman.com/feed "blogroll" "bloggers"
+https://kcpw.org/feed "blogroll"
+http://whatever.scalzi.com/feed/ "blogroll" "bloggers"
+https://www.tbray.org/ongoing/ongoing.atom "blogroll"
+http://waxy.org/feed/ "blogroll" "tech" "bloggers"
+https://github.blog/feed/ "blogroll"
+https://www.editorialboard.com/feed/ "blogroll" "politics"
+https://tedium.co/feed "blogroll"
+https://georgelakoff.substack.com/feed "blogroll" "politics" "bloggers"
+https://colinwalker.blog/dailyfeed.xml "blogroll"
+https://www.platformer.news/rss/ "blogroll"
+https://simonwillison.net/atom/everything/ "blogroll"
+https://heathercoxrichardson.substack.com/feed "blogroll" "bloggers"
+http://rolandtanglao.com/feed.xml "blogroll"
+https://socialwarming.substack.com/feed "blogroll"
+https://feeds.megaphone.fm/trippishow "blogroll"
+https://thejeshgn.com/rss "blogroll"
+https://seths.blog/feed "blogroll"
+http://longreads.com/rss "blogroll"
+http://evgrieve.com/feeds/posts/default?alt=rss "blogroll" "bloggers"
+http://feeds.feedburner.com/Torrentfreak "blogroll" "tech" "bloggers"
+http://www.poynter.org/feed/ "blogroll" "tech" "politics"
+http://feeds.arstechnica.com/arstechnica/index/ "blogroll"
+https://www.printmag.com/feed "blogroll"
+http://scripting.com/rss.xml "blogroll" "tech" "bloggers" "dave"
+http://feeds.kottke.org/main "blogroll" "bloggers"
+http://data.feedland.org/feeds/davewiner.xml "blogroll" "tech" "politics" "dave"
+http://www.manton.org/feed "blogroll"
+https://om.co/feed/ "blogroll" "tech" "politics" "bloggers"
+https://feeds.feedburner.com/NiemanJournalismLab "blogroll" "tech" "politics"
+https://buzzmachine.com/feed/ "blogroll" "tech" "politics" "bloggers"
+https://pressthink.org/feed/ "blogroll" "tech" "bloggers"
+https://mastodon.xyz/@johnonolan.rss "blogroll"
+https://memex.naughtons.org/feed/ "blogroll" "tech" "politics" "bloggers"
+https://daringfireball.net/feeds/main "blogroll" "tech" "bloggers"
+https://inessential.com/feed "blogroll" "tech" "bloggers"
+https://blog.joinmastodon.org/index.xml "blogroll"
+https://blog.x.com/feeds/posts/default "blogroll"

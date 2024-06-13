@@ -4,7 +4,6 @@ import init from "lib/init"
 import options from "options"
 import Bar from "widget/bar/Bar"
 import Launcher from "widget/launcher/Launcher"
-import OSD from "widget/osd/OSD"
 import PowerMenu from "widget/powermenu/PowerMenu"
 import SettingsDialog from "widget/settings/SettingsDialog"
 import Verification from "widget/powermenu/Verification"
@@ -36,7 +35,7 @@ App.config({
     ...forMonitors(CornerBottomleft),
     ...forMonitors(CornerBottomright),
     // ...forMonitors(ScreenCorners),
-    ...forMonitors(OSD),
+    // ...forMonitors(OSD),
     Launcher(),
     PowerMenu(),
     SettingsDialog(),

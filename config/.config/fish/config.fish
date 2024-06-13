@@ -19,8 +19,7 @@ fish_add_path /bin
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.local/share/pnpm
-fish_add_path $HOME/.local/share/bob/nvim-bin
-fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
+fish_add_path $HOME/.local/share/active/bin
 
 # golang - https://golang.google.cn/
 set -Ux GOPATH (go env GOPATH)
@@ -37,5 +36,8 @@ set -Ux PAGER nvimpager
 set -g __done_exclude 'nvim|vim|vi|man|less|journalctl'
 
 set -x LESS -rF
-set -x BAT_THEME Dracula
 set -x MANPAGER "nvim +Man!"
+
+# should come last to override the fzf ctrl-r binding
+bind \cr _atuin_search
+bind -M insert \cr _atuin_search

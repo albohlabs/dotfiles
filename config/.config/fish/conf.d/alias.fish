@@ -23,11 +23,6 @@
 # alias aws='docker run --rm -it -v ~/.aws:/root/.aws amazon/aws-cli '
 # alias ffmpeg='docker run --rm -it -v `pwd`:/app jrottenberg/ffmpeg '
 
-alias fzfp 'fzf --height 100% --sort --preview "bat --style=numbers --color=always {}"'
-
-alias pempty "trash list | fzf-tmux --multi -p --sort | awk '{print $5}' | xargs --no-run-if-empty trash empty --match=exact --force"
-alias prestore "trash list | fzf-tmux --multi -p --sort | awk '{print $1}' | xargs --no-run-if-empty trash restore --match=exact --force"
-
 alias vf 'fd --type f --hidden --follow --exclude .git \
    | gum filter --limit 1 --placeholder "Choose a file to open in vim" --height 15 \
    | xargs --no-run-if-empty nvim'
@@ -40,3 +35,27 @@ alias vg 'git ls-files -m --others --exclude-standard \
 
 alias p "pnpm run (jq -r '.scripts|to_entries[]|((.key))' package.json \
   | gum filter --limit 1 --placeholder \"pnpm run\" --height 15)"
+
+alias j just
+
+alias gnome-control-center "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
+
+abbr weather "curl -s wttr.in/Leipzig | grep -v Follow"
+
+# systemctl
+abbr su "systemctl --user"
+abbr ss "command systemctl status"
+abbr sl "systemctl --type service --state running"
+abbr slu "systemctl --user --type service --state running"
+abbr se "sudo systemctl enable --now"
+abbr sd "sudo systemctl disable --now"
+abbr sr "sudo systemctl restart"
+abbr so "sudo systemctl stop"
+abbr sa "sudo systemctl start"
+abbr sf "systemctl --failed --all"
+
+# journalctl
+abbr jb "journalctl -b"
+abbr jf "journalctl --follow"
+abbr jg "journalctl -b --grep"
+abbr ju "journalctl --unit"

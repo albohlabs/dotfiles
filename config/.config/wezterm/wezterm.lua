@@ -27,16 +27,24 @@ config.font = wezterm.font_with_fallback({
 config.bold_brightens_ansi_colors = true
 
 config.set_environment_variables = {
-	BAT_THEME = is_dark and "Catppuccin-mocha" or "Catppuccin-latte",
+	-- if not working rebuild cache `bat cache --build`
+	BAT_THEME = is_dark and "tokyonight_night" or "tokyonight_day",
+	FISH_THEME = is_dark and "night" or "day",
 }
 
-config.color_scheme = is_dark and "Tokyo Night (Gogh)" or "Tokyo Night Light (Gogh)"
+config.color_scheme_dirs = { wezterm.home_dir .. "/development/tokyonight.nvim/extras/wezterm" }
+config.color_scheme = is_dark and "tokyonight_night" or "tokyonight_day"
+
+-- so the font increase with CTRL + works when using slides
+config.adjust_window_size_when_changing_font_size = false
+
+config.enable_tab_bar = false
 
 config.window_padding = {
-	left = 0,
-	right = 0,
-	top = 0,
-	bottom = 0,
+	left = 2,
+	right = 2,
+	top = 2,
+	bottom = 2,
 }
 
 config.enable_wayland = false -- https://github.com/wez/wezterm/issues/5103

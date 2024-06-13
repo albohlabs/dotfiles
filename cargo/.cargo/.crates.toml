@@ -1,5 +1,6 @@
 [v1]
 "bunyan 0.1.9 (registry+https://github.com/rust-lang/crates.io-index)" = ["bunyan"]
+"cargo-check 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-check"]
 "cargo-expand 1.0.88 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-expand"]
 "cargo-geiger 0.11.7 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-geiger"]
 "cargo-update 13.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = [
@@ -7,4 +8,9 @@
     "cargo-install-update-config",
 ]
 "cargo-watch 8.5.2 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-watch"]
-"discovery-rs 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["discovery-rs"]
+"git-cliff 2.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = [
+    "git-cliff",
+    "git-cliff-completions",
+    "git-cliff-mangen",
+]
+"just 1.29.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["just"]

@@ -1,10 +1,7 @@
 [user]
-   name = Daniel_Pfefferkorn
-   email = dp@dhddigital.de
-   signingkey = 4FB083C6D90ED50816F58E4BB29B39A4566201DF
-
-[core]
-  sshCommand = ssh -i ~/.ssh/id_ed25519
+  name = Daniel_Pfefferkorn
+  email = dp@dhddigital.de
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFQ9BtDzYgQv1vse+XLSLX2Jrd218eSjrn6wnliahxcw
 
 [maintenance]
-	repo = /home/dpf/Development/dhd
+  repo = /home/dpf/Development/dhd
