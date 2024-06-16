@@ -13,4 +13,4 @@
     "git-cliff-completions",
     "git-cliff-mangen",
 ]
-"just 1.29.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["just"]
+"just 1.29.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["just"]
