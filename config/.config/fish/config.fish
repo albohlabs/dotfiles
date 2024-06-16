@@ -37,7 +37,3 @@ set -g __done_exclude 'nvim|vim|vi|man|less|journalctl'
 
 set -x LESS -rF
 set -x MANPAGER "nvim +Man!"
-
-# should come last to override the fzf ctrl-r binding
-bind \cr _atuin_search
-bind -M insert \cr _atuin_search
