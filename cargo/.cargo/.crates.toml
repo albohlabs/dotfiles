@@ -1,5 +1,7 @@
 [v1]
+"bacon 2.18.2 (registry+https://github.com/rust-lang/crates.io-index)" = ["bacon"]
 "bunyan 0.1.9 (registry+https://github.com/rust-lang/crates.io-index)" = ["bunyan"]
+"cargo-audit 0.20.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-audit"]
 "cargo-check 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-check"]
 "cargo-expand 1.0.88 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-expand"]
 "cargo-geiger 0.11.7 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-geiger"]
