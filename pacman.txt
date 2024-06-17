@@ -178,6 +178,7 @@ libreoffice-still
 libva-mesa-driver
 libva-vdpau-driver
 linux69
+lnav
 logrotate
 lollypop
 lrzip
