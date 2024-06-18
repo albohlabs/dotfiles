@@ -183,6 +183,9 @@ logrotate
 lollypop
 lrzip
 lsd
+lua-language-server
+luacheck
+luarocks
 lutris
 lvm2
 malcontent
@@ -296,7 +299,6 @@ seahorse
 shellcheck-bin
 signal-desktop
 simple-scan
-slides
 slurp
 snapshot
 sof-firmware
