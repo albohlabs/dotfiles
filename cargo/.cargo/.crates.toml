@@ -16,3 +16,5 @@
     "git-cliff-mangen",
 ]
 "just 1.29.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["just"]
+"lazyjj 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["lazyjj"]
+"cargo-binstall 1.7.2 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-binstall"]
