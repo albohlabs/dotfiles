@@ -13,7 +13,7 @@ local is_dark = appearance:find("Dark")
 config.font_size = 16
 config.line_height = 1.25
 -- config.cell_width = 1
-config.window_background_opacity = is_dark and 0.85 or 0.9
+config.window_background_opacity = is_dark and 0.85 or 0.8
 
 config.font = wezterm.font_with_fallback({
 	"Hasklug Nerd Font",
