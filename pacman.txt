@@ -76,7 +76,6 @@ firefox
 fish
 fprintd
 gamemode
-gamescope
 gdm
 gedit
 git-delta
