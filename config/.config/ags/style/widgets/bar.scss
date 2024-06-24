@@ -259,7 +259,8 @@ $button-radius: 0;
 }
 
 .bar.transparent {
-  background-color: transparent;
+  // background-color: transparent;
+  background-color: #000;
 
   .panel-button {
     &:hover > * {
