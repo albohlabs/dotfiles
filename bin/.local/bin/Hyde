@@ -378,7 +378,7 @@ cache() { #? Manages Hyde's cache
 
 cursor() { #? Cursor setting
 	#Case
-	check_package gsettings hyprcursor-util hyprcursor
+	enable_package gsettings hyprcursor-util hyprcursor
 	cursor_theme=$(gsettings get org.gnome.desktop.interface cursor-theme | sed "s/'//g")
 	cursor_size=$(gsettings get org.gnome.desktop.interface cursor-size | sed "s/'//g")
 
@@ -594,7 +594,7 @@ USAGE
 
 sddm() { #? Sddm commands
 
-	check_package sddm
+	enable_package sddm
 	navigate_clone
 	case $1 in
 	theme) #? Select sddm theme
@@ -701,25 +701,29 @@ show() { #? Useful GUI util
 	binds) #? [*] Show keybind hints\n ﯦ  Click to execute
 		# Keybinds_Hint #! Moved to .extra
 		shift
-		"${scrDir}"/keybinds_hint.sh "${*}"
+		diff "${etcDir}/keybinds_hint.sh" "${scrDir}/keybinds_hint.sh" > /dev/null || \
+		print_prompt +b "\n[changes available] " "copy '"${etcDir}/keybinds_hint.sh"' to '${scrDir}/keybinds_hint.sh' to update your keybinds_hint.sh" 
+		"${scrDir}"/keybinds_hint.sh "${@}"
 		: <<USAGE
 [SHOW_BINDS_USAGE]
     -j   ?  Show the JSON format
     -p   ?  Show the pretty format
     -d   ?  Add custom delimiter symbol (default '>')
-    -f   ?  Add custom file
+    -f	<PATH>   ?  Add custom .conf file
     -h   ?  Display this help message
 [END]
 USAGE
 		;;
 	bookmarks) #? [*] Bookmark selector\nﯦ append 'bookmark_file=("/path/to/bookmarks.lst")' line inside '${hydeConfDir}/hyde.conf'
 		shift
-		Launch-Bookmarks $*
+		Launch-Bookmarks "${@}"
 		: <<USAGE
 [SHOW_BOOKMARKS_USAGE]
-	--browser	?   Set Browser can also set 'BROWSER' env
-    --rebuild   ?   force rebuild cached bookmark paths
+    --browser	<PACKAGE> ?   Set Browser can also set 'BROWSER' env
     --no-custom ?    run without custom '.lst' bookmark files
+    --persist	?	Saves bookmark file list to ~/.cache.So no re-caching after reboot
+    --rasi	<PATH>?	set rofi configuration
+    --rebuild   ?   force rebuild cached bookmark paths
 [END]
 USAGE
 		;;
@@ -729,6 +733,7 @@ USAGE
 		: <<USAGE
 [SHOW_EMOJI_USAGE]
     --style   ?   use style [ 1 | 2 ]
+    --rasi	<PATH>?	set rofi configuration
 [END]
 USAGE
 		;;
@@ -760,6 +765,7 @@ USAGE
     --reset ?	Reset cache
     --browser  ? Browser to use
     --site  ? Search engine to use
+    --rasi	<PATH>? set rofi configuration
 [END]
 USAGE
 		;;
@@ -777,7 +783,7 @@ run() { #? Executable utilities
 	airplane-mode
 	;;
 	audio_idle) #? Inhibits idle when player status: 'Playing
-		check_package systemd
+		enable_package systemd
 		local command="${0} "${FUNCNAME[0]}" ${@} --listen"
 		shift
 		[ "--listen" = "$1" ] && while playerctl status | grep -q "Playing"; do sleep 5; done && exit
@@ -793,7 +799,7 @@ run() { #? Executable utilities
     --record-focus  ?  Record focused monitor
     --print-snip    ?  Drag to manually snip an area
     --record-snip   ?  Drag to manually snip an area to screen record it
-    -freeze         ?  Frozen screen, drag to manually snip an area
+    --freeze        ?  Frozen screen, drag to manually snip an area
     --print-monitor ?  Print focused monitor
     --scan          ?  Use 'tesseract' to scan image then add to clipboard
     --stop          ?  Stop every instance of Screencap
@@ -802,7 +808,7 @@ run() { #? Executable utilities
 USAGE
 		;;
 	events) #? Watches hyprland events and executes actions
-		check_package
+		enable_package
 		shift
 		verbose=0
 		event_config=""
@@ -845,10 +851,10 @@ inject() { #? User/Device specific scripts that might be useful
 		# Add in pacman.conf
 		echo -e "\n[g14]\nServer = https://arch.asus-linux.org" | SUPER tee -a /etc/pacman.conf
 
-		check_package asusctl supergfxctl rog-control-center power-profiles-daemon
+		enable_package asusctl supergfxctl rog-control-center power-profiles-daemon
 
 		#Check First before enabling
-		check_service power-profiles-daemon.service supergfxd
+		enable_service power-profiles-daemon.service supergfxd
 		;;
 	chaotic_aur) #? [*] Add chaotic aur to you mirror
 		shift
@@ -862,7 +868,7 @@ inject() { #? User/Device specific scripts that might be useful
 USAGE
 		;;
 	flatpak) #? Flatpak setup for HyDE
-		check_package flatpak
+		enable_package flatpak
 		flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 		# flats=$(awk -F '#' '{print $1}' "${baseDir}/custom_flat.lst" | sed 's/ //g' | xargs)
 
