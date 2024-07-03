@@ -31,14 +31,6 @@ return {
         style = "day", -- storm, moon, night, day
         transparent = true,
 
-        sidebars = {
-          "qf",
-          "vista_kind",
-          "terminal",
-          "spectre_panel",
-          "startuptime",
-          "Outline",
-        },
         on_highlights = function(hl, c)
           local prompt = "#2d3149"
           hl.TelescopeNormal = { bg = c.bg_dark, fg = c.fg }

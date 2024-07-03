@@ -66,6 +66,7 @@ return {
     "folke/zen-mode.nvim",
     cmd = "ZenMode",
     opts = {
+      window = { backdrop = 0.7 },
       plugins = {
         -- gitsigns = { enabled = true },
         -- tmux = { enabled = vim.env.TMUX ~= nil },
