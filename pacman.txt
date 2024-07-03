@@ -5,6 +5,8 @@ adw-gtk-theme
 apparmor
 ark
 atuin-bin
+aws-cdk
+aws-cli-v2
 aws-sam-cli-bin
 aylurs-gtk-shell
 b43-fwcutter
@@ -33,6 +35,7 @@ chaotic-mirrorlist
 chromium
 cliphist
 collision
+copilot-cli-bin
 coreutils
 cpupower
 cronie
@@ -47,11 +50,13 @@ dhcpcd
 diff-so-fancy
 diffutils
 discord
+dive
 dmidecode
 dmraid
 dnsmasq
 docker
 docker-compose
+doggo-bin
 dolphin
 dosfstools
 downgrade
@@ -73,6 +78,7 @@ ffmpegthumbnailer
 ffmpegthumbs
 file-roller
 firefox
+firefox-developer-edition
 fish
 fprintd
 gamemode
@@ -264,7 +270,6 @@ pavucontrol
 perl
 pipewire-jack
 plymouth-theme-manjaro
-pnpm
 podman
 podman-compose
 pokemon-colorscripts-git
