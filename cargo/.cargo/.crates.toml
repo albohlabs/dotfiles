@@ -2,7 +2,9 @@
 "bacon 2.18.2 (registry+https://github.com/rust-lang/crates.io-index)" = ["bacon"]
 "bunyan 0.1.9 (registry+https://github.com/rust-lang/crates.io-index)" = ["bunyan"]
 "cargo-audit 0.20.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-audit"]
+"cargo-binstall 1.7.3 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-binstall"]
 "cargo-check 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-check"]
+"cargo-deny 0.14.24 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-deny"]
 "cargo-expand 1.0.88 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-expand"]
 "cargo-geiger 0.11.7 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-geiger"]
 "cargo-update 13.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = [
@@ -10,11 +12,14 @@
     "cargo-install-update-config",
 ]
 "cargo-watch 8.5.2 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-watch"]
-"git-cliff 2.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = [
+"git-cliff 2.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = [
     "git-cliff",
     "git-cliff-completions",
     "git-cliff-mangen",
 ]
 "just 1.29.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["just"]
 "lazyjj 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["lazyjj"]
-"cargo-binstall 1.7.3 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-binstall"]
+"sqlx-cli 0.7.4 (registry+https://github.com/rust-lang/crates.io-index)" = [
+    "cargo-sqlx",
+    "sqlx",
+]
