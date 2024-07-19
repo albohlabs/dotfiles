@@ -15,17 +15,26 @@ Shrink some things so they take up less space
 #context-navigation > .menuitem-iconic[disabled="true"] {background-color: transparent !important;}
 
 menupopup > :is(menuitem, menu){
-  max-height: 20px !important;
-  min-height: 20px !important;
+  height: fit-content !important;
+  & > * {
+    padding: 0px !important;
+    margin: 1px !important;
+  }
+  
   max-width: 300px !important;
   border-radius: var(--rounding) !important;
   margin: 0 !important;
-  margin-block: 1px !important;
   
   padding-block: 0px !important;
   padding-inline-start: 5px !important;
 }
 
+/* large context menu */
+@media (-moz-bool-pref: "shyfox.larger.context.menu"){
+  menupopup > :is(menuitem, menu) > * {padding: 5px 0px !important;}
+}
+
+/* margin for some menus */
 :is(.bookmark-item, #PlacesChevron, #bookmarks-menu-button, #sidebarMenu-popup) :is(menuitem, menu) {margin-inline: 5px !important;}
 
 /* remove some items from sidebar header menu */
@@ -76,7 +85,10 @@ menupopup > :is(menuitem, menu){
       padding-top: 5px !important;
       padding-bottom: 5px !important;
     }
-
+    
+    .unified-extensions-item[attention] > .unified-extensions-item-action-button.subviewbutton {
+      background-position: left calc(var(--uei-dot-horizontal-position-in-panel) - 4px) bottom var(--uei-dot-vertical-position-in-panel) !important;
+    }
     .unified-extensions-item-action-button {padding-right: 3px !important;}
   }
 }

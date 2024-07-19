@@ -35,8 +35,8 @@ Area where website is displayed
   /* if navbar is not hidden in f11 fullscreen or not only navbar is visible in f11 or window is not maximized in clean mode */
   &:not(
     :is(
-      :is([titlepreface*="+"], [titlepreface*="-"][titlepreface*="="])[inFullscreen="true"]),
-      [titlepreface*="?"]:is([sizemode="maximized"], [inFullscreen="true"])
+      :is([titlepreface*="‌"], [titlepreface*="؜"][titlepreface*="​"])[inFullscreen="true"]),
+      [titlepreface*="‍"]:is([sizemode="maximized"], [inFullscreen="true"], [gtktiledwindow="true"])
   ){
     
     /* add rounded corners and outline to browser content */
@@ -58,17 +58,17 @@ Area where website is displayed
   }
   
   /* if in f11 fullscreen sidebar active but navbar not */
-  &:not([titlepreface*="?"]):not([titlepreface*="-"])[titlepreface*="+"][inFullscreen="true"]{
+  &:not([titlepreface*="‍"]):not([titlepreface*="؜"])[titlepreface*="‌"][inFullscreen="true"]{
     #appcontent browser {border-left: var(--outline);}
   }
   
   /* if in f11 fullscreen toolbar active but navbar not */
-  &:not([titlepreface*="?"]):not([titlepreface*="="])[titlepreface*="+"][inFullscreen="true"]{
+  &:not([titlepreface*="‍"]):not([titlepreface*="​"])[titlepreface*="‌"][inFullscreen="true"]{
     #appcontent browser {border-right: var(--outline);}
   }
   
   /* if in f11 fullscreen nor toolbar or sidebar active but navbar is */
-  &:not([titlepreface*="?"])[titlepreface*="-"][titlepreface*="="]:not([titlepreface*="+"])[inFullscreen="true"]{
+  &:not([titlepreface*="‍"])[titlepreface*="؜"][titlepreface*="​"]:not([titlepreface*="‌"])[inFullscreen="true"]{
     #appcontent browser {border-top: var(--outline);}
   }
 }
@@ -153,7 +153,7 @@ richlistbox
 {border-radius: var(--big-rounding) !important;}
 
 /* disable pointer events in clean mode */ 
-#main-window[titlepreface*="?"]{
+#main-window[titlepreface*="‍"]{
   #nav-bar:not(:has(#urlbar[breakout-extend])),
   #sidebar,
   #TabsToolbar,
@@ -269,7 +269,7 @@ screenshots-buttons{
 }
 
 /* when sidebar hidden */
-#main-window:is([titlepreface*="-"], [titlepreface*="?"]){
+#main-window:is([titlepreface*="؜"], [titlepreface*="‍"]){
   #screenshotsPagePanel{
     bottom: calc(
       var(--bottom-margin)
@@ -306,7 +306,7 @@ Apply theme colors to context menus and menubar
   --panel-color: var(--bt-col) !important;  
   
   menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
-    background-color: var(--tb-col) !important;
+    background-color: var(--panel-item-hover-bgcolor) !important;
     color: var(--bt-col) !important;
   }
 }
@@ -318,19 +318,24 @@ Apply theme colors to context menus and menubar
 #placesContext, #placesContext menupopup,
 #downloadsContextMenu, #downloadsContextMenu menupopup,
 #sidebarMenu-popup, #PopupSearchAutoComplete,
-:is(#back-button, #forward-button) menupopup
+:is(#back-button, #forward-button) menupopup,
+#permission-popup-menulist menupopup
 {
-  --panel-background: var(--tb-col)!important;  
-  --panel-border-color: var(--bg-col) !important;
+  --panel-background: var(--pp-col)!important;  
+  --panel-border-color: var(--tb-col) !important;
   
   --toolbar-field-focus-background-color: var(--bt-col) !important;
   --panel-color: var(--bt-col) !important;  
   
   menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
-    background-color: var(--bg-col) !important;
+    background-color: var(--panel-item-hover-bgcolor) !important;
     color: var(--bt-col) !important;
   }
 }
+
+/* dropdown selectors */
+menupopup {--content-select-background-image: none !important;}
+#ContentSelectDropdown .ContentSelectDropdown-item-0:not([_moz-menuactive="true"]) {background-color: transparent !important;;}
 
 /*
 
@@ -483,7 +488,7 @@ File Edit View History Bookmarks Tools Help
     }
   }
 
-  #main-menubar * {padding-top: 0px !important;}
+  #main-menubar > * {padding-top: 0px !important;}
 }
 
 /*
@@ -541,6 +546,13 @@ File Edit View History Bookmarks Tools Help
   z-index: 3;
 }
 
+/* weird margin fix */
+#tabbrowser-tabpanels {
+  & browser[type="content"] {
+    margin: 0 !important;
+  }
+}
+
 
 /*
 
@@ -553,18 +565,15 @@ File Edit View History Bookmarks Tools Help
 .footer-button {
   &:not([disabled]) {
     &[default], &.primary {
-      background-color: var(--shy-color) !important;;
+      background-color: var(--shy-accent-color) !important;;
       &:hover {
-        background-color: color-mix(in srgb, black 10%,var(--shy-color)) !important;
+        background-color: color-mix(in srgb, var(--bt-col, black) 10%,var(--shy-accent-color)) !important;
       }
     }
   }
 }
 
-::selection {
-    color: White !important;
-    background: var(--shy-color) !important;
-}
+::selection {background: var(--shy-accent-color) !important;}
 
 #tracking-protection-icon-box[active]{
   fill: var(--shy-color) !important;
@@ -577,7 +586,21 @@ File Edit View History Bookmarks Tools Help
   }
 }
 
-.urlbarView-row[selected] {background-color: var(--shy-color) !important;}
+.urlbarView-row[selected] {background-color: var(--shy-accent-color) !important;}
+
+.urlbarView-favicon {
+  .urlbarView-row[type="tabtosearch"]:not([selected]) > .urlbarView-row-inner > .urlbarView-no-wrap > & {
+    color: var(--shy-color) !important;
+  }
+}
+
+.urlbarView-row[dynamicType="onboardTabToSearch"] > .urlbarView-row-inner {
+  &:not([selected]) > .urlbarView-no-wrap {
+    & > .urlbarView-favicon {
+      color: var(--shy-color) !important;
+    }
+  }
+}
 
 .ctrlTab-preview:focus > .ctrlTab-preview-inner, #ctrlTab-showAll:focus {border-color: var(--shy-color) !important;}
 
@@ -589,6 +612,7 @@ File Edit View History Bookmarks Tools Help
   --toolbarbutton-icon-fill-attention:           var(--shy-color) !important;
   --fxview-primary-action-background:            var(--shy-color) !important;
   --toolbar-field-focus-border-color:            var(--shy-color) !important;
+  --uei-button-attention-dot-color:              var(--shy-color) !important;
   --button-primary-active-bgcolor:               var(--shy-color) !important;
   --button-primary-hover-bgcolor:                var(--shy-color) !important;
   --uc-checkbox-checked-bgcolor:                 var(--shy-color) !important;
