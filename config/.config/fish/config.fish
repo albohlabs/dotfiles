@@ -37,3 +37,5 @@ set -g __done_exclude 'nvim|vim|vi|man|less|journalctl'
 
 set -x LESS -rF
 set -x MANPAGER "nvim +Man!"
+
+zoxide init fish | source
