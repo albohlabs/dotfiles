@@ -3,6 +3,7 @@ acpi
 acpid
 adw-gtk-theme
 apparmor
+aria2
 ark
 atuin-bin
 aws-cdk
@@ -60,6 +61,7 @@ doggo-bin
 dolphin
 dosfstools
 downgrade
+duf
 dunst
 e2fsprogs
 ecryptfs-utils
