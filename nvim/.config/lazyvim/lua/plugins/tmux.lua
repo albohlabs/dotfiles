@@ -15,6 +15,9 @@ return {
     copy_sync = {
       enable = true,
     },
+    -- synchronizes registers when pressing (C-r) and ".
+    -- don't hijack my " key
+    sync_registers_keymap_reg = false,
   },
   keys = {
     {
