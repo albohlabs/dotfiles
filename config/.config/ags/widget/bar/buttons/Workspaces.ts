@@ -5,25 +5,28 @@ const hyprland = await Service.import("hyprland")
 
 const { workspaces } = options.bar.workspaces
 
+// hyprctl clients -j | jq -r ".[].initialClass"
+// icons can be found on https://www.nerdfonts.com/cheat-sheet
 const classToIcons = {
-  default: "",
+  default: "",
   empty: "",
   code: "󰨞",
   dbeaver: "",
   // "[dD]iscord": "󰙯",
-  foot: "",
+  foot: "",
   evince: "",
-  footclient: "",
-  kitty: "",
-  wezterm: "",
-  "org.wezfurlong.wezterm": "",
+  footclient: "",
+  kitty: "",
+  wezterm: "",
+  "org.wezfurlong.wezterm": "",
   firefox: "",
+  "firefox-developer-edition": "",
   "google-chrome": "",
   chromium: "",
   edge: "󰇩",
   telegram: "",
-  thunderbird: "",
-  "thunderbird-beta": "",
+  thunderbird: "",
+  "thunderbird-beta": "",
   slack: "",
   keymapp: "",
   "1Password": "",
@@ -31,7 +34,10 @@ const classToIcons = {
   keepassxc: "󱕴",
   rofi: "",
   Spotify: "󰓇",
-  // "class<vlc>": "󰕼",
+  spotube: "󰓇",
+  vlc: "󰕼",
+  "draw.io": "󰇟",
+  "org.qbittorrent.qBittorrent": "",
 }
 
 const dispatch = (arg: string | number) => {

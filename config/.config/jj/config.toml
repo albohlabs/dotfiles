@@ -2,29 +2,22 @@
 email = "github@alboh.de"
 name = "alboh"
 
-[core]
-fsmonitor = 'watchman'
+# [core]
+# fsmonitor = 'watchman'
+
+# [signing]
+# sign-all = true
+# backend = "gpg"
+# key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFQ9BtDzYgQv1vse+XLSLX2Jrd218eSjrn6wnliahxcw"
 
 [ui]
 editor = "nvim"
-# diff-editor = ['scm-diff-editor', '--dir-diff', '$left', '$right']
-# diff-editor = 'meld'
-# diff-editor = ["kdiff3", "--merge", "$left", "$right"]
-merge-editor = [
-  'code',
-  '--merge',
-  '$left',
-  '$right',
-  '$base',
-  '$output',
-  '--wait',
-]
 
 pager = ["sh", "-c", "diff-so-fancy | less -RFX"]
-default-command = "log"
+default-command = "st"
 
-[ui.diff]
-format = "git"
+# [ui.diff]
+# format = "git"
 
 [template-aliases]
 # 'format_short_id(id)' = 'id.shortest()'
@@ -33,23 +26,34 @@ format = "git"
 [aliases]
 n = ['new']
 d = ['diff']
-s = ['status']
+
+s = ['show']
+sp = ["show", "@-"]
 
 # l = ['log', '--limit', '10']
 # `jj l` shows commits on the working-copy commit's (anonymous) branch
 # compared to the `main` branch
 l = ["log", "-r", "(main..@):: | (main..@)-"]
+lp = ["log", "-r", "@-"]
+la = ["log", "-r", "..@"]
+lo = ["log", "-r", "overview"]
 
 # here = ['branch', 'set', '-r', 'HEAD@git']
 # mutably = ['--config-toml', 'revset-aliases."immutable_heads()" = "none()"']
 
-# [revsets]
+[revsets]
 # log = "@ | bases | branches | curbranch::@ | @::nextbranch | downstream(@, branchesandheads)"
-#
-# [revset-aliases]
+log = "stack"
+
+[revset-aliases]
 # 'bases' = 'main'
 # 'downstream(x,y)' = '(x::y) & y'
 # 'branches' = 'downstream(trunk(), branches()) & mine()'
 # 'branchesandheads' = 'branches | (heads(trunk()::) & mine())'
 # 'curbranch' = 'latest(branches::@- & branches)'
 # 'nextbranch' = 'roots(@:: & branchesandheads)'
+overview = '@ | ancestors(immutable_heads().., 2) | trunk()'
+stack = "(trunk()-..@) | @::"
+# my-unmerged = "mine() ~ ::trunk()"
+# my-unmerged-remote = "mine() ~ ::trunk() & remote_branches()"
+# not-pushed = "remote_branches().."

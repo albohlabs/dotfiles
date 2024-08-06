@@ -26,6 +26,10 @@ return {
       { "<leader>8", "<cmd>Grapple select index=8<cr>", desc = "Grapple select 8" },
       { "<leader>9", "<cmd>Grapple select index=9<cr>", desc = "Grapple select 9" },
     },
+    opts = {
+      -- https://github.com/cbochs/grapple.nvim?tab=readme-ov-file#scopes
+      scope = "static",
+    },
   },
   -- {
   --   "nvim-lualine/lualine.nvim",

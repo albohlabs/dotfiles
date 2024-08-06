@@ -33,9 +33,12 @@ set -gx NVIM_APPNAME lazyvim
 set -Ux PAGER nvimpager
 
 # configure franciscolourenco/done
-set -g __done_exclude 'nvim|vim|vi|man|less|journalctl'
+set -g __done_exclude 'nvim|vim|vi|man|less|journalctl|newsboat'
 
 set -x LESS -rF
 set -x MANPAGER "nvim +Man!"
+
+# print very large env variables
+# set -xL | string match -r '.{1024,}'
 
 zoxide init fish | source

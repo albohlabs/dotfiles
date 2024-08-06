@@ -1,0 +1,15 @@
+{
+  "autotheme": false,
+  "bar.transparent": false,
+  "bar.powermenu.monochrome": false,
+  "bar.launcher.icon.colored": false,
+  "bar.taskbar.exclusive": false,
+  "overview.monochromeIcon": false,
+  "theme.shadows": false,
+  "bar.flatButtons": false,
+  "bar.media.monochrome": false,
+  "powermenu.labels": false,
+  "quicksettings.media.monochromeIcon": false,
+  "osd.progress.vertical": false
+}
+

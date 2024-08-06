@@ -1,5 +1,3 @@
-local icons = require("lazyvim.config").icons
-
 return {
   {
     "folke/noice.nvim",

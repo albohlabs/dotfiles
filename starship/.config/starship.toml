@@ -1,37 +1,8 @@
-[character]
-success_symbol = "[\uf054](white)" # 
-vicmd_symbol = "[\ue62b](white)"   # 
-error_symbol = "[\uf467](red)"     # 
-
-[git_status]
-format = '([$all_status]($style))'
-conflicted = "([⚠️ $count](bold red) )"
-ahead = "([⟫$count])"
-behind = "([⟪$count])"
-stashed = "([↪ $count](bold red)) "
-modified = "([ $count](bold yellow) )"
-staged = "([ $count](bold green) )"
-renamed = "([⇆ $count](vold blue) )"
-deleted = "([ $count](bold red) )"
-untracked = "([ $count](dimmed red) )"
-
-[directory]
-read_only = " 󰌾"
-# truncate_to_repo = false
-# truncation_length = 5
-# truncation_symbol = "…/"
-
-# [directory.substitutions]
-# "~/dotfiles/nvim/.config/AstroVim" = "@dotfiles/astrovim"
-# "~/dotfiles" = "@dotfiles"
-# "~/Development/nuwork/dev/backend-services" = "@nuwork/backend"
-# "~/Development/nuwork/dev/frontend" = "@nuwork/frontend"
-# "~/Development/nuwork/dev" = "@nuwork"
-# "~/Development/nuwork" = "@nuwork"
-# "~/Development" = "@dev"
-
 [username]
 disabled = true
 
 [hostname]
 disabled = true
+
+[git_metrics]
+disabled = false
