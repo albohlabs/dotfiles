@@ -1,7 +1,6 @@
 1password
 acpi
 acpid
-adw-gtk-theme
 apparmor
 aria2
 ark
@@ -22,6 +21,7 @@ biome
 blueman
 bluez-utils
 bob
+brave-bin
 brightnessctl
 btop
 btrfs-progs
@@ -61,6 +61,8 @@ doggo-bin
 dolphin
 dosfstools
 downgrade
+dprint-bin
+drawio-desktop-bin
 duf
 dunst
 e2fsprogs
@@ -71,6 +73,7 @@ endeavour
 eslint_d
 evince
 exfatprogs
+expect
 eza
 f2fs-tools
 fastfetch
@@ -83,6 +86,7 @@ firefox
 firefox-developer-edition
 fish
 fprintd
+freetube-bin
 gamemode
 gdm
 gedit
@@ -184,7 +188,7 @@ libpamac-flatpak-plugin
 libreoffice-still
 libva-mesa-driver
 libva-vdpau-driver
-linux69
+linux610
 lnav
 logrotate
 lollypop
@@ -229,7 +233,6 @@ mkinitcpio-openswap
 modemmanager
 mplayer
 mpv
-musikcube
 nano
 nano-syntax-highlighting
 nautilus
@@ -270,6 +273,7 @@ papirus-maia-icon-theme
 parallel
 pavucontrol
 perl
+perl-image-exiftool
 pipewire-jack
 plymouth-theme-manjaro
 podman
@@ -280,7 +284,9 @@ polkit-kde-agent
 postgresql
 power-profiles-daemon
 prettierd
+proton-mail-bin
 proton-vpn-gtk-app
+protonmail-bridge
 python-pyamdgpuinfo
 qbittorrent-enhanced-qt5
 qt5-graphicaleffects
@@ -309,6 +315,7 @@ slurp
 snapshot
 sof-firmware
 spectre-meltdown-checker
+spotube-bin
 sptlrx-bin
 sqlfluff
 sqlx-cli
@@ -360,7 +367,7 @@ vulkan-intel
 vulkan-radeon
 waybar
 webapp-manager
-wezterm
+wezterm-git
 wf-recorder
 wget
 which
