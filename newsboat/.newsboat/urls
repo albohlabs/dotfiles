@@ -185,6 +185,7 @@ https://brandur.org/articles.atom "tech"
 https://thenewobjective.com/feed.xml "tech"
 https://feeds.pinboard.in/rss/popular "tech" "~Pinboard"
 https://dotfyle.com/this-week-in-neovim/rss.xml "tech"
+https://xeiaso.net/blog.rss "tech"
 
 "query:🟢 Stuff1:tags # \"stuff01\""
 https://tinierklaertsichdiewelt.wordpress.com/feed/ "stuff01"
