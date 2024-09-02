@@ -36,6 +36,7 @@ chaotic-mirrorlist
 chromium
 cliphist
 collision
+conan
 copilot-cli-bin
 coreutils
 cpupower
@@ -298,7 +299,7 @@ qt5ct
 qt6ct
 quadrapassel
 reiserfsprogs
-rofi-lbonn-wayland-git
+rofi-wayland
 rsync
 rust-analyzer
 rustrover

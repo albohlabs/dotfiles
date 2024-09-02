@@ -14,7 +14,7 @@
 ]
 "cargo-expand 1.0.90 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-expand"]
 "cargo-geiger 0.11.7 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-geiger"]
-"cargo-update 14.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = [
+"cargo-update 14.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = [
     "cargo-install-update",
     "cargo-install-update-config",
 ]
@@ -24,8 +24,8 @@
     "git-cliff-completions",
     "git-cliff-mangen",
 ]
-"just 1.34.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["just"]
-"rustlings 6.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["rustlings"]
+"just 1.35.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["just"]
+"rustlings 6.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["rustlings"]
 "sqlx-cli 0.8.1 (registry+https://github.com/rust-lang/crates.io-index)" = [
     "cargo-sqlx",
     "sqlx",
