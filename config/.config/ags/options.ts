@@ -72,10 +72,10 @@ const options = mkOptions(OPTIONS, {
         // "messages",
       ]),
       center: opt<Array<BarWidget>>([
-        "expander",
+        // "expander",
         // "roundedAngleStart",
         "date",
-        "media",
+        // "media",
         // "roundedAngleEnd",
       ]),
       end: opt<Array<BarWidget>>([
