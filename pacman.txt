@@ -306,7 +306,7 @@ rustrover
 rustup
 rygel
 s-nail
-safeeyes-git
+safeeyes
 sddm
 seahorse
 shellcheck-bin
