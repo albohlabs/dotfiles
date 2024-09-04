@@ -1,4 +1,4 @@
-##  █████╗ ██╗     ██╗ █████╗ ███████╗
+#  █████╗ ██╗     ██╗ █████╗ ███████╗
 # ██╔══██╗██║     ██║██╔══██╗██╔════╝
 # ███████║██║     ██║███████║███████╗
 # ██╔══██║██║     ██║██╔══██║╚════██║
@@ -40,22 +40,30 @@ alias j just
 
 alias gnome-control-center "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
 
-abbr weather "curl -s wttr.in/Leipzig | grep -v Follow"
+abbr weather curl -s wttr.in/Leipzig | grep -v Follow
 
 # systemctl
-abbr su "systemctl --user"
-abbr ss "command systemctl status"
-abbr sl "systemctl --type service --state running"
-abbr slu "systemctl --user --type service --state running"
-abbr se "sudo systemctl enable --now"
-abbr sd "sudo systemctl disable --now"
-abbr sr "sudo systemctl restart"
-abbr so "sudo systemctl stop"
-abbr sa "sudo systemctl start"
-abbr sf "systemctl --failed --all"
+abbr su systemctl --user
+abbr ss command systemctl status
+abbr sl systemctl --type service --state running
+abbr slu systemctl --user --type service --state running
+abbr se sudo systemctl enable --now
+abbr sd sudo systemctl disable --now
+abbr sr sudo systemctl restart
+abbr so sudo systemctl stop
+abbr sa sudo systemctl start
+abbr sf systemctl --failed --all
 
 # journalctl
-abbr jb "journalctl -b"
-abbr jf "journalctl --follow"
-abbr jg "journalctl -b --grep"
-abbr ju "journalctl --unit"
+abbr jb journalctl -b
+abbr jbe journalctl -b -p err
+abbr jf journalctl --follow
+abbr jg journalctl -b --grep
+abbr ju journalctl --unit
+
+abbr ipv4 ip addr show | grep 'inet ' | grep -v '127.0.0.1' | cut -d' ' -f6 | cut -d/ -f1
+abbr ipv6 ip addr show | grep 'inet6 ' | cut -d ' ' -f6 | sed -n 2p
+
+abbr yeet sudo pacman -Rns
+
+abbr daty date +%Y-%m-%d

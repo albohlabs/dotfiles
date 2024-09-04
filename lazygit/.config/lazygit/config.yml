@@ -4,6 +4,33 @@ gui:
   nerdFontsVersion: "3"
   timeFormat: 02 Jan 06 15:04 MST
 
+  # https://github.com/folke/tokyonight.nvim/blob/main/extras/lazygit/tokyonight_day.yml
+  theme:
+    activeBorderColor:
+      - "#b15c00"
+      - "bold"
+    inactiveBorderColor:
+      - "#4094a3"
+    searchingActiveBorderColor:
+      - "#b15c00"
+      - "bold"
+    optionsTextColor:
+      - "#2e7de9"
+    selectedLineBgColor:
+      - "#b7c1e3"
+    cherryPickedCommitFgColor:
+      - "#2e7de9"
+    cherryPickedCommitBgColor:
+      - "#9854f1"
+    markedBaseCommitFgColor:
+      - "#2e7de9"
+    markedBaseCommitBgColor:
+      - "#8c6c3e"
+    unstagedChangesColor:
+      - "#c64343"
+    defaultFgColor:
+      - "#3760bf"
+
 git:
   paging:
     colorArg: always

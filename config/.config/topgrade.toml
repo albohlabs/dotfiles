@@ -58,7 +58,7 @@
 no_self_update = true
 
 [git]
-repos = ["~/Development/tokyonight.nvim/"]
+repos = ["~/Development/tokyonight.nvim/", "~/Development/Hydra.nvim/"]
 #max_concurrency = 5
 # Additional git repositories to pull
 

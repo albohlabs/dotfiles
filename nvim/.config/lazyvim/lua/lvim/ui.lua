@@ -1,3 +1,5 @@
+local icons = require("lazyvim.config").icons
+
 return {
   {
     "folke/noice.nvim",
@@ -54,6 +56,29 @@ return {
       -- https://github.com/nvim-lualine/lualine.nvim#available-options
       sections = {
         lualine_a = {},
+        lualine_b = { "branch" },
+        lualine_c = {
+          { "filename", file_status = false, path = 4 },
+          {
+            "diagnostics",
+            symbols = {
+              error = icons.diagnostics.Error,
+              warn = icons.diagnostics.Warn,
+              info = icons.diagnostics.Info,
+              hint = icons.diagnostics.Hint,
+            },
+          },
+        },
+        lualine_x = {
+          {
+            "diff",
+            symbols = {
+              added = icons.git.added,
+              modified = icons.git.modified,
+              removed = icons.git.removed,
+            },
+          },
+        },
         lualine_y = {},
         lualine_z = {},
       },

@@ -35,6 +35,7 @@ const classToIcons = {
   rofi: "",
   Spotify: "󰓇",
   spotube: "󰓇",
+  steam: "",
   vlc: "󰕼",
   "draw.io": "󰇟",
   "org.qbittorrent.qBittorrent": "",

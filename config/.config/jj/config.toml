@@ -2,8 +2,8 @@
 email = "github@alboh.de"
 name = "alboh"
 
-# [core]
-# fsmonitor = 'watchman'
+[core]
+fsmonitor = 'watchman'
 
 # [signing]
 # sign-all = true

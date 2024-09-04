@@ -16,7 +16,7 @@ prepopulate-query-feeds yes
 # -- Notifications ---------------------------------------------------------------------
 notify-always yes
 notify-program notify-send
-notify-format "Newsboat: %n unread articles in %f feeds"
+notify-format "  RSS feed updated"
 
 # -- display -------------------------------------------------------------------
 
@@ -60,19 +60,8 @@ bind-key I rev-sort
 
 # -- color -------------------------------------------------------------------
 
-color background          color6     default
-color listnormal          color248   default
-color listnormal_unread   color6     default
-color listfocus           color236   color12
-color listfocus_unread    color15    color102
-color info                color248   color236
-color article             color248   default
-
-# Highlights
-
-highlight article "^(Feed|Link):.*$" color6 default bold
-highlight article "^(Title|Date|Author):.*$" color6 default bold
-highlight article "https?://[^ ]+" color10 default underline
-highlight article "\\[[0-9]+\\]" color10 default bold
-highlight article "\\[image\\ [0-9]+\\]" color10 default bold
-highlight feedlist "^─.*$" color6 color236 bold
+# https://newsboat.org/releases/2.36/docs/newsboat.html#_colors
+color info default default reverse
+color listnormal_unread yellow default
+color listfocus blue default reverse bold
+color listfocus_unread blue default reverse bold

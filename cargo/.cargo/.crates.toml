@@ -1,12 +1,10 @@
 [v1]
-"bacon 2.20.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["bacon"]
 "bunyan 0.1.9 (registry+https://github.com/rust-lang/crates.io-index)" = ["bunyan"]
 "cargo-about 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-about"]
 "cargo-audit 0.20.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-audit"]
-"cargo-binstall 1.10.3 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-binstall"]
 "cargo-check 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-check"]
 "cargo-deny 0.16.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-deny"]
-"cargo-edit 0.12.3 (registry+https://github.com/rust-lang/crates.io-index)" = [
+"cargo-edit 0.13.0 (registry+https://github.com/rust-lang/crates.io-index)" = [
     "cargo-add",
     "cargo-rm",
     "cargo-set-version",
@@ -14,19 +12,21 @@
 ]
 "cargo-expand 1.0.90 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-expand"]
 "cargo-geiger 0.11.7 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-geiger"]
-"cargo-update 14.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = [
-    "cargo-install-update",
-    "cargo-install-update-config",
+"rustlings 6.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["rustlings"]
+"sqlx-cli 0.8.2 (registry+https://github.com/rust-lang/crates.io-index)" = [
+    "cargo-sqlx",
+    "sqlx",
 ]
-"cargo-watch 8.5.2 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-watch"]
-"git-cliff 2.5.0 (registry+https://github.com/rust-lang/crates.io-index)" = [
+"git-cliff 2.6.1 (registry+https://github.com/rust-lang/crates.io-index)" = [
     "git-cliff",
     "git-cliff-completions",
     "git-cliff-mangen",
 ]
-"just 1.35.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["just"]
-"rustlings 6.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["rustlings"]
-"sqlx-cli 0.8.1 (registry+https://github.com/rust-lang/crates.io-index)" = [
-    "cargo-sqlx",
-    "sqlx",
+"cargo-watch 8.5.3 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-watch"]
+"just 1.36.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["just"]
+"cargo-update 15.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = [
+    "cargo-install-update",
+    "cargo-install-update-config",
 ]
+"cargo-binstall 1.10.7 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-binstall"]
+"bacon 3.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["bacon"]

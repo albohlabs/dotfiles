@@ -2,6 +2,7 @@
 acpi
 acpid
 apparmor
+arch-gaming-meta
 aria2
 ark
 atuin-bin
@@ -17,7 +18,7 @@ bat
 bat-extras
 bibata-cursor-theme
 bind
-biome
+biome-bin
 blueman
 bluez-utils
 bob
@@ -69,6 +70,7 @@ dunst
 e2fsprogs
 ecryptfs-utils
 efibootmgr
+element-desktop
 emote
 endeavour
 eslint_d
@@ -88,6 +90,7 @@ firefox-developer-edition
 fish
 fprintd
 freetube-bin
+fx
 gamemode
 gdm
 gedit
@@ -105,7 +108,6 @@ gnome-chess
 gnome-clocks
 gnome-connections
 gnome-contacts
-gnome-control-center
 gnome-disk-utility
 gnome-firmware
 gnome-font-viewer
@@ -117,7 +119,6 @@ gnome-remote-desktop
 gnome-shell
 gnome-shell-extension-appindicator
 gnome-shell-extension-arc-menu
-gnome-shell-extension-custom-accent-colors
 gnome-shell-extension-dash-to-dock
 gnome-shell-extension-dash-to-panel
 gnome-shell-extension-forge
@@ -157,6 +158,8 @@ gvfs-smb
 helix
 heroic-games-launcher-bin
 htop
+hub
+hurl
 hyde-cli-git
 hypridle
 hyprland
@@ -189,8 +192,9 @@ libpamac-flatpak-plugin
 libreoffice-still
 libva-mesa-driver
 libva-vdpau-driver
-linux610
+linux611
 lnav
+localsearch
 logrotate
 lollypop
 lrzip
@@ -261,10 +265,12 @@ nwg-displays
 nwg-look
 oh-my-zsh-git
 ollama
+onefetch
 openresolv
 openssh
 os-prober
 otf-hasklig-nerd
+otf-san-francisco
 p7zip
 pacman-contrib
 pamac-gnome-integration
@@ -285,7 +291,6 @@ polkit-kde-agent
 postgresql
 power-profiles-daemon
 prettierd
-proton-mail-bin
 proton-vpn-gtk-app
 protonmail-bridge
 python-pyamdgpuinfo
@@ -299,6 +304,7 @@ qt5ct
 qt6ct
 quadrapassel
 reiserfsprogs
+retroarch
 rofi-wayland
 rsync
 rust-analyzer
@@ -309,6 +315,7 @@ s-nail
 safeeyes
 sddm
 seahorse
+sesh-bin
 shellcheck-bin
 signal-desktop
 simple-scan
@@ -318,6 +325,7 @@ sof-firmware
 spectre-meltdown-checker
 spotube-bin
 sptlrx-bin
+sq-bin
 sqlfluff
 sqlx-cli
 squashfs-tools
@@ -346,7 +354,6 @@ topgrade-bin
 torbrowser-launcher
 totem
 touche
-tracker3-miners
 tree-sitter
 tree-sitter-cli
 ttf-dejavu
@@ -366,6 +373,7 @@ vim
 visual-studio-code-bin
 vulkan-intel
 vulkan-radeon
+watchman-bin
 waybar
 webapp-manager
 wezterm-git

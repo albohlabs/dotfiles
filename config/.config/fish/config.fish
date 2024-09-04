@@ -40,5 +40,3 @@ set -x MANPAGER "nvim +Man!"
 
 # print very large env variables
 # set -xL | string match -r '.{1024,}'
-
-zoxide init fish | source
