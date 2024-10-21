@@ -1,0 +1,94 @@
+{
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "theme.font.weight": 400,
+  "bar.workspaces.ignored": "(-\\d+)",
+  "bar.workspaces.showWsIcons": false,
+  "bar.workspaces.show_numbered": false,
+  "bar.workspaces.workspaceIconMap": {},
+  "bar.workspaces.show_icons": true,
+  "notifications.position": "top right",
+  "theme.font.size": "0.8rem",
+  "theme.font.name": "Hasklug Nerd Font Mono",
+  "terminal": "wezterm",
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces"
+      ],
+      "middle": [
+        "media",
+        "clock",
+        "notifications"
+      ],
+      "right": [
+        "volume",
+        "systray",
+        "battery"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces"
+      ],
+      "middle": [
+        "clock"
+      ],
+      "right": [
+        "volume"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces"
+      ],
+      "middle": [
+        "clock"
+      ],
+      "right": [
+        "volume"
+      ]
+    }
+  },
+  "theme.bar.outer_spacing": "0em",
+  "bar.workspaces.workspaces": 0,
+  "bar.bluetooth.label": false,
+  "bar.battery.hideLabelWhenFull": true,
+  "bar.clock.format": "%H:%M %d.%m",
+  "bar.notifications.show_total": true,
+  "bar.notifications.hideCountWhenZero": true,
+  "bar.network.label": false,
+  "menus.clock.weather.enabled": false,
+  "menus.dashboard.shortcuts.enabled": true,
+  "menus.dashboard.directories.enabled": false,
+  "menus.dashboard.controls.enabled": false,
+  "menus.dashboard.powermenu.avatar.image": "/home/dpf/Pictures/avatars-ape-t500x500.jpg",
+  "theme.osd.enable": true,
+  "theme.bar.buttons.workspaces.fontSize": "1em",
+  "theme.bar.buttons.workspaces.enableBorder": false,
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "bash -c \"XDG_CURRENT_DESKTOP=GNOME gnome-control-center\"",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Settings",
+  "menus.dashboard.shortcuts.left.shortcut2.command": "bash -c \"$HOME/.local/share/bin//rofilaunch.sh f\"",
+  "menus.dashboard.shortcuts.left.shortcut4.command": "bash -c \"$HOME/.local/share/bin//rofilaunch.sh d\"",
+  "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Folder",
+  "menus.dashboard.shortcuts.left.shortcut2.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut3.tooltip": "Windows",
+  "menus.dashboard.shortcuts.left.shortcut3.command": "bash -c \"$HOME/.local/share/bin//rofilaunch.sh w\"",
+  "menus.dashboard.shortcuts.left.shortcut3.icon": "",
+  "bar.clock.showIcon": true,
+  "bar.workspaces.numbered_active_indicator": "underline",
+  "theme.bar.buttons.workspaces.smartHighlight": true,
+  "theme.bar.location": "top",
+  "bar.systray.ignore": [
+    "thunderbird-beta"
+  ],
+  "bar.workspaces.hideUnoccupied": true,
+  "bar.workspaces.showAllActive": true,
+  "bar.workspaces.showApplicationIcons": true,
+  "bar.workspaces.applicationIconMap": {},
+  "bar.workspaces.spacing": 1.6,
+  "bar.workspaces.applicationIconOncePerWorkspace": true
+}
