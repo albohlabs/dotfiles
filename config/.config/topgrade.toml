@@ -6,10 +6,11 @@
 
 [misc]
 # Don't ask for confirmations
-#assume_yes = true
+assume_yes = true
 
 # Disable specific steps - same options as the command line flag
 #disable = ["system", "emacs"]
+disable = ["poetry", "containers", "vscode"]
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]
@@ -49,7 +50,7 @@
 # display_time = true
 
 # Cleanup temporary or old files
-#cleanup = true
+cleanup = true
 
 # Skip sending a notification at the end of a run
 #skip_notify = true
@@ -114,7 +115,7 @@ arch_package_manager = "yay"
 
 [firmware]
 # Offer to update firmware; if false just check for and display available updates
-#upgrade = true
+upgrade = true
 
 [flatpak]
 # Use sudo for updating the system-wide installation
