@@ -59,7 +59,7 @@ cleanup = true
 no_self_update = true
 
 [git]
-repos = ["~/Development/tokyonight.nvim/", "~/Development/Hydra.nvim/"]
+repos = ["~/Development/tokyonight.nvim/", "~/Development/HyperPanel/"]
 #max_concurrency = 5
 # Additional git repositories to pull
 
