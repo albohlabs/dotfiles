@@ -1,4 +1,5 @@
 1password
+1password-cli
 acpi
 acpid
 apparmor
@@ -9,8 +10,9 @@ atuin-bin
 aws-cdk
 aws-cli-v2
 aws-sam-cli-bin
-aylurs-gtk-shell
+aylurs-gtk-shell-git
 b43-fwcutter
+backrest
 baobab
 base
 base-devel
@@ -74,6 +76,7 @@ element-desktop
 emote
 endeavour
 eslint_d
+etcher-bin
 evince
 exfatprogs
 expect
@@ -139,6 +142,7 @@ gnome-user-share
 gnome-weather
 gnuchess
 golangci-lint-bin
+gpu-screen-recorder-git
 grilo-plugins
 grimblast-git
 grub
@@ -236,6 +240,8 @@ mhwd-db
 mise-bin
 mkinitcpio-openswap
 modemmanager
+mpd
+mpdris2
 mplayer
 mpv
 nano
@@ -243,6 +249,7 @@ nano-syntax-highlighting
 nautilus
 nautilus-admin
 nautilus-empty-file
+ncmpcpp
 network-manager-applet
 network-manager-sstp
 networkmanager
@@ -291,6 +298,7 @@ polkit-kde-agent
 postgresql
 power-profiles-daemon
 prettierd
+proton-mail
 proton-vpn-gtk-app
 protonmail-bridge
 python-pyamdgpuinfo
@@ -304,7 +312,7 @@ qt5ct
 qt6ct
 quadrapassel
 reiserfsprogs
-retroarch
+rmpc
 rofi-wayland
 rsync
 rust-analyzer
@@ -321,6 +329,7 @@ signal-desktop
 simple-scan
 slurp
 snapshot
+snes9x
 sof-firmware
 spectre-meltdown-checker
 spotube-bin
@@ -333,6 +342,7 @@ sshpass
 starship
 steam
 stow
+strace
 stylua
 sudo
 sushi
