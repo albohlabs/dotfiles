@@ -1,0 +1,13 @@
+/home/dpf/.cache
+/home/dpf/.bun
+/home/dpf/ollama_models
+/home/dpf/.local/share/mise/installs/
+/home/dpf/.cargo
+/home/dpf/.eclipse
+/home/dpf/.conan2
+/home/dpf/.java
+/home/dpf/.npm
+/home/dpf/.rustup
+/home/dpf/.vscode
+/home/dpf/.yarn
+/home/dpf/.local/state
