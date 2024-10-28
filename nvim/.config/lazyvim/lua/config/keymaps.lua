@@ -85,3 +85,23 @@ vim.keymap.set("n", "<esc>", function()
 
   close_all_floating_windows()
 end)
+
+-- DiffView
+DiffViewToggle = function()
+  local lib = require("diffview.lib")
+  local view = lib.get_current_view()
+  if view then
+    -- Current tabpage is a Diffview; close it
+    vim.cmd.DiffviewClose()
+  else
+    -- No open Diffview exists: open a new one
+    vim.cmd.DiffviewOpen()
+  end
+end
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>gd",
+  "<cmd>lua DiffViewToggle()<CR>",
+  { noremap = true, silent = true, desc = "Toggle DiffView" }
+)
