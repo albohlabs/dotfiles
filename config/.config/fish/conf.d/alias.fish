@@ -67,3 +67,6 @@ abbr ipv6 ip addr show | grep 'inet6 ' | cut -d ' ' -f6 | sed -n 2p
 abbr yeet sudo pacman -Rns
 
 abbr daty date +%Y-%m-%d
+
+# get password from 1password-cli
+abbr backup "op item get backrest --reveal --format json | jq .fields[0].value -r | restic -r /run/media/dpf/Backup/ backup ~ --exclude-file=/home/dpf/dotfiles/restic-excludes.txt --tag plan:manual --tag created-by:machine"

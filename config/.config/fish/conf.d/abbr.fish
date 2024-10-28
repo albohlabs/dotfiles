@@ -56,13 +56,9 @@ abbr "....." "cd ../../../../"
 abbr "......" "cd ../../../../../"
 abbr "......." "cd ../../../../../../"
 
-abbr l "lsd  --group-dirs first -A"
-abbr ll "lsd  --group-dirs first -Al"
-abbr lt "lsd  --group-dirs last -A --tree"
-# -A, --almost-all Do not list implied . and ..
-# -l, --long       Display extended file metadata as a table
-# -F, --classify   Append indicator (one of */=>@|) at the end of the file names
-abbr tree "lsd -AF --tree"
+abbr l eza -A --group-directories-first
+abbr ll eza -F -l -A --icons --group-directories-first
+abbr tree eza -A --tree --icons
 
 abbr lsvim 'tmux list-panes -a -F "#{session_name} #{command} #{pane_pid} #{pane_title} #{window_name} #{pane_id} #{session_path}" | grep nvim'
 
