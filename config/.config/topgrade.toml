@@ -6,7 +6,7 @@
 
 [misc]
 # Don't ask for confirmations
-assume_yes = true
+# assume_yes = true
 
 # Disable specific steps - same options as the command line flag
 #disable = ["system", "emacs"]
@@ -59,7 +59,11 @@ cleanup = true
 no_self_update = true
 
 [git]
-repos = ["~/Development/tokyonight.nvim/", "~/Development/HyperPanel/"]
+repos = [
+  "~/Development/tokyonight.nvim/",
+  "~/Development/HyperPanel/",
+  "~/Development/firefox-csshacks/",
+]
 #max_concurrency = 5
 # Additional git repositories to pull
 
