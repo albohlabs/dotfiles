@@ -38,6 +38,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCLksRXfBiEITZMUo2ssjSdA "te
 https://www.youtube.com/feeds/videos.xml?channel_id=UCZ_EWaQZCZuGGfnuqUoHujw "tech.videos" "~Hello Rust!"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCfX55Sx5hEFjoC3cNs6mCUQ "tech.videos" "~The Linux Foundation"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCD9CsJAoFiFjFWaw-S2e6Hg "tech.videos" "~Orhun Parmaksız"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCR3gXcme1HMK7_TrUaNZOqw "tech.videos" "~EuroRust"
 
 
 
@@ -227,7 +228,6 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCOxqrVVk0zX0yY3K5rZqHZQ "yo
 https://www.youtube.com/feeds/videos.xml?channel_id=UCP5tjEmvPItGyLhmjdwP7Ww "youtube" "~RealLifeLore"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCQM428Hwrvxla8DCgjGONSQ "youtube" "~JavaScript Conferences by GitNation"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCQsrJdD3B9KA-qWCtJxKHgg "youtube" "~Demokratieforschung"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCR3gXcme1HMK7_TrUaNZOqw "youtube" "~EuroRust"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCR7sJuN2-oqpd7guPX7cYgw "youtube" "~Steffen Geyer"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCRDEsZDDhVhtHLi0L8-5fow "youtube" "~Paul Lewis"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCRFPwbzJ4FN4ZkTJVhdbSeg "youtube" "~Sukini"
@@ -731,6 +731,7 @@ https://headphonecommute.com/feed/ "Music"
 http://lowlightmixes.blogspot.com/feeds/posts/default "Music"
 https://www.orbmag.com/feed/ "Music"
 https://datacide-magazine.com/feed/ "Music"
+https://canthisevenbecalledmusic.com/feed/ "Music"
 
 "query:🟢 Rust:tags # \"rust\""
 https://this-week-in-rust.org/atom.xml "rust"
