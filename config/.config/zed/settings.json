@@ -1,0 +1,121 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-20240620"
+    },
+    "version": "2"
+  },
+  "theme": {
+    "dark": "Gruvbox Dark",
+    "light": "Tokyo Night Light"
+  },
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "ui_font_family": "Hasklug Nerd Font",
+  "buffer_font_size": 14,
+  "buffer_font_family": "Hasklug Nerd Font",
+  "relative_line_numbers": true,
+  "show_inline_completions": true,
+  "inlay_hints": {
+    "enabled": true
+  },
+  "tab_bar": {
+    // "show_nav_history_buttons": false
+    "show": false
+  },
+  "cursor_blink": false,
+  "vertical_scroll_margin": 0,
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": false
+  },
+  "semantic_index": {
+    "enabled": true
+  },
+  "vim": {
+    "use_system_clipboard": "always",
+    "use_smartcase_find": true
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "show_whitespaces": "selection",
+  "terminal": {
+    "font_size": 12,
+    // This is to render graphics correctly, see https://github.com/zed-industries/zed/issues/15542
+    "line_height": "standard",
+    "button": false,
+    "working_directory": "current_project_directory",
+    "env": {
+      "ZED": "1"
+    },
+    "shell": {
+      "program": "fish"
+    }
+  },
+  "languages": {
+    "Rust": {
+      "format_on_save": "on"
+    },
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      }
+    },
+    "TSX": {
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      }
+    }
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "binary": {
+        "path_lookup": true
+      },
+      "initialization_options": {
+        "rustfmt": {
+          "overrideCommand": [
+            "rustup",
+            "run",
+            "nightly",
+            "--",
+            "rustfmt",
+            "--edition",
+            "2018",
+            "--"
+          ]
+        },
+        "check": {
+          "extraArgs": []
+        },
+        "checkOnSave": {
+          "command": "clippy"
+        }
+      }
+    }
+  },
+  "indent_guides": {
+    "coloring": "indent_aware"
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "preferred_line_length": 100,
+  "soft_wrap": "none",
+  "features": {
+    "inline_completion_provider": "copilot"
+  }
+}

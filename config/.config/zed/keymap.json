@@ -1,0 +1,160 @@
+[
+  // https://github.com/zed-industries/zed/blob/main/assets/keymaps/vim.json
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePrevItem",
+
+      // Window mode
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-shift-h": ["workspace::SwapPaneInDirection", "Left"],
+      "ctrl-shift-l": ["workspace::SwapPaneInDirection", "Right"],
+      "ctrl-shift-k": ["workspace::SwapPaneInDirection", "Up"],
+      "ctrl-shift-j": ["workspace::SwapPaneInDirection", "Down"],
+
+      "ctrl-w q": "pane::CloseActiveItem",
+      "ctrl-w s": "pane::SplitRight",
+      "ctrl-w r": "pane::SplitRight",
+      "ctrl-w v": "pane::SplitDown",
+      "ctrl-w d": "pane::SplitDown",
+
+      // Text manipulation
+      "alt-k": "editor::MoveLineUp",
+      "alt-up": "editor::MoveLineUp",
+      "alt-j": "editor::MoveLineDown",
+      "alt-down": "editor::MoveLineDown",
+
+      "shift-k": "editor::Hover",
+
+      // https://zed.dev/docs/vim#language-server
+      "g r": "editor::FindAllReferences",
+      "space shift-d": "diagnostics::Deploy",
+
+      // Diagnostics
+      "space x x": "diagnostics::Deploy", // Go to diagnostics panel
+      "[ d": "editor::GoToDiagnostic",
+      "] d": "editor::GoToPrevDiagnostic",
+
+      "space c a": "editor::ToggleCodeActions",
+      "space c r": "editor::Rename",
+      "space c f": "editor::Format",
+      "space c s": "workspace::SaveWithoutFormat",
+
+      "space g b": "editor::ToggleGitBlame",
+      "space g g": ["workspace::SendKeystrokes", "cmd-shift-` l a z y g i t enter"], // Toggle lazygit
+      "space g s": "branches::OpenRecent", // [g]it [s]witch
+      "space g h": "editor::ToggleHunkDiff",
+      "space g r": "editor::RevertSelectedHunks", // [g]it [r]evert
+      "] h": "editor::GoToHunk",
+      "[ h": "editor::GoToPrevHunk",
+
+      // buffers
+      "space b d": "pane::CloseActiveItem",
+      "space b D": "pane::CloseAllItems",
+      "space b o": "workspace::CloseInactiveTabsAndPanes",
+      "space b r": "pane::CloseItemsToTheRight",
+      "space b l": "pane::CloseItemsToTheLeft",
+      "space b p": "pane::TogglePinTab",
+
+      // Panels
+      "space e": "workspace::ToggleLeftDock",
+      // "space e": "project_panel::ToggleFocus",
+      "space d d": "workspace::CloseAllDocks",
+      "space d b": "workspace::ToggleBottomDock",
+      "space d l": "workspace::ToggleLeftDock",
+      "space d r": "workspace::ToggleRightDock",
+
+      // Terminal
+      "space t t": "workspace::NewCenterTerminal",
+
+      "space ,": "tab_switcher::Toggle",
+
+      // Toggles
+      "space u w": "editor::ToggleSoftWrap",
+      "space u l": "editor::ToggleLineNumbers",
+      "space u shift-l": "editor::ToggleRelativeLineNumbers",
+      "space u h": "editor::ToggleInlayHints",
+      "space u g": "editor::ToggleIndentGuides",
+
+      // Assistant
+      "space a i": "assistant::InlineAssist",
+      "space a /": "assistant::ToggleFocus",
+
+      // Files
+      "space n f": "workspace::NewFile",
+      "space n v": "workspace::NewFileSplitVertical",
+      "space n h": "workspace::NewFileSplitHorizontal",
+      "space n l": "language_selector::Toggle", // [n]ew [l]anguage
+
+      "space f f": "file_finder::Toggle",
+      "space space": "file_finder::Toggle",
+      "space f p": "command_palette::Toggle",
+      "space f o": "outline::Toggle",
+      "space s s": "outline::Toggle",
+      "space f s": "project_symbols::Toggle",
+      "space s g": "workspace::NewSearch",
+      "space s S": "project_symbols::Toggle",
+      "space s r": ["pane::DeploySearch", { "replace_enabled": true }], // Open search and replace for workspace
+      "space s w": ["pane::DeploySearch", { "selection_search_enabled": true }], // Open search for workspace with word under cursor
+      "space s a": "search::SelectAllMatches" // Activate multi cursor on all matches
+    }
+  },
+  {
+    "context": "Dock || Terminal || Editor",
+    "bindings": {
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
+    "context": "TabSwitcher || FileFinder || CommandPalette",
+    "bindings": {
+      "ctrl-k": "menu::SelectPrev",
+      "ctrl-j": "menu::SelectNext"
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "ctrl-j": "editor::ContextMenuNext",
+      "ctrl-k": "editor::ContextMenuPrev",
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrev"
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "f": "file_finder::Toggle",
+      "c": "zed::OpenSettings",
+      "k": "zed::OpenKeymap"
+      // put key-bindings here (in addition to above) if you want them to
+      // work when no editor exists
+      // "space f": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "OutlinePanel",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      // "h": "project_panel::CollapseSelectedEntry",
+      // "l": "project_panel::ExpandSelectedEntry",
+      // "o": "project_panel::Open",
+      // "shift-o": "project_panel::OpenWithSystem",
+      "a": "project_panel::NewFile",
+      "shift-a": "project_panel::NewDirectory",
+      "space e": "workspace::ToggleLeftDock"
+    }
+  }
+]
