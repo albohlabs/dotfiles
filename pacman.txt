@@ -169,7 +169,7 @@ hypridle
 hyprland
 hyprlock
 hyprpicker
-hyprshade
+hyprsunset-git
 iagno
 ibus
 inetutils
@@ -274,6 +274,7 @@ oh-my-zsh-git
 ollama
 onefetch
 openresolv
+opensnitch
 openssh
 os-prober
 otf-hasklig-nerd
