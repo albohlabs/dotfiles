@@ -27,9 +27,9 @@ alias vf 'fd --type f --hidden --follow --exclude .git \
    | gum filter --limit 1 --placeholder "Choose a file to open in vim" --height 15 \
    | xargs --no-run-if-empty nvim'
 alias vff 'fd --type f --hidden --follow --exclude .git \
-   | fzf-tmux -p -w 100 --reverse --preview "bat --color=always --style=numbers --line-range=:500 {}" \
+   | fzf-tmux -p -h 85% -w 60% --reverse --preview "bat --color=always --style=numbers --line-range=:500 {}" \
    | xargs --no-run-if-empty nvim'
-alias vg 'git ls-files -m --others --exclude-standard \
+alias vg 'git ls-files -m --others \
   | gum filter --limit 1 --placeholder "Choose from git ls-file" --height 15 \
   | xargs --no-run-if-empty nvim'
 
