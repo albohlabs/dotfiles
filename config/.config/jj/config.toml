@@ -43,7 +43,7 @@ lo = ["log", "-r", "overview"]
 
 [revsets]
 # log = "@ | bases | branches | curbranch::@ | @::nextbranch | downstream(@, branchesandheads)"
-log = "stack"
+# log = "stack"
 
 [revset-aliases]
 # 'bases' = 'main'
@@ -53,7 +53,7 @@ log = "stack"
 # 'curbranch' = 'latest(branches::@- & branches)'
 # 'nextbranch' = 'roots(@:: & branchesandheads)'
 overview = '@ | ancestors(immutable_heads().., 2) | trunk()'
-stack = "(trunk()-..@) | @::"
+# stack = "(trunk()-..@) | @::"
 # my-unmerged = "mine() ~ ::trunk()"
 # my-unmerged-remote = "mine() ~ ::trunk() & remote_branches()"
 # not-pushed = "remote_branches().."
