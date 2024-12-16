@@ -23,6 +23,7 @@
       ],
       "right": [
         "volume",
+        "hyprsunset",
         "systray",
         "battery"
       ]
@@ -90,5 +91,9 @@
   "bar.workspaces.showApplicationIcons": true,
   "bar.workspaces.applicationIconMap": {},
   "bar.workspaces.spacing": 1.6,
-  "bar.workspaces.applicationIconOncePerWorkspace": true
+  "bar.workspaces.applicationIconOncePerWorkspace": true,
+  "bar.workspaces.applicationIconEmptyWorkspace": "",
+  "bar.workspaces.applicationIconFallback": "",
+  "bar.customModules.hyprsunset.label": false,
+  "hyprpanel.restartCommand": "agsv1 -q; agsv1"
 }
