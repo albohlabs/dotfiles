@@ -1,11 +1,12 @@
 local icons = require("lazyvim.config").icons
 
 return {
+  { "akinsho/bufferline.nvim", enabled = false },
   {
     "folke/noice.nvim",
     opts = function(_, opts)
       opts.debug = false
-
+      opts.routes = opts.routes or {}
       table.insert(opts.routes, {
         filter = {
           event = "notify",
@@ -47,6 +48,7 @@ return {
           end)
         end,
       })
+      return opts
     end,
   },
 
@@ -83,20 +85,5 @@ return {
         lualine_z = {},
       },
     },
-  },
-
-  {
-    "folke/zen-mode.nvim",
-    cmd = "ZenMode",
-    opts = {
-      window = { backdrop = 0.7 },
-      plugins = {
-        -- gitsigns = { enabled = true },
-        -- tmux = { enabled = vim.env.TMUX ~= nil },
-        -- kitty = { enabled = true, font = "+2" },
-        -- wezterm = { enabled = true, font = "+2" },
-      },
-    },
-    keys = { { "<leader>Z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
   },
 }
