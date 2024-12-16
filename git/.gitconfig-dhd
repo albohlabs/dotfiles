@@ -1,7 +1,4 @@
 [user]
   name = Daniel_Pfefferkorn
-  email = dp@dhddigital.de
+  email = dp@dhd-audio.de
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFQ9BtDzYgQv1vse+XLSLX2Jrd218eSjrn6wnliahxcw
-
-[maintenance]
-  repo = /home/dpf/Development/dhd

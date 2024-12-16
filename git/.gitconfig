@@ -4,50 +4,20 @@
 [gpg "ssh"]
 	program = /opt/1Password/op-ssh-sign
 
-[includeIf "gitdir:~/Development/alboh"]
+[includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
   path = .gitconfig-albohlabs
 
-[includeIf "gitdir:~/Development/dhd"]
+[includeIf "hasconfig:remote.*.url:git@gitlab.intern.dhd.ai:*/**"]
   path = .gitconfig-dhd
 
 [commit]
   gpgsign = true
 
 [rebase]
-  autosquash = true
+  autoStash = true
 
 [merge]
-	conflictStyle = zdiff3
-  summary = true
-  tool = vscode
-
-[mergetool]
-  keepbackup = true
-  prompt = false
-
-[mergetool "vscode"]
-  cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
-
-# https://github.com/dandavison/delta
-[delta]
-  navigate = true    # use n and N to move between diff sections
-  light = false
-
-  syntax-theme = Nord
-  features = side-by-side line-numbers decorations
-
-  whitespace-error-style = 22 reverse
-
-[delta "decorations"]
-  commit-decoration-style = bold yellow box ul
-  file-style = bold yellow ul
-  file-decoration-style = none
-
-[interactive]
-	diffFilter = diff-so-fancy --patch
-
-[add.interactive]
-  useBuiltin = false # required for git 2.37.0
+	conflictStyle = diff3
 
 [branch]
   autosetuprebase = always
@@ -58,14 +28,8 @@
   followTags = true
 	autoSetupRemote = true
 
-[stash]
-  showPatch = true
-
 [pretty]
   cmedium="format:%C(auto,yellow)commit %H%C(auto,reset)%nCommit:     %cn <%ce>%nCommitDate: %cd (%cr)%n%n%w(0,4,4)%s%n%+b"
-
-[format]
-  pretty=cmedium
 
 [init]
   defaultBranch = main
@@ -73,17 +37,6 @@
 [fetch]
   prune = true
   
-[difftool]
-  prompt = false
-
-[pager]
-  difftool = true
-
-[filter "media"]
-  clean = git media clean %f
-  smudge = git media smudge %f
-  required = true
-
 [filter "lfs"]
   required = true
   clean = git-lfs clean -- %f
@@ -99,7 +52,20 @@
   # [default] space-before-tab: looks for spaces before tabs at the beginning of a line
   whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
-	pager = diff-so-fancy | less --tabs=4 -RF
+	pager = delta
+
+[include]
+path = ~/Development/tokyonight.nvim/extras/delta/tokyonight_day.gitconfig
+
+[delta]
+navigate = true    # use n and N to move between diff sections
+light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+side-by-side = false
+line-numbers = true
+syntax-theme = tokyonight_day
+
+[interactive]
+	diffFilter = delta --color-only
 
 [url "git@github.com:"]
   insteadof = "gh:"
@@ -118,23 +84,7 @@
   pushinsteadof = "git://gist.github.com/"
 
 [color]
-  status = auto
-  branch = auto
-  interactive = auto
 	ui = true
-  pager = true
-
-[help]
-  autocorrect = 1
-
-[jump]
-	grepCmd = ag --column
-
-[rerere]
-	enabled = true # remembers how you resolved merge conflicts during a git rebase and automatically resolves conflicts for you when it can
-
-[column]
-	ui = auto
 
 [include]
   # https://github.com/GitAlias/gitalias
