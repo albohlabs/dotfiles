@@ -2,14 +2,14 @@
 1password-cli
 acpi
 acpid
+agsv1
 apparmor
 arch-gaming-meta
 aria2
 ark
-atuin-bin
-aws-cdk
+ast-grep-bin
+atuin
 aws-cli-v2
-aws-sam-cli-bin
 aylurs-gtk-shell-git
 b43-fwcutter
 backrest
@@ -33,7 +33,6 @@ bun-bin
 bzip2
 cargo-lambda-bin
 cargo-nextest
-cava
 chaotic-keyring
 chaotic-mirrorlist
 chromium
@@ -42,6 +41,7 @@ collision
 conan
 copilot-cli-bin
 coreutils
+cpio
 cpupower
 cronie
 cryptsetup
@@ -97,6 +97,7 @@ fx
 gamemode
 gdm
 gedit
+get
 git-delta
 github-cli
 glibc-locales
@@ -141,6 +142,7 @@ gnome-user-docs
 gnome-user-share
 gnome-weather
 gnuchess
+go
 golangci-lint-bin
 gpu-screen-recorder-git
 grilo-plugins
@@ -161,10 +163,12 @@ gvfs-nfs
 gvfs-smb
 helix
 heroic-games-launcher-bin
+hl-log-viewer-bin
 htop
 hub
 hurl
 hyde-cli-git
+hyperfine
 hypridle
 hyprland
 hyprlock
@@ -188,15 +192,14 @@ kvantum-qt5
 lazygit
 less
 lib32-libva-vdpau-driver
-lib32-mesa-vdpau
 lib32-vulkan-intel
 lib32-vulkan-radeon
 libdvdcss
 libpamac-flatpak-plugin
 libreoffice-still
-libva-mesa-driver
 libva-vdpau-driver
 linux611
+linux612
 lnav
 localsearch
 logrotate
@@ -234,7 +237,6 @@ meld
 memtest86+
 memtest86+-efi
 mesa-utils
-mesa-vdpau
 mhwd
 mhwd-db
 mise-bin
@@ -286,6 +288,7 @@ pamac-gtk
 pamixer
 papirus-maia-icon-theme
 parallel
+paru-bin
 pavucontrol
 perl
 perl-image-exiftool
@@ -298,7 +301,6 @@ polkit-gnome
 polkit-kde-agent
 postgresql
 power-profiles-daemon
-prettierd
 proton-mail
 proton-vpn-gtk-app
 protonmail-bridge
@@ -353,13 +355,13 @@ swww
 sysfsutils
 system-config-printer
 systemd
+tealdeer
 telegram-desktop-bin
 texinfo
 the_silver_searcher
 thunderbird-beta-bin
 timeshift
 timeshift-autosnap-manjaro
-tldr
 tmux
 topgrade-bin
 torbrowser-launcher
@@ -379,6 +381,7 @@ unace
 unrar
 update-grub
 usbutils
+variety
 vi
 vim
 visual-studio-code-bin
