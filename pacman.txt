@@ -171,9 +171,11 @@ hyde-cli-git
 hyperfine
 hypridle
 hyprland
+hyprland-qtutils
 hyprlock
 hyprpicker
-hyprsunset-git
+hyprsunset
+hyprutils
 iagno
 ibus
 inetutils
