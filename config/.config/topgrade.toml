@@ -59,11 +59,7 @@ cleanup = true
 no_self_update = true
 
 [git]
-repos = [
-  "~/Development/tokyonight.nvim/",
-  "~/Development/HyperPanel/",
-  "~/Development/firefox-csshacks/",
-]
+repos = ["~/Development/tokyonight.nvim/", "~/Development/firefox-csshacks/"]
 #max_concurrency = 5
 # Additional git repositories to pull
 

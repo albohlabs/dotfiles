@@ -23,6 +23,7 @@
       ],
       "right": [
         "volume",
+        "hypridle",
         "hyprsunset",
         "systray",
         "battery"
@@ -95,5 +96,6 @@
   "bar.workspaces.applicationIconEmptyWorkspace": "",
   "bar.workspaces.applicationIconFallback": "",
   "bar.customModules.hyprsunset.label": false,
-  "hyprpanel.restartCommand": "agsv1 -q; agsv1"
+  "hyprpanel.restartCommand": "agsv1 -q; agsv1",
+  "bar.customModules.hypridle.label": false
 }

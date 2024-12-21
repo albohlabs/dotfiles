@@ -2,7 +2,7 @@
 1password-cli
 acpi
 acpid
-agsv1
+ags-hyprpanel-git
 apparmor
 arch-gaming-meta
 aria2
@@ -301,7 +301,6 @@ polkit-gnome
 polkit-kde-agent
 postgresql
 power-profiles-daemon
-proton-mail
 proton-vpn-gtk-app
 protonmail-bridge
 python-pyamdgpuinfo
