@@ -15,3 +15,7 @@ end
 vim.env.FZF_DEFAULT_OPTS = ""
 vim.g.ai_cmp = false
 vim.g.lazyvim_blink_main = true
+
+-- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/extras/ai/copilot.lua
+vim.g.copilot_proxy = "http://localhost:11435"
+vim.g.copilot_proxy_strict_ssl = false
