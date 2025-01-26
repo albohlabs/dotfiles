@@ -1,8 +1,6 @@
 -- https://wezfurlong.org/wezterm/config/lua/config/
 ---@type Wezterm
 local wezterm = require("wezterm")
-local appearance = require("appearance")
-local is_dark = appearance.is_dark()
 
 local config = wezterm.config_builder()
 
@@ -17,25 +15,35 @@ config.line_height = 1.25
 config.underline_thickness = 2
 config.underline_position = -6
 
-config.font = wezterm.font_with_fallback({
-	"Hasklug Nerd Font",
-	"FiraCode Nerd Font",
-	{ family = "Symbols Nerd Font Mono" },
-})
--- config.font = wezterm.font("SourceCodePro")
--- config.font = wezterm.font("JetbrainsMono Nerd Font")
--- config.font = wezterm.font("FiraCode Nerd Font")
+config.font = wezterm.font({ family = "Hasklug Nerd Font" })
+config.font_rules = {
+	{
+		intensity = "Bold",
+		italic = true,
+		font = wezterm.font({ family = "Maple Mono", weight = "Bold", style = "Italic" }),
+	},
+	{
+		italic = true,
+		intensity = "Half",
+		font = wezterm.font({ family = "Maple Mono", weight = "DemiBold", style = "Italic" }),
+	},
+	{
+		italic = true,
+		intensity = "Normal",
+		font = wezterm.font({ family = "Maple Mono", style = "Italic" }),
+	},
+}
 
 -- config.bold_brightens_ansi_colors = "BrightAndBold"
 
 config.set_environment_variables = {
 	-- if not working rebuild cache `bat cache --build`
-	BAT_THEME = is_dark and "tokyonight_night" or "tokyonight_day",
-	FISH_THEME = is_dark and "night" or "day",
+	BAT_THEME = "tokyonight_day",
+	FISH_THEME = "day",
 }
 
 config.color_scheme_dirs = { wezterm.home_dir .. "/development/tokyonight.nvim/extras/wezterm" }
-config.color_scheme = is_dark and "tokyonight_night" or "tokyonight_day"
+config.color_scheme = "tokyonight_day"
 
 config.window_padding = {
 	left = 2,
