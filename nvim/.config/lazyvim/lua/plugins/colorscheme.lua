@@ -4,7 +4,7 @@ return {
     lazy = true,
     -- enabled = false,
     opts = {
-      style = "moon", -- storm, moon, night, day
+      style = "day", -- storm, moon, night, day
       on_highlights = function(hl, c)
         local prompt = "#2d3149"
         hl.TelescopeNormal = { bg = c.bg_dark, fg = c.fg }

@@ -5,5 +5,11 @@ return {
   ---@type snacks.Config
   opts = {
     animate = { enabled = false },
+    scroll = { enabled = false },
+    picker = {
+      layout = {
+        -- fullscreen = true,
+      },
+    },
   },
 }
