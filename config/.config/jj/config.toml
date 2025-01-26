@@ -1,27 +1,45 @@
+"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+
 [user]
 email = "github@alboh.de"
 name = "alboh"
 
-[core]
-fsmonitor = 'watchman'
+[git]
+sign-on-push = true
+subprocess = true
 
-# [signing]
-# sign-all = true
-# backend = "gpg"
-# key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFQ9BtDzYgQv1vse+XLSLX2Jrd218eSjrn6wnliahxcw"
+[signing]
+sign-all = true
+backend = "ssh"
+key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBY6qu2rg/5QELypzwTYiUIbLlNUgMpeFSq8GYfgT40Y"
+
+[[--scope]]
+--when.repositories = ["~/Development/dhd"]
+[--scope.user]
+email = "dp@dhd-audio.de"
+name = "Daniel Pfefferkorn"
+[--scope.signing]
+key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFQ9BtDzYgQv1vse+XLSLX2Jrd218eSjrn6wnliahxcw"
+
+[signing.backends.ssh]
+program = "/opt/1Password/op-ssh-sign"
+allowed-signers = "~/.ssh/allowed_signers"
 
 [ui]
 editor = "nvim"
-
 pager = ["sh", "-c", "diff-so-fancy | less -RFX"]
 default-command = "st"
-
-# [ui.diff]
-# format = "git"
+diff-editor = ":builtin"
+show-cryptographic-signatures = true
 
 [template-aliases]
-# 'format_short_id(id)' = 'id.shortest()'
 'format_timestamp(timestamp)' = 'timestamp.ago()'
+# 'format_short_cryptographic_signature(sig)' = '''
+#   if(sig,
+#     sig.status(),
+#     "(no sig)",
+#   )
+# '''
 
 [aliases]
 n = ['new']
