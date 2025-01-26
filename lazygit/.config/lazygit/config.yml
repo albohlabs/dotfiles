@@ -1,9 +1,8 @@
 # cSpell:ignore brightblack unstaged unstage lazygit submodule repos pgup pgdown gitmoji commitizen topo maximised difftool
 gui:
-  windowSize: "half" # 'normal' | 'half' | 'full'
+  screenMode: "half" # 'normal' | 'half' | 'full'
   nerdFontsVersion: "3"
   timeFormat: 02 Jan 06 15:04 MST
-
   # https://github.com/folke/tokyonight.nvim/blob/main/extras/lazygit/tokyonight_day.yml
   theme:
     activeBorderColor:
@@ -30,7 +29,6 @@ gui:
       - "#c64343"
     defaultFgColor:
       - "#3760bf"
-
 git:
   paging:
     colorArg: always
