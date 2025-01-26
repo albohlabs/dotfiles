@@ -1,5 +1,6 @@
 1password
 1password-cli
+7zip
 acpi
 acpid
 ags-hyprpanel-git
@@ -98,6 +99,7 @@ gamemode
 gdm
 gedit
 get
+ghostty
 git-delta
 github-cli
 glibc-locales
@@ -143,6 +145,7 @@ gnome-user-share
 gnome-weather
 gnuchess
 go
+gobuster-bin
 golangci-lint-bin
 gpu-screen-recorder-git
 grilo-plugins
@@ -200,7 +203,7 @@ libdvdcss
 libpamac-flatpak-plugin
 libreoffice-still
 libva-vdpau-driver
-linux611
+linux-meta
 linux612
 lnav
 localsearch
@@ -283,7 +286,6 @@ openssh
 os-prober
 otf-hasklig-nerd
 otf-san-francisco
-p7zip
 pacman-contrib
 pamac-gnome-integration
 pamac-gtk
@@ -313,6 +315,7 @@ qt5-quickcontrols
 qt5-quickcontrols2
 qt5-wayland
 qt5ct
+qt6-virtualkeyboard
 qt6ct
 quadrapassel
 reiserfsprogs
@@ -348,6 +351,7 @@ steam
 stow
 strace
 stylua
+subfinder-bin
 sudo
 sushi
 swappy
@@ -372,6 +376,7 @@ tree-sitter
 tree-sitter-cli
 ttf-dejavu
 ttf-droid
+ttf-fira-code
 ttf-firacode-nerd
 ttf-hack
 ttf-indic-otf
@@ -381,6 +386,7 @@ udiskie
 unace
 unrar
 update-grub
+upx
 usbutils
 variety
 vi
