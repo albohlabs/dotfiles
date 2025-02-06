@@ -1,10 +1,28 @@
+"query: unread    :unread = \"yes\""
 
-"query:Unread Articles:unread = \"yes\""
+"query: Reddit    :tags # \"reddit\""
+"query: Blog      :tags # \"blog\""
+"query: Youtube   :tags # \"yt\""
+"query: Rust      :tags # \"rust\""
+"query: Neovim    :tags # \"neovim\""
+"query: Workflow  :tags # \"workflow\""
+
+"query: TechVideos :tags # \"tech.videos\"" 
+"query: MusicVideos:tags # \"music.videos\"" 
+"query: Videos    :tags # \"youtube\"" 
+"query: Github    :tags # \"github\"" 
+"query: Linux     :tags # \"Linux\""
+"query: Tech      :tags # \"tech\"" 
+"query: Stuff1    :tags # \"stuff01\""
+"query: Stuff2    :tags # \"stuff02\""
+"query: Stuff3    :tags # \"stuff03\""
+"query: Economics :tags # \"economics\"" 
+"query: Politics  :tags # \"politics\""
+"query: Philo     :tags # \"philo\"" 
 
 # https://www.youtube.com/feeds/videos.xml?channel_id=YOUR_CHANNEL_ID
 # find the channel id by looking at the source and search for itemprop="channelId"
 
-"query:🟢 TechVideos:tags # \"tech.videos\"" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UC3RKA4vunFAfrfxiJhPEplw "tech.videos" "~CodeOpinion"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCLLVlcmcCP4CUe7xSqVEnxw "tech.videos" "~ryansolid"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC74WfvCbjsgrvEEhqhDO7AQ "tech.videos" "~ybogomolov"
@@ -36,27 +54,20 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC9sLTozvg2SJme_W1in5s9Q "te
 https://www.youtube.com/feeds/videos.xml?channel_id=UCLksRXfBiEITZMUo2ssjSdA "tech.videos" "~Rust Nation UK"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCZ_EWaQZCZuGGfnuqUoHujw "tech.videos" "~Hello Rust!"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCfX55Sx5hEFjoC3cNs6mCUQ "tech.videos" "~The Linux Foundation"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCD9CsJAoFiFjFWaw-S2e6Hg "tech.videos" "~Orhun Parmaksız"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCR3gXcme1HMK7_TrUaNZOqw "tech.videos" "~EuroRust"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCNbxzUq4EKZfmp4FdJbs9OA "tech.videos" "~Nathan Stocks"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC0jzvznwtnsdXYIp415oC9g "tech.videos" "~Rust Foundation"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCmXIqVsp5QWiVDpyBP32O0Q "tech.videos"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCmXIqVsp5QWiVDpyBP32O0Q "tech.videos" "~Semicolon"
 
-
-"query:🟢 MusicVideos:tags # \"music.videos\"" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCjSJqyRtwq59W4c-x89u8uw "music.videos" "~Max Cooper"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC4hfA78X-lqiRERBZLTnLBw "music.videos" "~Aphex Twin"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC-eojuz7ovH7aW4l1izVlfw "music.videos" "~Dub FX"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC-0o65Lf1PjgLMn_SNM_-IA "music.videos" "~Planet Mu"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC0KBk7QwJpGBnVEMuiai-jg "music.videos" "~Acid Pauli"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC213K1tH6XJwHj6ZiVtLDrw "music.videos" "~The Flashbulb"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC30GX5Ka2Dr57hHQcH05snQ "music.videos" "~Tim Exile"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC6DicDItkLQ7N4ag1JS5mqg "music.videos" "~Die Antwoord"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCD-Qyrkg8ErzQGGKA6c2UEg "music.videos" "~Sebastian Mullaert"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC4hfA78X-lqiRERBZLTnLBw "music.videos" "~Aphex Twin"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCrWOkFeI_UzlBv5pWNeQ0wQ "music.videos" "~istari"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCrWcq3VjvaT6BW3kHo2vG_Q "music.videos" "~Peter Fox"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCro8RvkUIPnJQWKrC9-QDzQ "music.videos" "~Knorkator"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCtOec38GsVkdlirzi9_0aGg "music.videos" "~Ruby My Dear"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCu65lnnNSmV04YPCo-3jqHg "music.videos" "~karlmarxstadt"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCuisDAMnvHMYuLFRedMgmVw "music.videos" "~Max Cooper"
@@ -73,7 +84,6 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCIzMG_Ydi2715csQ1euoOSw "mu
 https://www.youtube.com/feeds/videos.xml?channel_id=UCff8T9tUBqqcduFAu02DfyA "music.videos" "~Marcus Henriksson"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCs5UgOYSmyGIW0Rp5vsjdkA "music.videos" "~vsnares"
 
-"query:🟢 Videos:tags # \"youtube\"" 
 https://www.youtube.com/feeds/videos.xml?channel_id=UC1yNl2E66ZzKApQdRuTQ4tw "youtube" "~Sabine Hossenfelder"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC-7Afb1Is0Bl1-7MRHt3HXQ "youtube" "~Wutpilger-Streifzüge"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCNvsIonJdJ5E4EXMa65VYpA "youtube" "~ContraPoints"
@@ -348,15 +358,51 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCynvzr-sppV3ybDOKxMcqMg "yo
 https://www.youtube.com/feeds/videos.xml?channel_id=UCzANwqVR0UKCmy_yf9W69Ng "youtube" "~Mosse Lectures"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCzBDmYcmynHX7mELvD0sWEA "youtube" "~Jesse Warden"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCzni8XZbcD1hsSPOcAMAdPA "youtube" "~Wolf-Dieter Storl"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCKTwTio3tOv713CnIcxyLhA "youtube"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCKGMHVipEvuZudhHD05FOYA "youtube" "~Simplicissimus"
 
-"query:🟢 Github:tags # \"github\"" 
+https://www.youtube.com/feeds/videos.xml?channel_id=UC0RC7CFacGKgHhnPrTl7UgQ yt "~yt/Dörner Csenge" finance
+https://www.youtube.com/feeds/videos.xml?channel_id=UC3ts8coMP645hZw9JSD3pqQ yt "~yt/Andreas Kling" programming
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4NNPgQ9sOkBjw6GlkgCylg yt "~yt/Ben Vallack" tech
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4qASCM1dcRl5NPtdso97yg yt "~yt/BLOPA DH :D" music
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8u-3rEnw9oTWp-AzAjE58g yt "~yt/Dialko" gaming
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA yt "~yt/Computerphile" tech
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9_p50tH3WmMslWRWKnM7dQ yt "~yt/Adam Ragusea" cooking
+https://www.youtube.com/feeds/videos.xml?channel_id=UCAL3JXZSzSm8AlZyD3nQdBA yt "~yt/Primitive Technology" random
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBKNuaxVlSNvIN139KplUKw yt "~yt/Vhyrro" programming neovim workflow
+https://www.youtube.com/feeds/videos.xml?channel_id=UCD6VugMZKRhSyzWEWA9W2fg yt "~yt/SsethTzeentach" gaming
+https://www.youtube.com/feeds/videos.xml?channel_id=UCDq5v10l4wkV5-ZBIJJFbzQ yt "~yt/Ethan Chlebowski" cooking
+https://www.youtube.com/feeds/videos.xml?channel_id=UCFKDEp9si4RmHFWJW1vYsMA yt "~yt/EthosLab" gaming
+https://www.youtube.com/feeds/videos.xml?channel_id=UCOvz3kkYZtCTeXKdiuMG8eg yt "~yt/MadSeasonShow" gaming
+https://www.youtube.com/feeds/videos.xml?channel_id=UCOxtz12SJHLzY2Ylo5O9jpA yt "~yt/bits & hits" music
+https://www.youtube.com/feeds/videos.xml?channel_id=UCPo9tTdY_fPVITnU0eI2Ndg yt "~yt/Jeremy Lawlilet" music
+https://www.youtube.com/feeds/videos.xml?channel_id=UCRIZtPl9nb9RiXc9btSTQNw yt "~yt/Food Wishes" cooking
+https://www.youtube.com/feeds/videos.xml?channel_id=UCS0N5baNlQWJCUrhCEo8WlA yt "~yt/Ben Eater" tech
+https://www.youtube.com/feeds/videos.xml?channel_id=UCS1TedAX9-5yRl9Tx5E2qmg yt "~yt/voxelbee" programming
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUMwY9iS8oMyWDYIe6_RmoA yt "~yt/No Boilerplate" programming rust
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUdZY_KRQndvMIPD-8_uXRw yt "~yt/eli_handle_b․wav" random
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUkRj4qoT1bsWpE_C8lZYoQ yt "~yt/ThinMatrix" programming
+https://www.youtube.com/feeds/videos.xml?channel_id=UCV0b2b07Gq1OtT8iLB2Zwhw yt "~yt/LudZip" random
+https://www.youtube.com/feeds/videos.xml?channel_id=UCW5OrUZ4SeUYkUg1XqcjFYA yt "~yt/GeoWizard" random
+https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw yt "~yt/3Blue1Brown" tech
+https://www.youtube.com/feeds/videos.xml?channel_id=UC_iD0xppBwwsrM9DegC5cQQ yt "~yt/Jon Gjengset" programming rust
+https://www.youtube.com/feeds/videos.xml?channel_id=UCaTznQhurW5AaiYPbhEA-KA yt "~yt/Molly Rocket" programming
+https://www.youtube.com/feeds/videos.xml?channel_id=UCbUx0H90I6TqUcqT0TWv9wg yt "~yt/Podel" random
+https://www.youtube.com/feeds/videos.xml?channel_id=UCl2mFZoRqjw_ELax4Yisf6w yt "~yt/Louis Rossmann" tech
+https://www.youtube.com/feeds/videos.xml?channel_id=UClOGLGPOqlAiLmOvXW5lKbw yt "~yt/MandaloreGaming" gaming
+https://www.youtube.com/feeds/videos.xml?channel_id=UCly0QRJAaJ2UGSGycOQoOdA yt "~yt/Alexander Sannikov" tech
+https://www.youtube.com/feeds/videos.xml?channel_id=UCmtyQOKKmrMVaKuRXz02jbQ yt "~yt/Sebastian Lague" programming
+https://www.youtube.com/feeds/videos.xml?channel_id=UCnaP100kTBB_WGM9IiF73yw yt "~yt/Mathilification" gaming
+https://www.youtube.com/feeds/videos.xml?channel_id=UCnr8mOKSn-UD3CgALDoqLDQ yt "~yt/LivAverageGamer" gaming
+https://www.youtube.com/feeds/videos.xml?channel_id=UCpWEeICUoxrhkjTID4j7-tw yt "~yt/Threefold" gaming
+https://www.youtube.com/feeds/videos.xml?channel_id=UCqqJQ_cXSat0KIAVfIfKkVA yt "~yt/J. Kenji López-Alt" cooking
+https://www.youtube.com/feeds/videos.xml?channel_id=UCs4fQRyl1TJvoeOdekW6lYA yt "~yt/fasterthanlime" programming rust
+https://www.youtube.com/feeds/videos.xml?channel_id=UCtAJObaoDVP24wcJEGcyWNg yt "~yt/Travelers Of Musical Dreams" music
+https://www.youtube.com/feeds/videos.xml?channel_id=UCv3mh2P-q3UCtR9-2q8B-ZA yt "~yt/The Urban Rescue Ranch" random
+https://www.youtube.com/feeds/videos.xml?channel_id=UCx6GR83AbXiSX2gesCxSPPw yt "~yt/Empyriangaming" gaming
+https://www.youtube.com/feeds/videos.xml?channel_id=UCyhnYIvIKK_--PiJXCMKxQQ yt "~yt/Joseph Anderson" gaming
+
 https://github.com/albohlabs.private.atom?token=AABH6UMRRFKC3P3C7WWSPKGAHXFH6 "github" "~github"
 
-"query:🟢 Movies:tags # \"movies\"" 
-https://scenenzbs.com/rss?t=2140&dl=1&i=44435&r=fcf890d6bd517f964316f8a558b5f9e3 "movies"
-
-"query:🟢 Linux:tags # \"Linux\""
 http://feeds.feedburner.com/tocadotux "Linux" 
 http://www.bashoneliners.com/oneliners/feeds/oneliner/ "Linux" 
 http://www.tuxmachines.org/node/feed "Linux"
@@ -377,12 +423,10 @@ https://itsfoss.com/feed/ "~It's FOSS" "Linux"
 https://archlinux.org/feeds/news/ "Linux"
 https://forum.manjaro.org/c/announcements/11.rss "Linux"
 
-"query:🟢 Tech:tags # \"tech\"" 
 https://jessewarden.com/feed "tech" 
 https://the-guild.dev/feed.xml "tech" 
 https://www.samhh.com/rss.xml "~samhh" "tech"
 https://increment.com/feed.xml "~Increment" "tech"
-https://hacks.mozilla.org/feed/ "~Mozilla Hacks" "tech"
 https://alistapart.com/main/feed/ "~A List Apart" "tech" "blogroll"
 https://lexi-lambda.github.io/feeds/all.rss.xml "tech"
 https://codersteve.dev/post/index.xml "tech"
@@ -391,7 +435,6 @@ https://juliu.is/rss.xml "~Ju Liu" "tech"
 https://www.michaelpj.com/blog/feed.xml "tech"
 https://www.snoyman.com/rss.xml "~Michael Snoyman" "tech"
 https://blog.drewolson.org/feed.xml "~Drew Olson" "tech"
-https://benhoyt.com/writings/rss.xml "~Ben Hoyt" "tech"
 https://chrispenner.ca/atom.xml "~Chris Penner" "tech"
 https://neilmitchell.blogspot.com/feeds/posts/default?alt=rss "~Neil Mitchell" "tech"
 https://jelv.is/blog/atom.xml "~Tikhon Jelvis" "tech"
@@ -455,8 +498,12 @@ https://thenewobjective.com/feed.xml "tech"
 https://feeds.pinboard.in/rss/popular "tech" "~Pinboard"
 https://dotfyle.com/this-week-in-neovim/rss.xml "tech"
 https://xeiaso.net/blog.rss "tech"
+https://xuanwo.io/index.xml tech
+https://simonwillison.net/atom/everything/ tech
 
-"query:🟢 Stuff1:tags # \"stuff01\""
+https://www.reddit.com/r/neovim/search.rss?q=self%3Atrue&restrict_sr=on&sort=top&t=week "tech"
+https://www.reddit.com/r/programming/search.rss?q=self%3Atrue&restrict_sr=on&sort=top&t=week "tech"
+
 https://tinierklaertsichdiewelt.wordpress.com/feed/ "stuff01"
 http://dietotenblog.blogspot.com/feeds/posts/default?alt=rss "stuff01"
 http://abgedichtet.org/?feed=atom "stuff01"
@@ -528,7 +575,6 @@ http://feeds.feedburner.com/alltagsforschung "stuff01"
 https://pieceoplastic.com/zk/feed/ "stuff01"
 https://gitta-peyn.de/rss/ "stuff01"
 
-"query:🟢 Stuff2:tags # \"stuff02\""
 https://pluralistic.net/feed/ "stuff02"
 https://itsa2amgrunge.com/feed/ "stuff02"
 https://geschichtedergegenwart.ch/feed/atom/ "stuff02"
@@ -592,14 +638,11 @@ https://asteriskmag.com/feed "stuff02"
 https://www.symmetrymagazine.org/feed "stuff02"
 https://www.nplusonemag.com/feed/ "stuff02"
 https://harpers.org/feed/ "stuff02"
-https://solar.lowtechmagazine.com/feeds/all-en.atom.xml "stuff02"
 http://www.publicbooks.org/feed "stuff02"
 https://www.thenewatlantis.com/feed "stuff02"
 
-"query:🟢 Economics:tags # \"economics\"" 
 https://www.nakedcapitalism.com/feed "economics"
 
-"query:🟢 Politics:tags # \"politics\""
 https://marginalrevolution.com/feed "politics" "~Marginal Revolution"
 https://www.kritiknetz.de/?format=feed&type=rss "politics"
 http://www.faz.net/rss/aktuell/feuilleton/aus-dem-maschinenraum/ "politics"
@@ -631,16 +674,11 @@ https://www.nachdenkseiten.de/?feed=rss2 "politics"
 https://www.volksverpetzer.de/feed/ "politics"
 https://knack.news/category/all/praxis/feed "politics"
 https://blog.strangerthanusual.de/feed.atom "politics"
+https://www.xn--untergrund-blttle-2qb.ch/rss/ politics
 
-"query:🟢 Rust:tags # \"rust\""
 https://this-week-in-rust.org/atom.xml "rust"
-https://fasterthanli.me/index.xml "rust"
-https://raphlinus.github.io/feed.xml "rust"
-https://matklad.github.io/feed.xml "rust"
-https://blog.burntsushi.net/index.xml "rust"
 https://blog.verbum.org/feed/ "rust"
 https://andreabergia.com/post/index.xml "rust"
-https://nnethercote.github.io/feed.xml "rust"
 https://jmmv.dev/feed.xml "rust"
 https://blog.wesleyac.com/feed.xml "rust"
 https://nereux.blog/feed.xml "rust"
@@ -648,44 +686,91 @@ https://ktkaufman03.github.io/feed.xml "rust"
 https://domwillia.ms/index.xml "rust"
 https://ricardoanderegg.com/posts/index.xml "rust"
 https://samsartor.com/atom.xml "rust"
-https://hashrust.com/rss.xml "~HashRust" "rust"
+https://hashrust.com/rss.xml "rust"
 http://cliffle.com/rss.xml "rust"
-https://zamundaaa.github.io/feed.xml "rust"
-https://faultlore.com/blah/rss.xml "rust"
-https://thesquareplanet.com/feed.xml "rust"
 https://blog.m-ou.se/index.xml "rust"
-https://raphlinus.github.io/feed.xml "rust"
-https://matklad.github.io/feed.xml "rust"
-https://limpet.net/mbrubeck/atom.xml "rust"
-https://polymonster.github.io/feed "rust"
-https://model-checking.github.io/kani-verifier-blog/feed.xml "rust"
-https://nnethercote.github.io/feed.xml "rust"
-https://billydm.github.io/atom.xml "rust"
-https://www.brandons.me/feed.xml "rust"
-https://stevedonovan.github.io/rustifications/feed.xml "rust"
-https://blog.turbo.fish/rss.xml "rust"
-https://blog.pnkfx.org/atom.xml "rust"
-https://blog.burntsushi.net/index.xml "rust"
-https://aloso.github.io/feed.xml "rust"
-https://pwy.io/feed.xml "rust"
-https://kdheepak.com/index.xml "rust"
-https://lucumr.pocoo.org/feed.atom "rust"
-https://www.ralfj.de/blog/feed.xml "rust"
-https://os.phil-opp.com/rss.xml "rust"
-https://smallcultfollowing.com/babysteps//index.xml "rust"
-https://kobzol.github.io/feed.xml "rust"
 https://fettblog.eu/feed.xml "rust"
 https://www.artificialworlds.net/blog/feed/?dontcache=true "rust"
 https://corrode.dev/rss.xml "rust"
-https://without.boats/index.xml "rust"
-https://danluu.com/atom.xml "rust"
-https://matklad.github.io/feed.xml "rust"
-https://www.ralfj.de/blog/feed.xml "rust"
-https://faultlore.com/blah/rss.xml "rust"
 https://www.evanmiller.org/news.xml "rust"
 https://blog.regehr.org/rss "rust"
+https://lobste.rs/t/rust.rss rust
 
-"query:🟢 Philo:tags # \"philo\"" 
+# Blogs
+https://nullderef.com/index.xml blog programming rust
+https://purplesyringa.moe/blog/feed.rss blog programming rust
+https://antoniosbarotsis.github.io/index.xml blog programming rust
+https://oxide.computer/blog/feed blog tech
+https://fasterthanli.me/index.xml blog programming rust
+https://nanotipsforvim.prose.sh/rss blog programming neovim
+https://blog.orhun.dev/rss.xml blog programming
+https://zamundaaa.github.io/feed.xml blog programming rust
+https://werat.dev/index.xml blog programming
+https://blog.rust-lang.org/feed.xml blog programming rust
+https://blog.rust-lang.org/inside-rust/feed.xml blog programming rust
+https://krebsonsecurity.com/feed/ blog tech
+https://hacks.mozilla.org/feed/ blog programming
+https://cdn.jwz.org/blog/feed/ blog programming
+https://worldofbs.com/rss.xml blog programming
+https://iximiuz.com/feed.rss blog programming
+https://solar.lowtechmagazine.com/posts/index.xml blog programming
+https://harshal.sheth.io/feed.xml blog programming
+https://faultlore.com/blah/rss.xml blog programming rust
+https://avi.im/blag/index.xml blog programming
+https://caseymuratori.com/blog_atom.rss blog programming
+https://blog.pragmaticengineer.com/feed/ blog tech
+https://css-tricks.com/feed/ blog programming
+https://benhoyt.com/writings/rss.xml blog programming
+https://thesquareplanet.com/feed.xml blog programming rust
+https://medium.com/feed/helsing blog programming
+https://medium.com/feed/@kelseyhightower blog programming
+https://bcantrill.dtrace.org/rss blog programming
+https://www.cppstories.com/index.xml blog programming
+https://yingtongli.me/blog/feed.xml blog programming
+https://www.internalpointers.com/rss blog programming
+https://oleksandrkvl.github.io/feed.xml blog programming
+https://marcmutz.wordpress.com/feed/ blog programming
+https://feeds.feedburner.com/rickstrahl blog programming
+https://kentcdodds.com/blog/rss.xml blog programming
+https://lexoral.com/rss.xml blog tech
+https://semaphoreci.com/feed blog tech
+https://surma.dev/index.xml blog programming
+https://neovim.io/news.xml blog programming neovim
+https://www.bigsoft.co.uk/blog/?tempskin=_rss2 blog programming
+https://250bpm.com/rss.xml blog programming
+https://blog.m-ou.se/index.xml blog programming rust
+https://raphlinus.github.io/feed.xml blog programming rust
+https://matklad.github.io/feed.xml blog programming rust
+https://limpet.net/mbrubeck/atom.xml blog programming rust
+https://polymonster.github.io/feed blog programming rust
+https://model-checking.github.io/kani-verifier-blog/feed.xml blog programming rust
+https://nnethercote.github.io/feed.xml blog programming rust
+https://ianthehenry.com/feed.xml blog programming
+https://jvns.ca/atom.xml blog programming
+https://ohadravid.github.io/index.xml blog programming
+https://www.brandons.me/feed.xml blog programming rust
+https://stevedonovan.github.io/rustifications/feed.xml blog programming rust
+https://blog.turbo.fish/rss.xml blog programming rust
+https://blog.pnkfx.org/atom.xml blog programming rust
+https://blog.burntsushi.net/index.xml blog programming rust
+https://aloso.github.io/feed.xml blog programming rust
+https://pwy.io/feed.xml blog programming rust
+https://kdheepak.com/index.xml blog programming rust
+https://lucumr.pocoo.org/feed.atom blog programming rust
+https://www.ralfj.de/blog/feed.xml blog programming rust
+https://os.phil-opp.com/rss.xml blog programming rust
+https://without.boats/index.xml blog programming rust
+https://smallcultfollowing.com/babysteps//index.xml blog programming rust
+https://kobzol.github.io/feed.xml blog programming rust
+https://danluu.com/atom.xml
+https://joshmo.hashnode.dev/can-rust-beat-javascript-in-2023/rss.xml rust
+https://blog.rust-lang.org/feed.xml rust
+https://blog.rust-lang.org/inside-rust/feed.xml rust
+https://blog.theembeddedrustacean.com/58-rust-resources-every-learner-should-know-in-2023/rss.xml rust
+https://blog.theembeddedrustacean.com/demystifying-rust-embedded-hal-split-and-constrain-methods/rss.xml rust
+
+https://www.reddit.com/r/rust/search.rss?q=self%3Atrue&restrict_sr=on&sort=top&t=week "rust"
+
 https://www.lesswrong.com/feed.xml "philo" 
 https://www.reddit.com/domain/lesswrong.com/.rss "philo" 
 https://meteuphoric.com/feed/ "philo" 
@@ -702,3 +787,698 @@ https://web.archive.org/atom.xml "philo"
 https://kill-the-newsletter.com/feeds/saai8csyfofi4n3z.xml "philo" 
 https://www.cold-takes.com/rss/ "philo" 
 
+http://antirez.com/rss stuff03
+http://bastian.rieck.me/blog/index.xml stuff03
+http://blog.fogus.me/feed/ stuff03
+http://blog.sesse.net/blog//?flav=rss stuff03
+http://boffosocko.com/kind/eat,drink/feed/ stuff03
+http://bunn.dev/feed.xml stuff03
+http://feeds.arstechnica.com/arstechnica/index stuff03
+http://feeds.feedburner.com/FunctioningForm stuff03
+http://feeds.feedburner.com/collabfund stuff03
+http://feeds.kottke.org/main stuff03
+http://fuzzyblog.io/blog/feed.xml stuff03
+http://habitatchronicles.com/feed/ stuff03
+http://rachelbythebay.com/w/atom.xml stuff03
+http://ratfactor.com/atom.xml stuff03
+http://stream.boffosocko.com/content/all?_t=rss stuff03
+http://twitchard.github.io/atom.xml stuff03
+http://www.antipope.org/charlie/blog-static/atom.xml stuff03
+http://www.righto.com/feeds/6193935694193718563/comments/default stuff03
+http://www.righto.com/feeds/posts/default stuff03
+https://8thlight.com/insights/feed/rss.xml stuff03
+https://abdulapopoola.com/feed/ stuff03
+https://acjay.com/feed/ stuff03
+https://adactio.com/articles/rss stuff03
+https://adactio.com/journal/rss stuff03
+https://adactio.com/links/rss stuff03
+https://adactio.com/notes/rss stuff03
+https://adactio.com/rss/ stuff03
+https://akkartik.name/freewheeling-apps-feed stuff03
+https://alan.norbauer.com/rss.xml stuff03
+https://alexanderell.is/index.xml stuff03
+https://alexis-lozano.com/rss.xml stuff03
+https://alexturek.com/feed.xml stuff03
+https://alexw.substack.com/feed stuff03
+https://alexwlchan.net/atom.xml stuff03
+https://alexwlchan.net/til/atom.xml stuff03
+https://alfredlua.substack.com/feed stuff03
+https://alinpanaitiu.com/index.xml stuff03
+https://alistapart.com/main/feed/ stuff03
+https://allenpike.com/feed/ stuff03
+https://amasad.me/rss stuff03
+https://amyhupe.co.uk/atom.xml stuff03
+https://amyunger.com/feed.xml stuff03
+https://ananthakumaran.in/atom.xml stuff03
+https://andrewkelley.me/rss.xml stuff03
+https://anhvn.com/feed.xml stuff03
+https://annehelen.substack.com/feed?sectionId=52487 stuff03
+https://anthonyvicino.com/feed/ stuff03
+https://aparker.io/feed/ stuff03
+https://apenwarr.ca/rss.php stuff03
+https://app.nymhq.com/writing/rss stuff03
+https://appventuretime.blog/how-to-design-software-architecture-for-startups/rss.xml stuff03
+https://ar.al/index.xml stuff03
+https://archiloque.net/blog/atom.xml stuff03
+https://architecturenotes.co/feed stuff03
+https://arne.me/book-reviews/feed.xml stuff03
+https://arne.me/feed.xml stuff03
+https://arne.me/weekly/feed.xml stuff03
+https://arslan.io/rss/ stuff03
+https://arun.is/rss.xml stuff03
+https://auren.substack.com/feed stuff03
+https://austinhenley.com/blog/feed.rss stuff03
+https://avdi.codes/feed/ stuff03
+https://avdi.codes/feed/podcast stuff03
+https://avi.im/blag/index.xml stuff03
+https://avivbenyosef.com/feed/ stuff03
+https://aworkinglibrary.com/feed/index.xml stuff03
+https://basicappleguy.com/basicappleblog?format=rss stuff03
+https://bastianallgeier.com/feed stuff03
+https://batsov.com/atom.xml stuff03
+https://ben.balter.com/feed.xml stuff03
+https://bert.org/feed.xml stuff03
+https://berthub.eu/articles/index.xml stuff03
+https://bigthink.com/feed/all stuff03
+https://bigthink.com/feed/progress stuff03
+https://bigthink.com/feed/the-well stuff03
+https://binaryigor.com/feed.xml stuff03
+https://bitfieldconsulting.com/posts?format=rss stuff03
+https://bjango.com/feed://bjango.com/rss/articles.xml stuff03
+https://blinry.org/feed/ stuff03
+https://blog.adamchalmers.com/atom.xml stuff03
+https://blog.alexewerlof.com/feed?sectionId=67726 stuff03
+https://blog.backslasher.net/feed.xml stuff03
+https://blog.carlana.net/index.xml stuff03
+https://blog.carlosgaldino.com/atom.xml stuff03
+https://blog.cryptographyengineering.com/feed/ stuff03
+https://blog.danslimmon.com/feed/ stuff03
+https://blog.dornea.nu/feed.xml stuff03
+https://blog.forcesunseen.com/feed.xml stuff03
+https://blog.frankmtaylor.com/feed/ stuff03
+https://blog.izs.me/feed/feed.xml stuff03
+https://blog.jim-nielsen.com/feed.xml stuff03
+https://blog.lawrencejones.dev/feed.xml stuff03
+https://blog.luap.info/feeds.xml stuff03
+https://blog.matt-rickard.com/feed stuff03
+https://blog.meain.io/feed.xml stuff03
+https://blog.mozilla.org/en/feed/ stuff03
+https://blog.nateliason.com/feed stuff03
+https://blog.nelhage.com/atom.xml stuff03
+https://blog.nilenso.com/atom.xml stuff03
+https://blog.orhun.dev/rss.xml stuff03
+https://blog.ovhcloud.com/feed/ stuff03
+https://blog.panic.com/feed/ stuff03
+https://blog.plerion.com/feed/ stuff03
+https://blog.polybdenum.com/feed.xml stuff03
+https://blog.pragmaticengineer.com/rss/ stuff03
+https://blog.readyset.io/rss/ stuff03
+https://blog.roblox.com/feed/ stuff03
+https://blog.separateconcerns.com/feed.atom stuff03
+https://blog.staysaasy.com/feed stuff03
+https://blog.sulami.xyz/atom.xml stuff03
+https://blog.sunfishcode.online/atom.xml stuff03
+https://blog.thea.codes/feed.xml stuff03
+https://blog.vivekpanyam.com/feed.xml stuff03
+https://blog.waleedkhan.name/feed.xml stuff03
+https://blog.warp.dev/rss.xml stuff03
+https://blog.wesleyac.com/feed.xml stuff03
+https://blog.yossarian.net/feed.xml stuff03
+https://blogs.library.duke.edu/feed/ stuff03
+https://boffosocko.com/author/chrisaldrich/feed/rss/ stuff03
+https://boffosocko.com/category/mathematics/feed/ stuff03
+https://boffosocko.com/category/microcast/feed/ stuff03
+https://boffosocko.com/category/podcast/feed/ stuff03
+https://boffosocko.com/category/science/information-theory/feed/ stuff03
+https://boffosocko.com/category/social-stream/feed/rss/ stuff03
+https://boffosocko.com/feed/ stuff03
+https://boffosocko.com/instagram.xml stuff03
+https://boffosocko.com/kind/annotation/feed/ stuff03
+https://boffosocko.com/kind/article/feed/ stuff03
+https://boffosocko.com/kind/article/feed/rss/ stuff03
+https://boffosocko.com/kind/bookmark/feed/ stuff03
+https://boffosocko.com/kind/checkin/feed/ stuff03
+https://boffosocko.com/kind/favorite/feed/ stuff03
+https://boffosocko.com/kind/follow/feed/ stuff03
+https://boffosocko.com/kind/issue/feed/ stuff03
+https://boffosocko.com/kind/jam/feed/ stuff03
+https://boffosocko.com/kind/like/feed/ stuff03
+https://boffosocko.com/kind/listen/feed/ stuff03
+https://boffosocko.com/kind/note/feed/ stuff03
+https://boffosocko.com/kind/photo/feed/ stuff03
+https://boffosocko.com/kind/reply/feed/ stuff03
+https://boffosocko.com/kind/repost/feed/ stuff03
+https://boffosocko.com/kind/rsvp/feed/ stuff03
+https://boffosocko.com/kind/watch/feed/ stuff03
+https://boffosocko.com/kind/wish/feed/ stuff03
+https://boffosocko.com/linkblog.xml stuff03
+https://boffosocko.com/microblog.xml stuff03
+https://boffosocko.com/read.xml stuff03
+https://boingboing.net/feed stuff03
+https://bottosson.github.io/feed/feed.xml stuff03
+https://brandur.org/articles.atom stuff03
+https://brandur.org/atoms.atom stuff03
+https://brandur.org/fragments.atom stuff03
+https://brandur.org/sequences.atom stuff03
+https://breakingpoint.substack.com/feed stuff03
+https://brettscott.substack.com/feed stuff03
+https://brickset.com/feed/ stuff03
+https://bryce.vc/rss stuff03
+https://buttondown.email/hillelwayne/rss stuff03
+https://buttondown.email/robinrendle/rss stuff03
+https://buttondown.email/rss/blog.xml stuff03
+https://bvisness.me/index.xml stuff03
+https://cabel.com/feed/ stuff03
+https://calnewport.com/feed/podcast stuff03
+https://calpaterson.com/calpaterson.rss stuff03
+https://careercutler.substack.com/feed stuff03
+https://castel.dev/rss.xml stuff03
+https://cate.blog/feed/ stuff03
+https://catfox.life/feed/ stuff03
+https://catskull.net/feed.xml stuff03
+https://cbloomrants.blogspot.com/feeds/1304141133887067554/comments/default stuff03
+https://cbloomrants.blogspot.com/feeds/posts/default stuff03
+https://census.dev/blog?format=rss stuff03
+https://changelog.com/feed stuff03
+https://changelog.com/master/feed stuff03
+https://changelog.com/posts/feed stuff03
+https://charity.wtf/feed/ stuff03
+https://chreke.com/feeds/all.atom.xml stuff03
+https://chreke.com/feeds/blog.atom.xml stuff03
+https://chris.manson.ie/rss.xml stuff03
+https://chriscoyier.net/feed/ stuff03
+https://cliffle.com/rss.xml stuff03
+https://climateer.substack.com/feed stuff03
+https://clipcontent.substack.com/feed stuff03
+https://cloudfour.com/feed/ stuff03
+https://commandcenter.blogspot.com/feeds/3039153514391512130/comments/default stuff03
+https://commandcenter.blogspot.com/feeds/posts/default stuff03
+https://constructionphysics.substack.com/feed stuff03
+https://cosmographia.substack.com/feed stuff03
+https://cprimozic.b-cdn.net/rss.xml stuff03
+https://craigmod.com/index.xml stuff03
+https://crawshaw.io/atom.xml stuff03
+https://crnkovic.dev/rss/ stuff03
+https://cs-syd.eu/rss.xml stuff03
+https://css-tricks.com/feed/ stuff03
+https://cutlefish.substack.com/feed stuff03
+https://datavirke.dk/atom.xml stuff03
+https://daveceddia.com/feed.xml stuff03
+https://davekarpf.substack.com/feed stuff03
+https://daverupert.com/atom.xml stuff03
+https://davidlaprade.github.io/atom.xml stuff03
+https://devonzuegel.com/feed.xml stuff03
+https://dgerrells.com/feed/ stuff03
+https://dither8.xyz/blog/rss.xml stuff03
+https://dither8.xyz/guide/rss.xml stuff03
+https://dorianlistens.com/feed/ stuff03
+https://drakerossman.com/feed.xml stuff03
+https://drewdevault.com/blog/index.xml stuff03
+https://dubroy.com/blog/rss.xml stuff03
+https://dukope.itch.io/mars-after-midnight/devlog.rss stuff03
+https://durmonski.com/feed/ stuff03
+https://dx.tips/circles/rss.xml stuff03
+https://dystroy.org/blog/atom.xml stuff03
+https://edwardsnowden.substack.com/feed stuff03
+https://eleanorkonik.com/feed stuff03
+https://elenaverna.substack.com/feed?sectionId=69839 stuff03
+https://eli.thegreenplace.net/feeds/all.atom.xml stuff03
+https://elijahcaine.me/atom.xml stuff03
+https://elijahcaine.me/rss.xml stuff03
+https://ellenchisa.substack.com/feed stuff03
+https://ellie.wtf/index.xml stuff03
+https://ellyloel.com/feed.atom stuff03
+https://ellyloel.com/feed.rss stuff03
+https://embedded.substack.com/feed stuff03
+https://empty.coffee/rss/ stuff03
+https://endler.dev/rss.xml stuff03
+https://endtimes.dev/feed/ stuff03
+https://engineercodex.substack.com/feed stuff03
+https://engineering.fb.com/feed/ stuff03
+https://erichartford.com/uncensored-models/rss.xml stuff03
+https://ericwbailey.website/feed/feed.xml stuff03
+https://erikbern.com/index.xml stuff03
+https://erinremblance.substack.com/feed stuff03
+https://escapingflatland.substack.com/feed stuff03
+https://eukaryotewritesblog.com/feed/ stuff03
+https://event-driven.io/newsletter-pl-rss.xml stuff03
+https://event-driven.io/rss.xml stuff03
+https://everythingchanges.us/feed.xml stuff03
+https://evilmartians.com/chronicles.atom stuff03
+https://evilmartians.com/events.atom stuff03
+https://experimentalhistory.substack.com/feed stuff03
+https://explorewhatworks.com/feed/ stuff03
+https://fabiensanglard.net/rss.xml stuff03
+https://faingezicht.com/atom.xml stuff03
+https://fasterthanli.me/index.xml stuff03
+https://feed.ctrl.blog/latest.atom stuff03
+https://feed.tedium.co/ stuff03
+https://feedpress.me/coryd stuff03
+https://feedpress.me/coryd-all stuff03
+https://feedpress.me/coryd-artist-charts stuff03
+https://feedpress.me/coryd-books stuff03
+https://feedpress.me/coryd-follow stuff03
+https://feedpress.me/coryd-links stuff03
+https://feeds.akkartik.name/kartiks-scrapbook stuff03
+https://feeds.elpais.com/mrss-s/list/ep/site/english.elpais.com/section/science-tech stuff03
+https://feeds.feedburner.com/GiantRobotsSmashingIntoOtherGiantRobots stuff03
+https://feeds.feedburner.com/NiemanJournalismLab stuff03
+https://feeds.feedburner.com/csswizardry stuff03
+https://feeds.feedburner.com/mcsweeneys stuff03
+https://feeds.npr.org/1029/rss.xml stuff03
+https://feeds.npr.org/1122/rss.xml stuff03
+https://feeds.npr.org/676529561/rss.xml stuff03
+https://ferd.ca/feed.rss stuff03
+https://ferrous-systems.com/blog/feed.xml stuff03
+https://fev.al/feed.xml stuff03
+https://flowingdata.com/feed stuff03
+https://fosdem.org/2023/rss.xml stuff03
+https://frankrausch.com/feed/rss stuff03
+https://frantic.im/feed.xml stuff03
+https://frontside.com/rss.xml stuff03
+https://fvsch.com/feed.xml stuff03
+https://fy.blackhats.net.au/rss.xml stuff03
+https://garrettdimon.com/feed stuff03
+https://garrettdimon.com/feed/links stuff03
+https://garrettdimon.com/feed/posts stuff03
+https://gist.github.com/samlambert.atom stuff03
+https://gist.github.com/thesamesam.atom stuff03
+https://github.blog/feed/ stuff03
+https://gkeenan.co/avgb/feed.xml stuff03
+https://gomakethings.com/feed/index.xml stuff03
+https://grumpy.website/feed.xml stuff03
+https://gurupanguji.com/feed/ stuff03
+https://habr.com/en/rss/publications/440736/?fl=en stuff03
+https://hakaimagazine.com/feed/ stuff03
+https://hamatti.org/feed/feed.xml stuff03
+https://hard-drive.net/feed/ stuff03
+https://harihareswara.net/rss/ stuff03
+https://hateithere.co/feed/ stuff03
+https://hazelweakly.me/rss.xml stuff03
+https://heather-buchel.com/feed/feed.xml stuff03
+https://hidde.blog/feed stuff03
+https://highline.huffingtonpost.com/rss.xml stuff03
+https://hmarr.com/feed.xml stuff03
+https://htmx.org/atom.xml stuff03
+https://httptoolkit.com/rss.xml stuff03
+https://httptoolkit.tech/rss.xml stuff03
+https://hurryabit.github.io/feed.xml stuff03
+https://hynek.me/index.xml stuff03
+https://ia.net/feed/ stuff03
+https://ian-cooper.writeas.com/feed/ stuff03
+https://ianthehenry.com/posts/how-to-learn-nix/feed.xml stuff03
+https://ideas.ted.com/feed/ stuff03
+https://iliana.fyi/atom.xml stuff03
+https://infrequently.org/feed/ stuff03
+https://interactionmagic.com/feed/ stuff03
+https://interconnected.org/home/feed stuff03
+https://invertedpassion.com/feed/ stuff03
+https://irenezhang.net/blog/blog.xml stuff03
+https://isthisit.nz/ stuff03
+https://itsallaboutthebit.com/atom.xml stuff03
+https://jack.wrenn.fyi/atom.xml stuff03
+https://jacobbartlett.substack.com/feed stuff03
+https://jamesg.blog/feeds/posts.xml stuff03
+https://jameshfisher.com/feed.xml stuff03
+https://jamey.thesharps.us/feed.xml stuff03
+https://jdstillwater.blogspot.com/feeds/posts/default stuff03
+https://jeanhsu.substack.com/feed stuff03
+https://jenson.org/feed/ stuff03
+https://jeremymikkola.com/atom.xml stuff03
+https://jesseduffield.com/feed.xml stuff03
+https://jessitron.com/feed/ stuff03
+https://jgefroh.substack.com/feed?sectionId=107875 stuff03
+https://jhaand.nl/feed/ stuff03
+https://jimmyhmiller.github.io/feed.xml stuff03
+https://jmmv.dev/feed.xml stuff03
+https://jogblog.substack.com/feed stuff03
+https://johns.codes/feed.xml stuff03
+https://jonathanhaidt.substack.com/feed stuff03
+https://jrsinclair.com/index.rss stuff03
+https://jsomers.net/blog/feed stuff03
+https://justinas.org/feeds/all.atom.xml stuff03
+https://justine.lol/rss.xml stuff03
+https://justingarrison.com/index.xml stuff03
+https://justinpombrio.net/feed.xml stuff03
+https://jvns.ca/atom.xml stuff03
+https://katydecorah.com/feed.xml stuff03
+https://kaviisuri.com/you-dont-need-to-learn-svelte/rss.xml stuff03
+https://kaylynn.gay/blog/feed.rss stuff03
+https://keithjgrant.com/posts/index.xml stuff03
+https://kellanem.com/feed.xml stuff03
+https://kenkantzer.com/feed/ stuff03
+https://kentnerburn.com/feed/ stuff03
+https://kerkour.com/feed.xml stuff03
+https://kmaasrud.com/atom.xml stuff03
+https://kobzol.github.io/feed.xml stuff03
+https://krausefx.com/feed.xml stuff03
+https://krebsonsecurity.com/feed/ stuff03
+https://kumazen.com/feed/ stuff03
+https://laplab.me/posts/index.xml stuff03
+https://lcnr.de/feed.xml stuff03
+https://lelouch.dev/blog/fullrss.xml stuff03
+https://lemire.me/blog/feed/ stuff03
+https://levels.io/rss/ stuff03
+https://levelupsoftwareengineering.substack.com/feed stuff03
+https://lexoral.com/rss.xml stuff03
+https://linus.coffee/index.xml stuff03
+https://litchipi.github.io/feed.xml stuff03
+https://lithub.com/feed/ stuff03
+https://lmnt.me/feed.xml stuff03
+https://loige.co/rss.xml stuff03
+https://longform.asmartbear.com/index.xml stuff03
+https://lostsupper.substack.com/feed stuff03
+https://lucasfcosta.com/feed.xml stuff03
+https://lukas.zapletalovi.com/atom.xml stuff03
+https://lunatic.solutions/rss.xml stuff03
+https://lwn.net/headlines/819452/ stuff03
+https://lwn.net/headlines/871283/ stuff03
+https://lwn.net/headlines/883602/ stuff03
+https://lwn.net/headlines/907685/ stuff03
+https://lwn.net/headlines/958468/ stuff03
+https://lwn.net/headlines/rss stuff03
+https://ma.tt/feed/ stuff03
+https://mabez.dev/rss.xml stuff03
+https://maggieappleton.com/rss.xml stuff03
+https://maheshba.bitbucket.io/blog/feed.xml stuff03
+https://marcel.io/feed stuff03
+https://margin.re/ stuff03
+https://margin.re/blog/rss/ stuff03
+https://martinrue.com/rss.xml stuff03
+https://matduggan.com/rss/ stuff03
+https://matt-rickard.com/rss stuff03
+https://matthealy.com/feed.xml stuff03
+https://matthewgrohman.substack.com/feed stuff03
+https://matthewstrom.com/feed.xml stuff03
+https://matthewtejo.substack.com/feed stuff03
+https://mazzo.li/rss.xml stuff03
+https://mebassett.info/rss.xml stuff03
+https://menno.io/atom.xml stuff03
+https://metacognitive.me/feed/ stuff03
+https://michael.stapelberg.ch/feed.xml stuff03
+https://mikefisher.substack.com/feed stuff03
+https://mikemcquaid.com/atom.xml stuff03
+https://mitchellh.com/feed.xml stuff03
+https://mkaic.substack.com/feed stuff03
+https://mmapped.blog/feed.xml stuff03
+https://mmazzarolo.com/blog/index.xml stuff03
+https://molily.de/feed.xml stuff03
+https://morestina.net/blog/feed stuff03
+https://moretothat.com/feed/ stuff03
+https://morrick.me/feed stuff03
+https://mtlynch.io/index.xml stuff03
+https://mxb.dev/feed.xml stuff03
+https://mxb.dev/notes/feed.xml stuff03
+https://myme.no/rss-feed.xml stuff03
+https://mzrn.sh/feed.xml stuff03
+https://nedbatchelder.com/blog/rss.xml stuff03
+https://neugierig.org/software/blog/atom.xml stuff03
+https://newsletter.thejorgemedina.com/feed stuff03
+https://next-hack.com/index.php/feed/ stuff03
+https://nick.scialli.me/feed/feed.xml stuff03
+https://nielsleenheer.com/feed/ stuff03
+https://nlopes.dev/feed.xml stuff03
+https://noahpinion.substack.com/feed stuff03
+https://notes.alinpanaitiu.com/index.xml stuff03
+https://notes.billmill.org/atom.xml stuff03
+https://notes.eatonphil.com/rss.xml stuff03
+https://notes.ghed.in/feed.xml stuff03
+https://notes.keithjgrant.com/index.xml stuff03
+https://npf.io/ stuff03
+https://nschloe.github.io/feed.xml stuff03
+https://ntietz.com/atom.xml stuff03
+https://oded.substack.com/feed stuff03
+https://ofcr.se/rss.xml stuff03
+https://ofdollarsanddata.com/feed/ stuff03
+https://offbyone.us/feed.xml stuff03
+https://ohhelloana.blog/feed.links.xml stuff03
+https://ohhelloana.blog/feed.xml stuff03
+https://olano.dev/feed.xml stuff03
+https://one-from-nippon.ghost.io/rss/ stuff03
+https://oneirical.github.io/atom.xml stuff03
+https://opensource.googleblog.com/feeds/6942912095778217977/comments/default stuff03
+https://opensource.googleblog.com/feeds/posts/default stuff03
+https://opensource.googleblog.com/feeds/posts/default?alt=rss stuff03
+https://orionmagazine.org/feed/ stuff03
+https://patrickfreed.github.io/feed.xml stuff03
+https://paulbutler.org/posts/index.xml stuff03
+https://pdx.su/feed.xml stuff03
+https://perell.com/feed/ stuff03
+https://peterkos.me/atom.xml stuff03
+https://piccalil.li/feed.xml stuff03
+https://piccalil.li/links.xml stuff03
+https://piszek.com/feed/ stuff03
+https://pkolaczk.github.io/feed.xml stuff03
+https://planetscale.com/blog/rss.xml stuff03
+https://ploum.net/atom.xml stuff03
+https://ploum.net/atom_en.xml stuff03
+https://plumshell.com/feed/ stuff03
+https://pluralistic.net/feed/ stuff03
+https://poignardazur.github.io/atom.xml stuff03
+https://portswigger.net/research/rss stuff03
+https://positive.security/rss.xml stuff03
+https://posthog.com/rss.xml stuff03
+https://programmingisterrible.com/rss stuff03
+https://protos.com/feed/ stuff03
+https://psyche.co/feed.rss stuff03
+https://purplesyringa.moe/blog/feed.rss stuff03
+https://qrper.com/feed/ stuff03
+https://quii.dev/rss stuff03
+https://rachelbythebay.com/w/atom.xml stuff03
+https://rachsmith.com/rss/ stuff03
+https://rakyll.org/index.xml stuff03
+https://randsinrepose.com/feed/ stuff03
+https://rant.gulbrandsen.priv.no/index.atom stuff03
+https://rauljordan.com/rss.xml stuff03
+https://reactionwheel.net/feed stuff03
+https://reasonstobecheerful.world/feed/ stuff03
+https://registerspill.thorstenball.com/feed stuff03
+https://review.firstround.com/ stuff03
+https://rishad.substack.com/feed stuff03
+https://rixx.de/de/blog/feed.atom stuff03
+https://rixx.de/de/feed.xml stuff03
+https://rixx.de/feed.xml stuff03
+https://rknight.me/subscribe/posts/rss.xml stuff03
+https://rmkit.dev/feed.xml stuff03
+https://robinrendle.com/cascadefeed.xml stuff03
+https://robinrendle.com/essayfeed.xml stuff03
+https://robinrendle.com/feed.xml stuff03
+https://robinrendle.com/newsletterfeed.xml stuff03
+https://robotic.substack.com/feed stuff03
+https://roughlywritten.substack.com/feed stuff03
+https://rss.beehiiv.com/feeds/xgTKUmMmUm.xml stuff03
+https://ruudvanasseldonk.com/feed.xml stuff03
+https://rya.nc/feeds/all.atom stuff03
+https://sabrinajewson.org/feed.xml stuff03
+https://salman.io/feed.xml stuff03
+https://samwho.dev/rss.xml stuff03
+https://scanofthemonth.com/scans/rss.xml stuff03
+https://scattered-thoughts.net/atom.xml stuff03
+https://scholars-stage.org/feed/ stuff03
+https://secret.club/feed.xml stuff03
+https://security.googleblog.com/feeds/1396014309343612973/comments/default stuff03
+https://security.googleblog.com/feeds/posts/default stuff03
+https://security.googleblog.com/feeds/posts/default?alt=rss stuff03
+https://seirdy.one/atom.xml stuff03
+https://seirdy.one/posts/atom.xml stuff03
+https://sethmlarson.dev/feed stuff03
+https://sharats.me/posts/index.xml stuff03
+https://shekhargulati.com/feed/ stuff03
+https://shkspr.mobi/blog/feed stuff03
+https://shopify.engineering/blog.atom stuff03
+https://sidbala.com/rss/ stuff03
+https://simone.org/rss/ stuff03
+https://sive.rs/en.atom stuff03
+https://slite.com/rss.xml stuff03
+https://snyder.substack.com/feed stuff03
+https://spectrum.ieee.org/feeds/topic/diy.rss stuff03
+https://spectrum.ieee.org/feeds/type/hands-on.rss stuff03
+https://staffeng.com/rss stuff03
+https://staysaasy.com/feed.xml stuff03
+https://stephango.com/feed.xml stuff03
+https://stephanjoppich.com/feed/ stuff03
+https://steveklabnik.com/feed.xml stuff03
+https://surfingcomplexity.blog/feed/ stuff03
+https://surma.dev/index.xml stuff03
+https://swellandcut.com/feed/ stuff03
+https://syllabusproject.org/feed/ stuff03
+https://tailscale.com/blog/index.xml stuff03
+https://tailscale.com/changelog/index.xml stuff03
+https://tailscale.com/security-bulletins/index.xml stuff03
+https://thequietlife.net/feed stuff03
+https://therealadam.com/feed.xml stuff03
+https://thewalrus.ca/feed/ stuff03
+https://thomask.sdf.org/feed.xml stuff03
+https://thume.ca/atom.xml stuff03
+https://tim.mcnamara.nz/rss stuff03
+https://tokio.rs/_next/static/feed.xml stuff03
+https://tonsky.me/atom.xml stuff03
+https://traefik.io/rss.xml stuff03
+https://trishagee.com/feed/ stuff03
+https://tuhrig.de/feed.xml stuff03
+https://turbot.com/blog/feed.xml stuff03
+https://tweedegolf.nl/feed.xml stuff03
+https://two-wrongs.com/atom stuff03
+https://typefully.com/DanHollick/rss.xml stuff03
+https://unencumberedbyfacts.com/feed/ stuff03
+https://unstructed.tech/feed/ stuff03
+https://unzip.dev/rss/ stuff03
+https://usacm.acm.org/weblog2/?feed=rss2 stuff03
+https://utcc.utoronto.ca/~cks/space/blog/?atom stuff03
+https://v5.chriskrycho.com/elsewhere/feed.xml stuff03
+https://v5.chriskrycho.com/essays/feed.xml stuff03
+https://v5.chriskrycho.com/feed.xml stuff03
+https://v5.chriskrycho.com/journal/feed.xml stuff03
+https://v5.chriskrycho.com/library/feed.xml stuff03
+https://v5.chriskrycho.com/photos/feed.xml stuff03
+https://vadimkravcenko.com/feed/ stuff03
+https://valhead.com/feed/ stuff03
+https://vanschneider.com/blog/rss/ stuff03
+https://vercel.com/atom stuff03
+https://vorpus.org/blog/feeds/atom.xml stuff03
+https://web3isgoinggreat.com/feed.xml stuff03
+https://webkit.org/feed/ stuff03
+https://werd.io/2024/stripping-the-web-of-its-humanity?_t=rss stuff03
+https://what-if.xkcd.com/feed.atom stuff03
+https://whitehoodhacker.net/rss.xml stuff03
+https://words.filippo.io/rss/ stuff03
+https://world.hey.com/itzy/feed.atom stuff03
+https://world.hey.com/joaoqalves/feed.atom stuff03
+https://world.hey.com/jorge/feed.atom stuff03
+https://wraptext.equals.com/feed stuff03
+https://write.as/harold-lee/feed/ stuff03
+https://www.alexcrompton.com/blog?format=rss stuff03
+https://www.alexmurrell.co.uk/articles?format=rss stuff03
+https://www.allthingsdistributed.com/atom.xml stuff03
+https://www.andreasfragner.com/writing?format=rss stuff03
+https://www.anildash.com/feed.xml stuff03
+https://www.austinmann.com/trek?format=rss stuff03
+https://www.baldurbjarnason.com/feed.xml stuff03
+https://www.ben-evans.com/benedictevans?format=rss stuff03
+https://www.benkuhn.net/index.xml stuff03
+https://www.biodigitaljazz.tech/feed stuff03
+https://www.bitecode.dev/feed stuff03
+https://www.bleepingcomputer.com/feed/ stuff03
+https://www.bonappetit.com/feed/rss stuff03
+https://www.bunniestudios.com/blog/feed/ stuff03
+https://www.callumhart.com/feed/feed.xml stuff03
+https://www.cenizal.com/rss/ stuff03
+https://www.citationneeded.news/rss/ stuff03
+https://www.codingvc.com/feed stuff03
+https://www.computerenhance.com/feed stuff03
+https://www.computerworld.com/feed/ stuff03
+https://www.dancowell.com/rss/ stuff03
+https://www.danielsieger.com/atom.xml stuff03
+https://www.dannyguo.com/blog/feed.xml stuff03
+https://www.departmentofproduct.com/feed/ stuff03
+https://www.drorpoleg.com/blog/rss/ stuff03
+https://www.dwell.com/@dwell/rss stuff03
+https://www.eugenewei.com/blog?format=rss stuff03
+https://www.experimental-history.com/feed stuff03
+https://www.fromjason.xyz/feed/feed.xml stuff03
+https://www.gkbrk.com/feed.xml stuff03
+https://www.goretro.ai/rss.xml stuff03
+https://www.hamiltonnolan.com/feed stuff03
+https://www.henrikkarlsson.xyz/feed stuff03
+https://www.honeycomb.io/feed stuff03
+https://www.htmhell.dev/feed.xml stuff03
+https://www.htmhell.dev/feed_advent.xml stuff03
+https://www.htmhell.dev/feed_tips.xml stuff03
+https://www.iamjonas.me/feeds/7020328561533096774/comments/default stuff03
+https://www.iamjonas.me/feeds/posts/default stuff03
+https://www.iamjonas.me/feeds/posts/default?alt=rss stuff03
+https://www.ifixit.com/News/rss stuff03
+https://www.imperialviolet.org/iv-rss.xml stuff03
+https://www.infoinc.com/acm/TechNews.rss stuff03
+https://www.intruder.io/rss.xml stuff03
+https://www.inverse.com/input/rss stuff03
+https://www.joelonsoftware.com/feed/ stuff03
+https://www.jofreund.com/rss/ stuff03
+https://www.jonashietala.se/feed.xml stuff03
+https://www.jorgegalindo.me/rss.xml stuff03
+https://www.joshwcomeau.com/rss.xml stuff03
+https://www.julian.com/rss.xml stuff03
+https://www.kalzumeus.com/%20/feed/articles/ stuff03
+https://www.karlsutt.com/rss/ stuff03
+https://www.kmjn.org/recent.atom stuff03
+https://www.learningfromincidents.io/rss.xml stuff03
+https://www.leemeichin.com/rss.xml stuff03
+https://www.lenareinhard.com/articles?format=rss stuff03
+https://www.lux.camera/rss/ stuff03
+https://www.macchaffee.com/blog/atom.xml stuff03
+https://www.malachisoord.com/feed.xml stuff03
+https://www.marginalia.nu/index.xml stuff03
+https://www.mattkeeter.com/atom.xml stuff03
+https://www.matuzo.at/feed.xml stuff03
+https://www.matuzo.at/feed_100dayscss.xml stuff03
+https://www.matuzo.at/feed_all.xml stuff03
+https://www.matuzo.at/feed_til.xml stuff03
+https://www.miriamsuzanne.com/feed.atom stuff03
+https://www.miriamsuzanne.com/feed.xml stuff03
+https://www.mollywhite.net/feed/feed.xml stuff03
+https://www.mollywhite.net/micro/feed.xml stuff03
+https://www.mollywhite.net/reading/blockchain/feed.xml stuff03
+https://www.mollywhite.net/reading/shortform/feed.xml stuff03
+https://www.nature.com/nature.rss stuff03
+https://www.ncameron.org/blog/rss/ stuff03
+https://www.newstatesman.com/feed stuff03
+https://www.noemamag.com/feed/ stuff03
+https://www.notboring.co/feed stuff03
+https://www.oneusefulthing.org/feed stuff03
+https://www.ontestautomation.com/feed.xml stuff03
+https://www.openmymind.net/atom.xml stuff03
+https://www.platformer.news/rss/ stuff03
+https://www.proofofconcept.pub/feed stuff03
+https://www.propelauth.com/blog/rss/ stuff03
+https://www.robinrendle.com/cascadefeed.xml stuff03
+https://www.robinrendle.com/essayfeed.xml stuff03
+https://www.robinrendle.com/feed.xml stuff03
+https://www.robinrendle.com/newsletterfeed.xml stuff03
+https://www.robinsloan.com/feed.xml stuff03
+https://www.robmensching.com/blog/rss.xml stuff03
+https://www.scanofthemonth.com/scans/rss.xml stuff03
+https://www.scarletink.com/feed stuff03
+https://www.sciencedaily.com/rss/ stuff03
+https://www.scientificamerican.com/platform/syndication/rss/ stuff03
+https://www.sea-ql.org/blog/rss.xml stuff03
+https://www.semianalysis.com/feed stuff03
+https://www.sethvargo.com/feed.xml stuff03
+https://www.sevarg.net/feed.xml stuff03
+https://www.sigarch.org/feed/ stuff03
+https://www.simplethread.com/feed/ stuff03
+https://www.sketch.com/blog/feed.xml stuff03
+https://www.softwareonthebrain.com/feeds/1888512393652049676/comments/default stuff03
+https://www.softwareonthebrain.com/feeds/posts/default stuff03
+https://www.stefantheard.com/rss/ stuff03
+https://www.stephendiehl.com/feed.rss stuff03
+https://www.swyx.io/rss.xml stuff03
+https://www.takahe.org.nz/feed/ stuff03
+https://www.tbray.org/ongoing/ongoing.atom stuff03
+https://www.techdirt.com/feed/ stuff03
+https://www.theatlantic.com/feed/best-of/ stuff03
+https://www.thecodedmessage.com/index.xml stuff03
+https://www.theredhandfiles.com/feed/ stuff03
+https://www.theseedsofscience.pub/feed?sectionId=28266 stuff03
+https://www.totaltypescript.com/rss.xml stuff03
+https://www.trend-mill.com/feed stuff03
+https://www.trevoragilbert.com/index.xml stuff03
+https://www.troyhunt.com/rss/ stuff03
+https://www.tweag.io/rss-nix.xml stuff03
+https://www.tweag.io/rss.xml stuff03
+https://www.uber.com/en-US/blog/rss/ stuff03
+https://www.warp.dev/blog/rss.xml stuff03
+https://www.wheresyoured.at/rss/ stuff03
+https://www.wired.com/feed/rss stuff03
+https://www.workingtheorys.com/feed?sectionId=114224 stuff03
+https://www.worldql.com/feed/feed.xml stuff03
+https://www.zerobanana.com/feeds/latest stuff03
+https://www.zhuk.fi/rss/ stuff03
+https://xeiaso.net/blog.rss stuff03
+https://xiph.org/flac/feeds/feed.xml stuff03
+https://yaleclimateconnections.org/feed/ stuff03
+https://yosefk.com/blog/feed stuff03
+https://ysantos.com/feed.xml stuff03
+https://zachholman.com/atom.xml stuff03
+https://zaidesanton.substack.com/feed stuff03
+https://zed.dev/blog.rss stuff03
+https://zserge.com/rss.xml stuff03

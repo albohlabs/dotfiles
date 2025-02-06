@@ -45,6 +45,7 @@ bind-key r reload
 bind-key R reload-all
 
 bind-key A mark-feed-read
+bind-key a mark-all-above-as-read
 
 bind-key o open-in-browser-noninteractively
 bind-key O open-all-unread-in-browser
