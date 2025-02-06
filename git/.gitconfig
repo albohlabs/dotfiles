@@ -3,6 +3,7 @@
 
 [gpg "ssh"]
 	program = /opt/1Password/op-ssh-sign
+  allowedSignersFile = ~/.ssh/allowed_signers
 
 [includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
   path = .gitconfig-albohlabs
