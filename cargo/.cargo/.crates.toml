@@ -1,11 +1,14 @@
 [v1]
-"bacon 3.8.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["bacon"]
+"bacon 3.9.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["bacon"]
 "bunyan 0.1.9 (registry+https://github.com/rust-lang/crates.io-index)" = ["bunyan"]
 "cargo-about 0.6.6 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-about"]
+"cargo-audit 0.21.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-audit"]
+"cargo-binstall 1.10.22 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-binstall"]
 "cargo-bloat 0.12.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-bloat"]
 "cargo-cache 0.8.3 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-cache"]
 "cargo-check 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-check"]
-"cargo-edit 0.13.0 (registry+https://github.com/rust-lang/crates.io-index)" = [
+"cargo-deny 0.16.4 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-deny"]
+"cargo-edit 0.13.1 (registry+https://github.com/rust-lang/crates.io-index)" = [
     "cargo-add",
     "cargo-rm",
     "cargo-set-version",
@@ -13,29 +16,26 @@
 ]
 "cargo-expand 1.0.100 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-expand"]
 "cargo-geiger 0.11.7 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-geiger"]
-"cargo-insta 1.42.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-insta"]
+"cargo-insta 1.42.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-insta"]
 "cargo-update 16.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = [
     "cargo-install-update",
     "cargo-install-update-config",
 ]
 "cargo-watch 8.5.3 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-watch"]
-"cross 0.2.5 (git+https://github.com/cross-rs/cross#4090beca3cfffa44371a5bba524de3a578aa46c3)" = [
+"cross 0.2.5 (git+https://github.com/cross-rs/cross#107433fa9d71d7eb506cd5bf5467bab89edb7a52)" = [
     "cross",
     "cross-util",
 ]
-"git-cliff 2.7.0 (registry+https://github.com/rust-lang/crates.io-index)" = [
+"git-cliff 2.8.0 (registry+https://github.com/rust-lang/crates.io-index)" = [
     "git-cliff",
     "git-cliff-completions",
     "git-cliff-mangen",
 ]
-"oha 1.6.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["oha"]
+"just 1.39.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["just"]
+"oha 1.7.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["oha"]
 "rustlings 6.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["rustlings"]
 "sqlx-cli 0.8.3 (registry+https://github.com/rust-lang/crates.io-index)" = [
     "cargo-sqlx",
     "sqlx",
 ]
 "tokio-console 0.1.13 (registry+https://github.com/rust-lang/crates.io-index)" = ["tokio-console"]
-"cargo-audit 0.21.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-audit"]
-"cargo-binstall 1.10.22 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-binstall"]
-"cargo-deny 0.16.4 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-deny"]
-"just 1.39.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["just"]
