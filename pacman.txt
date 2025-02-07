@@ -200,6 +200,7 @@ lib32-libva-vdpau-driver
 lib32-vulkan-intel
 lib32-vulkan-radeon
 libdvdcss
+libinput-gestures
 libpamac-flatpak-plugin
 libreoffice-still
 libva-vdpau-driver
@@ -305,6 +306,7 @@ polkit-gnome
 polkit-kde-agent
 postgresql
 power-profiles-daemon
+proton-mail-bin
 proton-vpn-gtk-app
 protonmail-bridge
 python-pyamdgpuinfo
